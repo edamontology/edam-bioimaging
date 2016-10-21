@@ -38,7 +38,6 @@
         <oboInOwl:hasSubset>relations &quot;EDAM relations&quot;</oboInOwl:hasSubset>
         <oboInOwl:hasSubset>edam &quot;EDAM&quot;</oboInOwl:hasSubset>
         <oboInOwl:hasSubset>operations &quot;EDAM operations&quot;</oboInOwl:hasSubset>
-        <oboOther:remark>EDAM ontology subset created on behalf of NEUBIAS.</oboOther:remark>
         <oboOther:idspace>EDAM http://edamontology.org/ &quot;EDAM relations and concept properties&quot;</oboOther:idspace>
         <dc:format>application/rdf+xml</dc:format>
         <oboOther:date>20.10.2016 10:41 GMT</oboOther:date>
@@ -48,13 +47,15 @@
 	<dc:creator>Aaron Ponti</dc:creator>
 	<dc:creator>Petter Ranefall</dc:creator>
 	<dc:creator>Jeremy Pike</dc:creator>
+	<dc:creator>Joshua Moore</dc:creator>
+	<dc:creator>Hervé Ménager</dc:creator>
 	<dc:creator>Hervé Ménager</dc:creator>
 	<dc:creator>Matúš Kalaš</dc:creator>
         <dc:title>Bioimaging operations, data types, formats, identifiers and topics</dc:title>
         <oboOther:idspace>EDAM_format http://edamontology.org/format_ &quot;EDAM data formats&quot;</oboOther:idspace>
         <next_id></next_id>
         <oboInOwl:hasSubset>topics &quot;EDAM topics&quot;</oboInOwl:hasSubset>
-        <oboOther:remark>EDAM-Bioimaging is an extension to the EDAM ontology (edamontology.org) for bioimaging, developed in collaboration with partners from NEUBIAS (neubias.org).</oboOther:remark>
+        <oboOther:remark>EDAM-Bioimaging is an extension to the EDAM ontology (edamontology.org) for bioimaging, developed in collaboration with partners from NEUBIAS Cost Action CA15124 (neubias.org) and EuroBioImaging PP2</oboOther:remark>
         <doap:Version>alpha01</doap:Version>
         <rdfs:isDefinedBy rdf:resource="http://edamontology.org/EDAM-Bioimaging.owl"/>
         <foaf:page rdf:resource="http://edamontology.org/page"/>
