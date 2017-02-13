@@ -40,7 +40,7 @@
         <oboInOwl:hasSubset>operations &quot;EDAM operations&quot;</oboInOwl:hasSubset>
         <oboOther:idspace>EDAM http://edamontology.org/ &quot;EDAM relations and concept properties&quot;</oboOther:idspace>
         <dc:format>application/rdf+xml</dc:format>
-        <oboOther:date>13.02.2017 11:42 GMT</oboOther:date>
+        <oboOther:date>13.02.2017 19:19 GMT</oboOther:date>
         <oboOther:idspace>EDAM_data http://edamontology.org/data_ &quot;EDAM types of data&quot;</oboOther:idspace>
         <oboInOwl:hasSubset>concept_properties &quot;EDAM concept properties&quot;</oboInOwl:hasSubset>
         <dc:creator>Jon Ison</dc:creator>
@@ -51,6 +51,11 @@
 	<dc:contributor>Joshua Moore</dc:contributor>
 	<dc:creator>Hervé Ménager</dc:creator>
 	<dc:creator>Matúš Kalaš</dc:creator>
+	<dc:contributor></dc:contributor>
+	<dc:contributor></dc:contributor>
+	<dc:contributor></dc:contributor>
+	<dc:contributor></dc:contributor>
+	<dc:contributor></dc:contributor>
         <dc:title>Bioimaging analysis operations, types of data, formats, and topics</dc:title>
         <oboOther:idspace>EDAM_format http://edamontology.org/format_ &quot;EDAM data formats&quot;</oboOther:idspace>
         <next_id>!NB.:NO_STABLE_IDS-YET!</next_id>
