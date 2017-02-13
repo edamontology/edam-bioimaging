@@ -40,7 +40,7 @@
         <oboInOwl:hasSubset>operations &quot;EDAM operations&quot;</oboInOwl:hasSubset>
         <oboOther:idspace>EDAM http://edamontology.org/ &quot;EDAM relations and concept properties&quot;</oboOther:idspace>
         <dc:format>application/rdf+xml</dc:format>
-        <oboOther:date>20.10.2016 10:41 GMT</oboOther:date>
+        <oboOther:date>13.02.2017 10:09 GMT</oboOther:date>
         <oboOther:idspace>EDAM_data http://edamontology.org/data_ &quot;EDAM types of data&quot;</oboOther:idspace>
         <oboInOwl:hasSubset>concept_properties &quot;EDAM concept properties&quot;</oboInOwl:hasSubset>
         <dc:creator>Jon Ison</dc:creator>
@@ -51,13 +51,13 @@
 	<dc:creator>Joshua Moore</dc:creator>
 	<dc:creator>Hervé Ménager</dc:creator>
 	<dc:creator>Matúš Kalaš</dc:creator>
-        <dc:title>Bioimaging operations, data types, formats, identifiers and topics</dc:title>
+        <dc:title>Bioimaging analysis operations, types of data, formats, and topics</dc:title>
         <oboOther:idspace>EDAM_format http://edamontology.org/format_ &quot;EDAM data formats&quot;</oboOther:idspace>
-        <next_id></next_id>
+        <next_id>!NB.:NO_STABLE_IDS-YET!</next_id>
         <oboInOwl:hasSubset>topics &quot;EDAM topics&quot;</oboInOwl:hasSubset>
-        <oboOther:remark>EDAM-Bioimaging is an extension to the EDAM ontology (edamontology.org) for bioimaging, developed in collaboration with partners from NEUBIAS Cost Action CA15124 (neubias.org) and EuroBioImaging PP2</oboOther:remark>
-        <doap:Version>alpha01</doap:Version>
-        <rdfs:isDefinedBy rdf:resource="http://edamontology.org/EDAM-Bioimaging.owl"/>
+        <oboOther:remark>EDAM-bioimaging is an extension to the EDAM ontology (edamontology.org) for bioimage analysis, developed in collaboration with partners from NEUBIAS Cost Action CA15124 (neubias.org) and EuroBioImaging PP2</oboOther:remark>
+        <doap:Version>alpha02_dev</doap:Version>
+        <rdfs:isDefinedBy rdf:resource="http://edamontology.org/EDAM-bioimaging.owl"/>
         <foaf:page rdf:resource="http://edamontology.org/page"/>
     </owl:Ontology>
     
