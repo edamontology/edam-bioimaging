@@ -58,7 +58,7 @@
         <oboOther:remark>EDAM-bioimaging is an extension to the EDAM ontology (edamontology.org) for bioimage analysis, developed in collaboration with partners from NEUBIAS Cost Action CA15124 (neubias.org) and EuroBioImaging PP2</oboOther:remark>
         <doap:Version>alpha02_dev</doap:Version>
         <rdfs:isDefinedBy rdf:resource="http://edamontology.org/EDAM-bioimaging.owl"/>
-        <foaf:page rdf:resource="http://edamontology.org/page"/>
+        <foaf:page rdf:resource="https://github.com/edamontology/edam-bioimaging"/>
     </owl:Ontology>
     
 
