@@ -40,7 +40,7 @@
         <oboInOwl:hasSubset>operations &quot;EDAM operations&quot;</oboInOwl:hasSubset>
         <oboOther:idspace>EDAM http://edamontology.org/ &quot;EDAM relations and concept properties&quot;</oboOther:idspace>
         <dc:format>application/rdf+xml</dc:format>
-        <oboOther:date>2017-04-28T05:32Z</oboOther:date>
+        <oboOther:date>2017-04-28T06:13Z</oboOther:date>
         <oboOther:idspace>EDAM_data http://edamontology.org/data_ &quot;EDAM types of data&quot;</oboOther:idspace>
         <oboInOwl:hasSubset>concept_properties &quot;EDAM concept properties&quot;</oboInOwl:hasSubset>
         <dc:creator>Jon Ison</dc:creator>
@@ -62,11 +62,11 @@
 		<dc:contributor>David Rousseau</dc:contributor>
 		<dc:contributor>Romain Guiet</dc:contributor>
 		<dc:contributor>NEUBIAS taggers and members of NEUBIAS WG4 lead by Perrine Paul-Gilloteaux</dc:contributor>
-        <dc:title>Bioimaging analysis operations, types of data, formats, and topics</dc:title>
+        <dc:title>EDAM-bioimaging: An ontology of bioimage informatics operations, types of data, data formats, and bioimaging topics</dc:title>
         <oboOther:idspace>EDAM_format http://edamontology.org/format_ &quot;EDAM data formats&quot;</oboOther:idspace>
         <next_id>!NB.:NO_STABLE_IDS-YET!</next_id>
         <oboInOwl:hasSubset>topics &quot;EDAM topics&quot;</oboInOwl:hasSubset>
-        <oboOther:remark>EDAM-bioimaging is an extension to the EDAM ontology (edamontology.org) for bioimage analysis and bioimage informatics, developed in collaboration with partners from NEUBIAS Cost Action CA15124 (neubias.org) and EuroBioImaging PP2</oboOther:remark>
+        <oboOther:remark>EDAM-bioimaging is an extension to the EDAM ontology (edamontology.org) for bioimage analysis, bioimage informatics, and bioimaging, developed in collaboration with partners from NEUBIAS Cost Action CA15124 (neubias.org) and EuroBioImaging PP2.</oboOther:remark>
         <doap:Version>alpha03_dev</doap:Version>
         <rdfs:isDefinedBy rdf:resource="http://edamontology.org/EDAM-bioimaging.owl"/>
         <foaf:page rdf:resource="https://github.com/edamontology/edam-bioimaging"/>
