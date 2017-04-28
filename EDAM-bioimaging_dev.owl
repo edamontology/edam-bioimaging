@@ -40,32 +40,33 @@
         <oboInOwl:hasSubset>operations &quot;EDAM operations&quot;</oboInOwl:hasSubset>
         <oboOther:idspace>EDAM http://edamontology.org/ &quot;EDAM relations and concept properties&quot;</oboOther:idspace>
         <dc:format>application/rdf+xml</dc:format>
-        <oboOther:date>15.02.2017 10:44 GMT</oboOther:date>
+        <oboOther:date>2017-04-28T01:38Z</oboOther:date>
         <oboOther:idspace>EDAM_data http://edamontology.org/data_ &quot;EDAM types of data&quot;</oboOther:idspace>
         <oboInOwl:hasSubset>concept_properties &quot;EDAM concept properties&quot;</oboInOwl:hasSubset>
         <dc:creator>Jon Ison</dc:creator>
-	<dc:contributor>Aaron Ponti</dc:contributor>
-	<dc:contributor>Petter Ranefall</dc:contributor>
-	<dc:contributor>Jeremy Pike</dc:contributor>
-	<dc:contributor>Gabriella Rustici</dc:contributor>
-	<dc:contributor>Joshua Moore</dc:contributor>
-	<dc:creator>Hervé Ménager</dc:creator>
-	<dc:creator>Matúš Kalaš</dc:creator>
-	<dc:contributor>Alexandre Dufour</dc:contributor>
-	<dc:contributor>Moritz Kirschmann</dc:contributor>
-	<dc:contributor>Anatole Chessel</dc:contributor>
-	<dc:contributor>Laure Plantard</dc:contributor>
-	<dc:contributor>Joakim Lindblad</dc:contributor>
-	<dc:contributor>Chong Zhang</dc:contributor>
-	<dc:contributor>Nataša Sladoje-Matić</dc:contributor>
-	<dc:contributor>Jean-Baptiste Sibarita</dc:contributor>
-	<dc:contributor>David Rousseau</dc:contributor>
-	<dc:contributor>Romain Guiet</dc:contributor>
+		<dc:contributor>Aaron Ponti</dc:contributor>
+		<dc:contributor>Petter Ranefall</dc:contributor>
+		<dc:contributor>Jeremy Pike</dc:contributor>
+		<dc:contributor>Gabriella Rustici</dc:contributor>
+		<dc:contributor>Joshua Moore</dc:contributor>
+		<dc:creator>Hervé Ménager</dc:creator>
+		<dc:creator>Matúš Kalaš</dc:creator>
+		<dc:contributor>Alexandre Dufour</dc:contributor>
+		<dc:creator>Moritz Kirschmann</dc:creator>
+		<dc:contributor>Anatole Chessel</dc:contributor>
+		<dc:creator>Laure Plantard</dc:creator>
+		<dc:creator>Joakim Lindblad</dc:creator>
+		<dc:contributor>Chong Zhang</dc:contributor>
+		<dc:contributor>Nataša Sladoje-Matić</dc:contributor>
+		<dc:contributor>Jean-Baptiste Sibarita</dc:contributor>
+		<dc:contributor>David Rousseau</dc:contributor>
+		<dc:contributor>Romain Guiet</dc:contributor>
+		<dc:contributor>NEUBIAS taggers and members of NEUBIAS WG4 lead by Perrine Paul-Gilloteaux</dc:contributor>
         <dc:title>Bioimaging analysis operations, types of data, formats, and topics</dc:title>
         <oboOther:idspace>EDAM_format http://edamontology.org/format_ &quot;EDAM data formats&quot;</oboOther:idspace>
         <next_id>!NB.:NO_STABLE_IDS-YET!</next_id>
         <oboInOwl:hasSubset>topics &quot;EDAM topics&quot;</oboInOwl:hasSubset>
-        <oboOther:remark>EDAM-bioimaging is an extension to the EDAM ontology (edamontology.org) for bioimage analysis, developed in collaboration with partners from NEUBIAS Cost Action CA15124 (neubias.org) and EuroBioImaging PP2</oboOther:remark>
+        <oboOther:remark>EDAM-bioimaging is an extension to the EDAM ontology (edamontology.org) for bioimage analysis and bioimage informatics, developed in collaboration with partners from NEUBIAS Cost Action CA15124 (neubias.org) and EuroBioImaging PP2</oboOther:remark>
         <doap:Version>alpha02_dev</doap:Version>
         <rdfs:isDefinedBy rdf:resource="http://edamontology.org/EDAM-bioimaging.owl"/>
         <foaf:page rdf:resource="https://github.com/edamontology/edam-bioimaging"/>
