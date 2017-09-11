@@ -38,9 +38,10 @@
         <oboInOwl:hasSubset>relations &quot;EDAM relations&quot;</oboInOwl:hasSubset>
         <oboInOwl:hasSubset>edam &quot;EDAM&quot;</oboInOwl:hasSubset>
         <oboInOwl:hasSubset>operations &quot;EDAM operations&quot;</oboInOwl:hasSubset>
+        <oboInOwl:hasSubset>bioimaging &quot;EDAM-bioimaging&quot;</oboInOwl:hasSubset>
         <oboOther:idspace>EDAM http://edamontology.org/ &quot;EDAM relations and concept properties&quot;</oboOther:idspace>
         <dc:format>application/rdf+xml</dc:format>
-        <oboOther:date>2017-04-28T06:13Z</oboOther:date>
+        <oboOther:date>2017-09-11T15:19Z</oboOther:date>
         <oboOther:idspace>EDAM_data http://edamontology.org/data_ &quot;EDAM types of data&quot;</oboOther:idspace>
         <oboInOwl:hasSubset>concept_properties &quot;EDAM concept properties&quot;</oboInOwl:hasSubset>
         <dc:creator>Jon Ison</dc:creator>
@@ -143,6 +144,18 @@
         <oboInOwl:inSubset>concept_properties</oboInOwl:inSubset>
         <oboOther:is_metadata_tag>true</oboOther:is_metadata_tag>
     </owl:AnnotationProperty>
+    
+
+
+    <!-- http://edamontology.org/hide_in_subset -->
+
+    <owl:AnnotationProperty rdf:about="http://edamontology.org/hide_in_subset">
+        <rdfs:label>Hide in subset</rdfs:label>
+        <oboInOwl:hasDefinition>&apos;Hide in subset&apos; concept property (&apos;hide_in_subset&apos; metadata tag) declared a subset in which the given concept may be hidden from users.</oboInOwl:hasDefinition>
+        <oboOther:is_metadata_tag>true</oboOther:is_metadata_tag>
+        <rdfs:comment>N.B. that the given concept is either explicitly or implicitly in the declared subset.</rdfs:comment>
+        <oboInOwl:inSubset>concept_properties</oboInOwl:inSubset>
+    </owl:AnnotationPropert
     
 
 
@@ -1387,6 +1400,7 @@
         <oboInOwl:hasRelatedSynonym>sumo:Function</oboInOwl:hasRelatedSynonym>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:comment>Special cases are: a) An operation that consumes no input (has no input arguments). Such operation is either a constant function, or an operation depending only on the underlying state. b) An operation that may modify the underlying state but has no output. c) The singular-case operation with no input or output, that still may modify the underlying state.</rdfs:comment>
         <rdfs:label>Operation</rdfs:label>
         <rdfs:seeAlso>http://en.wikipedia.org/wiki/Function_(computer_science)</rdfs:seeAlso>
@@ -1432,6 +1446,9 @@
     <!-- http://edamontology.org/operation_0337 -->
 
     <owl:Class rdf:about="http://edamontology.org/operation_0337">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
+        <hide_in_subset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_0004"/>
         <oboInOwl:hasNarrowSynonym>Plotting</oboInOwl:hasNarrowSynonym>
         <rdfs:label>Visualisation</rdfs:label>
@@ -1442,6 +1459,9 @@
     <!-- http://edamontology.org/operation_2409 -->
 
     <owl:Class rdf:about="http://edamontology.org/operation_2409">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
+        <hide_in_subset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_0004"/>
         <rdfs:label>Data handling</rdfs:label>
     </owl:Class>
@@ -1451,6 +1471,9 @@
     <!-- http://edamontology.org/operation_2423 -->
 
     <owl:Class rdf:about="http://edamontology.org/operation_2423">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
+        <hide_in_subset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_0004"/>
         <rdfs:label>Prediction and recognition</rdfs:label>
     </owl:Class>
@@ -1460,6 +1483,9 @@
     <!-- http://edamontology.org/operation_2928 -->
 
     <owl:Class rdf:about="http://edamontology.org/operation_2928">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
+        <hide_in_subset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_0004"/>
         <rdfs:label>Alignment construction</rdfs:label>
     </owl:Class>
@@ -1469,6 +1495,9 @@
     <!-- http://edamontology.org/operation_2990 -->
 
     <owl:Class rdf:about="http://edamontology.org/operation_2990">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
+        <hide_in_subset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_0004"/>
         <rdfs:label>Classification</rdfs:label>
     </owl:Class>
@@ -1478,6 +1507,9 @@
     <!-- http://edamontology.org/operation_3096 -->
 
     <owl:Class rdf:about="http://edamontology.org/operation_3096">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
+        <hide_in_subset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_2409"/>
         <rdfs:label>Editing</rdfs:label>
     </owl:Class>
@@ -1487,6 +1519,9 @@
     <!-- http://edamontology.org/operation_3429 -->
 
     <owl:Class rdf:about="http://edamontology.org/operation_3429">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
+        <hide_in_subset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_0004"/>
         <rdfs:label>Generation</rdfs:label>
     </owl:Class>
@@ -1496,6 +1531,9 @@
     <!-- http://edamontology.org/operation_3434 -->
 
     <owl:Class rdf:about="http://edamontology.org/operation_3434">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
+        <hide_in_subset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_0004"/>
         <rdfs:label>Conversion</rdfs:label>
     </owl:Class>
@@ -1505,6 +1543,9 @@
     <!-- http://edamontology.org/operation_3441 -->
 
     <owl:Class rdf:about="http://edamontology.org/operation_3441">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
+        <hide_in_subset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_0337"/>
         <rdfs:comment>Visualisation vs Plotting vs Image generation
 Should these be merged?
@@ -1517,6 +1558,8 @@ Which of these should be the top concept, and which sub-concepts, and which narr
     <!-- http://edamontology.org/operation_3443 -->
 
     <owl:Class rdf:about="http://edamontology.org/operation_3443">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation__RCeFsUcF68YcEyw6iWxw2le"/>
         <oboInOwl:hasNarrowSynonym>General image analysis</oboInOwl:hasNarrowSynonym>
         <rdfs:label>Image analysis</rdfs:label>
@@ -1527,6 +1570,8 @@ Which of these should be the top concept, and which sub-concepts, and which narr
     <!-- http://edamontology.org/operation_Active_contours -->
 
     <owl:Class rdf:about="http://edamontology.org/operation_Active_contours">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Image_segmentation"/>
         <rdfs:comment>ToDo: relation of this to &quot;Contours&quot; ?</rdfs:comment>
         <rdfs:label>Active contours</rdfs:label>
@@ -1537,6 +1582,8 @@ Which of these should be the top concept, and which sub-concepts, and which narr
     <!-- http://edamontology.org/operation_Adaptative_thresholding -->
 
     <owl:Class rdf:about="http://edamontology.org/operation_Adaptative_thresholding">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Image_segmentation"/>
         <rdfs:label>Adaptative thresholding</rdfs:label>
     </owl:Class>
@@ -1546,6 +1593,8 @@ Which of these should be the top concept, and which sub-concepts, and which narr
     <!-- http://edamontology.org/operation_Anaglyph -->
 
     <owl:Class rdf:about="http://edamontology.org/operation_Anaglyph">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Image_visualisation"/>
         <rdfs:label>Anaglyph</rdfs:label>
     </owl:Class>
@@ -1555,6 +1604,8 @@ Which of these should be the top concept, and which sub-concepts, and which narr
     <!-- http://edamontology.org/operation_Cell_counting -->
 
     <owl:Class rdf:about="http://edamontology.org/operation_Cell_counting">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_3443"/>
         <rdfs:label>Object counting</rdfs:label>
     </owl:Class>
@@ -1564,6 +1615,8 @@ Which of these should be the top concept, and which sub-concepts, and which narr
     <!-- http://edamontology.org/operation_Cell_segmentation -->
 
     <owl:Class rdf:about="http://edamontology.org/operation_Cell_segmentation">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Image_segmentation"/>
         <rdfs:label>Cell segmentation</rdfs:label>
     </owl:Class>
@@ -1573,6 +1626,8 @@ Which of these should be the top concept, and which sub-concepts, and which narr
     <!-- http://edamontology.org/operation_Cell_tracking -->
 
     <owl:Class rdf:about="http://edamontology.org/operation_Cell_tracking">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation__RDsrmC9l0bZw9kGJzGMCyY8"/>
         <rdfs:label>Cell tracking</rdfs:label>
     </owl:Class>
@@ -1582,6 +1637,8 @@ Which of these should be the top concept, and which sub-concepts, and which narr
     <!-- http://edamontology.org/operation_Closing -->
 
     <owl:Class rdf:about="http://edamontology.org/operation_Closing">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Morphological_operations"/>
         <rdfs:label>Closing</rdfs:label>
     </owl:Class>
@@ -1591,6 +1648,8 @@ Which of these should be the top concept, and which sub-concepts, and which narr
     <!-- http://edamontology.org/operation_Contours -->
 
     <owl:Class rdf:about="http://edamontology.org/operation_Contours">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Image_segmentation"/>
         <oboInOwl:hasExactSynonym>Contours</oboInOwl:hasExactSynonym>
         <rdfs:comment>ToDo: relation of this to &quot;Active contours&quot; ?</rdfs:comment>
@@ -1601,6 +1660,8 @@ Which of these should be the top concept, and which sub-concepts, and which narr
     <!-- http://edamontology.org/operation_Dilation -->
 
     <owl:Class rdf:about="http://edamontology.org/operation_Dilation">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Morphological_operations"/>
         <rdfs:label>Dilatation</rdfs:label>
     </owl:Class>
@@ -1610,6 +1671,8 @@ Which of these should be the top concept, and which sub-concepts, and which narr
     <!-- http://edamontology.org/operation_Distance_transform -->
 
     <owl:Class rdf:about="http://edamontology.org/operation_Distance_transform">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Morphological_operations"/>
         <rdfs:label>Distance transform</rdfs:label>
     </owl:Class>
@@ -1619,6 +1682,8 @@ Which of these should be the top concept, and which sub-concepts, and which narr
     <!-- http://edamontology.org/operation_Edge_detection -->
 
     <owl:Class rdf:about="http://edamontology.org/operation_Edge_detection">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Image_enhancement"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Image_segmentation"/>
         <oboInOwl:hasRelatedSynonym>Edge detection</oboInOwl:hasRelatedSynonym>
@@ -1630,6 +1695,8 @@ Which of these should be the top concept, and which sub-concepts, and which narr
     <!-- http://edamontology.org/operation_Erosion -->
 
     <owl:Class rdf:about="http://edamontology.org/operation_Erosion">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Morphological_operations"/>
         <rdfs:label>Erosion</rdfs:label>
     </owl:Class>
@@ -1639,6 +1706,8 @@ Which of these should be the top concept, and which sub-concepts, and which narr
     <!-- http://edamontology.org/operation_Feature_extraction -->
 
     <owl:Class rdf:about="http://edamontology.org/operation_Feature_extraction">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_3443"/>
         <oboInOwl:hasExactSynonym>Feature detection</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Image labeling</oboInOwl:hasExactSynonym>
@@ -1651,6 +1720,8 @@ Which of these should be the top concept, and which sub-concepts, and which narr
     <!-- http://edamontology.org/operation_Geometrical_transform -->
 
     <owl:Class rdf:about="http://edamontology.org/operation_Geometrical_transform">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Image_processing"/>
         <rdfs:label>Geometrical transform</rdfs:label>
     </owl:Class>
@@ -1660,6 +1731,8 @@ Which of these should be the top concept, and which sub-concepts, and which narr
     <!-- http://edamontology.org/operation_Homogeneity -->
 
     <owl:Class rdf:about="http://edamontology.org/operation_Homogeneity">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Feature_extraction"/>
         <rdfs:label>Homogeneity</rdfs:label>
     </owl:Class>
@@ -1669,6 +1742,8 @@ Which of these should be the top concept, and which sub-concepts, and which narr
     <!-- http://edamontology.org/operation_Illumination_correction -->
 
     <owl:Class rdf:about="http://edamontology.org/operation_Illumination_correction">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation__R7MFwdgojfmkZ07yWbdcda0"/>
         <oboInOwl:hasExactSynonym>Flat field correction</oboInOwl:hasExactSynonym>
         <rdfs:label>Illumination correction</rdfs:label>
@@ -1679,6 +1754,9 @@ Which of these should be the top concept, and which sub-concepts, and which narr
     <!-- http://edamontology.org/operation_Image_classification -->
 
     <owl:Class rdf:about="http://edamontology.org/operation_Image_classification">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_2990"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_3443"/>
         <oboInOwl:hasExactSynonym>Classification</oboInOwl:hasExactSynonym>
@@ -1692,6 +1770,8 @@ Which of these should be the top concept, and which sub-concepts, and which narr
     <!-- http://edamontology.org/operation_Image_colocalization -->
 
     <owl:Class rdf:about="http://edamontology.org/operation_Image_colocalization">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_3443"/>
         <oboInOwl:hasExactSynonym>Image colocalisation</oboInOwl:hasExactSynonym>
         <oboInOwl:hasNarrowSynonym>Manders coefficient</oboInOwl:hasNarrowSynonym>
@@ -1703,6 +1783,8 @@ Which of these should be the top concept, and which sub-concepts, and which narr
     <!-- http://edamontology.org/operation_Image_deconvolution -->
 
     <owl:Class rdf:about="http://edamontology.org/operation_Image_deconvolution">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Image_reconstruction"/>
         <rdfs:label>Image deconvolution</rdfs:label>
     </owl:Class>
@@ -1712,6 +1794,8 @@ Which of these should be the top concept, and which sub-concepts, and which narr
     <!-- http://edamontology.org/operation_Image_enhancement -->
 
     <owl:Class rdf:about="http://edamontology.org/operation_Image_enhancement">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Image_processing"/>
         <oboInOwl:hasNarrowSynonym>Image filtering</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasNarrowSynonym>Image restoration</oboInOwl:hasNarrowSynonym>
@@ -1724,6 +1808,8 @@ Which of these should be the top concept, and which sub-concepts, and which narr
     <!-- http://edamontology.org/operation_Image_measurement -->
 
     <owl:Class rdf:about="http://edamontology.org/operation_Image_measurement">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Feature_extraction"/>
         <rdfs:label>Image measurement</rdfs:label>
     </owl:Class>
@@ -1733,6 +1819,8 @@ Which of these should be the top concept, and which sub-concepts, and which narr
     <!-- http://edamontology.org/operation_Image_processing -->
 
     <owl:Class rdf:about="http://edamontology.org/operation_Image_processing">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_0004"/>
         <oboInOwl:hasNarrowSynonym>Image postprocessing</oboInOwl:hasNarrowSynonym>
         <rdfs:label>Image processing</rdfs:label>
@@ -1744,6 +1832,8 @@ Which of these should be the top concept, and which sub-concepts, and which narr
     <!-- http://edamontology.org/operation_Image_reconstruction -->
 
     <owl:Class rdf:about="http://edamontology.org/operation_Image_reconstruction">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Image_processing"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation__RDFFD5jBfUw74a3vJeBAGB1"/>
         <oboInOwl:hasNarrowSynonym>Image restoration</oboInOwl:hasNarrowSynonym>
@@ -1756,6 +1846,8 @@ Which of these should be the top concept, and which sub-concepts, and which narr
     <!-- http://edamontology.org/operation_Image_registration -->
 
     <owl:Class rdf:about="http://edamontology.org/operation_Image_registration">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_2928"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Image_processing"/>
         <oboInOwl:hasExactSynonym>Image alignment</oboInOwl:hasExactSynonym>
@@ -1767,6 +1859,8 @@ Which of these should be the top concept, and which sub-concepts, and which narr
     <!-- http://edamontology.org/operation_Image_segmentation -->
 
     <owl:Class rdf:about="http://edamontology.org/operation_Image_segmentation">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_3443"/>
         <oboInOwl:hasNarrowSynonym>Interactive segmentation</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasNarrowSynonym>Snakes</oboInOwl:hasNarrowSynonym>
@@ -1778,6 +1872,8 @@ Which of these should be the top concept, and which sub-concepts, and which narr
     <!-- http://edamontology.org/operation_Image_smoothing -->
 
     <owl:Class rdf:about="http://edamontology.org/operation_Image_smoothing">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Image_enhancement"/>
         <oboInOwl:hasNarrowSynonym>Gaussian blurring</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasNarrowSynonym>Gaussian filtering</oboInOwl:hasNarrowSynonym>
@@ -1791,6 +1887,8 @@ Which of these should be the top concept, and which sub-concepts, and which narr
     <!-- http://edamontology.org/operation_Image_stitching -->
 
     <owl:Class rdf:about="http://edamontology.org/operation_Image_stitching">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Image_reconstruction"/>
         <rdfs:label>Image stitching</rdfs:label>
     </owl:Class>
@@ -1800,6 +1898,8 @@ Which of these should be the top concept, and which sub-concepts, and which narr
     <!-- http://edamontology.org/operation_Image_thresholding -->
 
     <owl:Class rdf:about="http://edamontology.org/operation_Image_thresholding">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Image_segmentation"/>
         <oboInOwl:hasExactSynonym>Thresholding</oboInOwl:hasExactSynonym>
         <oboInOwl:hasNarrowSynonym>Clustering-based image thresholding</oboInOwl:hasNarrowSynonym>
@@ -1811,6 +1911,8 @@ Which of these should be the top concept, and which sub-concepts, and which narr
     <!-- http://edamontology.org/operation_Image_tracking -->
 
     <owl:Class rdf:about="http://edamontology.org/operation_Image_tracking">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_3443"/>
         <oboInOwl:hasExactSynonym>Tracking</oboInOwl:hasExactSynonym>
         <rdfs:label>Object tracking</rdfs:label>
@@ -1821,6 +1923,8 @@ Which of these should be the top concept, and which sub-concepts, and which narr
     <!-- http://edamontology.org/operation_Image_visualisation -->
 
     <owl:Class rdf:about="http://edamontology.org/operation_Image_visualisation">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_0337"/>
         <oboInOwl:hasExactSynonym>Rendering</oboInOwl:hasExactSynonym>
         <oboInOwl:hasNarrowSynonym>Lookup table</oboInOwl:hasNarrowSynonym>
@@ -1835,6 +1939,8 @@ Which of these should be the top concept, and which sub-concepts, and which narr
     <!-- http://edamontology.org/operation_Interactive_segmentation -->
 
     <owl:Class rdf:about="http://edamontology.org/operation_Interactive_segmentation">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Image_segmentation"/>
         <rdfs:label>Interactive segmentation</rdfs:label>
     </owl:Class>
@@ -1844,6 +1950,8 @@ Which of these should be the top concept, and which sub-concepts, and which narr
     <!-- http://edamontology.org/operation_Linear_transformation -->
 
     <owl:Class rdf:about="http://edamontology.org/operation_Linear_transformation">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation__R8ANfLkuHu47r739AkhxrId"/>
         <rdfs:label>Linear transformation</rdfs:label>
     </owl:Class>
@@ -1853,6 +1961,8 @@ Which of these should be the top concept, and which sub-concepts, and which narr
     <!-- http://edamontology.org/operation_Local_thresholding -->
 
     <owl:Class rdf:about="http://edamontology.org/operation_Local_thresholding">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Image_segmentation"/>
         <rdfs:label>Local thresholding</rdfs:label>
     </owl:Class>
@@ -1862,6 +1972,8 @@ Which of these should be the top concept, and which sub-concepts, and which narr
     <!-- http://edamontology.org/operation_Montage -->
 
     <owl:Class rdf:about="http://edamontology.org/operation_Montage">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Image_visualisation"/>
         <rdfs:label>Montage</rdfs:label>
     </owl:Class>
@@ -1871,6 +1983,8 @@ Which of these should be the top concept, and which sub-concepts, and which narr
     <!-- http://edamontology.org/operation_Morphological_operations -->
 
     <owl:Class rdf:about="http://edamontology.org/operation_Morphological_operations">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Image_processing"/>
         <oboInOwl:hasExactSynonym>Morphological image processing</oboInOwl:hasExactSynonym>
         <rdfs:label>Morphological operation</rdfs:label>
@@ -1881,6 +1995,8 @@ Which of these should be the top concept, and which sub-concepts, and which narr
     <!-- http://edamontology.org/operation_Neuron_image_analysis -->
 
     <owl:Class rdf:about="http://edamontology.org/operation_Neuron_image_analysis">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_3443"/>
         <rdfs:label>Neuron image analysis</rdfs:label>
     </owl:Class>
@@ -1890,6 +2006,8 @@ Which of these should be the top concept, and which sub-concepts, and which narr
     <!-- http://edamontology.org/operation_Object_detection -->
 
     <owl:Class rdf:about="http://edamontology.org/operation_Object_detection">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_3443"/>
         <rdfs:label>Object detection</rdfs:label>
     </owl:Class>
@@ -1899,6 +2017,8 @@ Which of these should be the top concept, and which sub-concepts, and which narr
     <!-- http://edamontology.org/operation_Opening -->
 
     <owl:Class rdf:about="http://edamontology.org/operation_Opening">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Morphological_operations"/>
         <rdfs:label>Opening</rdfs:label>
     </owl:Class>
@@ -1908,6 +2028,8 @@ Which of these should be the top concept, and which sub-concepts, and which narr
     <!-- http://edamontology.org/operation_Optical_flow_analysis -->
 
     <owl:Class rdf:about="http://edamontology.org/operation_Optical_flow_analysis">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_3443"/>
         <rdfs:label>Optical flow analysis</rdfs:label>
     </owl:Class>
@@ -1917,6 +2039,8 @@ Which of these should be the top concept, and which sub-concepts, and which narr
     <!-- http://edamontology.org/operation_Overlay -->
 
     <owl:Class rdf:about="http://edamontology.org/operation_Overlay">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Image_visualisation"/>
         <rdfs:label>Overlay</rdfs:label>
     </owl:Class>
@@ -1926,6 +2050,8 @@ Which of these should be the top concept, and which sub-concepts, and which narr
     <!-- http://edamontology.org/operation_Particle_extraction -->
 
     <owl:Class rdf:about="http://edamontology.org/operation_Particle_extraction">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Feature_extraction"/>
         <rdfs:label>Particle extraction</rdfs:label>
     </owl:Class>
@@ -1935,6 +2061,8 @@ Which of these should be the top concept, and which sub-concepts, and which narr
     <!-- http://edamontology.org/operation_Particle_tracking -->
 
     <owl:Class rdf:about="http://edamontology.org/operation_Particle_tracking">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation__RDsrmC9l0bZw9kGJzGMCyY8"/>
         <rdfs:label>Particle tracking</rdfs:label>
     </owl:Class>
@@ -1944,6 +2072,8 @@ Which of these should be the top concept, and which sub-concepts, and which narr
     <!-- http://edamontology.org/operation_Pixel_classification -->
 
     <owl:Class rdf:about="http://edamontology.org/operation_Pixel_classification">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_2990"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_3443"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Image_segmentation"/>
@@ -1955,6 +2085,8 @@ Which of these should be the top concept, and which sub-concepts, and which narr
     <!-- http://edamontology.org/operation_Projection -->
 
     <owl:Class rdf:about="http://edamontology.org/operation_Projection">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Image_reconstruction"/>
         <oboInOwl:hasExactSynonym>Maximum projection</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Minimum projection</oboInOwl:hasExactSynonym>
@@ -1968,6 +2100,8 @@ Which of these should be the top concept, and which sub-concepts, and which narr
     <!-- http://edamontology.org/operation_Rotation -->
 
     <owl:Class rdf:about="http://edamontology.org/operation_Rotation">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation__R8ANfLkuHu47r739AkhxrId"/>
         <rdfs:label>Rotation</rdfs:label>
     </owl:Class>
@@ -1977,6 +2111,8 @@ Which of these should be the top concept, and which sub-concepts, and which narr
     <!-- http://edamontology.org/operation_Shape_features -->
 
     <owl:Class rdf:about="http://edamontology.org/operation_Shape_features">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Feature_extraction"/>
         <rdfs:label>Shape features</rdfs:label>
     </owl:Class>
@@ -1986,6 +2122,8 @@ Which of these should be the top concept, and which sub-concepts, and which narr
     <!-- http://edamontology.org/operation_Skeletonization -->
 
     <owl:Class rdf:about="http://edamontology.org/operation_Skeletonization">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Morphological_operations"/>
         <oboInOwl:hasNarrowSynonym>Medial axis</oboInOwl:hasNarrowSynonym>
         <rdfs:label>Skeletonisation</rdfs:label>
@@ -1996,6 +2134,8 @@ Which of these should be the top concept, and which sub-concepts, and which narr
     <!-- http://edamontology.org/operation_Spot_extraction -->
 
     <owl:Class rdf:about="http://edamontology.org/operation_Spot_extraction">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Feature_extraction"/>
         <oboInOwl:hasExactSynonym>Spot detection</oboInOwl:hasExactSynonym>
         <rdfs:label>Spot extraction</rdfs:label>
@@ -2006,6 +2146,8 @@ Which of these should be the top concept, and which sub-concepts, and which narr
     <!-- http://edamontology.org/operation_Texture_extraction -->
 
     <owl:Class rdf:about="http://edamontology.org/operation_Texture_extraction">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Feature_extraction"/>
         <oboInOwl:hasNarrowSynonym>Inverse Difference Moment</oboInOwl:hasNarrowSynonym>
         <rdfs:label>Texture extraction</rdfs:label>
@@ -2016,6 +2158,8 @@ Which of these should be the top concept, and which sub-concepts, and which narr
     <!-- http://edamontology.org/operation_Texture_features -->
 
     <owl:Class rdf:about="http://edamontology.org/operation_Texture_features">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Feature_extraction"/>
         <rdfs:label>Texture features</rdfs:label>
     </owl:Class>
@@ -2025,6 +2169,8 @@ Which of these should be the top concept, and which sub-concepts, and which narr
     <!-- http://edamontology.org/operation_Volume_rendering -->
 
     <owl:Class rdf:about="http://edamontology.org/operation_Volume_rendering">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Image_visualisation"/>
         <rdfs:label>Volume rendering</rdfs:label>
     </owl:Class>
@@ -2034,6 +2180,8 @@ Which of these should be the top concept, and which sub-concepts, and which narr
     <!-- http://edamontology.org/operation_Warping -->
 
     <owl:Class rdf:about="http://edamontology.org/operation_Warping">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Geometrical_transform"/>
         <rdfs:label>Warping</rdfs:label>
     </owl:Class>
@@ -2043,6 +2191,8 @@ Which of these should be the top concept, and which sub-concepts, and which narr
     <!-- http://edamontology.org/operation_Watershed -->
 
     <owl:Class rdf:about="http://edamontology.org/operation_Watershed">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Image_segmentation"/>
         <rdfs:label>Watershed</rdfs:label>
     </owl:Class>
@@ -2052,6 +2202,8 @@ Which of these should be the top concept, and which sub-concepts, and which narr
     <!-- http://edamontology.org/operation__R1NVO6hpWWcs99UiEFiOfK -->
 
     <owl:Class rdf:about="http://edamontology.org/operation__R1NVO6hpWWcs99UiEFiOfK">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Image_reconstruction"/>
         <rdfs:label>Tomography reconstruction</rdfs:label>
     </owl:Class>
@@ -2061,8 +2213,10 @@ Which of these should be the top concept, and which sub-concepts, and which narr
     <!-- http://edamontology.org/operation__R3BGvVm77d5vFMF6f28ZiW -->
 
     <owl:Class rdf:about="http://edamontology.org/operation__R3BGvVm77d5vFMF6f28ZiW">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation__R7MFwdgojfmkZ07yWbdcda0"/>
-        <oboInOwl:hasNarrowSynonym>lens distortion correction</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>Lens distortion correction</oboInOwl:hasNarrowSynonym>
         <rdfs:label>Geometric distortion correction</rdfs:label>
     </owl:Class>
     
@@ -2071,6 +2225,8 @@ Which of these should be the top concept, and which sub-concepts, and which narr
     <!-- http://edamontology.org/operation__R7MFwdgojfmkZ07yWbdcda0 -->
 
     <owl:Class rdf:about="http://edamontology.org/operation__R7MFwdgojfmkZ07yWbdcda0">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Image_processing"/>
         <oboInOwl:hasDefinition>Image correction is the removal of aberrations originating from the imaging instrument, lighting, or sample.</oboInOwl:hasDefinition>
         <oboInOwl:hasNarrowSynonym>Instrument aberration correction</oboInOwl:hasNarrowSynonym>
@@ -2084,6 +2240,8 @@ Which of these should be the top concept, and which sub-concepts, and which narr
     <!-- http://edamontology.org/operation__R7luNqmR6DCU2lY6ogLGmCN -->
 
     <owl:Class rdf:about="http://edamontology.org/operation__R7luNqmR6DCU2lY6ogLGmCN">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Image_segmentation"/>
         <rdfs:label>Isolated object segmentation</rdfs:label>
     </owl:Class>
@@ -2093,6 +2251,8 @@ Which of these should be the top concept, and which sub-concepts, and which narr
     <!-- http://edamontology.org/operation__R7qn3VpJyCAPGqdW6ia3h2d -->
 
     <owl:Class rdf:about="http://edamontology.org/operation__R7qn3VpJyCAPGqdW6ia3h2d">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation__R7MFwdgojfmkZ07yWbdcda0"/>
         <oboInOwl:hasRelatedSynonym>Color deconvolution</oboInOwl:hasRelatedSynonym>
         <rdfs:label>Spectral unmixing</rdfs:label>
@@ -2103,6 +2263,8 @@ Which of these should be the top concept, and which sub-concepts, and which narr
     <!-- http://edamontology.org/operation__R8ANfLkuHu47r739AkhxrId -->
 
     <owl:Class rdf:about="http://edamontology.org/operation__R8ANfLkuHu47r739AkhxrId">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Geometrical_transform"/>
         <rdfs:label>Affine</rdfs:label>
     </owl:Class>
@@ -2112,6 +2274,8 @@ Which of these should be the top concept, and which sub-concepts, and which narr
     <!-- http://edamontology.org/operation__R8EfungVXA0oQM2Ac7YY5eu -->
 
     <owl:Class rdf:about="http://edamontology.org/operation__R8EfungVXA0oQM2Ac7YY5eu">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Image_reconstruction"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation__RBNng13hEB0CJD5VzSKqrfB"/>
         <oboInOwl:hasNarrowSynonym>PAINT image reconstruction</oboInOwl:hasNarrowSynonym>
@@ -2127,6 +2291,8 @@ Which of these should be the top concept, and which sub-concepts, and which narr
     <!-- http://edamontology.org/operation__R8V95OnTjs7fCvVXWjaXrh6 -->
 
     <owl:Class rdf:about="http://edamontology.org/operation__R8V95OnTjs7fCvVXWjaXrh6">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Image_reconstruction"/>
         <rdfs:label>Structured illumination reconstruction</rdfs:label>
     </owl:Class>
@@ -2136,6 +2302,8 @@ Which of these should be the top concept, and which sub-concepts, and which narr
     <!-- http://edamontology.org/operation__R9EjejimBB0tmnQRmZt0RhA -->
 
     <owl:Class rdf:about="http://edamontology.org/operation__R9EjejimBB0tmnQRmZt0RhA">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_3443"/>
         <rdfs:label>Object registration</rdfs:label>
     </owl:Class>
@@ -2145,6 +2313,8 @@ Which of these should be the top concept, and which sub-concepts, and which narr
     <!-- http://edamontology.org/operation__R9FvNkpDIaqZQhLVlPsHisj -->
 
     <owl:Class rdf:about="http://edamontology.org/operation__R9FvNkpDIaqZQhLVlPsHisj">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation__RDFFD5jBfUw74a3vJeBAGB1"/>
         <rdfs:label>Synthetic image generation</rdfs:label>
     </owl:Class>
@@ -2154,6 +2324,8 @@ Which of these should be the top concept, and which sub-concepts, and which narr
     <!-- http://edamontology.org/operation__R9Qf06vxvFj2UbAk7pW3IMG -->
 
     <owl:Class rdf:about="http://edamontology.org/operation__R9Qf06vxvFj2UbAk7pW3IMG">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_3443"/>
         <rdfs:label>Filament tracing</rdfs:label>
     </owl:Class>
@@ -2163,6 +2335,8 @@ Which of these should be the top concept, and which sub-concepts, and which narr
     <!-- http://edamontology.org/operation__R9Vc5BV3ZMcLHEL6WEceXbY -->
 
     <owl:Class rdf:about="http://edamontology.org/operation__R9Vc5BV3ZMcLHEL6WEceXbY">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation__RLtOI0poPsYRHzgXbAcr2E"/>
         <oboInOwl:hasExactSynonym>Rigid image registration</oboInOwl:hasExactSynonym>
         <rdfs:label>Rigid registration</rdfs:label>
@@ -2173,6 +2347,8 @@ Which of these should be the top concept, and which sub-concepts, and which narr
     <!-- http://edamontology.org/operation__RBNng13hEB0CJD5VzSKqrfB -->
 
     <owl:Class rdf:about="http://edamontology.org/operation__RBNng13hEB0CJD5VzSKqrfB">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Object_detection"/>
         <rdfs:label>Isolated object detection</rdfs:label>
     </owl:Class>
@@ -2182,6 +2358,8 @@ Which of these should be the top concept, and which sub-concepts, and which narr
     <!-- http://edamontology.org/operation__RBPObKBKIMwjdLygBOlvojW -->
 
     <owl:Class rdf:about="http://edamontology.org/operation__RBPObKBKIMwjdLygBOlvojW">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Image_reconstruction"/>
         <rdfs:label>Selective plane illumination microscopy reconstruction</rdfs:label>
     </owl:Class>
@@ -2191,6 +2369,8 @@ Which of these should be the top concept, and which sub-concepts, and which narr
     <!-- http://edamontology.org/operation__RBUpi1JSczmHQSf8Q8fDzG5 -->
 
     <owl:Class rdf:about="http://edamontology.org/operation__RBUpi1JSczmHQSf8Q8fDzG5">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Image_tracking"/>
         <oboInOwl:hasRelatedSynonym>Scratch assay analysis</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym>Wound healing analysis</oboInOwl:hasRelatedSynonym>
@@ -2202,12 +2382,14 @@ Which of these should be the top concept, and which sub-concepts, and which narr
     <!-- http://edamontology.org/operation__RBYLqCqN4rP7Jy5m5mxpTeM -->
 
     <owl:Class rdf:about="http://edamontology.org/operation__RBYLqCqN4rP7Jy5m5mxpTeM">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Image_processing"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation__RCeFsUcF68YcEyw6iWxw2le"/>
         <oboInOwl:hasRelatedSynonym>FFT</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym>Fast Fourier transform</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym>Wavelet transform</oboInOwl:hasRelatedSynonym>
-        <rdfs:comment>Add Wikipedia links</rdfs:comment>
+        <rdfs:comment>ToDo: Add Wikipedia links</rdfs:comment>
         <rdfs:label>Frequency analysis</rdfs:label>
     </owl:Class>
     
@@ -2216,6 +2398,8 @@ Which of these should be the top concept, and which sub-concepts, and which narr
     <!-- http://edamontology.org/operation__RBh3vNecu5XlIPh3kbMM4Cq -->
 
     <owl:Class rdf:about="http://edamontology.org/operation__RBh3vNecu5XlIPh3kbMM4Cq">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation__R7MFwdgojfmkZ07yWbdcda0"/>
         <rdfs:label>Drift correction</rdfs:label>
     </owl:Class>
@@ -2225,6 +2409,8 @@ Which of these should be the top concept, and which sub-concepts, and which narr
     <!-- http://edamontology.org/operation__RCPVGO34XrwrJasQ5yWBg9k -->
 
     <owl:Class rdf:about="http://edamontology.org/operation__RCPVGO34XrwrJasQ5yWBg9k">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Image_registration"/>
         <oboInOwl:hasNarrowSynonym>Elastic registration</oboInOwl:hasNarrowSynonym>
         <rdfs:label>Deformable registration</rdfs:label>
@@ -2235,6 +2421,9 @@ Which of these should be the top concept, and which sub-concepts, and which narr
     <!-- http://edamontology.org/operation__RCeFsUcF68YcEyw6iWxw2le -->
 
     <owl:Class rdf:about="http://edamontology.org/operation__RCeFsUcF68YcEyw6iWxw2le">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
+        <hide_in_subset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_0004"/>
         <rdfs:label>Analysis</rdfs:label>
     </owl:Class>
@@ -2244,6 +2433,8 @@ Which of these should be the top concept, and which sub-concepts, and which narr
     <!-- http://edamontology.org/operation__RCi5QWhY2hXnO46smg6bHRQ -->
 
     <owl:Class rdf:about="http://edamontology.org/operation__RCi5QWhY2hXnO46smg6bHRQ">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation__R7MFwdgojfmkZ07yWbdcda0"/>
         <rdfs:comment>multiplicative</rdfs:comment>
         <rdfs:label>Detector gain correction</rdfs:label>
@@ -2254,6 +2445,8 @@ Which of these should be the top concept, and which sub-concepts, and which narr
     <!-- http://edamontology.org/operation__RDFFD5jBfUw74a3vJeBAGB1 -->
 
     <owl:Class rdf:about="http://edamontology.org/operation__RDFFD5jBfUw74a3vJeBAGB1">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_3429"/>
         <rdfs:label>Image generation</rdfs:label>
     </owl:Class>
@@ -2263,6 +2456,8 @@ Which of these should be the top concept, and which sub-concepts, and which narr
     <!-- http://edamontology.org/operation__RDetoixS3xEu0agR2CebaoB -->
 
     <owl:Class rdf:about="http://edamontology.org/operation__RDetoixS3xEu0agR2CebaoB">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_2423"/>
         <rdfs:label>Pattern recognition</rdfs:label>
     </owl:Class>
@@ -2272,6 +2467,8 @@ Which of these should be the top concept, and which sub-concepts, and which narr
     <!-- http://edamontology.org/operation__RDggamr21qZlMqkQmyOdC7l -->
 
     <owl:Class rdf:about="http://edamontology.org/operation__RDggamr21qZlMqkQmyOdC7l">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Object_detection"/>
         <rdfs:label>Landmark detection</rdfs:label>
     </owl:Class>
@@ -2281,9 +2478,11 @@ Which of these should be the top concept, and which sub-concepts, and which narr
     <!-- http://edamontology.org/operation__RDlueIjODveP3FyOknVAqo5 -->
 
     <owl:Class rdf:about="http://edamontology.org/operation__RDlueIjODveP3FyOknVAqo5">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation__R7MFwdgojfmkZ07yWbdcda0"/>
         <oboInOwl:hasNarrowSynonym>Camera bias correction</oboInOwl:hasNarrowSynonym>
-        <rdfs:comment>additive</rdfs:comment>
+        <rdfs:comment>Additive</rdfs:comment>
         <rdfs:label>Detector bias correction</rdfs:label>
     </owl:Class>
     
@@ -2292,6 +2491,8 @@ Which of these should be the top concept, and which sub-concepts, and which narr
     <!-- http://edamontology.org/operation__RDr8xcZEa4L3mZsslmhhee8 -->
 
     <owl:Class rdf:about="http://edamontology.org/operation__RDr8xcZEa4L3mZsslmhhee8">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation__R7MFwdgojfmkZ07yWbdcda0"/>
         <oboInOwl:hasRelatedSynonym>Channel shift correction</oboInOwl:hasRelatedSynonym>
         <rdfs:label>Chromatic aberration correction</rdfs:label>
@@ -2302,6 +2503,8 @@ Which of these should be the top concept, and which sub-concepts, and which narr
     <!-- http://edamontology.org/operation__RDsrmC9l0bZw9kGJzGMCyY8 -->
 
     <owl:Class rdf:about="http://edamontology.org/operation__RDsrmC9l0bZw9kGJzGMCyY8">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Image_tracking"/>
         <rdfs:label>Isolated object tracking</rdfs:label>
     </owl:Class>
@@ -2311,6 +2514,8 @@ Which of these should be the top concept, and which sub-concepts, and which narr
     <!-- http://edamontology.org/operation__RDyyXyhf1oHK93opXhEnRND -->
 
     <owl:Class rdf:about="http://edamontology.org/operation__RDyyXyhf1oHK93opXhEnRND">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Image_enhancement"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Image_reconstruction"/>
         <oboInOwl:hasExactSynonym>Noise reduction</oboInOwl:hasExactSynonym>
@@ -2322,6 +2527,8 @@ Which of these should be the top concept, and which sub-concepts, and which narr
     <!-- http://edamontology.org/operation__RLtOI0poPsYRHzgXbAcr2E -->
 
     <owl:Class rdf:about="http://edamontology.org/operation__RLtOI0poPsYRHzgXbAcr2E">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Image_registration"/>
         <oboInOwl:hasExactSynonym>Affine image registration</oboInOwl:hasExactSynonym>
         <rdfs:label>Affine registration</rdfs:label>
@@ -2332,6 +2539,8 @@ Which of these should be the top concept, and which sub-concepts, and which narr
     <!-- http://edamontology.org/operation__Rhb4iyLUQWY4HnhPpuqNNI -->
 
     <owl:Class rdf:about="http://edamontology.org/operation__Rhb4iyLUQWY4HnhPpuqNNI">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Image_processing"/>
         <rdfs:label>Image crop</rdfs:label>
     </owl:Class>
@@ -2341,6 +2550,8 @@ Which of these should be the top concept, and which sub-concepts, and which narr
     <!-- http://edamontology.org/operation__RyCFuPLOeGxpcGjYbWcWWD -->
 
     <owl:Class rdf:about="http://edamontology.org/operation__RyCFuPLOeGxpcGjYbWcWWD">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_2990"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_3443"/>
         <rdfs:label>Isolated object classification</rdfs:label>
@@ -2614,6 +2825,7 @@ Which of these should be the top concept, and which sub-concepts, and which narr
     <owl:Class rdf:about="http://edamontology.org/topic__R9BRNdBzbmc9zAnc5qpx5Kp">
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_0003"/>
         <rdfs:label>Sample</rdfs:label>
+		<rdfs:comment>Do we need this?</rdfs:comment>
     </owl:Class>
     
 
