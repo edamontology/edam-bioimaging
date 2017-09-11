@@ -41,7 +41,7 @@
         <oboInOwl:hasSubset>bioimaging &quot;EDAM-bioimaging&quot;</oboInOwl:hasSubset>
         <oboOther:idspace>EDAM http://edamontology.org/ &quot;EDAM relations and concept properties&quot;</oboOther:idspace>
         <dc:format>application/rdf+xml</dc:format>
-        <oboOther:date>2017-09-11T15:25Z</oboOther:date>
+        <oboOther:date>2017-09-11T15:36Z</oboOther:date>
         <oboOther:idspace>EDAM_data http://edamontology.org/data_ &quot;EDAM types of data&quot;</oboOther:idspace>
         <oboInOwl:hasSubset>concept_properties &quot;EDAM concept properties&quot;</oboInOwl:hasSubset>
         <dc:creator>Jon Ison</dc:creator>
@@ -1547,9 +1547,7 @@
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <hide_in_subset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_0337"/>
-        <rdfs:comment>Visualisation vs Plotting vs Image generation
-Should these be merged?
-Which of these should be the top concept, and which sub-concepts, and which narrow synonyms?</rdfs:comment>
+        <rdfs:comment>Visualisation vs Plotting vs Image generation. Should these be merged? Which of these should be the top concept, and which sub-concepts, and which narrow synonyms?</rdfs:comment>
         <rdfs:label>Plotting</rdfs:label>
     </owl:Class>
     
@@ -1928,9 +1926,7 @@ Which of these should be the top concept, and which sub-concepts, and which narr
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_0337"/>
         <oboInOwl:hasExactSynonym>Rendering</oboInOwl:hasExactSynonym>
         <oboInOwl:hasNarrowSynonym>Lookup table</oboInOwl:hasNarrowSynonym>
-        <rdfs:comment>Visualisation vs Plotting vs Image generation
-Should these be merged?
-Which of these should be the top concept, and which sub-concepts, and which narrow synonyms?</rdfs:comment>
+        <rdfs:comment>Visualisation vs Plotting vs Image generation. Should these be merged? Which of these should be the top concept, and which sub-concepts, and which narrow synonyms?</rdfs:comment>
         <rdfs:label>Image visualisation</rdfs:label>
     </owl:Class>
     
