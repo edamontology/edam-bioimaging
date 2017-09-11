@@ -41,7 +41,7 @@
         <oboInOwl:hasSubset>bioimaging &quot;EDAM-bioimaging&quot;</oboInOwl:hasSubset>
         <oboOther:idspace>EDAM http://edamontology.org/ &quot;EDAM relations and concept properties&quot;</oboOther:idspace>
         <dc:format>application/rdf+xml</dc:format>
-        <oboOther:date>2017-09-11T15:36Z</oboOther:date>
+        <oboOther:date>2017-09-11T16:32Z</oboOther:date>
         <oboOther:idspace>EDAM_data http://edamontology.org/data_ &quot;EDAM types of data&quot;</oboOther:idspace>
         <oboInOwl:hasSubset>concept_properties &quot;EDAM concept properties&quot;</oboInOwl:hasSubset>
         <dc:creator>Jon Ison</dc:creator>
@@ -155,7 +155,7 @@
         <oboOther:is_metadata_tag>true</oboOther:is_metadata_tag>
         <rdfs:comment>N.B. that the given concept is either explicitly or implicitly in the declared subset.</rdfs:comment>
         <oboInOwl:inSubset>concept_properties</oboInOwl:inSubset>
-    </owl:AnnotationPropert
+    </owl:AnnotationProperty>
     
 
 
@@ -2821,7 +2821,7 @@
     <owl:Class rdf:about="http://edamontology.org/topic__R9BRNdBzbmc9zAnc5qpx5Kp">
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_0003"/>
         <rdfs:label>Sample</rdfs:label>
-		<rdfs:comment>Do we need this?</rdfs:comment>
+        <rdfs:comment>Do we need this?</rdfs:comment>
     </owl:Class>
     
 
