@@ -41,7 +41,7 @@
         <oboInOwl:hasSubset>bioimaging &quot;EDAM-bioimaging&quot;</oboInOwl:hasSubset>
         <oboOther:idspace>EDAM http://edamontology.org/ &quot;EDAM relations and concept properties&quot;</oboOther:idspace>
         <dc:format>application/rdf+xml</dc:format>
-        <oboOther:date>2017-09-11T15:19Z</oboOther:date>
+        <oboOther:date>2017-09-11T15:25Z</oboOther:date>
         <oboOther:idspace>EDAM_data http://edamontology.org/data_ &quot;EDAM types of data&quot;</oboOther:idspace>
         <oboInOwl:hasSubset>concept_properties &quot;EDAM concept properties&quot;</oboInOwl:hasSubset>
         <dc:creator>Jon Ison</dc:creator>
@@ -1398,7 +1398,7 @@
         <oboInOwl:hasRelatedSynonym>Computational tool</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym>Process</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym>sumo:Function</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:comment>Special cases are: a) An operation that consumes no input (has no input arguments). Such operation is either a constant function, or an operation depending only on the underlying state. b) An operation that may modify the underlying state but has no output. c) The singular-case operation with no input or output, that still may modify the underlying state.</rdfs:comment>
