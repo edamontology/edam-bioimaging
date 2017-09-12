@@ -37,11 +37,11 @@
         <oboInOwl:hasSubset>data &quot;EDAM types of data&quot;</oboInOwl:hasSubset>
         <oboInOwl:hasSubset>relations &quot;EDAM relations&quot;</oboInOwl:hasSubset>
         <oboInOwl:hasSubset>edam &quot;EDAM&quot;</oboInOwl:hasSubset>
-        <oboInOwl:hasSubset>operations &quot;EDAM operations&quot;</oboInOwl:hasSubset>
+        <oboInOwl:hasSubset>operations &quot;EDAM_operation&quot;</oboInOwl:hasSubset>
         <oboInOwl:hasSubset>bioimaging &quot;EDAM-bioimaging&quot;</oboInOwl:hasSubset>
         <oboOther:idspace>EDAM http://edamontology.org/ &quot;EDAM relations and concept properties&quot;</oboOther:idspace>
         <dc:format>application/rdf+xml</dc:format>
-        <oboOther:date>2017-09-11T16:32Z</oboOther:date>
+        <oboOther:date>2017-09-12T08:14Z</oboOther:date>
         <oboOther:idspace>EDAM_data http://edamontology.org/data_ &quot;EDAM types of data&quot;</oboOther:idspace>
         <oboInOwl:hasSubset>concept_properties &quot;EDAM concept properties&quot;</oboInOwl:hasSubset>
         <dc:creator>Jon Ison</dc:creator>
@@ -803,6 +803,7 @@
         <oboInOwl:hasNarrowSynonym>Datum</oboInOwl:hasNarrowSynonym>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#data"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:label>Data</rdfs:label>
         <rdfs:seeAlso>&quot;http://purl.obolibrary.org/obo/IAO_0000027&quot;</rdfs:seeAlso>
         <rdfs:seeAlso>&quot;http://purl.obolibrary.org/obo/IAO_0000030&quot;</rdfs:seeAlso>
@@ -837,6 +838,9 @@
     <!-- http://edamontology.org/data_1D_dataset -->
 
     <owl:Class rdf:about="http://edamontology.org/data_1D_dataset">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#data"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/data_Image_geometry"/>
         <rdfs:label>1D image</rdfs:label>
     </owl:Class>
@@ -846,6 +850,9 @@
     <!-- http://edamontology.org/data_2D_dataset -->
 
     <owl:Class rdf:about="http://edamontology.org/data_2D_dataset">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#data"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/data_Image"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/data_Image_geometry"/>
         <rdfs:label>2D image</rdfs:label>
@@ -856,6 +863,9 @@
     <!-- http://edamontology.org/data_3D_dataset -->
 
     <owl:Class rdf:about="http://edamontology.org/data_3D_dataset">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#data"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/data_Image"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/data_Image_geometry"/>
         <oboInOwl:hasRelatedSynonym>Image stack</oboInOwl:hasRelatedSynonym>
@@ -867,6 +877,9 @@
     <!-- http://edamontology.org/data_4D_dataset -->
 
     <owl:Class rdf:about="http://edamontology.org/data_4D_dataset">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#data"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/data_Image_geometry"/>
         <rdfs:label>nD image</rdfs:label>
     </owl:Class>
@@ -876,6 +889,9 @@
     <!-- http://edamontology.org/data_Colour -->
 
     <owl:Class rdf:about="http://edamontology.org/data_Colour">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#data"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/data__RCDMkOl5gzD23OFsPf6vr4a"/>
         <oboInOwl:hasNarrowSynonym>channel</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasNarrowSynonym>rgb</oboInOwl:hasNarrowSynonym>
@@ -887,6 +903,9 @@
     <!-- http://edamontology.org/data_Greyscale -->
 
     <owl:Class rdf:about="http://edamontology.org/data_Greyscale">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#data"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/data__RCDMkOl5gzD23OFsPf6vr4a"/>
         <rdfs:label>Greyscale</rdfs:label>
     </owl:Class>
@@ -896,6 +915,9 @@
     <!-- http://edamontology.org/data_Image -->
 
     <owl:Class rdf:about="http://edamontology.org/data_Image">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#data"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/data_0006"/>
         <oboInOwl:hasExactSynonym>Image data</oboInOwl:hasExactSynonym>
         <oboInOwl:hasNarrowSynonym>Image set</oboInOwl:hasNarrowSynonym>
@@ -908,6 +930,9 @@
     <!-- http://edamontology.org/data_Image_geometry -->
 
     <owl:Class rdf:about="http://edamontology.org/data_Image_geometry">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#data"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/data__R80aNLt4YY02ByptWQa2yrY"/>
         <rdfs:label>Image data properties</rdfs:label>
     </owl:Class>
@@ -917,6 +942,9 @@
     <!-- http://edamontology.org/data_Image_histogram -->
 
     <owl:Class rdf:about="http://edamontology.org/data_Image_histogram">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#data"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/data_0006"/>
         <rdfs:label>Image histogram</rdfs:label>
     </owl:Class>
@@ -926,6 +954,9 @@
     <!-- http://edamontology.org/data_Intensity -->
 
     <owl:Class rdf:about="http://edamontology.org/data_Intensity">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#data"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/data__RCjZhkavxxifpvdNiasVVCc"/>
         <rdfs:label>Intesity</rdfs:label>
     </owl:Class>
@@ -935,6 +966,9 @@
     <!-- http://edamontology.org/data_Time -->
 
     <owl:Class rdf:about="http://edamontology.org/data_Time">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#data"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/data__R7sy3JByrUsyKaGNYQ1eSQF"/>
         <rdfs:label>Time</rdfs:label>
     </owl:Class>
@@ -944,6 +978,9 @@
     <!-- http://edamontology.org/data_Time-lapse_data -->
 
     <owl:Class rdf:about="http://edamontology.org/data_Time-lapse_data">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#data"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/data__R7sy3JByrUsyKaGNYQ1eSQF"/>
         <rdfs:label>Time-lapse data</rdfs:label>
     </owl:Class>
@@ -953,6 +990,9 @@
     <!-- http://edamontology.org/data_Trajectory -->
 
     <owl:Class rdf:about="http://edamontology.org/data_Trajectory">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#data"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/data__Rj7rpnkJ6SPPwWkQ4x3Wik"/>
         <rdfs:label>Object trajectory</rdfs:label>
     </owl:Class>
@@ -962,6 +1002,9 @@
     <!-- http://edamontology.org/data_Volume -->
 
     <owl:Class rdf:about="http://edamontology.org/data_Volume">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#data"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/data__R7Xr4YLUfGpHoI3FnAzgMnA"/>
         <rdfs:label>Volume</rdfs:label>
     </owl:Class>
@@ -971,6 +1014,9 @@
     <!-- http://edamontology.org/data__R0uFIvsA9tQJYZz8NM3Smk -->
 
     <owl:Class rdf:about="http://edamontology.org/data__R0uFIvsA9tQJYZz8NM3Smk">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#data"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/data_Image"/>
         <rdfs:label>Multi-channel image</rdfs:label>
     </owl:Class>
@@ -980,6 +1026,9 @@
     <!-- http://edamontology.org/data__R7Vdp7H5PzNJiqA7JaEEPrJ -->
 
     <owl:Class rdf:about="http://edamontology.org/data__R7Vdp7H5PzNJiqA7JaEEPrJ">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#data"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/data__RDr5D5pOVdnB8hASL1LG8HH"/>
         <rdfs:label>Image radiometric noise characteristics</rdfs:label>
     </owl:Class>
@@ -989,6 +1038,9 @@
     <!-- http://edamontology.org/data__R7Xr4YLUfGpHoI3FnAzgMnA -->
 
     <owl:Class rdf:about="http://edamontology.org/data__R7Xr4YLUfGpHoI3FnAzgMnA">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#data"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/data__R80aNLt4YY02ByptWQa2yrY"/>
         <rdfs:label>Spatial properties</rdfs:label>
     </owl:Class>
@@ -998,6 +1050,9 @@
     <!-- http://edamontology.org/data__R7sy3JByrUsyKaGNYQ1eSQF -->
 
     <owl:Class rdf:about="http://edamontology.org/data__R7sy3JByrUsyKaGNYQ1eSQF">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#data"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/data__R80aNLt4YY02ByptWQa2yrY"/>
         <rdfs:label>Temporal properties</rdfs:label>
     </owl:Class>
@@ -1007,6 +1062,9 @@
     <!-- http://edamontology.org/data__R80aNLt4YY02ByptWQa2yrY -->
 
     <owl:Class rdf:about="http://edamontology.org/data__R80aNLt4YY02ByptWQa2yrY">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#data"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/data_0006"/>
         <oboInOwl:hasNarrowSynonym>Image metadata</oboInOwl:hasNarrowSynonym>
         <rdfs:label>Image characteristics</rdfs:label>
@@ -1017,6 +1075,9 @@
     <!-- http://edamontology.org/data__R9P4sScuriz9yN8l827hrLo -->
 
     <owl:Class rdf:about="http://edamontology.org/data__R9P4sScuriz9yN8l827hrLo">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#data"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/data__Rj7rpnkJ6SPPwWkQ4x3Wik"/>
         <oboInOwl:hasExactSynonym>Object speed</oboInOwl:hasExactSynonym>
         <rdfs:label>Object velocity</rdfs:label>
@@ -1027,6 +1088,9 @@
     <!-- http://edamontology.org/data__R9yc0jq1eJBgmvEQwMcRSUS -->
 
     <owl:Class rdf:about="http://edamontology.org/data__R9yc0jq1eJBgmvEQwMcRSUS">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#data"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/data__R7Xr4YLUfGpHoI3FnAzgMnA"/>
         <rdfs:label>Spatial image resolution</rdfs:label>
     </owl:Class>
@@ -1036,6 +1100,9 @@
     <!-- http://edamontology.org/data__RCDMkOl5gzD23OFsPf6vr4a -->
 
     <owl:Class rdf:about="http://edamontology.org/data__RCDMkOl5gzD23OFsPf6vr4a">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#data"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/data__R80aNLt4YY02ByptWQa2yrY"/>
         <rdfs:label>Spectral properties</rdfs:label>
     </owl:Class>
@@ -1045,6 +1112,9 @@
     <!-- http://edamontology.org/data__RCMgLYJyn9WJyCc3bA23xT1 -->
 
     <owl:Class rdf:about="http://edamontology.org/data__RCMgLYJyn9WJyCc3bA23xT1">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#data"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/data_Image"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/data_Time-lapse_data"/>
         <oboInOwl:hasExactSynonym>Time-series image</oboInOwl:hasExactSynonym>
@@ -1059,6 +1129,9 @@
     <!-- http://edamontology.org/data__RCOwaNKaK3gFcUhkjBq7aor -->
 
     <owl:Class rdf:about="http://edamontology.org/data__RCOwaNKaK3gFcUhkjBq7aor">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#data"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/data_0006"/>
         <oboInOwl:hasExactSynonym>Image</oboInOwl:hasExactSynonym>
         <rdfs:comment>So far consensus: Primary term Image data, exact synonym Image, meaning image or a set of (related) images (forming e.g. a stack or a time-lapse). No synonyms for stacks and &quot;movies&quot;, these should be specialised concepts.</rdfs:comment>
@@ -1070,6 +1143,9 @@
     <!-- http://edamontology.org/data__RCRp3XI62rYeU9aZHw4yBvj -->
 
     <owl:Class rdf:about="http://edamontology.org/data__RCRp3XI62rYeU9aZHw4yBvj">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#data"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/data_0006"/>
         <rdfs:label>Region properies</rdfs:label>
     </owl:Class>
@@ -1079,6 +1155,9 @@
     <!-- http://edamontology.org/data__RCjZhkavxxifpvdNiasVVCc -->
 
     <owl:Class rdf:about="http://edamontology.org/data__RCjZhkavxxifpvdNiasVVCc">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#data"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/data__R80aNLt4YY02ByptWQa2yrY"/>
         <rdfs:label>Radiometric properties</rdfs:label>
     </owl:Class>
@@ -1088,6 +1167,9 @@
     <!-- http://edamontology.org/data__RDLZjniM2p9bxNi1Md2Vqv3 -->
 
     <owl:Class rdf:about="http://edamontology.org/data__RDLZjniM2p9bxNi1Md2Vqv3">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#data"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/data__RCDMkOl5gzD23OFsPf6vr4a"/>
         <rdfs:label>Spectral image resolution</rdfs:label>
     </owl:Class>
@@ -1097,6 +1179,9 @@
     <!-- http://edamontology.org/data__RDcwcMJia2DgGNXx2JKa8Oc -->
 
     <owl:Class rdf:about="http://edamontology.org/data__RDcwcMJia2DgGNXx2JKa8Oc">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#data"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/data_Image_geometry"/>
         <rdfs:label>Image bit depth</rdfs:label>
     </owl:Class>
@@ -1106,6 +1191,9 @@
     <!-- http://edamontology.org/data__RDr5D5pOVdnB8hASL1LG8HH -->
 
     <owl:Class rdf:about="http://edamontology.org/data__RDr5D5pOVdnB8hASL1LG8HH">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#data"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/data__RCjZhkavxxifpvdNiasVVCc"/>
         <rdfs:label>Image radiometric noise</rdfs:label>
     </owl:Class>
@@ -1115,6 +1203,9 @@
     <!-- http://edamontology.org/data__RDz7WLs6GBWl7rPjqfjKBT0 -->
 
     <owl:Class rdf:about="http://edamontology.org/data__RDz7WLs6GBWl7rPjqfjKBT0">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#data"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/data__RCRp3XI62rYeU9aZHw4yBvj"/>
         <rdfs:label>Region texture</rdfs:label>
     </owl:Class>
@@ -1124,6 +1215,9 @@
     <!-- http://edamontology.org/data__RPhipiN98zgq3wqXj4ESkT -->
 
     <owl:Class rdf:about="http://edamontology.org/data__RPhipiN98zgq3wqXj4ESkT">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#data"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/data__Rj7rpnkJ6SPPwWkQ4x3Wik"/>
         <rdfs:label>Object shape</rdfs:label>
     </owl:Class>
@@ -1133,6 +1227,9 @@
     <!-- http://edamontology.org/data__Rj7rpnkJ6SPPwWkQ4x3Wik -->
 
     <owl:Class rdf:about="http://edamontology.org/data__Rj7rpnkJ6SPPwWkQ4x3Wik">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#data"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/data_0006"/>
         <oboInOwl:hasBroadSynonym>Object data</oboInOwl:hasBroadSynonym>
         <oboInOwl:hasExactSynonym>Object feature</oboInOwl:hasExactSynonym>
@@ -1145,6 +1242,9 @@
     <!-- http://edamontology.org/format_1915 -->
 
     <owl:Class rdf:about="http://edamontology.org/format_1915">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#formats"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <owl:disjointWith rdf:resource="http://edamontology.org/operation_0004"/>
         <owl:disjointWith rdf:resource="http://edamontology.org/topic_0003"/>
         <oboInOwl:hasBroadSynonym>Data model</oboInOwl:hasBroadSynonym>
@@ -1169,6 +1269,9 @@
     <!-- http://edamontology.org/format_Binary_format -->
 
     <owl:Class rdf:about="http://edamontology.org/format_Binary_format">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#formats"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/format_1915"/>
         <rdfs:label>Binary format</rdfs:label>
     </owl:Class>
@@ -1178,6 +1281,9 @@
     <!-- http://edamontology.org/format_avi -->
 
     <owl:Class rdf:about="http://edamontology.org/format_avi">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#formats"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/format_1915"/>
         <oboInOwl:hasExactSynonym>.avi</oboInOwl:hasExactSynonym>
         <rdfs:label>avi</rdfs:label>
@@ -1188,6 +1294,9 @@
     <!-- http://edamontology.org/format_csv -->
 
     <owl:Class rdf:about="http://edamontology.org/format_csv">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#formats"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/format_1915"/>
         <rdfs:label>csv</rdfs:label>
     </owl:Class>
@@ -1197,6 +1306,9 @@
     <!-- http://edamontology.org/format_dat -->
 
     <owl:Class rdf:about="http://edamontology.org/format_dat">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#formats"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/format_1915"/>
         <oboInOwl:hasExactSynonym>.dat</oboInOwl:hasExactSynonym>
         <rdfs:label>dat</rdfs:label>
@@ -1207,6 +1319,9 @@
     <!-- http://edamontology.org/format_hdf5 -->
 
     <owl:Class rdf:about="http://edamontology.org/format_hdf5">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#formats"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/format_1915"/>
         <rdfs:label>hdf5</rdfs:label>
     </owl:Class>
@@ -1216,6 +1331,9 @@
     <!-- http://edamontology.org/format_hdr -->
 
     <owl:Class rdf:about="http://edamontology.org/format_hdr">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#formats"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/format_1915"/>
         <oboInOwl:hasExactSynonym>.hdr</oboInOwl:hasExactSynonym>
         <rdfs:label>hdr</rdfs:label>
@@ -1226,6 +1344,9 @@
     <!-- http://edamontology.org/format_img -->
 
     <owl:Class rdf:about="http://edamontology.org/format_img">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#formats"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/format_1915"/>
         <oboInOwl:hasExactSynonym>.img</oboInOwl:hasExactSynonym>
         <rdfs:label>img</rdfs:label>
@@ -1236,6 +1357,9 @@
     <!-- http://edamontology.org/format_ims -->
 
     <owl:Class rdf:about="http://edamontology.org/format_ims">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#formats"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/format_1915"/>
         <oboInOwl:hasExactSynonym>.ims</oboInOwl:hasExactSynonym>
         <rdfs:label>ims</rdfs:label>
@@ -1246,6 +1370,9 @@
     <!-- http://edamontology.org/format_ism -->
 
     <owl:Class rdf:about="http://edamontology.org/format_ism">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#formats"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/format_1915"/>
         <rdfs:label>ism</rdfs:label>
     </owl:Class>
@@ -1255,6 +1382,9 @@
     <!-- http://edamontology.org/format_jpg -->
 
     <owl:Class rdf:about="http://edamontology.org/format_jpg">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#formats"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/format_1915"/>
         <oboInOwl:hasExactSynonym>.jpg</oboInOwl:hasExactSynonym>
         <rdfs:label>jpg</rdfs:label>
@@ -1265,6 +1395,9 @@
     <!-- http://edamontology.org/format_mpeg -->
 
     <owl:Class rdf:about="http://edamontology.org/format_mpeg">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#formats"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/format_1915"/>
         <rdfs:label>mpeg</rdfs:label>
     </owl:Class>
@@ -1274,6 +1407,9 @@
     <!-- http://edamontology.org/format_raw -->
 
     <owl:Class rdf:about="http://edamontology.org/format_raw">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#formats"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/format_1915"/>
         <oboInOwl:hasExactSynonym>.raw</oboInOwl:hasExactSynonym>
         <rdfs:label>raw</rdfs:label>
@@ -1284,6 +1420,9 @@
     <!-- http://edamontology.org/format_roi -->
 
     <owl:Class rdf:about="http://edamontology.org/format_roi">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#formats"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/data_0006"/>
         <oboInOwl:hasExactSynonym>ROI</oboInOwl:hasExactSynonym>
         <rdfs:label>Region of interest</rdfs:label>
@@ -1294,6 +1433,9 @@
     <!-- http://edamontology.org/format_scn -->
 
     <owl:Class rdf:about="http://edamontology.org/format_scn">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#formats"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/format_1915"/>
         <oboInOwl:hasExactSynonym>.scn</oboInOwl:hasExactSynonym>
         <rdfs:label>scn</rdfs:label>
@@ -1304,6 +1446,9 @@
     <!-- http://edamontology.org/format_sm2 -->
 
     <owl:Class rdf:about="http://edamontology.org/format_sm2">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#formats"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/format_1915"/>
         <oboInOwl:hasExactSynonym>.sm2</oboInOwl:hasExactSynonym>
         <rdfs:label>sm2</rdfs:label>
@@ -1314,6 +1459,9 @@
     <!-- http://edamontology.org/format_sm3 -->
 
     <owl:Class rdf:about="http://edamontology.org/format_sm3">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#formats"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/format_1915"/>
         <oboInOwl:hasExactSynonym>.sm3</oboInOwl:hasExactSynonym>
         <rdfs:label>sm3</rdfs:label>
@@ -1324,6 +1472,9 @@
     <!-- http://edamontology.org/format_stk -->
 
     <owl:Class rdf:about="http://edamontology.org/format_stk">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#formats"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/format_1915"/>
         <oboInOwl:hasExactSynonym>.stk</oboInOwl:hasExactSynonym>
         <rdfs:label>stk</rdfs:label>
@@ -1334,6 +1485,9 @@
     <!-- http://edamontology.org/format_tif -->
 
     <owl:Class rdf:about="http://edamontology.org/format_tif">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#formats"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/format_1915"/>
         <rdfs:label>tif</rdfs:label>
     </owl:Class>
@@ -1343,6 +1497,9 @@
     <!-- http://edamontology.org/format_tiff -->
 
     <owl:Class rdf:about="http://edamontology.org/format_tiff">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#formats"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/format_1915"/>
         <oboInOwl:hasExactSynonym>.tiff</oboInOwl:hasExactSynonym>
         <rdfs:label>tiff</rdfs:label>
@@ -1353,6 +1510,9 @@
     <!-- http://edamontology.org/format_txt -->
 
     <owl:Class rdf:about="http://edamontology.org/format_txt">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#formats"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/format_1915"/>
         <oboInOwl:hasExactSynonym>.txt</oboInOwl:hasExactSynonym>
         <rdfs:label>txt</rdfs:label>
@@ -1363,6 +1523,9 @@
     <!-- http://edamontology.org/format_vsi -->
 
     <owl:Class rdf:about="http://edamontology.org/format_vsi">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#formats"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/format_1915"/>
         <oboInOwl:hasExactSynonym>.vsi</oboInOwl:hasExactSynonym>
         <rdfs:label>vsi</rdfs:label>
@@ -1373,6 +1536,9 @@
     <!-- http://edamontology.org/format_xml -->
 
     <owl:Class rdf:about="http://edamontology.org/format_xml">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#formats"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/format_1915"/>
         <oboInOwl:hasExactSynonym>.xml</oboInOwl:hasExactSynonym>
         <rdfs:label>xml</rdfs:label>
@@ -1447,7 +1613,7 @@
 
     <owl:Class rdf:about="http://edamontology.org/operation_0337">
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
         <hide_in_subset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_0004"/>
         <oboInOwl:hasNarrowSynonym>Plotting</oboInOwl:hasNarrowSynonym>
@@ -1460,7 +1626,7 @@
 
     <owl:Class rdf:about="http://edamontology.org/operation_2409">
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
         <hide_in_subset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_0004"/>
         <rdfs:label>Data handling</rdfs:label>
@@ -1472,7 +1638,7 @@
 
     <owl:Class rdf:about="http://edamontology.org/operation_2423">
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
         <hide_in_subset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_0004"/>
         <rdfs:label>Prediction and recognition</rdfs:label>
@@ -1484,7 +1650,7 @@
 
     <owl:Class rdf:about="http://edamontology.org/operation_2928">
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
         <hide_in_subset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_0004"/>
         <rdfs:label>Alignment construction</rdfs:label>
@@ -1496,7 +1662,7 @@
 
     <owl:Class rdf:about="http://edamontology.org/operation_2990">
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
         <hide_in_subset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_0004"/>
         <rdfs:label>Classification</rdfs:label>
@@ -1508,7 +1674,7 @@
 
     <owl:Class rdf:about="http://edamontology.org/operation_3096">
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
         <hide_in_subset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_2409"/>
         <rdfs:label>Editing</rdfs:label>
@@ -1520,7 +1686,7 @@
 
     <owl:Class rdf:about="http://edamontology.org/operation_3429">
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
         <hide_in_subset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_0004"/>
         <rdfs:label>Generation</rdfs:label>
@@ -1532,7 +1698,7 @@
 
     <owl:Class rdf:about="http://edamontology.org/operation_3434">
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
         <hide_in_subset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_0004"/>
         <rdfs:label>Conversion</rdfs:label>
@@ -1544,7 +1710,7 @@
 
     <owl:Class rdf:about="http://edamontology.org/operation_3441">
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
         <hide_in_subset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_0337"/>
         <rdfs:comment>Visualisation vs Plotting vs Image generation. Should these be merged? Which of these should be the top concept, and which sub-concepts, and which narrow synonyms?</rdfs:comment>
@@ -1557,6 +1723,7 @@
 
     <owl:Class rdf:about="http://edamontology.org/operation_3443">
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation__RCeFsUcF68YcEyw6iWxw2le"/>
         <oboInOwl:hasNarrowSynonym>General image analysis</oboInOwl:hasNarrowSynonym>
@@ -1569,6 +1736,7 @@
 
     <owl:Class rdf:about="http://edamontology.org/operation_Active_contours">
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Image_segmentation"/>
         <rdfs:comment>ToDo: relation of this to &quot;Contours&quot; ?</rdfs:comment>
@@ -1581,6 +1749,7 @@
 
     <owl:Class rdf:about="http://edamontology.org/operation_Adaptative_thresholding">
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Image_segmentation"/>
         <rdfs:label>Adaptative thresholding</rdfs:label>
@@ -1592,6 +1761,7 @@
 
     <owl:Class rdf:about="http://edamontology.org/operation_Anaglyph">
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Image_visualisation"/>
         <rdfs:label>Anaglyph</rdfs:label>
@@ -1603,6 +1773,7 @@
 
     <owl:Class rdf:about="http://edamontology.org/operation_Cell_counting">
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_3443"/>
         <rdfs:label>Object counting</rdfs:label>
@@ -1614,6 +1785,7 @@
 
     <owl:Class rdf:about="http://edamontology.org/operation_Cell_segmentation">
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Image_segmentation"/>
         <rdfs:label>Cell segmentation</rdfs:label>
@@ -1625,6 +1797,7 @@
 
     <owl:Class rdf:about="http://edamontology.org/operation_Cell_tracking">
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation__RDsrmC9l0bZw9kGJzGMCyY8"/>
         <rdfs:label>Cell tracking</rdfs:label>
@@ -1636,6 +1809,7 @@
 
     <owl:Class rdf:about="http://edamontology.org/operation_Closing">
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Morphological_operations"/>
         <rdfs:label>Closing</rdfs:label>
@@ -1647,6 +1821,7 @@
 
     <owl:Class rdf:about="http://edamontology.org/operation_Contours">
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Image_segmentation"/>
         <oboInOwl:hasExactSynonym>Contours</oboInOwl:hasExactSynonym>
@@ -1659,6 +1834,7 @@
 
     <owl:Class rdf:about="http://edamontology.org/operation_Dilation">
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Morphological_operations"/>
         <rdfs:label>Dilatation</rdfs:label>
@@ -1670,6 +1846,7 @@
 
     <owl:Class rdf:about="http://edamontology.org/operation_Distance_transform">
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Morphological_operations"/>
         <rdfs:label>Distance transform</rdfs:label>
@@ -1681,6 +1858,7 @@
 
     <owl:Class rdf:about="http://edamontology.org/operation_Edge_detection">
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Image_enhancement"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Image_segmentation"/>
@@ -1694,6 +1872,7 @@
 
     <owl:Class rdf:about="http://edamontology.org/operation_Erosion">
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Morphological_operations"/>
         <rdfs:label>Erosion</rdfs:label>
@@ -1705,6 +1884,7 @@
 
     <owl:Class rdf:about="http://edamontology.org/operation_Feature_extraction">
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_3443"/>
         <oboInOwl:hasExactSynonym>Feature detection</oboInOwl:hasExactSynonym>
@@ -1719,6 +1899,7 @@
 
     <owl:Class rdf:about="http://edamontology.org/operation_Geometrical_transform">
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Image_processing"/>
         <rdfs:label>Geometrical transform</rdfs:label>
@@ -1730,6 +1911,7 @@
 
     <owl:Class rdf:about="http://edamontology.org/operation_Homogeneity">
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Feature_extraction"/>
         <rdfs:label>Homogeneity</rdfs:label>
@@ -1741,6 +1923,7 @@
 
     <owl:Class rdf:about="http://edamontology.org/operation_Illumination_correction">
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation__R7MFwdgojfmkZ07yWbdcda0"/>
         <oboInOwl:hasExactSynonym>Flat field correction</oboInOwl:hasExactSynonym>
@@ -1753,7 +1936,7 @@
 
     <owl:Class rdf:about="http://edamontology.org/operation_Image_classification">
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_2990"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_3443"/>
@@ -1769,6 +1952,7 @@
 
     <owl:Class rdf:about="http://edamontology.org/operation_Image_colocalization">
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_3443"/>
         <oboInOwl:hasExactSynonym>Image colocalisation</oboInOwl:hasExactSynonym>
@@ -1782,6 +1966,7 @@
 
     <owl:Class rdf:about="http://edamontology.org/operation_Image_deconvolution">
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Image_reconstruction"/>
         <rdfs:label>Image deconvolution</rdfs:label>
@@ -1793,6 +1978,7 @@
 
     <owl:Class rdf:about="http://edamontology.org/operation_Image_enhancement">
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Image_processing"/>
         <oboInOwl:hasNarrowSynonym>Image filtering</oboInOwl:hasNarrowSynonym>
@@ -1807,6 +1993,7 @@
 
     <owl:Class rdf:about="http://edamontology.org/operation_Image_measurement">
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Feature_extraction"/>
         <rdfs:label>Image measurement</rdfs:label>
@@ -1818,6 +2005,7 @@
 
     <owl:Class rdf:about="http://edamontology.org/operation_Image_processing">
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_0004"/>
         <oboInOwl:hasNarrowSynonym>Image postprocessing</oboInOwl:hasNarrowSynonym>
@@ -1831,6 +2019,7 @@
 
     <owl:Class rdf:about="http://edamontology.org/operation_Image_reconstruction">
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Image_processing"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation__RDFFD5jBfUw74a3vJeBAGB1"/>
@@ -1845,6 +2034,7 @@
 
     <owl:Class rdf:about="http://edamontology.org/operation_Image_registration">
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_2928"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Image_processing"/>
@@ -1858,6 +2048,7 @@
 
     <owl:Class rdf:about="http://edamontology.org/operation_Image_segmentation">
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_3443"/>
         <oboInOwl:hasNarrowSynonym>Interactive segmentation</oboInOwl:hasNarrowSynonym>
@@ -1871,6 +2062,7 @@
 
     <owl:Class rdf:about="http://edamontology.org/operation_Image_smoothing">
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Image_enhancement"/>
         <oboInOwl:hasNarrowSynonym>Gaussian blurring</oboInOwl:hasNarrowSynonym>
@@ -1886,6 +2078,7 @@
 
     <owl:Class rdf:about="http://edamontology.org/operation_Image_stitching">
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Image_reconstruction"/>
         <rdfs:label>Image stitching</rdfs:label>
@@ -1897,6 +2090,7 @@
 
     <owl:Class rdf:about="http://edamontology.org/operation_Image_thresholding">
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Image_segmentation"/>
         <oboInOwl:hasExactSynonym>Thresholding</oboInOwl:hasExactSynonym>
@@ -1910,6 +2104,7 @@
 
     <owl:Class rdf:about="http://edamontology.org/operation_Image_tracking">
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_3443"/>
         <oboInOwl:hasExactSynonym>Tracking</oboInOwl:hasExactSynonym>
@@ -1922,6 +2117,7 @@
 
     <owl:Class rdf:about="http://edamontology.org/operation_Image_visualisation">
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_0337"/>
         <oboInOwl:hasExactSynonym>Rendering</oboInOwl:hasExactSynonym>
@@ -1936,6 +2132,7 @@
 
     <owl:Class rdf:about="http://edamontology.org/operation_Interactive_segmentation">
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Image_segmentation"/>
         <rdfs:label>Interactive segmentation</rdfs:label>
@@ -1947,6 +2144,7 @@
 
     <owl:Class rdf:about="http://edamontology.org/operation_Linear_transformation">
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation__R8ANfLkuHu47r739AkhxrId"/>
         <rdfs:label>Linear transformation</rdfs:label>
@@ -1958,6 +2156,7 @@
 
     <owl:Class rdf:about="http://edamontology.org/operation_Local_thresholding">
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Image_segmentation"/>
         <rdfs:label>Local thresholding</rdfs:label>
@@ -1969,6 +2168,7 @@
 
     <owl:Class rdf:about="http://edamontology.org/operation_Montage">
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Image_visualisation"/>
         <rdfs:label>Montage</rdfs:label>
@@ -1980,6 +2180,7 @@
 
     <owl:Class rdf:about="http://edamontology.org/operation_Morphological_operations">
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Image_processing"/>
         <oboInOwl:hasExactSynonym>Morphological image processing</oboInOwl:hasExactSynonym>
@@ -1992,6 +2193,7 @@
 
     <owl:Class rdf:about="http://edamontology.org/operation_Neuron_image_analysis">
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_3443"/>
         <rdfs:label>Neuron image analysis</rdfs:label>
@@ -2003,6 +2205,7 @@
 
     <owl:Class rdf:about="http://edamontology.org/operation_Object_detection">
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_3443"/>
         <rdfs:label>Object detection</rdfs:label>
@@ -2014,6 +2217,7 @@
 
     <owl:Class rdf:about="http://edamontology.org/operation_Opening">
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Morphological_operations"/>
         <rdfs:label>Opening</rdfs:label>
@@ -2025,6 +2229,7 @@
 
     <owl:Class rdf:about="http://edamontology.org/operation_Optical_flow_analysis">
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_3443"/>
         <rdfs:label>Optical flow analysis</rdfs:label>
@@ -2036,6 +2241,7 @@
 
     <owl:Class rdf:about="http://edamontology.org/operation_Overlay">
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Image_visualisation"/>
         <rdfs:label>Overlay</rdfs:label>
@@ -2047,6 +2253,7 @@
 
     <owl:Class rdf:about="http://edamontology.org/operation_Particle_extraction">
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Feature_extraction"/>
         <rdfs:label>Particle extraction</rdfs:label>
@@ -2058,6 +2265,7 @@
 
     <owl:Class rdf:about="http://edamontology.org/operation_Particle_tracking">
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation__RDsrmC9l0bZw9kGJzGMCyY8"/>
         <rdfs:label>Particle tracking</rdfs:label>
@@ -2069,6 +2277,7 @@
 
     <owl:Class rdf:about="http://edamontology.org/operation_Pixel_classification">
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_2990"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_3443"/>
@@ -2082,6 +2291,7 @@
 
     <owl:Class rdf:about="http://edamontology.org/operation_Projection">
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Image_reconstruction"/>
         <oboInOwl:hasExactSynonym>Maximum projection</oboInOwl:hasExactSynonym>
@@ -2097,6 +2307,7 @@
 
     <owl:Class rdf:about="http://edamontology.org/operation_Rotation">
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation__R8ANfLkuHu47r739AkhxrId"/>
         <rdfs:label>Rotation</rdfs:label>
@@ -2108,6 +2319,7 @@
 
     <owl:Class rdf:about="http://edamontology.org/operation_Shape_features">
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Feature_extraction"/>
         <rdfs:label>Shape features</rdfs:label>
@@ -2119,6 +2331,7 @@
 
     <owl:Class rdf:about="http://edamontology.org/operation_Skeletonization">
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Morphological_operations"/>
         <oboInOwl:hasNarrowSynonym>Medial axis</oboInOwl:hasNarrowSynonym>
@@ -2131,6 +2344,7 @@
 
     <owl:Class rdf:about="http://edamontology.org/operation_Spot_extraction">
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Feature_extraction"/>
         <oboInOwl:hasExactSynonym>Spot detection</oboInOwl:hasExactSynonym>
@@ -2143,6 +2357,7 @@
 
     <owl:Class rdf:about="http://edamontology.org/operation_Texture_extraction">
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Feature_extraction"/>
         <oboInOwl:hasNarrowSynonym>Inverse Difference Moment</oboInOwl:hasNarrowSynonym>
@@ -2155,6 +2370,7 @@
 
     <owl:Class rdf:about="http://edamontology.org/operation_Texture_features">
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Feature_extraction"/>
         <rdfs:label>Texture features</rdfs:label>
@@ -2166,6 +2382,7 @@
 
     <owl:Class rdf:about="http://edamontology.org/operation_Volume_rendering">
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Image_visualisation"/>
         <rdfs:label>Volume rendering</rdfs:label>
@@ -2177,6 +2394,7 @@
 
     <owl:Class rdf:about="http://edamontology.org/operation_Warping">
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Geometrical_transform"/>
         <rdfs:label>Warping</rdfs:label>
@@ -2188,6 +2406,7 @@
 
     <owl:Class rdf:about="http://edamontology.org/operation_Watershed">
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Image_segmentation"/>
         <rdfs:label>Watershed</rdfs:label>
@@ -2199,6 +2418,7 @@
 
     <owl:Class rdf:about="http://edamontology.org/operation__R1NVO6hpWWcs99UiEFiOfK">
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Image_reconstruction"/>
         <rdfs:label>Tomography reconstruction</rdfs:label>
@@ -2210,6 +2430,7 @@
 
     <owl:Class rdf:about="http://edamontology.org/operation__R3BGvVm77d5vFMF6f28ZiW">
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation__R7MFwdgojfmkZ07yWbdcda0"/>
         <oboInOwl:hasNarrowSynonym>Lens distortion correction</oboInOwl:hasNarrowSynonym>
@@ -2222,6 +2443,7 @@
 
     <owl:Class rdf:about="http://edamontology.org/operation__R7MFwdgojfmkZ07yWbdcda0">
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Image_processing"/>
         <oboInOwl:hasDefinition>Image correction is the removal of aberrations originating from the imaging instrument, lighting, or sample.</oboInOwl:hasDefinition>
@@ -2237,6 +2459,7 @@
 
     <owl:Class rdf:about="http://edamontology.org/operation__R7luNqmR6DCU2lY6ogLGmCN">
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Image_segmentation"/>
         <rdfs:label>Isolated object segmentation</rdfs:label>
@@ -2248,6 +2471,7 @@
 
     <owl:Class rdf:about="http://edamontology.org/operation__R7qn3VpJyCAPGqdW6ia3h2d">
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation__R7MFwdgojfmkZ07yWbdcda0"/>
         <oboInOwl:hasRelatedSynonym>Color deconvolution</oboInOwl:hasRelatedSynonym>
@@ -2260,6 +2484,7 @@
 
     <owl:Class rdf:about="http://edamontology.org/operation__R8ANfLkuHu47r739AkhxrId">
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Geometrical_transform"/>
         <rdfs:label>Affine</rdfs:label>
@@ -2271,6 +2496,7 @@
 
     <owl:Class rdf:about="http://edamontology.org/operation__R8EfungVXA0oQM2Ac7YY5eu">
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Image_reconstruction"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation__RBNng13hEB0CJD5VzSKqrfB"/>
@@ -2288,6 +2514,7 @@
 
     <owl:Class rdf:about="http://edamontology.org/operation__R8V95OnTjs7fCvVXWjaXrh6">
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Image_reconstruction"/>
         <rdfs:label>Structured illumination reconstruction</rdfs:label>
@@ -2299,6 +2526,7 @@
 
     <owl:Class rdf:about="http://edamontology.org/operation__R9EjejimBB0tmnQRmZt0RhA">
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_3443"/>
         <rdfs:label>Object registration</rdfs:label>
@@ -2310,6 +2538,7 @@
 
     <owl:Class rdf:about="http://edamontology.org/operation__R9FvNkpDIaqZQhLVlPsHisj">
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation__RDFFD5jBfUw74a3vJeBAGB1"/>
         <rdfs:label>Synthetic image generation</rdfs:label>
@@ -2321,6 +2550,7 @@
 
     <owl:Class rdf:about="http://edamontology.org/operation__R9Qf06vxvFj2UbAk7pW3IMG">
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_3443"/>
         <rdfs:label>Filament tracing</rdfs:label>
@@ -2332,6 +2562,7 @@
 
     <owl:Class rdf:about="http://edamontology.org/operation__R9Vc5BV3ZMcLHEL6WEceXbY">
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation__RLtOI0poPsYRHzgXbAcr2E"/>
         <oboInOwl:hasExactSynonym>Rigid image registration</oboInOwl:hasExactSynonym>
@@ -2344,6 +2575,7 @@
 
     <owl:Class rdf:about="http://edamontology.org/operation__RBNng13hEB0CJD5VzSKqrfB">
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Object_detection"/>
         <rdfs:label>Isolated object detection</rdfs:label>
@@ -2355,6 +2587,7 @@
 
     <owl:Class rdf:about="http://edamontology.org/operation__RBPObKBKIMwjdLygBOlvojW">
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Image_reconstruction"/>
         <rdfs:label>Selective plane illumination microscopy reconstruction</rdfs:label>
@@ -2366,6 +2599,7 @@
 
     <owl:Class rdf:about="http://edamontology.org/operation__RBUpi1JSczmHQSf8Q8fDzG5">
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Image_tracking"/>
         <oboInOwl:hasRelatedSynonym>Scratch assay analysis</oboInOwl:hasRelatedSynonym>
@@ -2379,6 +2613,7 @@
 
     <owl:Class rdf:about="http://edamontology.org/operation__RBYLqCqN4rP7Jy5m5mxpTeM">
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Image_processing"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation__RCeFsUcF68YcEyw6iWxw2le"/>
@@ -2395,6 +2630,7 @@
 
     <owl:Class rdf:about="http://edamontology.org/operation__RBh3vNecu5XlIPh3kbMM4Cq">
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation__R7MFwdgojfmkZ07yWbdcda0"/>
         <rdfs:label>Drift correction</rdfs:label>
@@ -2406,6 +2642,7 @@
 
     <owl:Class rdf:about="http://edamontology.org/operation__RCPVGO34XrwrJasQ5yWBg9k">
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Image_registration"/>
         <oboInOwl:hasNarrowSynonym>Elastic registration</oboInOwl:hasNarrowSynonym>
@@ -2418,6 +2655,7 @@
 
     <owl:Class rdf:about="http://edamontology.org/operation__RCeFsUcF68YcEyw6iWxw2le">
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <hide_in_subset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_0004"/>
@@ -2430,6 +2668,7 @@
 
     <owl:Class rdf:about="http://edamontology.org/operation__RCi5QWhY2hXnO46smg6bHRQ">
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation__R7MFwdgojfmkZ07yWbdcda0"/>
         <rdfs:comment>multiplicative</rdfs:comment>
@@ -2442,6 +2681,7 @@
 
     <owl:Class rdf:about="http://edamontology.org/operation__RDFFD5jBfUw74a3vJeBAGB1">
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_3429"/>
         <rdfs:label>Image generation</rdfs:label>
@@ -2453,6 +2693,7 @@
 
     <owl:Class rdf:about="http://edamontology.org/operation__RDetoixS3xEu0agR2CebaoB">
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_2423"/>
         <rdfs:label>Pattern recognition</rdfs:label>
@@ -2464,6 +2705,7 @@
 
     <owl:Class rdf:about="http://edamontology.org/operation__RDggamr21qZlMqkQmyOdC7l">
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Object_detection"/>
         <rdfs:label>Landmark detection</rdfs:label>
@@ -2475,6 +2717,7 @@
 
     <owl:Class rdf:about="http://edamontology.org/operation__RDlueIjODveP3FyOknVAqo5">
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation__R7MFwdgojfmkZ07yWbdcda0"/>
         <oboInOwl:hasNarrowSynonym>Camera bias correction</oboInOwl:hasNarrowSynonym>
@@ -2488,6 +2731,7 @@
 
     <owl:Class rdf:about="http://edamontology.org/operation__RDr8xcZEa4L3mZsslmhhee8">
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation__R7MFwdgojfmkZ07yWbdcda0"/>
         <oboInOwl:hasRelatedSynonym>Channel shift correction</oboInOwl:hasRelatedSynonym>
@@ -2500,6 +2744,7 @@
 
     <owl:Class rdf:about="http://edamontology.org/operation__RDsrmC9l0bZw9kGJzGMCyY8">
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Image_tracking"/>
         <rdfs:label>Isolated object tracking</rdfs:label>
@@ -2511,6 +2756,7 @@
 
     <owl:Class rdf:about="http://edamontology.org/operation__RDyyXyhf1oHK93opXhEnRND">
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Image_enhancement"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Image_reconstruction"/>
@@ -2524,6 +2770,7 @@
 
     <owl:Class rdf:about="http://edamontology.org/operation__RLtOI0poPsYRHzgXbAcr2E">
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Image_registration"/>
         <oboInOwl:hasExactSynonym>Affine image registration</oboInOwl:hasExactSynonym>
@@ -2536,6 +2783,7 @@
 
     <owl:Class rdf:about="http://edamontology.org/operation__Rhb4iyLUQWY4HnhPpuqNNI">
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Image_processing"/>
         <rdfs:label>Image crop</rdfs:label>
@@ -2547,6 +2795,7 @@
 
     <owl:Class rdf:about="http://edamontology.org/operation__RyCFuPLOeGxpcGjYbWcWWD">
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_2990"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_3443"/>
@@ -2563,6 +2812,7 @@
         <oboInOwl:hasRelatedSynonym>sumo:FieldOfStudy</oboInOwl:hasRelatedSynonym>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#topics"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:label>Topic</rdfs:label>
         <rdfs:seeAlso>http://bioontology.org/ontologies/ResearchArea.owl#Area_of_Research</rdfs:seeAlso>
         <rdfs:seeAlso>http://onto.eva.mpg.de/ontologies/gfo-bio.owl#Method</rdfs:seeAlso>
@@ -2579,6 +2829,9 @@
     <!-- http://edamontology.org/topic_0593 -->
 
     <owl:Class rdf:about="http://edamontology.org/topic_0593">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#topics"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic__RBfI2XgIsxcfKonPPluKAhK"/>
         <oboInOwl:hasExactSynonym>NMR</oboInOwl:hasExactSynonym>
         <rdfs:label>Nuclear magnetic resonance spectroscopy</rdfs:label>
@@ -2589,6 +2842,9 @@
     <!-- http://edamontology.org/topic_0611 -->
 
     <owl:Class rdf:about="http://edamontology.org/topic_0611">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#topics"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_Microscopy"/>
         <rdfs:label>Electron microscopy</rdfs:label>
     </owl:Class>
@@ -2598,6 +2854,9 @@
     <!-- http://edamontology.org/topic_3382 -->
 
     <owl:Class rdf:about="http://edamontology.org/topic_3382">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#topics"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_0003"/>
         <rdfs:label>Imaging</rdfs:label>
     </owl:Class>
@@ -2607,6 +2866,9 @@
     <!-- http://edamontology.org/topic_3385 -->
 
     <owl:Class rdf:about="http://edamontology.org/topic_3385">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#topics"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_Microscopy"/>
         <oboInOwl:hasNarrowSynonym>Brightfield</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasNarrowSynonym>Fluorescence recovery after photobleaching</oboInOwl:hasNarrowSynonym>
@@ -2619,6 +2881,9 @@
     <!-- http://edamontology.org/topic_3444 -->
 
     <owl:Class rdf:about="http://edamontology.org/topic_3444">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#topics"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_3382"/>
         <oboInOwl:hasExactSynonym>MRI</oboInOwl:hasExactSynonym>
         <rdfs:label>Magnetic resonance imaging</rdfs:label>
@@ -2629,6 +2894,9 @@
     <!-- http://edamontology.org/topic_3452 -->
 
     <owl:Class rdf:about="http://edamontology.org/topic_3452">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#topics"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_3382"/>
         <rdfs:label>Tomography</rdfs:label>
     </owl:Class>
@@ -2638,6 +2906,9 @@
     <!-- http://edamontology.org/topic_3474 -->
 
     <owl:Class rdf:about="http://edamontology.org/topic_3474">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#topics"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_0003"/>
         <rdfs:label>Machine learning</rdfs:label>
     </owl:Class>
@@ -2647,6 +2918,9 @@
     <!-- http://edamontology.org/topic_Digital_histology -->
 
     <owl:Class rdf:about="http://edamontology.org/topic_Digital_histology">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#topics"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_0003"/>
         <rdfs:label>Digital histology</rdfs:label>
     </owl:Class>
@@ -2656,6 +2930,9 @@
     <!-- http://edamontology.org/topic_Fluorescent_microscopy -->
 
     <owl:Class rdf:about="http://edamontology.org/topic_Fluorescent_microscopy">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#topics"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_3385"/>
         <rdfs:label>Fluorescent microscopy</rdfs:label>
     </owl:Class>
@@ -2665,6 +2942,9 @@
     <!-- http://edamontology.org/topic_High_content_screening -->
 
     <owl:Class rdf:about="http://edamontology.org/topic_High_content_screening">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#topics"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_0003"/>
         <oboInOwl:hasExactSynonym>hcs</oboInOwl:hasExactSynonym>
         <rdfs:label>High content screening</rdfs:label>
@@ -2675,6 +2955,9 @@
     <!-- http://edamontology.org/topic_Light-sheet_microscopy -->
 
     <owl:Class rdf:about="http://edamontology.org/topic_Light-sheet_microscopy">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#topics"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic__R7Vn7GbwtqVvGWNAMGdcNW1"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic__RBsSZve5PnQFO3scMDWo9f0"/>
         <oboInOwl:hasNarrowSynonym>Spim</oboInOwl:hasNarrowSynonym>
@@ -2686,6 +2969,9 @@
     <!-- http://edamontology.org/topic_Microscopy -->
 
     <owl:Class rdf:about="http://edamontology.org/topic_Microscopy">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#topics"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_3382"/>
         <oboInOwl:hasNarrowSynonym>Slide scanner</oboInOwl:hasNarrowSynonym>
         <rdfs:label>Microscopy</rdfs:label>
@@ -2696,6 +2982,9 @@
     <!-- http://edamontology.org/topic_Statistics -->
 
     <owl:Class rdf:about="http://edamontology.org/topic_Statistics">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#topics"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_0003"/>
         <rdfs:label>Statistics</rdfs:label>
     </owl:Class>
@@ -2705,6 +2994,9 @@
     <!-- http://edamontology.org/topic_Super-resolution_microscopy -->
 
     <owl:Class rdf:about="http://edamontology.org/topic_Super-resolution_microscopy">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#topics"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_Fluorescent_microscopy"/>
         <oboInOwl:hasNarrowSynonym>Photoactivated localization microscopy</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasNarrowSynonym>palm</oboInOwl:hasNarrowSynonym>
@@ -2716,6 +3008,9 @@
     <!-- http://edamontology.org/topic_Widefield_microscopy -->
 
     <owl:Class rdf:about="http://edamontology.org/topic_Widefield_microscopy">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#topics"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_3385"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic__RBsSZve5PnQFO3scMDWo9f0"/>
         <rdfs:label>Widefield microscopy</rdfs:label>
@@ -2726,6 +3021,9 @@
     <!-- http://edamontology.org/topic__R77vfEkRqjIenYUqhDPvdkM -->
 
     <owl:Class rdf:about="http://edamontology.org/topic__R77vfEkRqjIenYUqhDPvdkM">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#topics"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic__ReQzVVVh0IPyN0c1V5wQVO"/>
         <rdfs:label>Cryo fixation</rdfs:label>
     </owl:Class>
@@ -2735,6 +3033,9 @@
     <!-- http://edamontology.org/topic__R7LElbFkBgKS401YKsVtNck -->
 
     <owl:Class rdf:about="http://edamontology.org/topic__R7LElbFkBgKS401YKsVtNck">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#topics"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_0611"/>
         <rdfs:label>Transmission electron microscopy</rdfs:label>
     </owl:Class>
@@ -2744,6 +3045,9 @@
     <!-- http://edamontology.org/topic__R7Vn7GbwtqVvGWNAMGdcNW1 -->
 
     <owl:Class rdf:about="http://edamontology.org/topic__R7Vn7GbwtqVvGWNAMGdcNW1">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#topics"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_3385"/>
         <rdfs:label>Point-scanning microscopy</rdfs:label>
     </owl:Class>
@@ -2753,6 +3057,9 @@
     <!-- http://edamontology.org/topic__R7WRbf9Y8ySw9QWPwAjzcUa -->
 
     <owl:Class rdf:about="http://edamontology.org/topic__R7WRbf9Y8ySw9QWPwAjzcUa">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#topics"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic__RL4rPCXlIu9uzNrGcbcSNp"/>
         <rdfs:label>In-vitro imaging</rdfs:label>
     </owl:Class>
@@ -2762,6 +3069,9 @@
     <!-- http://edamontology.org/topic__R89wYXZ2735GXdn4m4GOT9n -->
 
     <owl:Class rdf:about="http://edamontology.org/topic__R89wYXZ2735GXdn4m4GOT9n">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#topics"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic__R9P5gEAm1wic4R2PcZ7ZpPA"/>
         <rdfs:label>Dark field microscopy</rdfs:label>
     </owl:Class>
@@ -2771,6 +3081,9 @@
     <!-- http://edamontology.org/topic__R8Ss4wIFt90wZ1yjFLfXyPM -->
 
     <owl:Class rdf:about="http://edamontology.org/topic__R8Ss4wIFt90wZ1yjFLfXyPM">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#topics"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_Microscopy"/>
         <oboInOwl:hasExactSynonym>CLEM</oboInOwl:hasExactSynonym>
         <rdfs:label>Correlative Light and Electron Microscopy</rdfs:label>
@@ -2781,6 +3094,9 @@
     <!-- http://edamontology.org/topic__R8XUtD89JCyeUaaVebe9Mkw -->
 
     <owl:Class rdf:about="http://edamontology.org/topic__R8XUtD89JCyeUaaVebe9Mkw">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#topics"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic__RL4rPCXlIu9uzNrGcbcSNp"/>
         <rdfs:label>In-vivo imaging</rdfs:label>
     </owl:Class>
@@ -2790,6 +3106,9 @@
     <!-- http://edamontology.org/topic__R8nlu8VCuL5nvBFgOaGNHgT -->
 
     <owl:Class rdf:about="http://edamontology.org/topic__R8nlu8VCuL5nvBFgOaGNHgT">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#topics"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic__R9P5gEAm1wic4R2PcZ7ZpPA"/>
         <rdfs:label>Polarized light microscopy</rdfs:label>
     </owl:Class>
@@ -2799,6 +3118,9 @@
     <!-- http://edamontology.org/topic__R8oQpUEjKZjNQCTB4x3JQuJ -->
 
     <owl:Class rdf:about="http://edamontology.org/topic__R8oQpUEjKZjNQCTB4x3JQuJ">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#topics"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_Super-resolution_microscopy"/>
         <rdfs:label>Single molecule localization microscopy</rdfs:label>
     </owl:Class>
@@ -2808,6 +3130,9 @@
     <!-- http://edamontology.org/topic__R96toeNl9iMp8oqv9augU84 -->
 
     <owl:Class rdf:about="http://edamontology.org/topic__R96toeNl9iMp8oqv9augU84">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#topics"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_0003"/>
         <oboInOwl:hasBroadSynonym>3D reconstruction</oboInOwl:hasBroadSynonym>
         <oboInOwl:hasBroadSynonym>Morphological reconstruction</oboInOwl:hasBroadSynonym>
@@ -2819,6 +3144,9 @@
     <!-- http://edamontology.org/topic__R9BRNdBzbmc9zAnc5qpx5Kp -->
 
     <owl:Class rdf:about="http://edamontology.org/topic__R9BRNdBzbmc9zAnc5qpx5Kp">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#topics"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_0003"/>
         <rdfs:label>Sample</rdfs:label>
         <rdfs:comment>Do we need this?</rdfs:comment>
@@ -2829,6 +3157,9 @@
     <!-- http://edamontology.org/topic__R9Cmje2ZUXyDW6aQAvFhwSM -->
 
     <owl:Class rdf:about="http://edamontology.org/topic__R9Cmje2ZUXyDW6aQAvFhwSM">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#topics"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic__R7Vn7GbwtqVvGWNAMGdcNW1"/>
         <rdfs:label>Confocal microscopy</rdfs:label>
     </owl:Class>
@@ -2838,6 +3169,9 @@
     <!-- http://edamontology.org/topic__R9O3HmIAjoN5IqXXXRukzzr -->
 
     <owl:Class rdf:about="http://edamontology.org/topic__R9O3HmIAjoN5IqXXXRukzzr">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#topics"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic__R7LElbFkBgKS401YKsVtNck"/>
         <rdfs:label>Electron tomography</rdfs:label>
     </owl:Class>
@@ -2847,6 +3181,9 @@
     <!-- http://edamontology.org/topic__R9P5gEAm1wic4R2PcZ7ZpPA -->
 
     <owl:Class rdf:about="http://edamontology.org/topic__R9P5gEAm1wic4R2PcZ7ZpPA">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#topics"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_3385"/>
         <rdfs:label>Transmission light microscopy</rdfs:label>
     </owl:Class>
@@ -2856,6 +3193,9 @@
     <!-- http://edamontology.org/topic__R9PtYz3fOHhRsnKnQzFIXff -->
 
     <owl:Class rdf:about="http://edamontology.org/topic__R9PtYz3fOHhRsnKnQzFIXff">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#topics"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic__ReQzVVVh0IPyN0c1V5wQVO"/>
         <rdfs:label>Critical-point drying</rdfs:label>
     </owl:Class>
@@ -2865,6 +3205,9 @@
     <!-- http://edamontology.org/topic__R9WwNqEL8rvkyBPk7GkDTYh -->
 
     <owl:Class rdf:about="http://edamontology.org/topic__R9WwNqEL8rvkyBPk7GkDTYh">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#topics"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_3452"/>
         <oboInOwl:hasRelatedSynonym>PAT</oboInOwl:hasRelatedSynonym>
         <rdfs:label>Photoacoustic tomography</rdfs:label>
@@ -2875,6 +3218,9 @@
     <!-- http://edamontology.org/topic__R9zg34pnGmTyzPidJj9vfJt -->
 
     <owl:Class rdf:about="http://edamontology.org/topic__R9zg34pnGmTyzPidJj9vfJt">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#topics"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic__RBZsLMTdyuEDtVe2fge61l0"/>
         <oboInOwl:hasExactSynonym>FIB-SEM</oboInOwl:hasExactSynonym>
         <rdfs:label>Focused ion beam scanning electron microscopy</rdfs:label>
@@ -2885,6 +3231,9 @@
     <!-- http://edamontology.org/topic__RB4unXFUWvdBe91ihVAA9rR -->
 
     <owl:Class rdf:about="http://edamontology.org/topic__RB4unXFUWvdBe91ihVAA9rR">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#topics"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic__RL4rPCXlIu9uzNrGcbcSNp"/>
         <rdfs:label>Ex-vivo imaging</rdfs:label>
     </owl:Class>
@@ -2894,6 +3243,9 @@
     <!-- http://edamontology.org/topic__RBDp7HwdUBEjpS6PRjYfV2V -->
 
     <owl:Class rdf:about="http://edamontology.org/topic__RBDp7HwdUBEjpS6PRjYfV2V">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#topics"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_0003"/>
         <rdfs:label>Bioimage informatics</rdfs:label>
     </owl:Class>
@@ -2903,6 +3255,9 @@
     <!-- http://edamontology.org/topic__RBHw300pzIYcttGsAmIZvk5 -->
 
     <owl:Class rdf:about="http://edamontology.org/topic__RBHw300pzIYcttGsAmIZvk5">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#topics"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_3382"/>
         <rdfs:label>Ultrasonography</rdfs:label>
     </owl:Class>
@@ -2912,6 +3267,9 @@
     <!-- http://edamontology.org/topic__RBKlmE9DGTZwEwxw0juThGg -->
 
     <owl:Class rdf:about="http://edamontology.org/topic__RBKlmE9DGTZwEwxw0juThGg">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#topics"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic__R7Vn7GbwtqVvGWNAMGdcNW1"/>
         <rdfs:label>Multi-photon microscopy</rdfs:label>
     </owl:Class>
@@ -2921,6 +3279,9 @@
     <!-- http://edamontology.org/topic__RBNfUSYBOKUapWrsyPMMTkw -->
 
     <owl:Class rdf:about="http://edamontology.org/topic__RBNfUSYBOKUapWrsyPMMTkw">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#topics"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic__RBZsLMTdyuEDtVe2fge61l0"/>
         <oboInOwl:hasExactSynonym>Cryo SEM</oboInOwl:hasExactSynonym>
         <rdfs:label>Cryo scanning electron microscopy</rdfs:label>
@@ -2931,6 +3292,9 @@
     <!-- http://edamontology.org/topic__RBNoPZIOvBhdWGe8mFNpoWQ -->
 
     <owl:Class rdf:about="http://edamontology.org/topic__RBNoPZIOvBhdWGe8mFNpoWQ">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#topics"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_3382"/>
         <rdfs:label>Fixed sample imaging</rdfs:label>
     </owl:Class>
@@ -2940,6 +3304,9 @@
     <!-- http://edamontology.org/topic__RBZsLMTdyuEDtVe2fge61l0 -->
 
     <owl:Class rdf:about="http://edamontology.org/topic__RBZsLMTdyuEDtVe2fge61l0">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#topics"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_0611"/>
         <rdfs:label>Scanning electron microscopy</rdfs:label>
     </owl:Class>
@@ -2949,6 +3316,9 @@
     <!-- http://edamontology.org/topic__RBfI2XgIsxcfKonPPluKAhK -->
 
     <owl:Class rdf:about="http://edamontology.org/topic__RBfI2XgIsxcfKonPPluKAhK">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#topics"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_3382"/>
         <rdfs:label>Spectroscopy</rdfs:label>
     </owl:Class>
@@ -2958,6 +3328,9 @@
     <!-- http://edamontology.org/topic__RBkRgSi7js0c70kjiPgYTgR -->
 
     <owl:Class rdf:about="http://edamontology.org/topic__RBkRgSi7js0c70kjiPgYTgR">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#topics"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_3452"/>
         <oboInOwl:hasRelatedSynonym>SPECT</oboInOwl:hasRelatedSynonym>
         <rdfs:label>Single-photon emission computed tomography</rdfs:label>
@@ -2968,6 +3341,9 @@
     <!-- http://edamontology.org/topic__RBsSZve5PnQFO3scMDWo9f0 -->
 
     <owl:Class rdf:about="http://edamontology.org/topic__RBsSZve5PnQFO3scMDWo9f0">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#topics"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_3385"/>
         <rdfs:label>Area-capturing microscopy</rdfs:label>
     </owl:Class>
@@ -2977,6 +3353,9 @@
     <!-- http://edamontology.org/topic__RByvmgDpAo4FOrMdvTm1gwR -->
 
     <owl:Class rdf:about="http://edamontology.org/topic__RByvmgDpAo4FOrMdvTm1gwR">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#topics"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic__RBZsLMTdyuEDtVe2fge61l0"/>
         <rdfs:label>Serial block-face scanning electron microscopy</rdfs:label>
     </owl:Class>
@@ -2986,6 +3365,9 @@
     <!-- http://edamontology.org/topic__RC91JqkkQnsmvg8zuG6Td7q -->
 
     <owl:Class rdf:about="http://edamontology.org/topic__RC91JqkkQnsmvg8zuG6Td7q">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#topics"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_Super-resolution_microscopy"/>
         <rdfs:label>Structured illumination microscopy</rdfs:label>
     </owl:Class>
@@ -2995,6 +3377,9 @@
     <!-- http://edamontology.org/topic__RDCjx86atJP685sX1zrE2ia -->
 
     <owl:Class rdf:about="http://edamontology.org/topic__RDCjx86atJP685sX1zrE2ia">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#topics"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic__R9O3HmIAjoN5IqXXXRukzzr"/>
         <rdfs:label>Cryo electron tomography</rdfs:label>
     </owl:Class>
@@ -3004,6 +3389,9 @@
     <!-- http://edamontology.org/topic__RDdX0TswBVhmWiS1dI3pghN -->
 
     <owl:Class rdf:about="http://edamontology.org/topic__RDdX0TswBVhmWiS1dI3pghN">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#topics"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic__R9P5gEAm1wic4R2PcZ7ZpPA"/>
         <rdfs:label>Bright field microscopy</rdfs:label>
     </owl:Class>
@@ -3013,6 +3401,9 @@
     <!-- http://edamontology.org/topic__RDos3h5yRfjhLUcOImDOFgB -->
 
     <owl:Class rdf:about="http://edamontology.org/topic__RDos3h5yRfjhLUcOImDOFgB">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#topics"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_3452"/>
         <oboInOwl:hasNarrowSynonym>PET scan</oboInOwl:hasNarrowSynonym>
         <rdfs:label>Positron emission tomography</rdfs:label>
@@ -3023,6 +3414,9 @@
     <!-- http://edamontology.org/topic__RDvZSyRAcr8fonKvKdVoXw2 -->
 
     <owl:Class rdf:about="http://edamontology.org/topic__RDvZSyRAcr8fonKvKdVoXw2">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#topics"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_3382"/>
         <rdfs:label>Bioluminescence imaging</rdfs:label>
     </owl:Class>
@@ -3032,6 +3426,9 @@
     <!-- http://edamontology.org/topic__RL4rPCXlIu9uzNrGcbcSNp -->
 
     <owl:Class rdf:about="http://edamontology.org/topic__RL4rPCXlIu9uzNrGcbcSNp">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#topics"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_3382"/>
         <rdfs:label>Live sample imaging</rdfs:label>
     </owl:Class>
@@ -3041,6 +3438,9 @@
     <!-- http://edamontology.org/topic__RMCSMqSNvOTurvW2FV8tjN -->
 
     <owl:Class rdf:about="http://edamontology.org/topic__RMCSMqSNvOTurvW2FV8tjN">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#topics"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_Super-resolution_microscopy"/>
         <rdfs:label>Stimulated Emission Depletion microscopy</rdfs:label>
     </owl:Class>
@@ -3050,6 +3450,9 @@
     <!-- http://edamontology.org/topic__RMctC69gGv9qYqwKCXxeLF -->
 
     <owl:Class rdf:about="http://edamontology.org/topic__RMctC69gGv9qYqwKCXxeLF">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#topics"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic__R77vfEkRqjIenYUqhDPvdkM"/>
         <rdfs:label>Plunge freezing</rdfs:label>
     </owl:Class>
@@ -3059,6 +3462,9 @@
     <!-- http://edamontology.org/topic__RNFOzq5E0ZVBh5Euhn06rn -->
 
     <owl:Class rdf:about="http://edamontology.org/topic__RNFOzq5E0ZVBh5Euhn06rn">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#topics"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic__R9P5gEAm1wic4R2PcZ7ZpPA"/>
         <rdfs:label>DIC microscopy</rdfs:label>
     </owl:Class>
@@ -3068,6 +3474,9 @@
     <!-- http://edamontology.org/topic__RXLeVr0cHSXzTSRyO5zwZD -->
 
     <owl:Class rdf:about="http://edamontology.org/topic__RXLeVr0cHSXzTSRyO5zwZD">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#topics"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic__R7LElbFkBgKS401YKsVtNck"/>
         <rdfs:label>Scanning transmission electron microscopy</rdfs:label>
     </owl:Class>
@@ -3077,6 +3486,9 @@
     <!-- http://edamontology.org/topic__RbM6PZFI9i5lG4gzAySn0c -->
 
     <owl:Class rdf:about="http://edamontology.org/topic__RbM6PZFI9i5lG4gzAySn0c">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#topics"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic__ReQzVVVh0IPyN0c1V5wQVO"/>
         <rdfs:label>Freeze fracturing</rdfs:label>
     </owl:Class>
@@ -3086,6 +3498,9 @@
     <!-- http://edamontology.org/topic__ReQzVVVh0IPyN0c1V5wQVO -->
 
     <owl:Class rdf:about="http://edamontology.org/topic__ReQzVVVh0IPyN0c1V5wQVO">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#topics"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_0003"/>
         <rdfs:label>Sample preparation</rdfs:label>
     </owl:Class>
@@ -3095,6 +3510,9 @@
     <!-- http://edamontology.org/topic__RkSYwMcVWG5FCi4BaWDMaJ -->
 
     <owl:Class rdf:about="http://edamontology.org/topic__RkSYwMcVWG5FCi4BaWDMaJ">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#topics"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic__R77vfEkRqjIenYUqhDPvdkM"/>
         <rdfs:label>High-pressure freezing</rdfs:label>
     </owl:Class>
@@ -3104,6 +3522,9 @@
     <!-- http://edamontology.org/topic__Rn8MnorStmqIkNlAVZWBc0 -->
 
     <owl:Class rdf:about="http://edamontology.org/topic__Rn8MnorStmqIkNlAVZWBc0">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#topics"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_Fluorescent_microscopy"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic__R9Cmje2ZUXyDW6aQAvFhwSM"/>
         <rdfs:label>Confocal fluorescence microscopy</rdfs:label>
@@ -3114,6 +3535,9 @@
     <!-- http://edamontology.org/topic__RtBCcu7zJiS0phrbR2HzAI -->
 
     <owl:Class rdf:about="http://edamontology.org/topic__RtBCcu7zJiS0phrbR2HzAI">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#topics"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic__R9P5gEAm1wic4R2PcZ7ZpPA"/>
         <rdfs:label>Phase contrast microscopy</rdfs:label>
     </owl:Class>
@@ -3123,6 +3547,9 @@
     <!-- http://edamontology.org/topic__RwTXNChEQ9hv7IpvHjQGin -->
 
     <owl:Class rdf:about="http://edamontology.org/topic__RwTXNChEQ9hv7IpvHjQGin">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#topics"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_0003"/>
         <rdfs:label>Data sharing</rdfs:label>
     </owl:Class>
@@ -3132,6 +3559,9 @@
     <!-- http://edamontology.org/topic__RxfmHE99gOkUOOML5krfsJ -->
 
     <owl:Class rdf:about="http://edamontology.org/topic__RxfmHE99gOkUOOML5krfsJ">
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#topics"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_3452"/>
         <oboInOwl:hasNarrowSynonym>CT</oboInOwl:hasNarrowSynonym>
         <rdfs:label>Computerized tomography</rdfs:label>
