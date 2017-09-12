@@ -41,7 +41,7 @@
         <oboInOwl:hasSubset>bioimaging &quot;EDAM-bioimaging&quot;</oboInOwl:hasSubset>
         <oboOther:idspace>EDAM http://edamontology.org/ &quot;EDAM relations and concept properties&quot;</oboOther:idspace>
         <dc:format>application/rdf+xml</dc:format>
-        <oboOther:date>2017-09-12T15:37Z</oboOther:date>
+        <oboOther:date>2017-09-12T15:45Z</oboOther:date>
         <oboOther:idspace>EDAM_data http://edamontology.org/data_ &quot;EDAM types of data&quot;</oboOther:idspace>
         <oboInOwl:hasSubset>concept_properties &quot;EDAM concept properties&quot;</oboInOwl:hasSubset>
         <dc:creator>Jon Ison</dc:creator>
@@ -3584,6 +3584,33 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_3452"/>
         <oboInOwl:hasNarrowSynonym>CT</oboInOwl:hasNarrowSynonym>
         <rdfs:label>Computerized tomography</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://edamontology.org/topic___Reinforcement_learning -->
+
+    <owl:Class rdf:about="http://edamontology.org/topic___Reinforcement_learning">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_3474"/>
+        <rdfs:label>Reinforcement learning</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://edamontology.org/topic___Supervised_learning -->
+
+    <owl:Class rdf:about="http://edamontology.org/topic___Supervised_learning">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_3474"/>
+        <rdfs:label>Supervised learning</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://edamontology.org/topic___Unsupervised_learning -->
+
+    <owl:Class rdf:about="http://edamontology.org/topic___Unsupervised_learning">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_3474"/>
+        <rdfs:label>Unsupervised learning</rdfs:label>
     </owl:Class>
 </rdf:RDF>
 
