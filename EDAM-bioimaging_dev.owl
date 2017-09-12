@@ -41,7 +41,7 @@
         <oboInOwl:hasSubset>bioimaging &quot;EDAM-bioimaging&quot;</oboInOwl:hasSubset>
         <oboOther:idspace>EDAM http://edamontology.org/ &quot;EDAM relations and concept properties&quot;</oboOther:idspace>
         <dc:format>application/rdf+xml</dc:format>
-        <oboOther:date>2017-09-12T15:45Z</oboOther:date>
+        <oboOther:date>2017-09-12T17:30Z</oboOther:date>
         <oboOther:idspace>EDAM_data http://edamontology.org/data_ &quot;EDAM types of data&quot;</oboOther:idspace>
         <oboInOwl:hasSubset>concept_properties &quot;EDAM concept properties&quot;</oboInOwl:hasSubset>
         <dc:creator>Jon Ison</dc:creator>
@@ -824,6 +824,7 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#data"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
+        <oboInOwl:inSubset>navigation</oboInOwl:inSubset>
         <rdfs:label>Data</rdfs:label>
         <rdfs:seeAlso>&quot;http://purl.obolibrary.org/obo/IAO_0000027&quot;</rdfs:seeAlso>
         <rdfs:seeAlso>&quot;http://purl.obolibrary.org/obo/IAO_0000030&quot;</rdfs:seeAlso>
@@ -1265,6 +1266,7 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
         <oboInOwl:inSubset>formats</oboInOwl:inSubset>
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
         <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+        <oboInOwl:inSubset>navigation</oboInOwl:inSubset>
         <owl:disjointWith rdf:resource="http://edamontology.org/operation_0004"/>
         <owl:disjointWith rdf:resource="http://edamontology.org/topic_0003"/>
         <oboInOwl:hasBroadSynonym>Data model</oboInOwl:hasBroadSynonym>
@@ -1587,11 +1589,12 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#operations"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
+        <oboInOwl:inSubset>navigation</oboInOwl:inSubset>
         <rdfs:comment>Special cases are: a) An operation that consumes no input (has no input arguments). Such operation is either a constant function, or an operation depending only on the underlying state. b) An operation that may modify the underlying state but has no output. c) The singular-case operation with no input or output, that still may modify the underlying state.</rdfs:comment>
         <rdfs:label>Operation</rdfs:label>
-        <rdfs:seeAlso>http://en.wikipedia.org/wiki/Function_(computer_science)</rdfs:seeAlso>
-        <rdfs:seeAlso>http://en.wikipedia.org/wiki/Function_(mathematics)</rdfs:seeAlso>
-        <rdfs:seeAlso>http://en.wikipedia.org/wiki/Subroutine</rdfs:seeAlso>
+        <rdfs:seeAlso rdf:resource="http://en.wikipedia.org/wiki/Function_(computer_science)"/>
+        <rdfs:seeAlso rdf:resource="http://en.wikipedia.org/wiki/Function_(mathematics)"/>
+        <rdfs:seeAlso rdf:resource="http://en.wikipedia.org/wiki/Subroutine"/>
         <rdfs:seeAlso>http://onto.eva.mpg.de/ontologies/gfo-bio.owl#Method</rdfs:seeAlso>
         <rdfs:seeAlso>http://purl.org/biotop/biotop.owl#Function</rdfs:seeAlso>
         <rdfs:seeAlso>http://semanticscience.org/resource/SIO_000017</rdfs:seeAlso>
@@ -2832,6 +2835,7 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#edam"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#topics"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/edam#bioimaging"/>
+        <oboInOwl:inSubset>navigation</oboInOwl:inSubset>
         <rdfs:label>Topic</rdfs:label>
         <rdfs:seeAlso>http://bioontology.org/ontologies/ResearchArea.owl#Area_of_Research</rdfs:seeAlso>
         <rdfs:seeAlso>http://onto.eva.mpg.de/ontologies/gfo-bio.owl#Method</rdfs:seeAlso>
