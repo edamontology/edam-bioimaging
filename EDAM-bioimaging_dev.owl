@@ -2030,8 +2030,8 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
         <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_0004"/>
         <oboInOwl:hasNarrowSynonym>Image postprocessing</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasBroadSynonym>Image manipulation??</oboInOwl:hasBroadSynonym>
         <rdfs:label>Image processing</rdfs:label>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Image processing</rdfs:label>
     </owl:Class>
     
 
