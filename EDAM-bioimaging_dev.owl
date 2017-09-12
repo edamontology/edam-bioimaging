@@ -41,7 +41,7 @@
         <oboInOwl:hasSubset>bioimaging &quot;EDAM-bioimaging&quot;</oboInOwl:hasSubset>
         <oboOther:idspace>EDAM http://edamontology.org/ &quot;EDAM relations and concept properties&quot;</oboOther:idspace>
         <dc:format>application/rdf+xml</dc:format>
-        <oboOther:date>2017-09-12T10:00Z</oboOther:date>
+        <oboOther:date>2017-09-12T15:37Z</oboOther:date>
         <oboOther:idspace>EDAM_data http://edamontology.org/data_ &quot;EDAM types of data&quot;</oboOther:idspace>
         <oboInOwl:hasSubset>concept_properties &quot;EDAM concept properties&quot;</oboInOwl:hasSubset>
         <dc:creator>Jon Ison</dc:creator>
@@ -207,6 +207,17 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
         <oboInOwl:hasDefinition>&apos;Regular expression&apos; concept property (&apos;regex&apos; metadata tag) specifies the allowed values of types of identifiers (accessions). Applicable to some other types of data, too.</oboInOwl:hasDefinition>
         <oboInOwl:inSubset>concept_properties</oboInOwl:inSubset>
         <oboOther:is_metadata_tag>true</oboOther:is_metadata_tag>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://edamontology.org/related_term -->
+
+    <owl:AnnotationProperty rdf:about="http://edamontology.org/related_term">
+        <rdfs:label>Related term</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&oboInOwl;hasRelatedSynonym"/>
+        <oboInOwl:hasDefinition>&apos;Related term&apos; concept property (&apos;related_term&apos;; supposedly a synonym modifier in OBO format) states a related term - not necessarily closely semantically related - that an uninformed user may use when searching for the given concept.</oboInOwl:hasDefinition>
+        <oboInOwl:inSubset>concept_properties</oboInOwl:inSubset>
     </owl:AnnotationProperty>
     
 
