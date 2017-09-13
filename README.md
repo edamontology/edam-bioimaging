@@ -31,4 +31,4 @@ http://edamontology.org/EDAM-bioimaging.csv
 
 ### Editing
 
-At this momentary early stage of the development, the content of EDAM-bioimaging is developed collaboratively at http://webprotege.stanford.edu/#projects/2ce704bf-83ed-4d2e-985f-84c4841fac71/edit/Classes. After one dev cycle, these developments are commited in a batch to _git_.
+At this momentary early stage of the development, the content of EDAM-bioimaging is developed collaboratively at http://webprotege.stanford.edu/#projects/2ce704bf-83ed-4d2e-985f-84c4841fac71/edit/Classes. After one dev cycle, these developments are commited in a batch to _git_. _Vice versa_, commits from _git_ are merged into WebProtégé.
