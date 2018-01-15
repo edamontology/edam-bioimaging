@@ -41,7 +41,7 @@
         <oboInOwl:hasSubset>bioimaging &quot;EDAM-bioimaging&quot;</oboInOwl:hasSubset>
         <oboOther:idspace>EDAM http://edamontology.org/ &quot;EDAM relations and concept properties&quot;</oboOther:idspace>
         <dc:format>application/rdf+xml</dc:format>
-        <oboOther:date>2017-09-14T13:20Z</oboOther:date>
+        <oboOther:date>15.01.2018 20:30 GMT</oboOther:date>
         <oboOther:idspace>EDAM_data http://edamontology.org/data_ &quot;EDAM types of data&quot;</oboOther:idspace>
         <oboInOwl:hasSubset>concept_properties &quot;EDAM concept properties&quot;</oboInOwl:hasSubset>
         <dc:creator>Jon Ison</dc:creator>
@@ -65,6 +65,7 @@
 		<dc:contributor>Kota Miura</dc:contributor>
 		<dc:contributor>Lassi Paavolainen</dc:contributor>
 		<dc:contributor>Ofra Golani</dc:contributor>
+		<dc:contributor>Leandro Scholz</dc:contributor>
 		<dc:contributor>Julien Colombelli</dc:contributor>
 		<dc:contributor>NEUBIAS taggers and members of NEUBIAS WG4 lead by Perrine Paul-Gilloteaux and WG5 lead by Sébastien Tosi</dc:contributor>
         <dc:title>EDAM-bioimaging: An ontology of bioimage informatics operations, types of data, data formats, and bioimaging topics</dc:title>
@@ -155,7 +156,7 @@
 
     <owl:AnnotationProperty rdf:about="http://edamontology.org/hide_in_subset">
         <rdfs:label>Hide in subset</rdfs:label>
-        <oboInOwl:hasDefinition>&apos;Hide in subset&apos; concept property (&apos;hide_in_subset&apos; metadata tag) is a temporary property in EDAM-bioimaging that declares a subset in which the given concept may (or shoudl) be hidden from users.</oboInOwl:hasDefinition>
+        <oboInOwl:hasDefinition>&apos;Hide in subset&apos; concept property (&apos;hide_in_subset&apos; metadata tag) is a temporary property in EDAM-bioimaging that declares a subset in which the given concept may (or should) be hidden from users.</oboInOwl:hasDefinition>
         <oboOther:is_metadata_tag>true</oboOther:is_metadata_tag>
         <rdfs:comment>N.B.: In full mature EDAM, this will be implicit by not including the given concepts in the given subset.
 N.B.: In generated subsets, these concepts should be omitted, and their children re-rooted (while omitting unneccessary|uninteresting paths to root!!).</rdfs:comment>
@@ -863,10 +864,10 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/data_1D_dataset -->
 
     <owl:Class rdf:about="http://edamontology.org/data_1D_dataset">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/data_Image_geometry"/>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <oboInOwl:inSubset>data</oboInOwl:inSubset>
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
-        <rdfs:subClassOf rdf:resource="http://edamontology.org/data_Image_geometry"/>
         <rdfs:label>1D image</rdfs:label>
     </owl:Class>
     
@@ -875,11 +876,11 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/data_2D_dataset -->
 
     <owl:Class rdf:about="http://edamontology.org/data_2D_dataset">
-        <oboInOwl:inSubset>data</oboInOwl:inSubset>
-        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/data_Image"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/data_Image_geometry"/>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+        <oboInOwl:inSubset>data</oboInOwl:inSubset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
         <rdfs:label>2D image</rdfs:label>
     </owl:Class>
     
@@ -888,12 +889,12 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/data_3D_dataset -->
 
     <owl:Class rdf:about="http://edamontology.org/data_3D_dataset">
-        <oboInOwl:inSubset>data</oboInOwl:inSubset>
-        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/data_Image"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/data_Image_geometry"/>
         <oboInOwl:hasRelatedSynonym>Image stack</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+        <oboInOwl:inSubset>data</oboInOwl:inSubset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
         <rdfs:label>3D image</rdfs:label>
     </owl:Class>
     
@@ -902,10 +903,10 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/data_4D_dataset -->
 
     <owl:Class rdf:about="http://edamontology.org/data_4D_dataset">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/data_Image_geometry"/>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <oboInOwl:inSubset>data</oboInOwl:inSubset>
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
-        <rdfs:subClassOf rdf:resource="http://edamontology.org/data_Image_geometry"/>
         <rdfs:label>nD image</rdfs:label>
     </owl:Class>
     
@@ -914,12 +915,12 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/data_Colour -->
 
     <owl:Class rdf:about="http://edamontology.org/data_Colour">
-        <oboInOwl:inSubset>data</oboInOwl:inSubset>
-        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/data__RCDMkOl5gzD23OFsPf6vr4a"/>
         <oboInOwl:hasNarrowSynonym>channel</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasNarrowSynonym>rgb</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+        <oboInOwl:inSubset>data</oboInOwl:inSubset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
         <rdfs:label>Colour</rdfs:label>
     </owl:Class>
     
@@ -928,10 +929,10 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/data_Greyscale -->
 
     <owl:Class rdf:about="http://edamontology.org/data_Greyscale">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/data__RCDMkOl5gzD23OFsPf6vr4a"/>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <oboInOwl:inSubset>data</oboInOwl:inSubset>
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
-        <rdfs:subClassOf rdf:resource="http://edamontology.org/data__RCDMkOl5gzD23OFsPf6vr4a"/>
         <rdfs:label>Greyscale</rdfs:label>
     </owl:Class>
     
@@ -940,13 +941,13 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/data_Image -->
 
     <owl:Class rdf:about="http://edamontology.org/data_Image">
-        <oboInOwl:inSubset>data</oboInOwl:inSubset>
-        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/data_0006"/>
         <oboInOwl:hasExactSynonym>Image data</oboInOwl:hasExactSynonym>
         <oboInOwl:hasNarrowSynonym>Image set</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasNarrowSynonym>Set of images</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+        <oboInOwl:inSubset>data</oboInOwl:inSubset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
         <rdfs:label>Image</rdfs:label>
     </owl:Class>
     
@@ -955,10 +956,10 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/data_Image_geometry -->
 
     <owl:Class rdf:about="http://edamontology.org/data_Image_geometry">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/data__R80aNLt4YY02ByptWQa2yrY"/>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <oboInOwl:inSubset>data</oboInOwl:inSubset>
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
-        <rdfs:subClassOf rdf:resource="http://edamontology.org/data__R80aNLt4YY02ByptWQa2yrY"/>
         <rdfs:label>Image data properties</rdfs:label>
     </owl:Class>
     
@@ -967,10 +968,10 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/data_Image_histogram -->
 
     <owl:Class rdf:about="http://edamontology.org/data_Image_histogram">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/data_0006"/>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <oboInOwl:inSubset>data</oboInOwl:inSubset>
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
-        <rdfs:subClassOf rdf:resource="http://edamontology.org/data_0006"/>
         <rdfs:label>Image histogram</rdfs:label>
     </owl:Class>
     
@@ -979,11 +980,11 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/data_Intensity -->
 
     <owl:Class rdf:about="http://edamontology.org/data_Intensity">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/data__RCjZhkavxxifpvdNiasVVCc"/>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <oboInOwl:inSubset>data</oboInOwl:inSubset>
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
-        <rdfs:subClassOf rdf:resource="http://edamontology.org/data__RCjZhkavxxifpvdNiasVVCc"/>
-        <rdfs:label>Intesity</rdfs:label>
+        <rdfs:label>Intensity</rdfs:label>
     </owl:Class>
     
 
@@ -991,10 +992,10 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/data_Time -->
 
     <owl:Class rdf:about="http://edamontology.org/data_Time">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/data__R7sy3JByrUsyKaGNYQ1eSQF"/>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <oboInOwl:inSubset>data</oboInOwl:inSubset>
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
-        <rdfs:subClassOf rdf:resource="http://edamontology.org/data__R7sy3JByrUsyKaGNYQ1eSQF"/>
         <rdfs:label>Time</rdfs:label>
     </owl:Class>
     
@@ -1003,10 +1004,10 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/data_Time-lapse_data -->
 
     <owl:Class rdf:about="http://edamontology.org/data_Time-lapse_data">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/data__R7sy3JByrUsyKaGNYQ1eSQF"/>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <oboInOwl:inSubset>data</oboInOwl:inSubset>
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
-        <rdfs:subClassOf rdf:resource="http://edamontology.org/data__R7sy3JByrUsyKaGNYQ1eSQF"/>
         <rdfs:label>Time-lapse data</rdfs:label>
     </owl:Class>
     
@@ -1015,10 +1016,10 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/data_Trajectory -->
 
     <owl:Class rdf:about="http://edamontology.org/data_Trajectory">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/data__Rj7rpnkJ6SPPwWkQ4x3Wik"/>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <oboInOwl:inSubset>data</oboInOwl:inSubset>
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
-        <rdfs:subClassOf rdf:resource="http://edamontology.org/data__Rj7rpnkJ6SPPwWkQ4x3Wik"/>
         <rdfs:label>Object trajectory</rdfs:label>
     </owl:Class>
     
@@ -1027,10 +1028,10 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/data_Volume -->
 
     <owl:Class rdf:about="http://edamontology.org/data_Volume">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/data__R7Xr4YLUfGpHoI3FnAzgMnA"/>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <oboInOwl:inSubset>data</oboInOwl:inSubset>
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
-        <rdfs:subClassOf rdf:resource="http://edamontology.org/data__R7Xr4YLUfGpHoI3FnAzgMnA"/>
         <rdfs:label>Volume</rdfs:label>
     </owl:Class>
     
@@ -1039,10 +1040,10 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/data__R0uFIvsA9tQJYZz8NM3Smk -->
 
     <owl:Class rdf:about="http://edamontology.org/data__R0uFIvsA9tQJYZz8NM3Smk">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/data_Image"/>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <oboInOwl:inSubset>data</oboInOwl:inSubset>
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
-        <rdfs:subClassOf rdf:resource="http://edamontology.org/data_Image"/>
         <rdfs:label>Multi-channel image</rdfs:label>
     </owl:Class>
     
@@ -1051,10 +1052,10 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/data__R7Vdp7H5PzNJiqA7JaEEPrJ -->
 
     <owl:Class rdf:about="http://edamontology.org/data__R7Vdp7H5PzNJiqA7JaEEPrJ">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/data__RDr5D5pOVdnB8hASL1LG8HH"/>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <oboInOwl:inSubset>data</oboInOwl:inSubset>
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
-        <rdfs:subClassOf rdf:resource="http://edamontology.org/data__RDr5D5pOVdnB8hASL1LG8HH"/>
         <rdfs:label>Image radiometric noise characteristics</rdfs:label>
     </owl:Class>
     
@@ -1063,10 +1064,10 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/data__R7Xr4YLUfGpHoI3FnAzgMnA -->
 
     <owl:Class rdf:about="http://edamontology.org/data__R7Xr4YLUfGpHoI3FnAzgMnA">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/data__R80aNLt4YY02ByptWQa2yrY"/>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <oboInOwl:inSubset>data</oboInOwl:inSubset>
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
-        <rdfs:subClassOf rdf:resource="http://edamontology.org/data__R80aNLt4YY02ByptWQa2yrY"/>
         <rdfs:label>Spatial properties</rdfs:label>
     </owl:Class>
     
@@ -1075,10 +1076,10 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/data__R7sy3JByrUsyKaGNYQ1eSQF -->
 
     <owl:Class rdf:about="http://edamontology.org/data__R7sy3JByrUsyKaGNYQ1eSQF">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/data__R80aNLt4YY02ByptWQa2yrY"/>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <oboInOwl:inSubset>data</oboInOwl:inSubset>
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
-        <rdfs:subClassOf rdf:resource="http://edamontology.org/data__R80aNLt4YY02ByptWQa2yrY"/>
         <rdfs:label>Temporal properties</rdfs:label>
     </owl:Class>
     
@@ -1087,11 +1088,11 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/data__R80aNLt4YY02ByptWQa2yrY -->
 
     <owl:Class rdf:about="http://edamontology.org/data__R80aNLt4YY02ByptWQa2yrY">
-        <oboInOwl:inSubset>data</oboInOwl:inSubset>
-        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/data_0006"/>
         <oboInOwl:hasNarrowSynonym>Image metadata</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+        <oboInOwl:inSubset>data</oboInOwl:inSubset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
         <rdfs:label>Image characteristics</rdfs:label>
     </owl:Class>
     
@@ -1100,11 +1101,11 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/data__R9P4sScuriz9yN8l827hrLo -->
 
     <owl:Class rdf:about="http://edamontology.org/data__R9P4sScuriz9yN8l827hrLo">
-        <oboInOwl:inSubset>data</oboInOwl:inSubset>
-        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/data__Rj7rpnkJ6SPPwWkQ4x3Wik"/>
         <oboInOwl:hasExactSynonym>Object speed</oboInOwl:hasExactSynonym>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+        <oboInOwl:inSubset>data</oboInOwl:inSubset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
         <rdfs:label>Object velocity</rdfs:label>
     </owl:Class>
     
@@ -1113,10 +1114,10 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/data__R9yc0jq1eJBgmvEQwMcRSUS -->
 
     <owl:Class rdf:about="http://edamontology.org/data__R9yc0jq1eJBgmvEQwMcRSUS">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/data__R7Xr4YLUfGpHoI3FnAzgMnA"/>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <oboInOwl:inSubset>data</oboInOwl:inSubset>
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
-        <rdfs:subClassOf rdf:resource="http://edamontology.org/data__R7Xr4YLUfGpHoI3FnAzgMnA"/>
         <rdfs:label>Spatial image resolution</rdfs:label>
     </owl:Class>
     
@@ -1125,10 +1126,10 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/data__RCDMkOl5gzD23OFsPf6vr4a -->
 
     <owl:Class rdf:about="http://edamontology.org/data__RCDMkOl5gzD23OFsPf6vr4a">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/data__R80aNLt4YY02ByptWQa2yrY"/>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <oboInOwl:inSubset>data</oboInOwl:inSubset>
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
-        <rdfs:subClassOf rdf:resource="http://edamontology.org/data__R80aNLt4YY02ByptWQa2yrY"/>
         <rdfs:label>Spectral properties</rdfs:label>
     </owl:Class>
     
@@ -1137,15 +1138,15 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/data__RCMgLYJyn9WJyCc3bA23xT1 -->
 
     <owl:Class rdf:about="http://edamontology.org/data__RCMgLYJyn9WJyCc3bA23xT1">
-        <oboInOwl:inSubset>data</oboInOwl:inSubset>
-        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/data_Image"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/data_Time-lapse_data"/>
         <oboInOwl:hasExactSynonym>Time-series image</oboInOwl:hasExactSynonym>
         <oboInOwl:hasNarrowSynonym>Movie</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasNarrowSynonym>Time-lapse image</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasNarrowSynonym>Video sequence</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+        <oboInOwl:inSubset>data</oboInOwl:inSubset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
         <rdfs:label>Image time series</rdfs:label>
     </owl:Class>
     
@@ -1154,11 +1155,11 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/data__RCOwaNKaK3gFcUhkjBq7aor -->
 
     <owl:Class rdf:about="http://edamontology.org/data__RCOwaNKaK3gFcUhkjBq7aor">
-        <oboInOwl:inSubset>data</oboInOwl:inSubset>
-        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/data_0006"/>
         <oboInOwl:hasExactSynonym>Image</oboInOwl:hasExactSynonym>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+        <oboInOwl:inSubset>data</oboInOwl:inSubset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
         <rdfs:comment>So far consensus: Primary term Image data, exact synonym Image, meaning image or a set of (related) images (forming e.g. a stack or a time-lapse). No synonyms for stacks and &quot;movies&quot;, these should be specialised concepts.</rdfs:comment>
         <rdfs:label>Image data</rdfs:label>
     </owl:Class>
@@ -1168,11 +1169,11 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/data__RCRp3XI62rYeU9aZHw4yBvj -->
 
     <owl:Class rdf:about="http://edamontology.org/data__RCRp3XI62rYeU9aZHw4yBvj">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/data_0006"/>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <oboInOwl:inSubset>data</oboInOwl:inSubset>
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
-        <rdfs:subClassOf rdf:resource="http://edamontology.org/data_0006"/>
-        <rdfs:label>Region properies</rdfs:label>
+        <rdfs:label>Region properties</rdfs:label>
     </owl:Class>
     
 
@@ -1180,10 +1181,10 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/data__RCjZhkavxxifpvdNiasVVCc -->
 
     <owl:Class rdf:about="http://edamontology.org/data__RCjZhkavxxifpvdNiasVVCc">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/data__R80aNLt4YY02ByptWQa2yrY"/>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <oboInOwl:inSubset>data</oboInOwl:inSubset>
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
-        <rdfs:subClassOf rdf:resource="http://edamontology.org/data__R80aNLt4YY02ByptWQa2yrY"/>
         <rdfs:label>Radiometric properties</rdfs:label>
     </owl:Class>
     
@@ -1192,10 +1193,10 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/data__RDLZjniM2p9bxNi1Md2Vqv3 -->
 
     <owl:Class rdf:about="http://edamontology.org/data__RDLZjniM2p9bxNi1Md2Vqv3">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/data__RCDMkOl5gzD23OFsPf6vr4a"/>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <oboInOwl:inSubset>data</oboInOwl:inSubset>
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
-        <rdfs:subClassOf rdf:resource="http://edamontology.org/data__RCDMkOl5gzD23OFsPf6vr4a"/>
         <rdfs:label>Spectral image resolution</rdfs:label>
     </owl:Class>
     
@@ -1204,10 +1205,10 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/data__RDcwcMJia2DgGNXx2JKa8Oc -->
 
     <owl:Class rdf:about="http://edamontology.org/data__RDcwcMJia2DgGNXx2JKa8Oc">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/data_Image_geometry"/>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <oboInOwl:inSubset>data</oboInOwl:inSubset>
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
-        <rdfs:subClassOf rdf:resource="http://edamontology.org/data_Image_geometry"/>
         <rdfs:label>Image bit depth</rdfs:label>
     </owl:Class>
     
@@ -1216,10 +1217,10 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/data__RDr5D5pOVdnB8hASL1LG8HH -->
 
     <owl:Class rdf:about="http://edamontology.org/data__RDr5D5pOVdnB8hASL1LG8HH">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/data__RCjZhkavxxifpvdNiasVVCc"/>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <oboInOwl:inSubset>data</oboInOwl:inSubset>
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
-        <rdfs:subClassOf rdf:resource="http://edamontology.org/data__RCjZhkavxxifpvdNiasVVCc"/>
         <rdfs:label>Image radiometric noise</rdfs:label>
     </owl:Class>
     
@@ -1228,10 +1229,10 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/data__RDz7WLs6GBWl7rPjqfjKBT0 -->
 
     <owl:Class rdf:about="http://edamontology.org/data__RDz7WLs6GBWl7rPjqfjKBT0">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/data__RCRp3XI62rYeU9aZHw4yBvj"/>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <oboInOwl:inSubset>data</oboInOwl:inSubset>
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
-        <rdfs:subClassOf rdf:resource="http://edamontology.org/data__RCRp3XI62rYeU9aZHw4yBvj"/>
         <rdfs:label>Region texture</rdfs:label>
     </owl:Class>
     
@@ -1240,10 +1241,10 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/data__RPhipiN98zgq3wqXj4ESkT -->
 
     <owl:Class rdf:about="http://edamontology.org/data__RPhipiN98zgq3wqXj4ESkT">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/data__Rj7rpnkJ6SPPwWkQ4x3Wik"/>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <oboInOwl:inSubset>data</oboInOwl:inSubset>
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
-        <rdfs:subClassOf rdf:resource="http://edamontology.org/data__Rj7rpnkJ6SPPwWkQ4x3Wik"/>
         <rdfs:label>Object shape</rdfs:label>
     </owl:Class>
     
@@ -1252,13 +1253,13 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/data__Rj7rpnkJ6SPPwWkQ4x3Wik -->
 
     <owl:Class rdf:about="http://edamontology.org/data__Rj7rpnkJ6SPPwWkQ4x3Wik">
-        <oboInOwl:inSubset>data</oboInOwl:inSubset>
-        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/data_0006"/>
         <oboInOwl:hasBroadSynonym>Object data</oboInOwl:hasBroadSynonym>
         <oboInOwl:hasExactSynonym>Object feature</oboInOwl:hasExactSynonym>
         <oboInOwl:hasNarrowSynonym>Object measurement</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+        <oboInOwl:inSubset>data</oboInOwl:inSubset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
         <rdfs:label>Object characteristics</rdfs:label>
     </owl:Class>
     
@@ -1295,10 +1296,10 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/format_Binary_format -->
 
     <owl:Class rdf:about="http://edamontology.org/format_Binary_format">
-        <oboInOwl:inSubset>formats</oboInOwl:inSubset>
-        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/format_1915"/>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>formats</oboInOwl:inSubset>
         <rdfs:label>Binary format</rdfs:label>
     </owl:Class>
     
@@ -1307,11 +1308,11 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/format_avi -->
 
     <owl:Class rdf:about="http://edamontology.org/format_avi">
-        <oboInOwl:inSubset>formats</oboInOwl:inSubset>
-        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/format_1915"/>
         <oboInOwl:hasExactSynonym>.avi</oboInOwl:hasExactSynonym>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>formats</oboInOwl:inSubset>
         <rdfs:label>avi</rdfs:label>
     </owl:Class>
     
@@ -1320,10 +1321,10 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/format_csv -->
 
     <owl:Class rdf:about="http://edamontology.org/format_csv">
-        <oboInOwl:inSubset>formats</oboInOwl:inSubset>
-        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/format_1915"/>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>formats</oboInOwl:inSubset>
         <rdfs:label>csv</rdfs:label>
     </owl:Class>
     
@@ -1332,11 +1333,11 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/format_dat -->
 
     <owl:Class rdf:about="http://edamontology.org/format_dat">
-        <oboInOwl:inSubset>formats</oboInOwl:inSubset>
-        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/format_1915"/>
         <oboInOwl:hasExactSynonym>.dat</oboInOwl:hasExactSynonym>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>formats</oboInOwl:inSubset>
         <rdfs:label>dat</rdfs:label>
     </owl:Class>
     
@@ -1345,10 +1346,10 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/format_hdf5 -->
 
     <owl:Class rdf:about="http://edamontology.org/format_hdf5">
-        <oboInOwl:inSubset>formats</oboInOwl:inSubset>
-        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/format_1915"/>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>formats</oboInOwl:inSubset>
         <rdfs:label>hdf5</rdfs:label>
     </owl:Class>
     
@@ -1357,11 +1358,11 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/format_hdr -->
 
     <owl:Class rdf:about="http://edamontology.org/format_hdr">
-        <oboInOwl:inSubset>formats</oboInOwl:inSubset>
-        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/format_1915"/>
         <oboInOwl:hasExactSynonym>.hdr</oboInOwl:hasExactSynonym>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>formats</oboInOwl:inSubset>
         <rdfs:label>hdr</rdfs:label>
     </owl:Class>
     
@@ -1370,11 +1371,11 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/format_img -->
 
     <owl:Class rdf:about="http://edamontology.org/format_img">
-        <oboInOwl:inSubset>formats</oboInOwl:inSubset>
-        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/format_1915"/>
         <oboInOwl:hasExactSynonym>.img</oboInOwl:hasExactSynonym>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>formats</oboInOwl:inSubset>
         <rdfs:label>img</rdfs:label>
     </owl:Class>
     
@@ -1383,11 +1384,11 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/format_ims -->
 
     <owl:Class rdf:about="http://edamontology.org/format_ims">
-        <oboInOwl:inSubset>formats</oboInOwl:inSubset>
-        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/format_1915"/>
         <oboInOwl:hasExactSynonym>.ims</oboInOwl:hasExactSynonym>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>formats</oboInOwl:inSubset>
         <rdfs:label>ims</rdfs:label>
     </owl:Class>
     
@@ -1396,10 +1397,10 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/format_ism -->
 
     <owl:Class rdf:about="http://edamontology.org/format_ism">
-        <oboInOwl:inSubset>formats</oboInOwl:inSubset>
-        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/format_1915"/>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>formats</oboInOwl:inSubset>
         <rdfs:label>ism</rdfs:label>
     </owl:Class>
     
@@ -1408,11 +1409,11 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/format_jpg -->
 
     <owl:Class rdf:about="http://edamontology.org/format_jpg">
-        <oboInOwl:inSubset>formats</oboInOwl:inSubset>
-        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/format_1915"/>
         <oboInOwl:hasExactSynonym>.jpg</oboInOwl:hasExactSynonym>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>formats</oboInOwl:inSubset>
         <rdfs:label>jpg</rdfs:label>
     </owl:Class>
     
@@ -1421,10 +1422,10 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/format_mpeg -->
 
     <owl:Class rdf:about="http://edamontology.org/format_mpeg">
-        <oboInOwl:inSubset>formats</oboInOwl:inSubset>
-        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/format_1915"/>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>formats</oboInOwl:inSubset>
         <rdfs:label>mpeg</rdfs:label>
     </owl:Class>
     
@@ -1433,11 +1434,11 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/format_raw -->
 
     <owl:Class rdf:about="http://edamontology.org/format_raw">
-        <oboInOwl:inSubset>formats</oboInOwl:inSubset>
-        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/format_1915"/>
         <oboInOwl:hasExactSynonym>.raw</oboInOwl:hasExactSynonym>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>formats</oboInOwl:inSubset>
         <rdfs:label>raw</rdfs:label>
     </owl:Class>
     
@@ -1446,11 +1447,11 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/format_roi -->
 
     <owl:Class rdf:about="http://edamontology.org/format_roi">
-        <oboInOwl:inSubset>formats</oboInOwl:inSubset>
-        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/data_0006"/>
         <oboInOwl:hasExactSynonym>ROI</oboInOwl:hasExactSynonym>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>formats</oboInOwl:inSubset>
         <rdfs:label>Region of interest</rdfs:label>
     </owl:Class>
     
@@ -1459,11 +1460,11 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/format_scn -->
 
     <owl:Class rdf:about="http://edamontology.org/format_scn">
-        <oboInOwl:inSubset>formats</oboInOwl:inSubset>
-        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/format_1915"/>
         <oboInOwl:hasExactSynonym>.scn</oboInOwl:hasExactSynonym>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>formats</oboInOwl:inSubset>
         <rdfs:label>scn</rdfs:label>
     </owl:Class>
     
@@ -1472,11 +1473,11 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/format_sm2 -->
 
     <owl:Class rdf:about="http://edamontology.org/format_sm2">
-        <oboInOwl:inSubset>formats</oboInOwl:inSubset>
-        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/format_1915"/>
         <oboInOwl:hasExactSynonym>.sm2</oboInOwl:hasExactSynonym>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>formats</oboInOwl:inSubset>
         <rdfs:label>sm2</rdfs:label>
     </owl:Class>
     
@@ -1485,11 +1486,11 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/format_sm3 -->
 
     <owl:Class rdf:about="http://edamontology.org/format_sm3">
-        <oboInOwl:inSubset>formats</oboInOwl:inSubset>
-        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/format_1915"/>
         <oboInOwl:hasExactSynonym>.sm3</oboInOwl:hasExactSynonym>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>formats</oboInOwl:inSubset>
         <rdfs:label>sm3</rdfs:label>
     </owl:Class>
     
@@ -1498,11 +1499,11 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/format_stk -->
 
     <owl:Class rdf:about="http://edamontology.org/format_stk">
-        <oboInOwl:inSubset>formats</oboInOwl:inSubset>
-        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/format_1915"/>
         <oboInOwl:hasExactSynonym>.stk</oboInOwl:hasExactSynonym>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>formats</oboInOwl:inSubset>
         <rdfs:label>stk</rdfs:label>
     </owl:Class>
     
@@ -1511,10 +1512,10 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/format_tif -->
 
     <owl:Class rdf:about="http://edamontology.org/format_tif">
-        <oboInOwl:inSubset>formats</oboInOwl:inSubset>
-        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/format_1915"/>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>formats</oboInOwl:inSubset>
         <rdfs:label>tif</rdfs:label>
     </owl:Class>
     
@@ -1523,11 +1524,11 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/format_tiff -->
 
     <owl:Class rdf:about="http://edamontology.org/format_tiff">
-        <oboInOwl:inSubset>formats</oboInOwl:inSubset>
-        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/format_1915"/>
         <oboInOwl:hasExactSynonym>.tiff</oboInOwl:hasExactSynonym>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>formats</oboInOwl:inSubset>
         <rdfs:label>tiff</rdfs:label>
     </owl:Class>
     
@@ -1536,11 +1537,11 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/format_txt -->
 
     <owl:Class rdf:about="http://edamontology.org/format_txt">
-        <oboInOwl:inSubset>formats</oboInOwl:inSubset>
-        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/format_1915"/>
         <oboInOwl:hasExactSynonym>.txt</oboInOwl:hasExactSynonym>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>formats</oboInOwl:inSubset>
         <rdfs:label>txt</rdfs:label>
     </owl:Class>
     
@@ -1549,11 +1550,11 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/format_vsi -->
 
     <owl:Class rdf:about="http://edamontology.org/format_vsi">
-        <oboInOwl:inSubset>formats</oboInOwl:inSubset>
-        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/format_1915"/>
         <oboInOwl:hasExactSynonym>.vsi</oboInOwl:hasExactSynonym>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>formats</oboInOwl:inSubset>
         <rdfs:label>vsi</rdfs:label>
     </owl:Class>
     
@@ -1562,11 +1563,11 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/format_xml -->
 
     <owl:Class rdf:about="http://edamontology.org/format_xml">
-        <oboInOwl:inSubset>formats</oboInOwl:inSubset>
-        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/format_1915"/>
         <oboInOwl:hasExactSynonym>.xml</oboInOwl:hasExactSynonym>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>formats</oboInOwl:inSubset>
         <rdfs:label>xml</rdfs:label>
     </owl:Class>
     
@@ -1636,14 +1637,27 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     
 
 
+    <!-- http://edamontology.org/operation_0226 -->
+
+    <owl:Class rdf:about="http://edamontology.org/operation_0226">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_0004"/>
+        <hide_in_subset>bioimaging?</hide_in_subset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
+        <rdfs:label>Annotation</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://edamontology.org/operation_0337 -->
 
     <owl:Class rdf:about="http://edamontology.org/operation_0337">
-        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
-        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <hide_in_subset>bioimaging</hide_in_subset>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_0004"/>
+        <hide_in_subset>bioimaging?</hide_in_subset>
         <oboInOwl:hasNarrowSynonym>Plotting</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
+        <rdfs:comment>Re-occurs among biii.info tags (visualisation, rendering, viewer, classification, ...)</rdfs:comment>
         <rdfs:label>Visualisation</rdfs:label>
     </owl:Class>
     
@@ -1652,10 +1666,10 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/operation_2409 -->
 
     <owl:Class rdf:about="http://edamontology.org/operation_2409">
-        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
-        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <hide_in_subset>bioimaging</hide_in_subset>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_0004"/>
+        <hide_in_subset>bioimaging</hide_in_subset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
         <rdfs:label>Data handling</rdfs:label>
     </owl:Class>
     
@@ -1664,10 +1678,11 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/operation_2423 -->
 
     <owl:Class rdf:about="http://edamontology.org/operation_2423">
-        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
-        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <hide_in_subset>bioimaging</hide_in_subset>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_0004"/>
+        <hide_in_subset>bioimaging</hide_in_subset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
+        <rdfs:comment>ToDo: Clear up relation between Classification, Clustering, and Prediction and recognition (also in main EDAM)</rdfs:comment>
         <rdfs:label>Prediction and recognition</rdfs:label>
     </owl:Class>
     
@@ -1676,10 +1691,10 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/operation_2928 -->
 
     <owl:Class rdf:about="http://edamontology.org/operation_2928">
-        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
-        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <hide_in_subset>bioimaging</hide_in_subset>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_0004"/>
+        <hide_in_subset>bioimaging</hide_in_subset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
         <rdfs:label>Alignment construction</rdfs:label>
     </owl:Class>
     
@@ -1688,10 +1703,10 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/operation_2945 -->
 
     <owl:Class rdf:about="http://edamontology.org/operation_2945">
-        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
-        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <hide_in_subset>bioimaging</hide_in_subset>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_0004"/>
+        <hide_in_subset>bioimaging</hide_in_subset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
         <rdfs:label>Analysis</rdfs:label>
     </owl:Class>
     
@@ -1700,10 +1715,12 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/operation_2990 -->
 
     <owl:Class rdf:about="http://edamontology.org/operation_2990">
-        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
-        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <hide_in_subset>bioimaging</hide_in_subset>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_0004"/>
+        <hide_in_subset>bioimaging?</hide_in_subset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
+        <rdfs:comment>Re-occurs among biii.info tags (visualisation, rendering, viewer, classification, ...)</rdfs:comment>
+        <rdfs:comment>ToDo: Clear up relation between Classification, Clustering, and Prediction and recognition (also in main EDAM)</rdfs:comment>
         <rdfs:label>Classification</rdfs:label>
     </owl:Class>
     
@@ -1712,10 +1729,10 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/operation_3096 -->
 
     <owl:Class rdf:about="http://edamontology.org/operation_3096">
-        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
-        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <hide_in_subset>bioimaging</hide_in_subset>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_2409"/>
+        <hide_in_subset>bioimaging</hide_in_subset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
         <rdfs:label>Editing</rdfs:label>
     </owl:Class>
     
@@ -1724,10 +1741,10 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/operation_3429 -->
 
     <owl:Class rdf:about="http://edamontology.org/operation_3429">
-        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
-        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <hide_in_subset>bioimaging</hide_in_subset>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_0004"/>
+        <hide_in_subset>bioimaging</hide_in_subset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
         <rdfs:label>Generation</rdfs:label>
     </owl:Class>
     
@@ -1736,10 +1753,10 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/operation_3434 -->
 
     <owl:Class rdf:about="http://edamontology.org/operation_3434">
-        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
-        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <hide_in_subset>bioimaging</hide_in_subset>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_0004"/>
+        <hide_in_subset>bioimaging</hide_in_subset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
         <rdfs:label>Conversion</rdfs:label>
     </owl:Class>
     
@@ -1748,10 +1765,10 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/operation_3441 -->
 
     <owl:Class rdf:about="http://edamontology.org/operation_3441">
-        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
-        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <hide_in_subset>bioimaging</hide_in_subset>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_0337"/>
+        <hide_in_subset>bioimaging</hide_in_subset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
         <rdfs:comment>Visualisation vs Plotting vs Image generation. Should these be merged? Which of these should be the top concept, and which sub-concepts, and which narrow synonyms?</rdfs:comment>
         <rdfs:label>Plotting</rdfs:label>
     </owl:Class>
@@ -1761,12 +1778,24 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/operation_3443 -->
 
     <owl:Class rdf:about="http://edamontology.org/operation_3443">
-        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
-        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_2945"/>
         <oboInOwl:hasNarrowSynonym>General image analysis</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
         <rdfs:label>Image analysis</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://edamontology.org/operation_3553 -->
+
+    <owl:Class rdf:about="http://edamontology.org/operation_3553">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_0226"/>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
+        <rdfs:label>Image annotation</rdfs:label>
     </owl:Class>
     
 
@@ -1774,11 +1803,13 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/operation_Active_contours -->
 
     <owl:Class rdf:about="http://edamontology.org/operation_Active_contours">
-        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
-        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Image_segmentation"/>
-        <rdfs:comment>ToDo: relation of this to &quot;Contours&quot; ?</rdfs:comment>
+        <oboInOwl:hasExactSynonym>Active contour model</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Active contour models</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasNarrowSynonym>Snakes</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
         <rdfs:label>Active contours</rdfs:label>
     </owl:Class>
     
@@ -1787,10 +1818,10 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/operation_Adaptative_thresholding -->
 
     <owl:Class rdf:about="http://edamontology.org/operation_Adaptative_thresholding">
-        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
-        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Image_segmentation"/>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
         <rdfs:label>Adaptative thresholding</rdfs:label>
     </owl:Class>
     
@@ -1799,10 +1830,10 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/operation_Anaglyph -->
 
     <owl:Class rdf:about="http://edamontology.org/operation_Anaglyph">
-        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
-        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Image_visualisation"/>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
         <rdfs:label>Anaglyph</rdfs:label>
     </owl:Class>
     
@@ -1811,10 +1842,10 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/operation_Cell_counting -->
 
     <owl:Class rdf:about="http://edamontology.org/operation_Cell_counting">
-        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
-        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_3443"/>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
         <rdfs:label>Object counting</rdfs:label>
     </owl:Class>
     
@@ -1823,10 +1854,10 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/operation_Cell_segmentation -->
 
     <owl:Class rdf:about="http://edamontology.org/operation_Cell_segmentation">
-        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
-        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Image_segmentation"/>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
         <rdfs:label>Cell segmentation</rdfs:label>
     </owl:Class>
     
@@ -1835,10 +1866,10 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/operation_Cell_tracking -->
 
     <owl:Class rdf:about="http://edamontology.org/operation_Cell_tracking">
-        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
-        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation__RDsrmC9l0bZw9kGJzGMCyY8"/>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
         <rdfs:label>Cell tracking</rdfs:label>
     </owl:Class>
     
@@ -1847,24 +1878,11 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/operation_Closing -->
 
     <owl:Class rdf:about="http://edamontology.org/operation_Closing">
-        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
-        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Morphological_operations"/>
-        <rdfs:label>Closing</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://edamontology.org/operation_Contours -->
-
-    <owl:Class rdf:about="http://edamontology.org/operation_Contours">
-        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
-        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
         <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
-        <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Image_segmentation"/>
-        <oboInOwl:hasExactSynonym>Contours</oboInOwl:hasExactSynonym>
-        <rdfs:comment>ToDo: relation of this to &quot;Active contours&quot; ?</rdfs:comment>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
+        <rdfs:label>Closing</rdfs:label>
     </owl:Class>
     
 
@@ -1872,11 +1890,11 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/operation_Dilation -->
 
     <owl:Class rdf:about="http://edamontology.org/operation_Dilation">
-        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
-        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Morphological_operations"/>
-        <rdfs:label>Dilatation</rdfs:label>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
+        <rdfs:label>Dilation</rdfs:label>
     </owl:Class>
     
 
@@ -1884,10 +1902,10 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/operation_Distance_transform -->
 
     <owl:Class rdf:about="http://edamontology.org/operation_Distance_transform">
-        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
-        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Morphological_operations"/>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
         <rdfs:label>Distance transform</rdfs:label>
     </owl:Class>
     
@@ -1896,13 +1914,13 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/operation_Edge_detection -->
 
     <owl:Class rdf:about="http://edamontology.org/operation_Edge_detection">
-        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
-        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Image_enhancement"/>
-        <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Image_segmentation"/>
-        <oboInOwl:hasRelatedSynonym>Edge detection</oboInOwl:hasRelatedSynonym>
-        <rdfs:label>Edge enhancement</rdfs:label>
+        <related_term>Edge detection</related_term>
+        <oboInOwl:hasNarrowSynonym>Edge enhancement</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
+        <rdfs:label>Feature enhancement</rdfs:label>
     </owl:Class>
     
 
@@ -1910,10 +1928,10 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/operation_Erosion -->
 
     <owl:Class rdf:about="http://edamontology.org/operation_Erosion">
-        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
-        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Morphological_operations"/>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
         <rdfs:label>Erosion</rdfs:label>
     </owl:Class>
     
@@ -1922,13 +1940,13 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/operation_Feature_extraction -->
 
     <owl:Class rdf:about="http://edamontology.org/operation_Feature_extraction">
-        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
-        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_3443"/>
         <oboInOwl:hasExactSynonym>Feature detection</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Image labeling</oboInOwl:hasExactSynonym>
         <oboInOwl:hasNarrowSynonym>SURF</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
         <rdfs:label>Object feature extraction</rdfs:label>
     </owl:Class>
     
@@ -1937,10 +1955,10 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/operation_Geometrical_transform -->
 
     <owl:Class rdf:about="http://edamontology.org/operation_Geometrical_transform">
-        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
-        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Image_processing"/>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
         <rdfs:label>Geometrical transform</rdfs:label>
     </owl:Class>
     
@@ -1949,10 +1967,10 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/operation_Homogeneity -->
 
     <owl:Class rdf:about="http://edamontology.org/operation_Homogeneity">
-        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
-        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Feature_extraction"/>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
         <rdfs:label>Homogeneity</rdfs:label>
     </owl:Class>
     
@@ -1961,11 +1979,11 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/operation_Illumination_correction -->
 
     <owl:Class rdf:about="http://edamontology.org/operation_Illumination_correction">
-        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
-        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation__R7MFwdgojfmkZ07yWbdcda0"/>
         <oboInOwl:hasExactSynonym>Flat field correction</oboInOwl:hasExactSynonym>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
         <rdfs:label>Illumination correction</rdfs:label>
     </owl:Class>
     
@@ -1974,14 +1992,14 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/operation_Image_classification -->
 
     <owl:Class rdf:about="http://edamontology.org/operation_Image_classification">
-        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
-        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_2990"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_3443"/>
         <oboInOwl:hasExactSynonym>Classification</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Object classification</oboInOwl:hasExactSynonym>
         <oboInOwl:hasNarrowSynonym>Image clustering</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
         <rdfs:label>Image classification</rdfs:label>
     </owl:Class>
     
@@ -1990,13 +2008,12 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/operation_Image_colocalization -->
 
     <owl:Class rdf:about="http://edamontology.org/operation_Image_colocalization">
-        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
-        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/operation___Colocalisation_analysis"/>
+        <oboInOwl:hasExactSynonym>Object-based colocalization</oboInOwl:hasExactSynonym>
         <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
-        <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_3443"/>
-        <oboInOwl:hasExactSynonym>Image colocalisation</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasNarrowSynonym>Manders coefficient</oboInOwl:hasNarrowSynonym>
-        <rdfs:label>Image co-allocation</rdfs:label>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
+        <rdfs:label>Object-based colocalisation</rdfs:label>
     </owl:Class>
     
 
@@ -2004,10 +2021,10 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/operation_Image_deconvolution -->
 
     <owl:Class rdf:about="http://edamontology.org/operation_Image_deconvolution">
-        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
-        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Image_reconstruction"/>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
         <rdfs:label>Image deconvolution</rdfs:label>
     </owl:Class>
     
@@ -2016,12 +2033,11 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/operation_Image_enhancement -->
 
     <owl:Class rdf:about="http://edamontology.org/operation_Image_enhancement">
-        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
-        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Image_processing"/>
-        <oboInOwl:hasNarrowSynonym>Image filtering</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasNarrowSynonym>Image restoration</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
         <rdfs:comment>Image enhancement moves further away from the &quot;reality&quot;, as opposed to Image reconstruction that moves closer to the &quot;reality&quot;.</rdfs:comment>
         <rdfs:label>Image enhancement</rdfs:label>
     </owl:Class>
@@ -2031,11 +2047,12 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/operation_Image_measurement -->
 
     <owl:Class rdf:about="http://edamontology.org/operation_Image_measurement">
-        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
-        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_3443"/>
+        <oboInOwl:hasExactSynonym>Image measurement</oboInOwl:hasExactSynonym>
         <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
-        <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Feature_extraction"/>
-        <rdfs:label>Image measurement</rdfs:label>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
+        <rdfs:label>Image feature extraction</rdfs:label>
     </owl:Class>
     
 
@@ -2043,12 +2060,12 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/operation_Image_processing -->
 
     <owl:Class rdf:about="http://edamontology.org/operation_Image_processing">
-        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
-        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_0004"/>
-        <oboInOwl:hasNarrowSynonym>Image postprocessing</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasBroadSynonym>Image manipulation??</oboInOwl:hasBroadSynonym>
+        <oboInOwl:hasNarrowSynonym>Image postprocessing</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
         <rdfs:label>Image processing</rdfs:label>
     </owl:Class>
     
@@ -2057,12 +2074,12 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/operation_Image_reconstruction -->
 
     <owl:Class rdf:about="http://edamontology.org/operation_Image_reconstruction">
-        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
-        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Image_processing"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation__RDFFD5jBfUw74a3vJeBAGB1"/>
         <oboInOwl:hasNarrowSynonym>Image restoration</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
         <rdfs:comment>Image enhancement moves further away from the &quot;reality&quot;, as opposed to Image reconstruction that moves closer to the &quot;reality&quot;.</rdfs:comment>
         <rdfs:label>Image reconstruction</rdfs:label>
     </owl:Class>
@@ -2072,12 +2089,12 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/operation_Image_registration -->
 
     <owl:Class rdf:about="http://edamontology.org/operation_Image_registration">
-        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
-        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_2928"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Image_processing"/>
         <oboInOwl:hasExactSynonym>Image alignment</oboInOwl:hasExactSynonym>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
         <rdfs:label>Image registration</rdfs:label>
     </owl:Class>
     
@@ -2086,12 +2103,10 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/operation_Image_segmentation -->
 
     <owl:Class rdf:about="http://edamontology.org/operation_Image_segmentation">
-        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
-        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_3443"/>
-        <oboInOwl:hasNarrowSynonym>Interactive segmentation</oboInOwl:hasNarrowSynonym>
-        <oboInOwl:hasNarrowSynonym>Snakes</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
         <rdfs:label>Image segmentation</rdfs:label>
     </owl:Class>
     
@@ -2100,14 +2115,14 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/operation_Image_smoothing -->
 
     <owl:Class rdf:about="http://edamontology.org/operation_Image_smoothing">
-        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
-        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Image_enhancement"/>
         <oboInOwl:hasNarrowSynonym>Gaussian blurring</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasNarrowSynonym>Gaussian filtering</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasNarrowSynonym>Gaussian smoothing</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasRelatedSynonym>Blurring</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
         <rdfs:label>Smoothing</rdfs:label>
     </owl:Class>
     
@@ -2116,10 +2131,10 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/operation_Image_stitching -->
 
     <owl:Class rdf:about="http://edamontology.org/operation_Image_stitching">
-        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
-        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Image_reconstruction"/>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
         <rdfs:label>Image stitching</rdfs:label>
     </owl:Class>
     
@@ -2128,12 +2143,12 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/operation_Image_thresholding -->
 
     <owl:Class rdf:about="http://edamontology.org/operation_Image_thresholding">
-        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
-        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Image_segmentation"/>
         <oboInOwl:hasExactSynonym>Thresholding</oboInOwl:hasExactSynonym>
         <oboInOwl:hasNarrowSynonym>Clustering-based image thresholding</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
         <rdfs:label>Image thresholding</rdfs:label>
     </owl:Class>
     
@@ -2142,11 +2157,11 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/operation_Image_tracking -->
 
     <owl:Class rdf:about="http://edamontology.org/operation_Image_tracking">
-        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
-        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_3443"/>
         <oboInOwl:hasExactSynonym>Tracking</oboInOwl:hasExactSynonym>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
         <rdfs:label>Object tracking</rdfs:label>
     </owl:Class>
     
@@ -2155,12 +2170,12 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/operation_Image_visualisation -->
 
     <owl:Class rdf:about="http://edamontology.org/operation_Image_visualisation">
-        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
-        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_0337"/>
         <oboInOwl:hasExactSynonym>Rendering</oboInOwl:hasExactSynonym>
         <oboInOwl:hasNarrowSynonym>Lookup table</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
         <rdfs:comment>Visualisation vs Plotting vs Image generation. Should these be merged? Which of these should be the top concept, and which sub-concepts, and which narrow synonyms?</rdfs:comment>
         <rdfs:label>Image visualisation</rdfs:label>
     </owl:Class>
@@ -2170,10 +2185,11 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/operation_Interactive_segmentation -->
 
     <owl:Class rdf:about="http://edamontology.org/operation_Interactive_segmentation">
-        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
-        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Image_segmentation"/>
+        <oboInOwl:hasExactSynonym>Manual segmentation</oboInOwl:hasExactSynonym>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
         <rdfs:label>Interactive segmentation</rdfs:label>
     </owl:Class>
     
@@ -2182,10 +2198,10 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/operation_Linear_transformation -->
 
     <owl:Class rdf:about="http://edamontology.org/operation_Linear_transformation">
-        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
-        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation__R8ANfLkuHu47r739AkhxrId"/>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
         <rdfs:label>Linear transformation</rdfs:label>
     </owl:Class>
     
@@ -2194,10 +2210,11 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/operation_Local_thresholding -->
 
     <owl:Class rdf:about="http://edamontology.org/operation_Local_thresholding">
-        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
-        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Image_segmentation"/>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
+        <rdfs:comment>Concrete algorithm?</rdfs:comment>
         <rdfs:label>Local thresholding</rdfs:label>
     </owl:Class>
     
@@ -2206,10 +2223,10 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/operation_Montage -->
 
     <owl:Class rdf:about="http://edamontology.org/operation_Montage">
-        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
-        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Image_visualisation"/>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
         <rdfs:label>Montage</rdfs:label>
     </owl:Class>
     
@@ -2218,11 +2235,11 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/operation_Morphological_operations -->
 
     <owl:Class rdf:about="http://edamontology.org/operation_Morphological_operations">
-        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
-        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Image_processing"/>
         <oboInOwl:hasExactSynonym>Morphological image processing</oboInOwl:hasExactSynonym>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
         <rdfs:label>Morphological operation</rdfs:label>
     </owl:Class>
     
@@ -2231,10 +2248,10 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/operation_Neuron_image_analysis -->
 
     <owl:Class rdf:about="http://edamontology.org/operation_Neuron_image_analysis">
-        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
-        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_3443"/>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
         <rdfs:label>Neuron image analysis</rdfs:label>
     </owl:Class>
     
@@ -2243,10 +2260,11 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/operation_Object_detection -->
 
     <owl:Class rdf:about="http://edamontology.org/operation_Object_detection">
-        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
-        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_3443"/>
+        <oboInOwl:hasNarrowSynonym>Particle detection</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
         <rdfs:label>Object detection</rdfs:label>
     </owl:Class>
     
@@ -2255,10 +2273,10 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/operation_Opening -->
 
     <owl:Class rdf:about="http://edamontology.org/operation_Opening">
-        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
-        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Morphological_operations"/>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
         <rdfs:label>Opening</rdfs:label>
     </owl:Class>
     
@@ -2267,10 +2285,10 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/operation_Optical_flow_analysis -->
 
     <owl:Class rdf:about="http://edamontology.org/operation_Optical_flow_analysis">
-        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
-        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_3443"/>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
         <rdfs:label>Optical flow analysis</rdfs:label>
     </owl:Class>
     
@@ -2279,23 +2297,11 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/operation_Overlay -->
 
     <owl:Class rdf:about="http://edamontology.org/operation_Overlay">
-        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
-        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Image_visualisation"/>
-        <rdfs:label>Overlay</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://edamontology.org/operation_Particle_extraction -->
-
-    <owl:Class rdf:about="http://edamontology.org/operation_Particle_extraction">
-        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
-        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
         <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
-        <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Feature_extraction"/>
-        <rdfs:label>Particle extraction</rdfs:label>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
+        <rdfs:label>Overlay</rdfs:label>
     </owl:Class>
     
 
@@ -2303,10 +2309,10 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/operation_Particle_tracking -->
 
     <owl:Class rdf:about="http://edamontology.org/operation_Particle_tracking">
-        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
-        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation__RDsrmC9l0bZw9kGJzGMCyY8"/>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
         <rdfs:label>Particle tracking</rdfs:label>
     </owl:Class>
     
@@ -2315,12 +2321,11 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/operation_Pixel_classification -->
 
     <owl:Class rdf:about="http://edamontology.org/operation_Pixel_classification">
-        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
-        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_2990"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_3443"/>
-        <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Image_segmentation"/>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
         <rdfs:label>Pixel classification</rdfs:label>
     </owl:Class>
     
@@ -2329,14 +2334,14 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/operation_Projection -->
 
     <owl:Class rdf:about="http://edamontology.org/operation_Projection">
-        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
-        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Image_reconstruction"/>
         <oboInOwl:hasExactSynonym>Maximum projection</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Minimum projection</oboInOwl:hasExactSynonym>
         <oboInOwl:hasNarrowSynonym>Maximum intensity projection</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasNarrowSynonym>Mean projection</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
         <rdfs:label>Image projection</rdfs:label>
     </owl:Class>
     
@@ -2345,10 +2350,10 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/operation_Rotation -->
 
     <owl:Class rdf:about="http://edamontology.org/operation_Rotation">
-        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
-        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation__R8ANfLkuHu47r739AkhxrId"/>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
         <rdfs:label>Rotation</rdfs:label>
     </owl:Class>
     
@@ -2357,10 +2362,11 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/operation_Shape_features -->
 
     <owl:Class rdf:about="http://edamontology.org/operation_Shape_features">
-        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
-        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Feature_extraction"/>
+        <oboInOwl:hasRelatedSynonym>Area</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
         <rdfs:label>Shape features</rdfs:label>
     </owl:Class>
     
@@ -2369,11 +2375,11 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/operation_Skeletonization -->
 
     <owl:Class rdf:about="http://edamontology.org/operation_Skeletonization">
-        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
-        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Morphological_operations"/>
         <oboInOwl:hasNarrowSynonym>Medial axis</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
         <rdfs:label>Skeletonisation</rdfs:label>
     </owl:Class>
     
@@ -2382,12 +2388,11 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/operation_Spot_extraction -->
 
     <owl:Class rdf:about="http://edamontology.org/operation_Spot_extraction">
-        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
-        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Object_detection"/>
         <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
-        <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Feature_extraction"/>
-        <oboInOwl:hasExactSynonym>Spot detection</oboInOwl:hasExactSynonym>
-        <rdfs:label>Spot extraction</rdfs:label>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
+        <rdfs:label>Spot detection</rdfs:label>
     </owl:Class>
     
 
@@ -2395,24 +2400,13 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/operation_Texture_extraction -->
 
     <owl:Class rdf:about="http://edamontology.org/operation_Texture_extraction">
-        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
-        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Feature_extraction"/>
+        <oboInOwl:hasExactSynonym>Texture feature extraction</oboInOwl:hasExactSynonym>
         <oboInOwl:hasNarrowSynonym>Inverse Difference Moment</oboInOwl:hasNarrowSynonym>
-        <rdfs:label>Texture extraction</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://edamontology.org/operation_Texture_features -->
-
-    <owl:Class rdf:about="http://edamontology.org/operation_Texture_features">
-        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
-        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
         <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
-        <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Feature_extraction"/>
-        <rdfs:label>Texture features</rdfs:label>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
+        <rdfs:label>Texture extraction</rdfs:label>
     </owl:Class>
     
 
@@ -2420,10 +2414,10 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/operation_Volume_rendering -->
 
     <owl:Class rdf:about="http://edamontology.org/operation_Volume_rendering">
-        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
-        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Image_visualisation"/>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
         <rdfs:label>Volume rendering</rdfs:label>
     </owl:Class>
     
@@ -2432,10 +2426,10 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/operation_Warping -->
 
     <owl:Class rdf:about="http://edamontology.org/operation_Warping">
-        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
-        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Geometrical_transform"/>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
         <rdfs:label>Warping</rdfs:label>
     </owl:Class>
     
@@ -2444,10 +2438,11 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/operation_Watershed -->
 
     <owl:Class rdf:about="http://edamontology.org/operation_Watershed">
-        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
-        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Image_segmentation"/>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
+        <rdfs:comment>Concrete algorithm?</rdfs:comment>
         <rdfs:label>Watershed</rdfs:label>
     </owl:Class>
     
@@ -2456,10 +2451,10 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/operation__R1NVO6hpWWcs99UiEFiOfK -->
 
     <owl:Class rdf:about="http://edamontology.org/operation__R1NVO6hpWWcs99UiEFiOfK">
-        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
-        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Image_reconstruction"/>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
         <rdfs:label>Tomography reconstruction</rdfs:label>
     </owl:Class>
     
@@ -2468,11 +2463,11 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/operation__R3BGvVm77d5vFMF6f28ZiW -->
 
     <owl:Class rdf:about="http://edamontology.org/operation__R3BGvVm77d5vFMF6f28ZiW">
-        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
-        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation__R7MFwdgojfmkZ07yWbdcda0"/>
         <oboInOwl:hasNarrowSynonym>Lens distortion correction</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
         <rdfs:label>Geometric distortion correction</rdfs:label>
     </owl:Class>
     
@@ -2481,27 +2476,15 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/operation__R7MFwdgojfmkZ07yWbdcda0 -->
 
     <owl:Class rdf:about="http://edamontology.org/operation__R7MFwdgojfmkZ07yWbdcda0">
-        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
-        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Image_processing"/>
         <oboInOwl:hasDefinition>Image correction is the removal of aberrations originating from the imaging instrument, lighting, or sample.</oboInOwl:hasDefinition>
         <oboInOwl:hasNarrowSynonym>Instrument aberration correction</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasRelatedSynonym>Image pre-processing</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym>Image preprocessing</oboInOwl:hasRelatedSynonym>
-        <rdfs:label>Image correction</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://edamontology.org/operation__R7luNqmR6DCU2lY6ogLGmCN -->
-
-    <owl:Class rdf:about="http://edamontology.org/operation__R7luNqmR6DCU2lY6ogLGmCN">
-        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
-        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
         <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
-        <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Image_segmentation"/>
-        <rdfs:label>Isolated object segmentation</rdfs:label>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
+        <rdfs:label>Image correction</rdfs:label>
     </owl:Class>
     
 
@@ -2509,11 +2492,11 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/operation__R7qn3VpJyCAPGqdW6ia3h2d -->
 
     <owl:Class rdf:about="http://edamontology.org/operation__R7qn3VpJyCAPGqdW6ia3h2d">
-        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
-        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation__R7MFwdgojfmkZ07yWbdcda0"/>
         <oboInOwl:hasRelatedSynonym>Color deconvolution</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
         <rdfs:label>Spectral unmixing</rdfs:label>
     </owl:Class>
     
@@ -2522,10 +2505,10 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/operation__R8ANfLkuHu47r739AkhxrId -->
 
     <owl:Class rdf:about="http://edamontology.org/operation__R8ANfLkuHu47r739AkhxrId">
-        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
-        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Geometrical_transform"/>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
         <rdfs:label>Affine</rdfs:label>
     </owl:Class>
     
@@ -2534,9 +2517,6 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/operation__R8EfungVXA0oQM2Ac7YY5eu -->
 
     <owl:Class rdf:about="http://edamontology.org/operation__R8EfungVXA0oQM2Ac7YY5eu">
-        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
-        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Image_reconstruction"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation__RBNng13hEB0CJD5VzSKqrfB"/>
         <oboInOwl:hasNarrowSynonym>PAINT image reconstruction</oboInOwl:hasNarrowSynonym>
@@ -2544,6 +2524,9 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
         <oboInOwl:hasNarrowSynonym>SMLM image reconstruction</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasNarrowSynonym>STORM image reconstruction</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasNarrowSynonym>Single-molecule localisation microscopy image reconstruction</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
         <rdfs:label>Single molecule localisation</rdfs:label>
     </owl:Class>
     
@@ -2552,10 +2535,10 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/operation__R8V95OnTjs7fCvVXWjaXrh6 -->
 
     <owl:Class rdf:about="http://edamontology.org/operation__R8V95OnTjs7fCvVXWjaXrh6">
-        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
-        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Image_reconstruction"/>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
         <rdfs:label>Structured illumination reconstruction</rdfs:label>
     </owl:Class>
     
@@ -2564,10 +2547,10 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/operation__R9EjejimBB0tmnQRmZt0RhA -->
 
     <owl:Class rdf:about="http://edamontology.org/operation__R9EjejimBB0tmnQRmZt0RhA">
-        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
-        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Image_registration"/>
         <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
-        <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_3443"/>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
         <rdfs:label>Object registration</rdfs:label>
     </owl:Class>
     
@@ -2576,10 +2559,10 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/operation__R9FvNkpDIaqZQhLVlPsHisj -->
 
     <owl:Class rdf:about="http://edamontology.org/operation__R9FvNkpDIaqZQhLVlPsHisj">
-        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
-        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation__RDFFD5jBfUw74a3vJeBAGB1"/>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
         <rdfs:label>Synthetic image generation</rdfs:label>
     </owl:Class>
     
@@ -2588,10 +2571,10 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/operation__R9Qf06vxvFj2UbAk7pW3IMG -->
 
     <owl:Class rdf:about="http://edamontology.org/operation__R9Qf06vxvFj2UbAk7pW3IMG">
-        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
-        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_3443"/>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
         <rdfs:label>Filament tracing</rdfs:label>
     </owl:Class>
     
@@ -2600,11 +2583,11 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/operation__R9Vc5BV3ZMcLHEL6WEceXbY -->
 
     <owl:Class rdf:about="http://edamontology.org/operation__R9Vc5BV3ZMcLHEL6WEceXbY">
-        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
-        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation__RLtOI0poPsYRHzgXbAcr2E"/>
         <oboInOwl:hasExactSynonym>Rigid image registration</oboInOwl:hasExactSynonym>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
         <rdfs:label>Rigid registration</rdfs:label>
     </owl:Class>
     
@@ -2613,10 +2596,10 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/operation__RBNng13hEB0CJD5VzSKqrfB -->
 
     <owl:Class rdf:about="http://edamontology.org/operation__RBNng13hEB0CJD5VzSKqrfB">
-        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
-        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Object_detection"/>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
         <rdfs:label>Isolated object detection</rdfs:label>
     </owl:Class>
     
@@ -2625,10 +2608,10 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/operation__RBPObKBKIMwjdLygBOlvojW -->
 
     <owl:Class rdf:about="http://edamontology.org/operation__RBPObKBKIMwjdLygBOlvojW">
-        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
-        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Image_reconstruction"/>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
         <rdfs:label>Selective plane illumination microscopy reconstruction</rdfs:label>
     </owl:Class>
     
@@ -2637,12 +2620,12 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/operation__RBUpi1JSczmHQSf8Q8fDzG5 -->
 
     <owl:Class rdf:about="http://edamontology.org/operation__RBUpi1JSczmHQSf8Q8fDzG5">
-        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
-        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Image_tracking"/>
         <oboInOwl:hasRelatedSynonym>Scratch assay analysis</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym>Wound healing analysis</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
         <rdfs:label>Collective object tracking</rdfs:label>
     </owl:Class>
     
@@ -2651,14 +2634,14 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/operation__RBYLqCqN4rP7Jy5m5mxpTeM -->
 
     <owl:Class rdf:about="http://edamontology.org/operation__RBYLqCqN4rP7Jy5m5mxpTeM">
-        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
-        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
-        <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Image_processing"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_2945"/>
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Image_processing"/>
         <oboInOwl:hasRelatedSynonym>FFT</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym>Fast Fourier transform</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym>Wavelet transform</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
         <rdfs:comment>ToDo: Add Wikipedia links</rdfs:comment>
         <rdfs:label>Frequency analysis</rdfs:label>
     </owl:Class>
@@ -2668,10 +2651,10 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/operation__RBh3vNecu5XlIPh3kbMM4Cq -->
 
     <owl:Class rdf:about="http://edamontology.org/operation__RBh3vNecu5XlIPh3kbMM4Cq">
-        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
-        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation__R7MFwdgojfmkZ07yWbdcda0"/>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
         <rdfs:label>Drift correction</rdfs:label>
     </owl:Class>
     
@@ -2680,11 +2663,11 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/operation__RCPVGO34XrwrJasQ5yWBg9k -->
 
     <owl:Class rdf:about="http://edamontology.org/operation__RCPVGO34XrwrJasQ5yWBg9k">
-        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
-        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Image_registration"/>
         <oboInOwl:hasNarrowSynonym>Elastic registration</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
         <rdfs:label>Deformable registration</rdfs:label>
     </owl:Class>
     
@@ -2693,10 +2676,10 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/operation__RCi5QWhY2hXnO46smg6bHRQ -->
 
     <owl:Class rdf:about="http://edamontology.org/operation__RCi5QWhY2hXnO46smg6bHRQ">
-        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
-        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation__R7MFwdgojfmkZ07yWbdcda0"/>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
         <rdfs:comment>multiplicative</rdfs:comment>
         <rdfs:label>Detector gain correction</rdfs:label>
     </owl:Class>
@@ -2706,10 +2689,10 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/operation__RDFFD5jBfUw74a3vJeBAGB1 -->
 
     <owl:Class rdf:about="http://edamontology.org/operation__RDFFD5jBfUw74a3vJeBAGB1">
-        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
-        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_3429"/>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
         <rdfs:label>Image generation</rdfs:label>
     </owl:Class>
     
@@ -2718,10 +2701,10 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/operation__RDetoixS3xEu0agR2CebaoB -->
 
     <owl:Class rdf:about="http://edamontology.org/operation__RDetoixS3xEu0agR2CebaoB">
-        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
-        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_2423"/>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
         <rdfs:label>Pattern recognition</rdfs:label>
     </owl:Class>
     
@@ -2730,10 +2713,10 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/operation__RDggamr21qZlMqkQmyOdC7l -->
 
     <owl:Class rdf:about="http://edamontology.org/operation__RDggamr21qZlMqkQmyOdC7l">
-        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
-        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Object_detection"/>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
         <rdfs:label>Landmark detection</rdfs:label>
     </owl:Class>
     
@@ -2742,11 +2725,11 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/operation__RDlueIjODveP3FyOknVAqo5 -->
 
     <owl:Class rdf:about="http://edamontology.org/operation__RDlueIjODveP3FyOknVAqo5">
-        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
-        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation__R7MFwdgojfmkZ07yWbdcda0"/>
         <oboInOwl:hasNarrowSynonym>Camera bias correction</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
         <rdfs:comment>Additive</rdfs:comment>
         <rdfs:label>Detector bias correction</rdfs:label>
     </owl:Class>
@@ -2756,11 +2739,11 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/operation__RDr8xcZEa4L3mZsslmhhee8 -->
 
     <owl:Class rdf:about="http://edamontology.org/operation__RDr8xcZEa4L3mZsslmhhee8">
-        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
-        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation__R7MFwdgojfmkZ07yWbdcda0"/>
         <oboInOwl:hasRelatedSynonym>Channel shift correction</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
         <rdfs:label>Chromatic aberration correction</rdfs:label>
     </owl:Class>
     
@@ -2769,10 +2752,10 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/operation__RDsrmC9l0bZw9kGJzGMCyY8 -->
 
     <owl:Class rdf:about="http://edamontology.org/operation__RDsrmC9l0bZw9kGJzGMCyY8">
-        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
-        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Image_tracking"/>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
         <rdfs:label>Isolated object tracking</rdfs:label>
     </owl:Class>
     
@@ -2781,12 +2764,12 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/operation__RDyyXyhf1oHK93opXhEnRND -->
 
     <owl:Class rdf:about="http://edamontology.org/operation__RDyyXyhf1oHK93opXhEnRND">
-        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
-        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Image_enhancement"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Image_reconstruction"/>
         <oboInOwl:hasExactSynonym>Noise reduction</oboInOwl:hasExactSynonym>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
         <rdfs:label>Image denoising</rdfs:label>
     </owl:Class>
     
@@ -2795,11 +2778,11 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/operation__RLtOI0poPsYRHzgXbAcr2E -->
 
     <owl:Class rdf:about="http://edamontology.org/operation__RLtOI0poPsYRHzgXbAcr2E">
-        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
-        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Image_registration"/>
         <oboInOwl:hasExactSynonym>Affine image registration</oboInOwl:hasExactSynonym>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
         <rdfs:label>Affine registration</rdfs:label>
     </owl:Class>
     
@@ -2808,10 +2791,10 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/operation__Rhb4iyLUQWY4HnhPpuqNNI -->
 
     <owl:Class rdf:about="http://edamontology.org/operation__Rhb4iyLUQWY4HnhPpuqNNI">
-        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
-        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Image_processing"/>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
         <rdfs:label>Image crop</rdfs:label>
     </owl:Class>
     
@@ -2820,12 +2803,150 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/operation__RyCFuPLOeGxpcGjYbWcWWD -->
 
     <owl:Class rdf:about="http://edamontology.org/operation__RyCFuPLOeGxpcGjYbWcWWD">
-        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
-        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_2990"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_3443"/>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
         <rdfs:label>Isolated object classification</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://edamontology.org/operation___Clustering -->
+
+    <owl:Class rdf:about="http://edamontology.org/operation___Clustering">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_0004"/>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
+        <rdfs:label>Clustering</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://edamontology.org/operation___Colocalisation_analysis -->
+
+    <owl:Class rdf:about="http://edamontology.org/operation___Colocalisation_analysis">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_3443"/>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
+        <oboInOwl:hasExactSynonym>Colocalization analysis</oboInOwl:hasExactSynonym>
+        <rdfs:label>Colocalisation analysis</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://edamontology.org/operation___Image_convolution -->
+
+    <owl:Class rdf:about="http://edamontology.org/operation___Image_convolution">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/operation___Image_filtering"/>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
+        <rdfs:label>Image convolution</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://edamontology.org/operation___Image_filtering -->
+
+    <owl:Class rdf:about="http://edamontology.org/operation___Image_filtering">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Image_processing"/>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
+        <rdfs:label>Image filtering</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://edamontology.org/operation___Image_validation -->
+
+    <owl:Class rdf:about="http://edamontology.org/operation___Image_validation">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/operation___Validation"/>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
+        <rdfs:label>Image validation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://edamontology.org/operation___Optimisation_or_refinement -->
+
+    <owl:Class rdf:about="http://edamontology.org/operation___Optimisation_or_refinement">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_0004"/>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
+        <oboInOwl:hasExactSynonym>Optimization or refinement</oboInOwl:hasExactSynonym>
+        <rdfs:label>Optimisation or refinement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://edamontology.org/operation___Parameter_optimisation -->
+
+    <owl:Class rdf:about="http://edamontology.org/operation___Parameter_optimisation">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/operation___Optimisation_or_refinement"/>
+        <related_term>Model optimisation</related_term>
+        <related_term>Model training</related_term>
+        <oboInOwl:hasExactSynonym>Parameter optimization</oboInOwl:hasExactSynonym>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
+        <rdfs:label>Parameter optimisation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://edamontology.org/operation___Pixel-based_colocalisation -->
+
+    <owl:Class rdf:about="http://edamontology.org/operation___Pixel-based_colocalisation">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/operation___Colocalisation_analysis"/>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
+        <related_term>Manders coefficient</related_term>
+        <oboInOwl:hasExactSynonym>Pixel-based colocalization</oboInOwl:hasExactSynonym>
+        <rdfs:label>Pixel-based colocalisation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://edamontology.org/operation___Trajectory_analysis -->
+
+    <owl:Class rdf:about="http://edamontology.org/operation___Trajectory_analysis">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Image_tracking"/>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
+        <rdfs:label>Trajectory analysis</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://edamontology.org/operation___Validation -->
+
+    <owl:Class rdf:about="http://edamontology.org/operation___Validation">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_0004"/>
+        <hide_in_subset>bioimaging</hide_in_subset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
+        <rdfs:label>Validation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://edamontology.org/operation___Wound-healing_analysis -->
+
+    <owl:Class rdf:about="http://edamontology.org/operation___Wound-healing_analysis">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Image_tracking"/>
+        <related_term>Scratch assay</related_term>
+        <related_term>Wound-healing assay</related_term>
+        <rdfs:label>Wound-healing analysis</rdfs:label>
     </owl:Class>
     
 
@@ -2856,11 +2977,11 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/topic_0593 -->
 
     <owl:Class rdf:about="http://edamontology.org/topic_0593">
-        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>topics</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic__RBfI2XgIsxcfKonPPluKAhK"/>
         <oboInOwl:hasExactSynonym>NMR</oboInOwl:hasExactSynonym>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>topics</oboInOwl:inSubset>
         <rdfs:label>Nuclear magnetic resonance spectroscopy</rdfs:label>
     </owl:Class>
     
@@ -2869,10 +2990,10 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/topic_0611 -->
 
     <owl:Class rdf:about="http://edamontology.org/topic_0611">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_Microscopy"/>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
         <oboInOwl:inSubset>topics</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
-        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_Microscopy"/>
         <rdfs:label>Electron microscopy</rdfs:label>
     </owl:Class>
     
@@ -2881,10 +3002,10 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/topic_3382 -->
 
     <owl:Class rdf:about="http://edamontology.org/topic_3382">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_0003"/>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
         <oboInOwl:inSubset>topics</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
-        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_0003"/>
         <rdfs:label>Imaging</rdfs:label>
     </owl:Class>
     
@@ -2893,13 +3014,13 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/topic_3385 -->
 
     <owl:Class rdf:about="http://edamontology.org/topic_3385">
-        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>topics</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_Microscopy"/>
         <oboInOwl:hasNarrowSynonym>Brightfield</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasNarrowSynonym>Fluorescence recovery after photobleaching</oboInOwl:hasNarrowSynonym>
-        <oboInOwl:hasNarrowSynonym>Frap</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>FRAP</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>topics</oboInOwl:inSubset>
         <rdfs:label>Light microscopy</rdfs:label>
     </owl:Class>
     
@@ -2908,11 +3029,11 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/topic_3444 -->
 
     <owl:Class rdf:about="http://edamontology.org/topic_3444">
-        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>topics</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_3382"/>
         <oboInOwl:hasExactSynonym>MRI</oboInOwl:hasExactSynonym>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>topics</oboInOwl:inSubset>
         <rdfs:label>Magnetic resonance imaging</rdfs:label>
     </owl:Class>
     
@@ -2921,10 +3042,10 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/topic_3452 -->
 
     <owl:Class rdf:about="http://edamontology.org/topic_3452">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_3382"/>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
         <oboInOwl:inSubset>topics</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
-        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_3382"/>
         <rdfs:label>Tomography</rdfs:label>
     </owl:Class>
     
@@ -2933,10 +3054,11 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/topic_3474 -->
 
     <owl:Class rdf:about="http://edamontology.org/topic_3474">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_0003"/>
+        <related_term>Artificial intelligence</related_term>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
         <oboInOwl:inSubset>topics</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
-        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_0003"/>
         <rdfs:label>Machine learning</rdfs:label>
     </owl:Class>
     
@@ -2945,10 +3067,11 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/topic_Digital_histology -->
 
     <owl:Class rdf:about="http://edamontology.org/topic_Digital_histology">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_0003"/>
+        <oboInOwl:hasNarrowSynonym>Digital pathology imaging</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
         <oboInOwl:inSubset>topics</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
-        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_0003"/>
         <rdfs:label>Digital histology</rdfs:label>
     </owl:Class>
     
@@ -2957,11 +3080,11 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/topic_Fluorescent_microscopy -->
 
     <owl:Class rdf:about="http://edamontology.org/topic_Fluorescent_microscopy">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_3385"/>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
         <oboInOwl:inSubset>topics</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
-        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_3385"/>
-        <rdfs:label>Fluorescent microscopy</rdfs:label>
+        <rdfs:label>Fluorescence microscopy</rdfs:label>
     </owl:Class>
     
 
@@ -2969,11 +3092,11 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/topic_High_content_screening -->
 
     <owl:Class rdf:about="http://edamontology.org/topic_High_content_screening">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_0003"/>
+        <oboInOwl:hasExactSynonym>HCS</oboInOwl:hasExactSynonym>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
         <oboInOwl:inSubset>topics</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
-        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_0003"/>
-        <oboInOwl:hasExactSynonym>hcs</oboInOwl:hasExactSynonym>
         <rdfs:label>High content screening</rdfs:label>
     </owl:Class>
     
@@ -2982,12 +3105,34 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/topic_Light-sheet_microscopy -->
 
     <owl:Class rdf:about="http://edamontology.org/topic_Light-sheet_microscopy">
-        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>topics</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic__R7Vn7GbwtqVvGWNAMGdcNW1"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic__RBsSZve5PnQFO3scMDWo9f0"/>
-        <oboInOwl:hasNarrowSynonym>Spim</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>DSLM</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>Digitally scanned Lightsheet Microscopy</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>LSFM</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>Light-sheet fluorescence microscopy</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>SPIM</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>Selective Plane Illumination Microscopy</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasRelatedSynonym>Bessel Beam Lightsheet Microscopy</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>COLM</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>Clarity Optimized Lightsheet Microscopy</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>Dual-View inverted SPIM</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>Hardware implementations: multidirectional SPIM</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>LLSM</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>Lattice Light-sheet Microscopy</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>MuViSPIM</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>Multiview Selective Plane Illumination Microscopy</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>SPED</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>Spherical aberrations assisted Extended Depth-of-field Lightsheet Microscopy</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>diSPIM</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>iSPIM</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>inverted SPIM</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>mSPIM</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>single objective Selective Plane Illumination Microscopy</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>soSPIM</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>topics</oboInOwl:inSubset>
         <rdfs:label>Light-sheet microscopy</rdfs:label>
     </owl:Class>
     
@@ -2996,11 +3141,11 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/topic_Microscopy -->
 
     <owl:Class rdf:about="http://edamontology.org/topic_Microscopy">
-        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>topics</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_3382"/>
         <oboInOwl:hasNarrowSynonym>Slide scanner</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>topics</oboInOwl:inSubset>
         <rdfs:label>Microscopy</rdfs:label>
     </owl:Class>
     
@@ -3009,10 +3154,10 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/topic_Statistics -->
 
     <owl:Class rdf:about="http://edamontology.org/topic_Statistics">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_0003"/>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
         <oboInOwl:inSubset>topics</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
-        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_0003"/>
         <rdfs:label>Statistics</rdfs:label>
     </owl:Class>
     
@@ -3021,12 +3166,12 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/topic_Super-resolution_microscopy -->
 
     <owl:Class rdf:about="http://edamontology.org/topic_Super-resolution_microscopy">
-        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>topics</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_Fluorescent_microscopy"/>
         <oboInOwl:hasNarrowSynonym>Photoactivated localization microscopy</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasNarrowSynonym>palm</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>topics</oboInOwl:inSubset>
         <rdfs:label>Super-resolution microscopy</rdfs:label>
     </owl:Class>
     
@@ -3035,11 +3180,14 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/topic_Widefield_microscopy -->
 
     <owl:Class rdf:about="http://edamontology.org/topic_Widefield_microscopy">
-        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>topics</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_3385"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic__RBsSZve5PnQFO3scMDWo9f0"/>
+        <oboInOwl:hasNarrowSynonym>Epi-fluorescence microscopy</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>Epifluorescence microscopy</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>Widefield fluorescence microscopy</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>topics</oboInOwl:inSubset>
         <rdfs:label>Widefield microscopy</rdfs:label>
     </owl:Class>
     
@@ -3048,10 +3196,10 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/topic__R77vfEkRqjIenYUqhDPvdkM -->
 
     <owl:Class rdf:about="http://edamontology.org/topic__R77vfEkRqjIenYUqhDPvdkM">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic__ReQzVVVh0IPyN0c1V5wQVO"/>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
         <oboInOwl:inSubset>topics</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
-        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic__ReQzVVVh0IPyN0c1V5wQVO"/>
         <rdfs:label>Cryo fixation</rdfs:label>
     </owl:Class>
     
@@ -3060,10 +3208,11 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/topic__R7LElbFkBgKS401YKsVtNck -->
 
     <owl:Class rdf:about="http://edamontology.org/topic__R7LElbFkBgKS401YKsVtNck">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_0611"/>
+        <oboInOwl:hasExactSynonym>TEM</oboInOwl:hasExactSynonym>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
         <oboInOwl:inSubset>topics</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
-        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_0611"/>
         <rdfs:label>Transmission electron microscopy</rdfs:label>
     </owl:Class>
     
@@ -3072,10 +3221,10 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/topic__R7Vn7GbwtqVvGWNAMGdcNW1 -->
 
     <owl:Class rdf:about="http://edamontology.org/topic__R7Vn7GbwtqVvGWNAMGdcNW1">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_3385"/>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
         <oboInOwl:inSubset>topics</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
-        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_3385"/>
         <rdfs:label>Point-scanning microscopy</rdfs:label>
     </owl:Class>
     
@@ -3084,10 +3233,10 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/topic__R7WRbf9Y8ySw9QWPwAjzcUa -->
 
     <owl:Class rdf:about="http://edamontology.org/topic__R7WRbf9Y8ySw9QWPwAjzcUa">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic__RL4rPCXlIu9uzNrGcbcSNp"/>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
         <oboInOwl:inSubset>topics</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
-        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic__RL4rPCXlIu9uzNrGcbcSNp"/>
         <rdfs:label>In-vitro imaging</rdfs:label>
     </owl:Class>
     
@@ -3096,10 +3245,10 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/topic__R89wYXZ2735GXdn4m4GOT9n -->
 
     <owl:Class rdf:about="http://edamontology.org/topic__R89wYXZ2735GXdn4m4GOT9n">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic__R9P5gEAm1wic4R2PcZ7ZpPA"/>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
         <oboInOwl:inSubset>topics</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
-        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic__R9P5gEAm1wic4R2PcZ7ZpPA"/>
         <rdfs:label>Dark field microscopy</rdfs:label>
     </owl:Class>
     
@@ -3108,11 +3257,11 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/topic__R8Ss4wIFt90wZ1yjFLfXyPM -->
 
     <owl:Class rdf:about="http://edamontology.org/topic__R8Ss4wIFt90wZ1yjFLfXyPM">
-        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>topics</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_Microscopy"/>
         <oboInOwl:hasExactSynonym>CLEM</oboInOwl:hasExactSynonym>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>topics</oboInOwl:inSubset>
         <rdfs:label>Correlative Light and Electron Microscopy</rdfs:label>
     </owl:Class>
     
@@ -3121,10 +3270,10 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/topic__R8XUtD89JCyeUaaVebe9Mkw -->
 
     <owl:Class rdf:about="http://edamontology.org/topic__R8XUtD89JCyeUaaVebe9Mkw">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic__RL4rPCXlIu9uzNrGcbcSNp"/>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
         <oboInOwl:inSubset>topics</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
-        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic__RL4rPCXlIu9uzNrGcbcSNp"/>
         <rdfs:label>In-vivo imaging</rdfs:label>
     </owl:Class>
     
@@ -3133,10 +3282,10 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/topic__R8nlu8VCuL5nvBFgOaGNHgT -->
 
     <owl:Class rdf:about="http://edamontology.org/topic__R8nlu8VCuL5nvBFgOaGNHgT">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic__R9P5gEAm1wic4R2PcZ7ZpPA"/>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
         <oboInOwl:inSubset>topics</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
-        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic__R9P5gEAm1wic4R2PcZ7ZpPA"/>
         <rdfs:label>Polarized light microscopy</rdfs:label>
     </owl:Class>
     
@@ -3145,10 +3294,20 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/topic__R8oQpUEjKZjNQCTB4x3JQuJ -->
 
     <owl:Class rdf:about="http://edamontology.org/topic__R8oQpUEjKZjNQCTB4x3JQuJ">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_Super-resolution_microscopy"/>
+        <oboInOwl:hasExactSynonym>SMLM</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasNarrowSynonym>Direct stochastic optical reconstruction microscopy</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>Fluorescence Photoactivation Localization Microscopy</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>GSDIM</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>Ground State Depletion Individual Molecule Return</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>PALM</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>Photoactivated Localization Microscopy</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>STORM</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>Stochastic optical reconstruction microscopy</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>dSTORM</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
         <oboInOwl:inSubset>topics</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
-        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_Super-resolution_microscopy"/>
         <rdfs:label>Single molecule localization microscopy</rdfs:label>
     </owl:Class>
     
@@ -3157,26 +3316,13 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/topic__R96toeNl9iMp8oqv9augU84 -->
 
     <owl:Class rdf:about="http://edamontology.org/topic__R96toeNl9iMp8oqv9augU84">
-        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>topics</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_0003"/>
         <oboInOwl:hasBroadSynonym>3D reconstruction</oboInOwl:hasBroadSynonym>
         <oboInOwl:hasBroadSynonym>Morphological reconstruction</oboInOwl:hasBroadSynonym>
-        <rdfs:label>In-silico reconstruction</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://edamontology.org/topic__R9BRNdBzbmc9zAnc5qpx5Kp -->
-
-    <owl:Class rdf:about="http://edamontology.org/topic__R9BRNdBzbmc9zAnc5qpx5Kp">
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
         <oboInOwl:inSubset>topics</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
-        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_0003"/>
-        <rdfs:label>Sample</rdfs:label>
-        <rdfs:comment>Do we need this?</rdfs:comment>
+        <rdfs:label>In-silico reconstruction</rdfs:label>
     </owl:Class>
     
 
@@ -3184,10 +3330,10 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/topic__R9Cmje2ZUXyDW6aQAvFhwSM -->
 
     <owl:Class rdf:about="http://edamontology.org/topic__R9Cmje2ZUXyDW6aQAvFhwSM">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic__R7Vn7GbwtqVvGWNAMGdcNW1"/>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
         <oboInOwl:inSubset>topics</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
-        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic__R7Vn7GbwtqVvGWNAMGdcNW1"/>
         <rdfs:label>Confocal microscopy</rdfs:label>
     </owl:Class>
     
@@ -3196,10 +3342,10 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/topic__R9O3HmIAjoN5IqXXXRukzzr -->
 
     <owl:Class rdf:about="http://edamontology.org/topic__R9O3HmIAjoN5IqXXXRukzzr">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic__R7LElbFkBgKS401YKsVtNck"/>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
         <oboInOwl:inSubset>topics</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
-        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic__R7LElbFkBgKS401YKsVtNck"/>
         <rdfs:label>Electron tomography</rdfs:label>
     </owl:Class>
     
@@ -3208,10 +3354,10 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/topic__R9P5gEAm1wic4R2PcZ7ZpPA -->
 
     <owl:Class rdf:about="http://edamontology.org/topic__R9P5gEAm1wic4R2PcZ7ZpPA">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_3385"/>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
         <oboInOwl:inSubset>topics</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
-        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_3385"/>
         <rdfs:label>Transmission light microscopy</rdfs:label>
     </owl:Class>
     
@@ -3220,10 +3366,10 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/topic__R9PtYz3fOHhRsnKnQzFIXff -->
 
     <owl:Class rdf:about="http://edamontology.org/topic__R9PtYz3fOHhRsnKnQzFIXff">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic__ReQzVVVh0IPyN0c1V5wQVO"/>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
         <oboInOwl:inSubset>topics</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
-        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic__ReQzVVVh0IPyN0c1V5wQVO"/>
         <rdfs:label>Critical-point drying</rdfs:label>
     </owl:Class>
     
@@ -3232,11 +3378,11 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/topic__R9WwNqEL8rvkyBPk7GkDTYh -->
 
     <owl:Class rdf:about="http://edamontology.org/topic__R9WwNqEL8rvkyBPk7GkDTYh">
-        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>topics</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_3452"/>
         <oboInOwl:hasRelatedSynonym>PAT</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>topics</oboInOwl:inSubset>
         <rdfs:label>Photoacoustic tomography</rdfs:label>
     </owl:Class>
     
@@ -3245,11 +3391,11 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/topic__R9zg34pnGmTyzPidJj9vfJt -->
 
     <owl:Class rdf:about="http://edamontology.org/topic__R9zg34pnGmTyzPidJj9vfJt">
-        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>topics</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic__RBZsLMTdyuEDtVe2fge61l0"/>
         <oboInOwl:hasExactSynonym>FIB-SEM</oboInOwl:hasExactSynonym>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>topics</oboInOwl:inSubset>
         <rdfs:label>Focused ion beam scanning electron microscopy</rdfs:label>
     </owl:Class>
     
@@ -3258,10 +3404,10 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/topic__RB4unXFUWvdBe91ihVAA9rR -->
 
     <owl:Class rdf:about="http://edamontology.org/topic__RB4unXFUWvdBe91ihVAA9rR">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic__RL4rPCXlIu9uzNrGcbcSNp"/>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
         <oboInOwl:inSubset>topics</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
-        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic__RL4rPCXlIu9uzNrGcbcSNp"/>
         <rdfs:label>Ex-vivo imaging</rdfs:label>
     </owl:Class>
     
@@ -3270,10 +3416,10 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/topic__RBDp7HwdUBEjpS6PRjYfV2V -->
 
     <owl:Class rdf:about="http://edamontology.org/topic__RBDp7HwdUBEjpS6PRjYfV2V">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_0003"/>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
         <oboInOwl:inSubset>topics</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
-        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_0003"/>
         <rdfs:label>Bioimage informatics</rdfs:label>
     </owl:Class>
     
@@ -3282,10 +3428,10 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/topic__RBHw300pzIYcttGsAmIZvk5 -->
 
     <owl:Class rdf:about="http://edamontology.org/topic__RBHw300pzIYcttGsAmIZvk5">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_3382"/>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
         <oboInOwl:inSubset>topics</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
-        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_3382"/>
         <rdfs:label>Ultrasonography</rdfs:label>
     </owl:Class>
     
@@ -3294,10 +3440,11 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/topic__RBKlmE9DGTZwEwxw0juThGg -->
 
     <owl:Class rdf:about="http://edamontology.org/topic__RBKlmE9DGTZwEwxw0juThGg">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic__R7Vn7GbwtqVvGWNAMGdcNW1"/>
+        <oboInOwl:hasNarrowSynonym>Two-photon excitation Microscopy (TPEM)</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
         <oboInOwl:inSubset>topics</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
-        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic__R7Vn7GbwtqVvGWNAMGdcNW1"/>
         <rdfs:label>Multi-photon microscopy</rdfs:label>
     </owl:Class>
     
@@ -3306,11 +3453,11 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/topic__RBNfUSYBOKUapWrsyPMMTkw -->
 
     <owl:Class rdf:about="http://edamontology.org/topic__RBNfUSYBOKUapWrsyPMMTkw">
-        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>topics</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic__RBZsLMTdyuEDtVe2fge61l0"/>
         <oboInOwl:hasExactSynonym>Cryo SEM</oboInOwl:hasExactSynonym>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>topics</oboInOwl:inSubset>
         <rdfs:label>Cryo scanning electron microscopy</rdfs:label>
     </owl:Class>
     
@@ -3319,10 +3466,10 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/topic__RBNoPZIOvBhdWGe8mFNpoWQ -->
 
     <owl:Class rdf:about="http://edamontology.org/topic__RBNoPZIOvBhdWGe8mFNpoWQ">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_3382"/>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
         <oboInOwl:inSubset>topics</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
-        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_3382"/>
         <rdfs:label>Fixed sample imaging</rdfs:label>
     </owl:Class>
     
@@ -3331,10 +3478,10 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/topic__RBZsLMTdyuEDtVe2fge61l0 -->
 
     <owl:Class rdf:about="http://edamontology.org/topic__RBZsLMTdyuEDtVe2fge61l0">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_0611"/>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
         <oboInOwl:inSubset>topics</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
-        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_0611"/>
         <rdfs:label>Scanning electron microscopy</rdfs:label>
     </owl:Class>
     
@@ -3343,10 +3490,10 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/topic__RBfI2XgIsxcfKonPPluKAhK -->
 
     <owl:Class rdf:about="http://edamontology.org/topic__RBfI2XgIsxcfKonPPluKAhK">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_3382"/>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
         <oboInOwl:inSubset>topics</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
-        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_3382"/>
         <rdfs:label>Spectroscopy</rdfs:label>
     </owl:Class>
     
@@ -3355,11 +3502,11 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/topic__RBkRgSi7js0c70kjiPgYTgR -->
 
     <owl:Class rdf:about="http://edamontology.org/topic__RBkRgSi7js0c70kjiPgYTgR">
-        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>topics</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_3452"/>
         <oboInOwl:hasRelatedSynonym>SPECT</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>topics</oboInOwl:inSubset>
         <rdfs:label>Single-photon emission computed tomography</rdfs:label>
     </owl:Class>
     
@@ -3368,10 +3515,10 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/topic__RBsSZve5PnQFO3scMDWo9f0 -->
 
     <owl:Class rdf:about="http://edamontology.org/topic__RBsSZve5PnQFO3scMDWo9f0">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_3385"/>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
         <oboInOwl:inSubset>topics</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
-        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_3385"/>
         <rdfs:label>Area-capturing microscopy</rdfs:label>
     </owl:Class>
     
@@ -3380,10 +3527,10 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/topic__RByvmgDpAo4FOrMdvTm1gwR -->
 
     <owl:Class rdf:about="http://edamontology.org/topic__RByvmgDpAo4FOrMdvTm1gwR">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic__RBZsLMTdyuEDtVe2fge61l0"/>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
         <oboInOwl:inSubset>topics</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
-        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic__RBZsLMTdyuEDtVe2fge61l0"/>
         <rdfs:label>Serial block-face scanning electron microscopy</rdfs:label>
     </owl:Class>
     
@@ -3392,10 +3539,17 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/topic__RC91JqkkQnsmvg8zuG6Td7q -->
 
     <owl:Class rdf:about="http://edamontology.org/topic__RC91JqkkQnsmvg8zuG6Td7q">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_Super-resolution_microscopy"/>
+        <oboInOwl:hasExactSynonym>SIM</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasRelatedSynonym>Instant linear structured Illumination Microscopy</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>MSIM</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>Multifocal Structured Illumination Microscopy</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>SSIM</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>Saturated Structured Illumination</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>iSIM</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
         <oboInOwl:inSubset>topics</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
-        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_Super-resolution_microscopy"/>
         <rdfs:label>Structured illumination microscopy</rdfs:label>
     </owl:Class>
     
@@ -3404,10 +3558,10 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/topic__RDCjx86atJP685sX1zrE2ia -->
 
     <owl:Class rdf:about="http://edamontology.org/topic__RDCjx86atJP685sX1zrE2ia">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic__R9O3HmIAjoN5IqXXXRukzzr"/>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
         <oboInOwl:inSubset>topics</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
-        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic__R9O3HmIAjoN5IqXXXRukzzr"/>
         <rdfs:label>Cryo electron tomography</rdfs:label>
     </owl:Class>
     
@@ -3416,10 +3570,10 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/topic__RDdX0TswBVhmWiS1dI3pghN -->
 
     <owl:Class rdf:about="http://edamontology.org/topic__RDdX0TswBVhmWiS1dI3pghN">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic__R9P5gEAm1wic4R2PcZ7ZpPA"/>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
         <oboInOwl:inSubset>topics</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
-        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic__R9P5gEAm1wic4R2PcZ7ZpPA"/>
         <rdfs:label>Bright field microscopy</rdfs:label>
     </owl:Class>
     
@@ -3428,11 +3582,11 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/topic__RDos3h5yRfjhLUcOImDOFgB -->
 
     <owl:Class rdf:about="http://edamontology.org/topic__RDos3h5yRfjhLUcOImDOFgB">
-        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>topics</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_3452"/>
         <oboInOwl:hasNarrowSynonym>PET scan</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>topics</oboInOwl:inSubset>
         <rdfs:label>Positron emission tomography</rdfs:label>
     </owl:Class>
     
@@ -3441,10 +3595,10 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/topic__RDvZSyRAcr8fonKvKdVoXw2 -->
 
     <owl:Class rdf:about="http://edamontology.org/topic__RDvZSyRAcr8fonKvKdVoXw2">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_3382"/>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
         <oboInOwl:inSubset>topics</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
-        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_3382"/>
         <rdfs:label>Bioluminescence imaging</rdfs:label>
     </owl:Class>
     
@@ -3453,10 +3607,10 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/topic__RL4rPCXlIu9uzNrGcbcSNp -->
 
     <owl:Class rdf:about="http://edamontology.org/topic__RL4rPCXlIu9uzNrGcbcSNp">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_3382"/>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
         <oboInOwl:inSubset>topics</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
-        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_3382"/>
         <rdfs:label>Live sample imaging</rdfs:label>
     </owl:Class>
     
@@ -3465,10 +3619,16 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/topic__RMCSMqSNvOTurvW2FV8tjN -->
 
     <owl:Class rdf:about="http://edamontology.org/topic__RMCSMqSNvOTurvW2FV8tjN">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_Super-resolution_microscopy"/>
+        <oboInOwl:hasBroadSynonym>STED-4Pi</oboInOwl:hasBroadSynonym>
+        <oboInOwl:hasExactSynonym>STED</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasNarrowSynonym>MinFlux</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>RESOLFT</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>Reversible Saturable Optical Linear Fluorescence Transitions microscopy</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>gated-STED</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
         <oboInOwl:inSubset>topics</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
-        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_Super-resolution_microscopy"/>
         <rdfs:label>Stimulated Emission Depletion microscopy</rdfs:label>
     </owl:Class>
     
@@ -3477,10 +3637,10 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/topic__RMctC69gGv9qYqwKCXxeLF -->
 
     <owl:Class rdf:about="http://edamontology.org/topic__RMctC69gGv9qYqwKCXxeLF">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic__R77vfEkRqjIenYUqhDPvdkM"/>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
         <oboInOwl:inSubset>topics</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
-        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic__R77vfEkRqjIenYUqhDPvdkM"/>
         <rdfs:label>Plunge freezing</rdfs:label>
     </owl:Class>
     
@@ -3489,10 +3649,12 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/topic__RNFOzq5E0ZVBh5Euhn06rn -->
 
     <owl:Class rdf:about="http://edamontology.org/topic__RNFOzq5E0ZVBh5Euhn06rn">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic__R9P5gEAm1wic4R2PcZ7ZpPA"/>
+        <oboInOwl:hasNarrowSynonym>Nomarski interferential contrast (NIC)</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>Nomarski microscopy</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
         <oboInOwl:inSubset>topics</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
-        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic__R9P5gEAm1wic4R2PcZ7ZpPA"/>
         <rdfs:label>DIC microscopy</rdfs:label>
     </owl:Class>
     
@@ -3501,10 +3663,11 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/topic__RXLeVr0cHSXzTSRyO5zwZD -->
 
     <owl:Class rdf:about="http://edamontology.org/topic__RXLeVr0cHSXzTSRyO5zwZD">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic__R7LElbFkBgKS401YKsVtNck"/>
+        <oboInOwl:hasExactSynonym>STEM</oboInOwl:hasExactSynonym>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
         <oboInOwl:inSubset>topics</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
-        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic__R7LElbFkBgKS401YKsVtNck"/>
         <rdfs:label>Scanning transmission electron microscopy</rdfs:label>
     </owl:Class>
     
@@ -3513,10 +3676,10 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/topic__RbM6PZFI9i5lG4gzAySn0c -->
 
     <owl:Class rdf:about="http://edamontology.org/topic__RbM6PZFI9i5lG4gzAySn0c">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic__ReQzVVVh0IPyN0c1V5wQVO"/>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
         <oboInOwl:inSubset>topics</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
-        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic__ReQzVVVh0IPyN0c1V5wQVO"/>
         <rdfs:label>Freeze fracturing</rdfs:label>
     </owl:Class>
     
@@ -3525,10 +3688,10 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/topic__ReQzVVVh0IPyN0c1V5wQVO -->
 
     <owl:Class rdf:about="http://edamontology.org/topic__ReQzVVVh0IPyN0c1V5wQVO">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_0003"/>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
         <oboInOwl:inSubset>topics</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
-        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_0003"/>
         <rdfs:label>Sample preparation</rdfs:label>
     </owl:Class>
     
@@ -3537,10 +3700,10 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/topic__RkSYwMcVWG5FCi4BaWDMaJ -->
 
     <owl:Class rdf:about="http://edamontology.org/topic__RkSYwMcVWG5FCi4BaWDMaJ">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic__R77vfEkRqjIenYUqhDPvdkM"/>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
         <oboInOwl:inSubset>topics</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
-        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic__R77vfEkRqjIenYUqhDPvdkM"/>
         <rdfs:label>High-pressure freezing</rdfs:label>
     </owl:Class>
     
@@ -3549,11 +3712,16 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/topic__Rn8MnorStmqIkNlAVZWBc0 -->
 
     <owl:Class rdf:about="http://edamontology.org/topic__Rn8MnorStmqIkNlAVZWBc0">
-        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>topics</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_Fluorescent_microscopy"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic__R9Cmje2ZUXyDW6aQAvFhwSM"/>
+        <oboInOwl:hasNarrowSynonym>LSM</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>Laser scanning microscopy</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>Nipkow disk microscopy</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>SDCM</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>Spinning Disk confocal microscopy</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>topics</oboInOwl:inSubset>
         <rdfs:label>Confocal fluorescence microscopy</rdfs:label>
     </owl:Class>
     
@@ -3562,10 +3730,12 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/topic__RtBCcu7zJiS0phrbR2HzAI -->
 
     <owl:Class rdf:about="http://edamontology.org/topic__RtBCcu7zJiS0phrbR2HzAI">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic__R9P5gEAm1wic4R2PcZ7ZpPA"/>
+        <oboInOwl:hasNarrowSynonym>Phase imaging</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasRelatedSynonym>Quantitative phase contrast imaging</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
         <oboInOwl:inSubset>topics</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
-        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic__R9P5gEAm1wic4R2PcZ7ZpPA"/>
         <rdfs:label>Phase contrast microscopy</rdfs:label>
     </owl:Class>
     
@@ -3574,10 +3744,10 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/topic__RwTXNChEQ9hv7IpvHjQGin -->
 
     <owl:Class rdf:about="http://edamontology.org/topic__RwTXNChEQ9hv7IpvHjQGin">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_0003"/>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
         <oboInOwl:inSubset>topics</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
-        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_0003"/>
         <rdfs:label>Data sharing</rdfs:label>
     </owl:Class>
     
@@ -3586,12 +3756,111 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://edamontology.org/topic__RxfmHE99gOkUOOML5krfsJ -->
 
     <owl:Class rdf:about="http://edamontology.org/topic__RxfmHE99gOkUOOML5krfsJ">
-        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>topics</oboInOwl:inSubset>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_3452"/>
         <oboInOwl:hasNarrowSynonym>CT</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>topics</oboInOwl:inSubset>
         <rdfs:label>Computerized tomography</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://edamontology.org/topic___Fluctuation_based_microscopy -->
+
+    <owl:Class rdf:about="http://edamontology.org/topic___Fluctuation_based_microscopy">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_Fluorescent_microscopy"/>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>topics</oboInOwl:inSubset>
+        <oboInOwl:hasNarrowSynonym>Photobleaching microscopy with non-linear processing</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>PiMP</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>SOFI</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>SRRF</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>Super resolution optical fluctuation imaging</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>Super resolution radial fluctuations</oboInOwl:hasNarrowSynonym>
+        <rdfs:label>Fluctuation based microscopy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://edamontology.org/topic___Fluorescence_correlative_spectroscopy -->
+
+    <owl:Class rdf:about="http://edamontology.org/topic___Fluorescence_correlative_spectroscopy">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_Fluorescent_microscopy"/>
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic__RBfI2XgIsxcfKonPPluKAhK"/>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>topics</oboInOwl:inSubset>
+        <oboInOwl:hasExactSynonym>FCS</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasRelatedSynonym>FCCS</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>FLCS</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>Fluorescence Lifetime Correlation Microscopy</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>Fluorescence cross-correlative spectroscopy</oboInOwl:hasRelatedSynonym>
+        <rdfs:label>Fluorescence correlative spectroscopy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://edamontology.org/topic___Fluorescence_lifetime_imaging -->
+
+    <owl:Class rdf:about="http://edamontology.org/topic___Fluorescence_lifetime_imaging">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_Fluorescent_microscopy"/>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>topics</oboInOwl:inSubset>
+        <oboInOwl:hasExactSynonym>FLIM</oboInOwl:hasExactSynonym>
+        <rdfs:label>Fluorescence lifetime imaging microscopy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://edamontology.org/topic___Fluorescence_recovery_after_photobleaching -->
+
+    <owl:Class rdf:about="http://edamontology.org/topic___Fluorescence_recovery_after_photobleaching">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_Fluorescent_microscopy"/>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>topics</oboInOwl:inSubset>
+        <oboInOwl:hasExactSynonym>FRAP</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasRelatedSynonym>FLAP</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>FLIP</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>Fluorescence Localization after photobleaching</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>Fluorescence loss in photobleaching</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>Inverse Fluorescence Recovery after photobleaching</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>iFRAP</oboInOwl:hasRelatedSynonym>
+        <rdfs:label>Fluorescence recovery after photobleaching</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://edamontology.org/topic___F%C3%B6rster_resonance_energy_transfer -->
+
+    <owl:Class rdf:about="http://edamontology.org/topic___F%C3%B6rster_resonance_energy_transfer">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_Fluorescent_microscopy"/>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>topics</oboInOwl:inSubset>
+        <oboInOwl:hasExactSynonym>FRET</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Fluorescence resonance energy transfer</oboInOwl:hasExactSynonym>
+        <rdfs:label>Förster resonance energy transfer</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://edamontology.org/topic___Image_correlation_spectroscopy -->
+
+    <owl:Class rdf:about="http://edamontology.org/topic___Image_correlation_spectroscopy">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_Fluorescent_microscopy"/>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>topics</oboInOwl:inSubset>
+        <oboInOwl:hasExactSynonym>ICS</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasRelatedSynonym>PICS</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>Particle Image Correlation Spectroscopy</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>RICS</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>Raster Image Correlation Spectroscopy</oboInOwl:hasRelatedSynonym>
+        <rdfs:label>Image correlation spectroscopy</rdfs:label>
     </owl:Class>
     
 
@@ -3600,6 +3869,9 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
 
     <owl:Class rdf:about="http://edamontology.org/topic___Reinforcement_learning">
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_3474"/>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>topics</oboInOwl:inSubset>
         <rdfs:label>Reinforcement learning</rdfs:label>
     </owl:Class>
     
@@ -3609,6 +3881,9 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
 
     <owl:Class rdf:about="http://edamontology.org/topic___Supervised_learning">
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_3474"/>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>topics</oboInOwl:inSubset>
         <rdfs:label>Supervised learning</rdfs:label>
     </owl:Class>
     
@@ -3618,6 +3893,9 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
 
     <owl:Class rdf:about="http://edamontology.org/topic___Unsupervised_learning">
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_3474"/>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>topics</oboInOwl:inSubset>
         <rdfs:label>Unsupervised learning</rdfs:label>
     </owl:Class>
 </rdf:RDF>
