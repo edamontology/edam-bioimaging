@@ -1,3 +1,7 @@
+DOI representing all stable versions, resolving to the latest: [![10.5281/zenodo.1149730](https://zenodo.org/badge/DOI/10.5281/zenodo.1149730.svg)](https://doi.org/10.5281/zenodo.1149730)
+
+DOI of the latest stable EDAM-bioimaging version _alpha03_: [![10.5281/zenodo.1149731](https://zenodo.org/badge/DOI/10.5281/zenodo.1149731.svg)](https://doi.org/10.5281/zenodo.1149731)
+
 # EDAM-bioimaging
 
 An ontology of bioimage informatics operations, types of data, data formats, and bioimaging topics
