@@ -2,44 +2,7 @@
 
 An ontology of bioimage informatics operations, types of data, data formats, and bioimaging topics
 
-
-EDAM-bioimaging is an extension to the [EDAM ontology](https://github.com/edamontology/edamontology) (http://edamontology.org) for bioimage analysis, bioimage informatics, and bioimaging, developed in collaboration with partners from [NEUBIAS](http://eubias.org/NEUBIAS) Cost Action (CA15124), [ELIXIR](http://www.elixir-europe.org)-EXCELERATE WP1 (Horizon 2020 676559), and [Euro-BioImaging](http://www.eurobioimaging.eu) PP2.
-
-
-## Viewing
-
- * __Last stable version__ (now _alpha03_) at the __[NCBO BioPortal](https://bioportal.bioontology.org/ontologies/EDAM-BIOIMAGING?p=classes)__
- 
- * __All versions__ at __WebProtégé__. Free registration at WebProtégé is required.
- 
-     * __[Live development version](https://webprotege.stanford.edu/#projects/2ce704bf-83ed-4d2e-985f-84c4841fac71/edit/Classes)__ (now *alpha04_dev*)
- 
-     * __[Last stable version](https://webprotege.stanford.edu/#projects/60fbe82b-bd58-41e2-825d-3801c071ee47/edit/Classes)__ (now _alpha03_)
- 
-     * __[Frozen version *alpha03*](https://webprotege.stanford.edu/#projects/40a89525-b6d6-42f2-a4c1-88e7fb1c1f86/edit/Classes)__
- 
-     * [Frozen version *alpha02*](https://webprotege.stanford.edu/#projects/f2cd721e-0f26-4b05-9ce2-ce20d4860442/edit/Classes)
- 
- 
- 
-## Download
-
-__Always the last stable version:__
-
-* In __OWL__ format from http://edamontology.org/EDAM-bioimaging.owl
-
-* In __TSV__ format from http://edamontology.org/EDAM-bioimaging.tsv
-
-* In __CSV__ format from http://edamontology.org/EDAM-bioimaging.csv
-
-
-__Other versions__, _e.g._ the current _alpha03_:
-
-* In __OWL__ format from http://edamontology.org/EDAM-bioimaging_alpha03.owl
-
-* In __TSV__ format from http://edamontology.org/EDAM-bioimaging_alpha03.tsv
-
-* In __CSV__ format from http://edamontology.org/EDAM-bioimaging_alpha03.csv
+Please see README.md for more details, including viewing and download.
 
 
 
