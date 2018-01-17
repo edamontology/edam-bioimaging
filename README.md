@@ -24,11 +24,22 @@ EDAM-bioimaging is an extension to the [EDAM ontology](https://github.com/edamon
  
 ## Download
 
+__Always the last stable version:__
+
 * In __OWL__ format from http://edamontology.org/EDAM-bioimaging.owl
 
 * In __TSV__ format from http://edamontology.org/EDAM-bioimaging.tsv
 
 * In __CSV__ format from http://edamontology.org/EDAM-bioimaging.csv
+
+
+__Other versions__, _e.g._ the current _alpha03_:
+
+* In __OWL__ format from http://edamontology.org/EDAM-bioimaging_alpha03.owl
+
+* In __TSV__ format from http://edamontology.org/EDAM-bioimaging_alpha03.tsv
+
+* In __CSV__ format from http://edamontology.org/EDAM-bioimaging_alpha03.csv
 
 
 
