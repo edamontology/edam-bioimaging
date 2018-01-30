@@ -32,6 +32,7 @@
         <oboOther:idspace>EDAM_operation http://edamontology.org/operation_ &quot;EDAM operations&quot;</oboOther:idspace>
         <oboInOwl:hasSubset>formats &quot;EDAM data formats&quot;</oboInOwl:hasSubset>
         <oboOther:default-relationship-id-prefix>EDAM</oboOther:default-relationship-id-prefix>
+        <oboInOwl:savedBy>Matúš Kalaš</oboInOwl:savedBy>
         <oboInOwl:savedBy>Jon Ison</oboInOwl:savedBy>
         <oboInOwl:hasSubset>identifiers &quot;EDAM types of identifiers&quot;</oboInOwl:hasSubset>
         <oboInOwl:hasSubset>data &quot;EDAM types of data&quot;</oboInOwl:hasSubset>
@@ -41,7 +42,7 @@
         <oboInOwl:hasSubset>bioimaging &quot;EDAM-bioimaging&quot;</oboInOwl:hasSubset>
         <oboOther:idspace>EDAM http://edamontology.org/ &quot;EDAM relations and concept properties&quot;</oboOther:idspace>
         <dc:format>application/rdf+xml</dc:format>
-        <oboOther:date>17.01.2018 01:38 GMT</oboOther:date>
+        <oboOther:date>30.01.2018 12:27 GMT</oboOther:date>
         <oboOther:idspace>EDAM_data http://edamontology.org/data_ &quot;EDAM types of data&quot;</oboOther:idspace>
         <oboInOwl:hasSubset>concept_properties &quot;EDAM concept properties&quot;</oboInOwl:hasSubset>
         <dc:creator>Jon Ison</dc:creator>
@@ -53,7 +54,7 @@
 		<dc:creator>Hervé Ménager</dc:creator>
 		<dc:creator>Matúš Kalaš</dc:creator>
 		<dc:contributor>Alexandre Dufour</dc:contributor>
-		<dc:creator>Moritz Kirschmann</dc:creator>
+		<dc:creator>Moritz Alexander Kirschmann</dc:creator>
 		<dc:creator>Anatole Chessel</dc:creator>
 		<dc:creator>Laure Plantard</dc:creator>
 		<dc:creator>Joakim Lindblad</dc:creator>
@@ -65,9 +66,14 @@
 		<dc:contributor>Kota Miura</dc:contributor>
 		<dc:contributor>Lassi Paavolainen</dc:contributor>
 		<dc:contributor>Ofra Golani</dc:contributor>
-		<dc:contributor>Leandro Scholz</dc:contributor>
+		<dc:contributor>Leandro Aluisio Scholz</dc:contributor>
 		<dc:contributor>Julien Colombelli</dc:contributor>
+		<dc:contributor>David Hörl</dc:contributor>
+		<dc:contributor>John Bogovic</dc:contributor>
+		<dc:contributor>Martin Jones</dc:contributor>
+		<dc:contributor>Fabienne Rössler</dc:contributor>
 		<dc:contributor>NEUBIAS taggers and members of NEUBIAS WG4 lead by Perrine Paul-Gilloteaux and WG5 lead by Sébastien Tosi</dc:contributor>
+		<dc:contributor>Participants in the NEUBIAS taggathons organised by Perrine Paul-Gilloteaux and other members of NEUBIAS WG4 and WG5</dc:contributor>
         <dc:title>EDAM-bioimaging: An ontology of bioimage informatics operations, types of data, data formats, and bioimaging topics</dc:title>
         <oboOther:idspace>EDAM_format http://edamontology.org/format_ &quot;EDAM data formats&quot;</oboOther:idspace>
         <next_id>!NB.:NO_STABLE_IDS-YET!</next_id>
