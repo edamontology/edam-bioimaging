@@ -42,7 +42,7 @@
         <oboInOwl:hasSubset>bioimaging &quot;EDAM-bioimaging&quot;</oboInOwl:hasSubset>
         <oboOther:idspace>EDAM http://edamontology.org/ &quot;EDAM relations and concept properties&quot;</oboOther:idspace>
         <dc:format>application/rdf+xml</dc:format>
-        <oboOther:date>30.01.2018 12:27 GMT</oboOther:date>
+        <oboOther:date>30.01.2018 12:29 GMT</oboOther:date>
         <oboOther:idspace>EDAM_data http://edamontology.org/data_ &quot;EDAM types of data&quot;</oboOther:idspace>
         <oboInOwl:hasSubset>concept_properties &quot;EDAM concept properties&quot;</oboInOwl:hasSubset>
         <dc:creator>Jon Ison</dc:creator>
@@ -59,14 +59,14 @@
 		<dc:creator>Laure Plantard</dc:creator>
 		<dc:creator>Joakim Lindblad</dc:creator>
 		<dc:contributor>Chong Zhang</dc:contributor>
-		<dc:contributor>Nataša Sladoje-Matić</dc:contributor>
+		<dc:creator>Nataša Sladoje-Matić</dc:creator>
 		<dc:contributor>Jean-Baptiste Sibarita</dc:contributor>
 		<dc:contributor>David Rousseau</dc:contributor>
 		<dc:contributor>Romain Guiet</dc:contributor>
 		<dc:contributor>Kota Miura</dc:contributor>
 		<dc:contributor>Lassi Paavolainen</dc:contributor>
 		<dc:contributor>Ofra Golani</dc:contributor>
-		<dc:contributor>Leandro Aluisio Scholz</dc:contributor>
+		<dc:creator>Leandro Aluisio Scholz</dc:creator>
 		<dc:contributor>Julien Colombelli</dc:contributor>
 		<dc:contributor>David Hörl</dc:contributor>
 		<dc:contributor>John Bogovic</dc:contributor>
