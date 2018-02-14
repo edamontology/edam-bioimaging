@@ -2,12 +2,17 @@ DOI representing all stable versions, resolving to the latest: [![10.5281/zenodo
 
 DOI of the latest stable EDAM-bioimaging version _alpha03_: [![10.5281/zenodo.1149731](https://zenodo.org/badge/DOI/10.5281/zenodo.1149731.svg)](https://doi.org/10.5281/zenodo.1149731)
 
+Poster: [![10.7490/f1000research.1115257.1](https://zenodo.org/badge/DOI/10.7490/f1000research.1115257.1.svg)](https://doi.org/10.7490/f1000research.1115257.1)
+
+Twitter: [@edamontology](http://twitter.com/edamontology) ([follow](https://twitter.com/intent/follow?original_referer=https%3A%2F%2Fgithub.com%2Fedamontology%2Fedam-bioimaging&region=follow_link&screen_name=edamontology&tw_p=followbutton)).
+
+
 # EDAM-bioimaging
 
 An ontology of bioimage informatics operations, types of data, data formats, and bioimaging topics
 
 
-EDAM-bioimaging is an extension to the [EDAM ontology](https://github.com/edamontology/edamontology) (http://edamontology.org) for bioimage analysis, bioimage informatics, and bioimaging, developed in collaboration with partners from [NEUBIAS](http://eubias.org/NEUBIAS) Cost Action (CA15124), [ELIXIR](http://www.elixir-europe.org)-EXCELERATE WP1 (Horizon 2020 676559), and [Euro-BioImaging](http://www.eurobioimaging.eu) PP2.
+EDAM-bioimaging is an extension to the [EDAM ontology](https://github.com/edamontology/edamontology) (http://edamontology.org) for bioimage analysis, bioimage informatics, and bioimaging, developed in collaboration between partners from [NEUBIAS](http://eubias.org/NEUBIAS) Cost Action (Horizon 2020 CA15124) and [ELIXIR](http://www.elixir-europe.org)-EXCELERATE WP1 (Horizon 2020 676559), in contact with partners from [Euro-BioImaging](http://www.eurobioimaging.eu) PP2.
 
 
 ## Viewing
@@ -76,3 +81,17 @@ At this momentary early stage of the development, the content of EDAM-bioimaging
 * or if needed in parallel, edit properties and root concepts only in _git_ and other concepts only in WebProtégé. Merge afterwards.
 
 **_N.B._:** Be aware of how IDs of new concepts are assigned, and what it means for both **merging into _git_** and **[Comments](https://webprotege.stanford.edu/#projects/2ce704bf-83ed-4d2e-985f-84c4841fac71/edit/Comments) in WebProtégé**. See https://github.com/edamontology/edam-bioimaging/issues/7.
+
+
+## Citing
+
+Before a full article is published, please cite the following when refering to EDAM-bioimaging in a scholarly publication:
+
+ * Matúš Kalaš, Laure Plantard, Moritz Alexander Kirschmann, Joakim Lindblad, Anatole Chessel, Nataša Sladoje-Matić, Leandro A. Scholz, Chong Zhang, Fabienne Rössler, Alexandre Dufour, John A. Bogovic, Martin Jones, Josh Moore, Alban Gaignard, Lassi Paavolainen, David Hörl, Ofra Golani, Participants in the [NEUBIAS Taggathons](http://eubias.org/NEUBIAS/what-is-taggathon/), Perrine Paul-Gilloteaux, [the EDAM dev team](http://edamontologydocs.readthedocs.io/en/latest/contributors.html#edam-developers), Kota Miura, Julien Colombelli, and [welcoming contributors](https://github.com/edamontology/edam-bioimaging#contributing) **(2018)**. [EDAM-bioimaging: the ontology of bioimage informatics operations, topics, data, and formats [version 1; not peer reviewed]](https://f1000research.com/posters/7-180). _F1000Research_, **7**(ELIXIR): 180. Poster. [![10.7490/f1000research.1115257.1](https://zenodo.org/badge/DOI/10.7490/f1000research.1115257.1.svg)](https://doi.org/10.7490/f1000research.1115257.1) _Open Access_
+
+The "mainline" EDAM ontology can be cited by:
+
+ * Jon Ison, Matúš Kalaš, Inge Jonassen, Dan Bolser, Mahmut Uludag, Hamish McWilliam, James Malone, Rodrigo Lopez, Steve Pettifer, and Peter Rice **(2013)**. [EDAM: an ontology of bioinformatics operations, types of data and identifiers, topics and formats](http://bioinformatics.oxfordjournals.org/content/29/10/1325.full). _Bioinformatics_, **29**(10): 1325-1332.
+[![10.1093/bioinformatics/btt113](https://zenodo.org/badge/DOI/10.1093/bioinformatics/btt113.svg)](https://doi.org/10.1093/bioinformatics/btt113) PMID: [23479348](http://www.ncbi.nlm.nih.gov/pubmed/23479348) _Open Access_
+
+EDAM-bioimaging releases are citable with DOIs too, for cases when that is needed. [![10.5281/zenodo.1149730](https://zenodo.org/badge/DOI/10.5281/zenodo.1149730.svg)](https://doi.org/10.5281/zenodo.1149730) represents all releases and resolves to the DOI of the last stable release. For the DOI of a particular release of EDAM-bioimaging, please see [/releases](https://github.com/edamontology/edam-bioimaging/tree/master/releases).
