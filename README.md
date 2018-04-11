@@ -62,11 +62,11 @@ The most accessible way of contributing is writing comments with suggestions or 
 * Add comments to the [live development version of EDAM-bioimaging](https://webprotege.stanford.edu/#projects/2ce704bf-83ed-4d2e-985f-84c4841fac71/edit/Classes) at __WebProtégé__. Free registration at WebProtégé is required. Select a concept and "Start new thread" in the "Comments" widget|window (not "Comments" tab, stay in the "Classes" tab). Contribute to already open threads _ibid_ or in the "Comments" tab.
 
 **Other options:**
+* Submit or comment on an [issue](https://github.com/edamontology/edam-bioimaging/issues) at __GitHub__
 * Add a proposal or comment to EDAM-bioimaging at the __NCBO BioPortal__
     * to a selected concept in the ["Classes" tab](https://bioportal.bioontology.org/ontologies/EDAM-BIOIMAGING/?p=classes) by clicking the small "Notes" tab on the right (still within the big "Classes" tab)
     * on the general level in the ["Notes" tab](https://bioportal.bioontology.org/ontologies/EDAM-BIOIMAGING/?p=notes). You can include new concept proposals here.
-* Submit or comment on an [issue](https://github.com/edamontology/edam-bioimaging/issues) at __GitHub__
-* Join the discussions at wg4-edam_ontology@irbbarcelona.org.glip.com (if part or invited to NeuBIAS on [Glip](https://app.glip.com/)). Mostly organisational stuff.
+* Join the discussions at wg4-edam_ontology@irbbarcelona.org.glip.com (if member of, or invited to NeuBIAS on [Glip](https://app.glip.com/)). Mostly organisational stuff.
 * Add comments to the stable versions of EDAM-bioimaging at WebProtégé, such as the [last stable version](https://webprotege.stanford.edu/#projects/60fbe82b-bd58-41e2-825d-3801c071ee47/edit/Classes) and especially the frozen versions ([alpha03](https://webprotege.stanford.edu/#projects/40a89525-b6d6-42f2-a4c1-88e7fb1c1f86/edit/Classes), [alpha02](https://webprotege.stanford.edu/#projects/f2cd721e-0f26-4b05-9ce2-ce20d4860442/edit/Classes)) for more persistent comments. Note that comments to the [live version](https://webprotege.stanford.edu/#projects/2ce704bf-83ed-4d2e-985f-84c4841fac71/edit/Classes) are handled with the highest priority.
 
 If you want to contribute in person, please join or organise a hackathon. Get in touch with wg4-edam_ontology@irbbarcelona.org.glip.com or matus.kalas@uib.no for planning. Usual hackathons for editing EDAM-bioimaging are the [NEUBIAS Taggathons](http://eubias.org/NEUBIAS/what-is-taggathon/).
@@ -85,8 +85,9 @@ At this momentary early stage of the development, the content of EDAM-bioimaging
 
 ## Citing
 
-Before a full article is published, please cite the following when refering to EDAM-bioimaging in a scholarly publication:
 (Download [BibTeX](https://raw.githubusercontent.com/edamontology/edam-bioimaging/master/CITATION.bib))
+
+Before a full article is published, please cite the following when refering to EDAM-bioimaging in a scholarly publication:
 
  * Matúš Kalaš, Laure Plantard, Moritz Alexander Kirschmann, Joakim Lindblad, Anatole Chessel, Nataša Sladoje-Matić, Leandro A. Scholz, Chong Zhang, Fabienne Rössler, Alexandre Dufour, John A. Bogovic, Martin Jones, Josh Moore, Alban Gaignard, Lassi Paavolainen, David Hörl, Ofra Golani, Participants in the [NEUBIAS Taggathons](http://eubias.org/NEUBIAS/what-is-taggathon/), Perrine Paul-Gilloteaux, [the EDAM dev team](http://edamontologydocs.readthedocs.io/en/latest/contributors.html#edam-developers), Kota Miura, Julien Colombelli, and [welcoming contributors](https://github.com/edamontology/edam-bioimaging#contributing) **(2018)**. [EDAM-bioimaging: the ontology of bioimage informatics operations, topics, data, and formats [version 1; not peer reviewed]](https://f1000research.com/posters/7-180). _F1000Research_, **7**(ELIXIR): 180. Poster. [![10.7490/f1000research.1115257.1](https://zenodo.org/badge/DOI/10.7490/f1000research.1115257.1.svg)](https://doi.org/10.7490/f1000research.1115257.1) _Open Access_
 
