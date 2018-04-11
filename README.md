@@ -86,7 +86,7 @@ At this momentary early stage of the development, the content of EDAM-bioimaging
 ## Citing
 
 Before a full article is published, please cite the following when refering to EDAM-bioimaging in a scholarly publication:
-(Download [BibTeX](https://github.com/edamontology/edam-bioimaging/blob/master/CITATION.bib))
+(Download [BibTeX](https://raw.githubusercontent.com/edamontology/edam-bioimaging/master/CITATION.bib))
 
  * Matúš Kalaš, Laure Plantard, Moritz Alexander Kirschmann, Joakim Lindblad, Anatole Chessel, Nataša Sladoje-Matić, Leandro A. Scholz, Chong Zhang, Fabienne Rössler, Alexandre Dufour, John A. Bogovic, Martin Jones, Josh Moore, Alban Gaignard, Lassi Paavolainen, David Hörl, Ofra Golani, Participants in the [NEUBIAS Taggathons](http://eubias.org/NEUBIAS/what-is-taggathon/), Perrine Paul-Gilloteaux, [the EDAM dev team](http://edamontologydocs.readthedocs.io/en/latest/contributors.html#edam-developers), Kota Miura, Julien Colombelli, and [welcoming contributors](https://github.com/edamontology/edam-bioimaging#contributing) **(2018)**. [EDAM-bioimaging: the ontology of bioimage informatics operations, topics, data, and formats [version 1; not peer reviewed]](https://f1000research.com/posters/7-180). _F1000Research_, **7**(ELIXIR): 180. Poster. [![10.7490/f1000research.1115257.1](https://zenodo.org/badge/DOI/10.7490/f1000research.1115257.1.svg)](https://doi.org/10.7490/f1000research.1115257.1) _Open Access_
 
