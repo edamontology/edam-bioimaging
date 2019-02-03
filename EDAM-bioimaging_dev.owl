@@ -42,7 +42,7 @@
         <oboInOwl:hasSubset>bioimaging &quot;EDAM-bioimaging&quot;</oboInOwl:hasSubset>
         <oboOther:idspace>EDAM http://edamontology.org/ &quot;EDAM relations and concept properties&quot;</oboOther:idspace>
         <dc:format>application/rdf+xml</dc:format>
-        <oboOther:date>17.10.2018 15:33 GMT</oboOther:date>
+        <oboOther:date>03.02.2018 16:15 GMT</oboOther:date>
         <oboOther:idspace>EDAM_data http://edamontology.org/data_ &quot;EDAM types of data&quot;</oboOther:idspace>
         <oboInOwl:hasSubset>concept_properties &quot;EDAM concept properties&quot;</oboInOwl:hasSubset>
         <dc:creator>Jon Ison</dc:creator>
@@ -59,7 +59,7 @@
 		<dc:creator>Laure Plantard</dc:creator>
 		<dc:creator>Joakim Lindblad</dc:creator>
 		<dc:contributor>Chong Zhang</dc:contributor>
-		<dc:creator>Nataša Sladoje-Matić</dc:creator>
+		<dc:creator>Nataša Sladoje</dc:creator>
 		<dc:contributor>Jean-Baptiste Sibarita</dc:contributor>
 		<dc:contributor>David Rousseau</dc:contributor>
 		<dc:contributor>Romain Guiet</dc:contributor>
@@ -72,8 +72,9 @@
 		<dc:contributor>John Bogovic</dc:contributor>
 		<dc:creator>Martin Jones</dc:creator>
 		<dc:contributor>Fabienne Rössler</dc:contributor>
-		<dc:contributor>NEUBIAS taggers and members of NEUBIAS WG4 lead by Perrine Paul-Gilloteaux and WG5 lead by Sébastien Tosi</dc:contributor>
-		<dc:contributor>Participants in the NEUBIAS taggathons organised by Perrine Paul-Gilloteaux and other members of NEUBIAS WG4 and WG5</dc:contributor>
+		<dc:contributor>Dominic Waithe</dc:contributor>
+		<dc:contributor>Alban Gaignard</dc:contributor>
+		<dc:contributor>NEUBIAS "taggers" and members of NEUBIAS WG4 lead by Perrine Paul-Gilloteaux and WG5 lead by Sébastien Tosi</dc:contributor>
         <dc:title>EDAM-bioimaging: An ontology of bioimage informatics operations, types of data, data formats, and bioimaging topics</dc:title>
         <oboOther:idspace>EDAM_format http://edamontology.org/format_ &quot;EDAM data formats&quot;</oboOther:idspace>
         <next_id>!NB.:NO_STABLE_IDS-YET!</next_id>
