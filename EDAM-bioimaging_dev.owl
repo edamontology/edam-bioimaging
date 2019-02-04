@@ -42,7 +42,7 @@
         <oboInOwl:hasSubset>bioimaging &quot;EDAM-bioimaging&quot;</oboInOwl:hasSubset>
         <oboOther:idspace>EDAM http://edamontology.org/ &quot;EDAM relations and concept properties&quot;</oboOther:idspace>
         <dc:format>application/rdf+xml</dc:format>
-        <oboOther:date>03.02.2018 16:15 GMT</oboOther:date>
+        <oboOther:date>04.02.2019 17:24 GMT</oboOther:date>
         <oboOther:idspace>EDAM_data http://edamontology.org/data_ &quot;EDAM types of data&quot;</oboOther:idspace>
         <oboInOwl:hasSubset>concept_properties &quot;EDAM concept properties&quot;</oboInOwl:hasSubset>
         <dc:creator>Jon Ison</dc:creator>
@@ -74,6 +74,8 @@
 		<dc:contributor>Fabienne Rössler</dc:contributor>
 		<dc:contributor>Dominic Waithe</dc:contributor>
 		<dc:contributor>Alban Gaignard</dc:contributor>
+		<dc:contributor>Florian Levet</dc:contributor>
+		<dc:contributor>Paula Sampaio</dc:contributor>
 		<dc:contributor>NEUBIAS "taggers" and members of NEUBIAS WG4 lead by Perrine Paul-Gilloteaux and WG5 lead by Sébastien Tosi</dc:contributor>
         <dc:title>EDAM-bioimaging: An ontology of bioimage informatics operations, types of data, data formats, and bioimaging topics</dc:title>
         <oboOther:idspace>EDAM_format http://edamontology.org/format_ &quot;EDAM data formats&quot;</oboOther:idspace>
