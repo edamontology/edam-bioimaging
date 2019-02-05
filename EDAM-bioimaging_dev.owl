@@ -42,7 +42,7 @@
         <oboInOwl:hasSubset>bioimaging &quot;EDAM-bioimaging&quot;</oboInOwl:hasSubset>
         <oboOther:idspace>EDAM http://edamontology.org/ &quot;EDAM relations and concept properties&quot;</oboOther:idspace>
         <dc:format>application/rdf+xml</dc:format>
-        <oboOther:date>05.02.2019 01:48 GMT</oboOther:date>
+        <oboOther:date>05.02.2019 01:55 GMT</oboOther:date>
         <oboOther:idspace>EDAM_data http://edamontology.org/data_ &quot;EDAM types of data&quot;</oboOther:idspace>
         <oboInOwl:hasSubset>concept_properties &quot;EDAM concept properties&quot;</oboInOwl:hasSubset>
         <dc:creator>Jon Ison</dc:creator>
@@ -1010,6 +1010,21 @@ Numbers in a matrix are responses from a sensor measured at a set of sampling po
     
 
 
+    <!-- http://edamontology.org/data_roi -->
+
+    <owl:Class rdf:about="http://edamontology.org/data_roi">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/data_0006"/>
+        <oboInOwl:hasExactSynonym>ROI</oboInOwl:hasExactSynonym>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>data</oboInOwl:inSubset>
+        <rdfs:comment>Resolving the discussion on &quot;object vs region vs region of interest&quot;, after adding Wiki def. Object is a region, but region can be more than an object.</rdfs:comment>
+        <rdfs:label>Region of interest</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Region_of_interest"/>
+    </owl:Class>
+    
+
+
     <!-- http://edamontology.org/data_Time -->
 
     <owl:Class rdf:about="http://edamontology.org/data_Time">
@@ -1529,21 +1544,6 @@ Numbers in a matrix are responses from a sensor measured at a set of sampling po
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
         <oboInOwl:inSubset>formats</oboInOwl:inSubset>
         <rdfs:label>raw</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://edamontology.org/format_roi -->
-
-    <owl:Class rdf:about="http://edamontology.org/format_roi">
-        <rdfs:subClassOf rdf:resource="http://edamontology.org/data_0006"/>
-        <oboInOwl:hasExactSynonym>ROI</oboInOwl:hasExactSynonym>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
-        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>formats</oboInOwl:inSubset>
-        <rdfs:comment>Resolving the discussion on &quot;object vs region vs region of interest&quot;, after adding Wiki def. Object is a region, but region can be more than an object.</rdfs:comment>
-        <rdfs:label>Region of interest</rdfs:label>
-        <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Region_of_interest"/>
     </owl:Class>
     
 
@@ -3557,7 +3557,7 @@ Whereas  the standard Fourier transform is only localized in frequency, wavelets
         <oboInOwl:hasNarrowSynonym>Connectomics</oboInOwl:hasNarrowSynonym>
         <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
-        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
+        <oboInOwl:inSubset>topics</oboInOwl:inSubset>
         <rdfs:label>Neuron image analysis</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://edamontology.org/operation__R9Qf06vxvFj2UbAk7pW3IMG"/>
     </owl:Class>
