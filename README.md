@@ -4,7 +4,9 @@ DOI of the latest stable EDAM-bioimaging version _alpha05_: [![10.5281/zenodo.25
 
 Poster: [![10.7490/f1000research.f1000research.1116432.1](https://zenodo.org/badge/DOI/10.7490/f1000research.1116432.1.svg)](https://doi.org/10.7490/f1000research.1116432.1)
 
-Twitter: [@edamontology](http://twitter.com/edamontology) ([follow](https://twitter.com/intent/follow?original_referer=https%3A%2F%2Fgithub.com%2Fedamontology%2Fedam-bioimaging&region=follow_link&screen_name=edamontology&tw_p=followbutton)).
+Twitter: [@edamontology](http://twitter.com/edamontology) ([follow](https://twitter.com/intent/follow?original_referer=https%3A%2F%2Fgithub.com%2Fedamontology%2Fedam-bioimaging&region=follow_link&screen_name=edamontology&tw_p=followbutton))
+
+[![Project Status: WIP – Initial development is in progress, but there has not yet been a stable, full-fledged reliable release.](https://www.repostatus.org/badges/latest/wip.svg)](https://www.repostatus.org/#wip)
 
 
 # EDAM-bioimaging
