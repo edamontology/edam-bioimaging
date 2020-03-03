@@ -1,8 +1,8 @@
 DOI representing all stable versions, resolving to the latest: [![10.5281/zenodo.1149730](https://zenodo.org/badge/DOI/10.5281/zenodo.1149730.svg)](https://doi.org/10.5281/zenodo.1149730)
 
-<!--DOI of the latest stable EDAM-bioimaging version _alpha06_: [![10.5281/zenodo.2557012](https://zenodo.org/badge/DOI/10.5281/zenodo.TODO.svg)](https://doi.org/10.5281/zenodo.TODO)
+DOI of the latest stable EDAM-bioimaging version _alpha06_: [![10.5281/zenodo.3695725](https://zenodo.org/badge/DOI/10.5281/zenodo.3695725.svg)](https://doi.org/10.5281/zenodo.3695725)
 
-Poster: [![10.7490/f1000research.TODO.1](https://zenodo.org/badge/DOI/10.7490/f1000research.TODO.1.svg)](https://doi.org/10.7490/f1000research.TODO.1)-->
+<!--Poster: [![10.7490/f1000research.TODO.1](https://zenodo.org/badge/DOI/10.7490/f1000research.TODO.1.svg)](https://doi.org/10.7490/f1000research.TODO.1)-->
 
 Twitter: [@edamontology](http://twitter.com/edamontology) ([follow](https://twitter.com/intent/follow?original_referer=https%3A%2F%2Fgithub.com%2Fedamontology%2Fedam-bioimaging&region=follow_link&screen_name=edamontology&tw_p=followbutton))
 
