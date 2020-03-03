@@ -42,7 +42,7 @@
         <oboInOwl:hasSubset>bioimaging &quot;EDAM-bioimaging&quot;</oboInOwl:hasSubset>
         <oboOther:idspace>EDAM http://edamontology.org/ &quot;EDAM relations and concept properties&quot;</oboOther:idspace>
         <dc:format>application/rdf+xml</dc:format>
-        <oboOther:date>05.02.2019 01:55 GMT</oboOther:date>
+        <oboOther:date>03.03.2020 11:16 UTC</oboOther:date>
         <oboOther:idspace>EDAM_data http://edamontology.org/data_ &quot;EDAM types of data&quot;</oboOther:idspace>
         <oboInOwl:hasSubset>concept_properties &quot;EDAM concept properties&quot;</oboInOwl:hasSubset>
         <dc:creator>Jon Ison</dc:creator>
@@ -77,13 +77,23 @@
 		<dc:contributor>Florian Levet</dc:contributor>
 		<dc:contributor>Paula Sampaio</dc:contributor>
 		<dc:contributor>Sebastian Munck</dc:contributor>
-		<dc:contributor>NEUBIAS "taggers" and members of NEUBIAS WG4 lead by Perrine Paul-Gilloteaux and WG5 lead by Sébastien Tosi</dc:contributor>
+		<dc:contributor>Perrine Paul-Gilloteaux</dc:contributor>
+		<dc:contributor>Marie-Charlotte Domart</dc:contributor>
+		<dc:contributor>Matthia Karreman</dc:contributor>
+		<dc:contributor>María Arrate Muñoz-Barrutia</dc:contributor>
+		<dc:contributor>Raf Van de Plas</dc:contributor>
+		<dc:contributor>Xavier Heiligenstein</dc:contributor>
+		<dc:contributor>Ivana Vrhovac Madunić</dc:contributor>
+		<dc:contributor>Daniel Sage</dc:contributor>
+		<dc:contributor>Estibaliz Gómez de Mariscal</dc:contributor>
+		<dc:contributor>Laura Nicolás Sáenz</dc:contributor>
+		<dc:contributor>Robert Haase</dc:contributor>
         <dc:title>EDAM-bioimaging: An ontology of bioimage informatics operations, types of data, data formats, and bioimaging topics</dc:title>
         <oboOther:idspace>EDAM_format http://edamontology.org/format_ &quot;EDAM data formats&quot;</oboOther:idspace>
         <next_id>!NB.:NO_STABLE_IDS-YET!</next_id>
         <oboInOwl:hasSubset>topics &quot;EDAM topics&quot;</oboInOwl:hasSubset>
-        <oboOther:remark>EDAM-bioimaging is an extension to the EDAM ontology (edamontology.org) for bioimage analysis, bioimage informatics, and bioimaging, developed in collaboration with partners from NEUBIAS Cost Action CA15124 (neubias.org) and EuroBioImaging PP2.</oboOther:remark>
-        <doap:Version>alpha06_dev</doap:Version>
+        <oboOther:remark>EDAM-bioimaging is an extension to the EDAM ontology (edamontology.org) for bioimage analysis, bioimage informatics, and bioimaging. It is being developed in collaboration between the ELIXIR research infrastructure and the NEUBIAS and COMULIS COST Actions (neubias.org CA15124, comulis.eu CA17121, funded by the Horizon 2020 Framework Programme of the European Union), in close contact with the Euro-BioImaging research infrastructure (PP2) and the Global BioImaging network.</oboOther:remark>
+        <doap:Version>alpha06</doap:Version>
         <rdfs:isDefinedBy rdf:resource="http://edamontology.org/EDAM-bioimaging.owl"/>
         <foaf:page rdf:resource="https://github.com/edamontology/edam-bioimaging"/>
     </owl:Ontology>
@@ -888,6 +898,8 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <owl:Class rdf:about="http://edamontology.org/data_2D_dataset">
         <rdfs:subClassOf rdf:resource="http://edamontology.org/data_Image"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/data_Image_geometry"/>
+        <related_term>tile</related_term>
+        <related_term>tiling</related_term>
         <oboInOwl:hasDefinition>A (2D) image is the optical counterpart of an object produced by an optical or an electronic device.
 
 A (2D) digital image is a representation of a real (2D) image in a form of a 2D array, or matrix, containing numbers that can be stored and handled by a digital computer.</oboInOwl:hasDefinition>
@@ -908,6 +920,7 @@ Numbers in a matrix are responses from a sensor measured at a set of sampling po
     <owl:Class rdf:about="http://edamontology.org/data_3D_dataset">
         <rdfs:subClassOf rdf:resource="http://edamontology.org/data_Image"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/data_Image_geometry"/>
+        <related_term>stack</related_term>
         <oboInOwl:hasRelatedSynonym>Image stack</oboInOwl:hasRelatedSynonym>
         <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <oboInOwl:inSubset>data</oboInOwl:inSubset>
@@ -1379,6 +1392,17 @@ Numbers in a matrix are responses from a sensor measured at a set of sampling po
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
         <oboInOwl:inSubset>formats</oboInOwl:inSubset>
         <oboInOwl:inSubset>navigation</oboInOwl:inSubset>
+        <rdfs:comment>Xavier Heiligenstein
+20th March 2019
+I would add: dm3, md4, dv, zvi, mrc, st
+
+sampaio
+4th February 2019
+Add pre-clinical and medica specific formats e.g. DICOM
+
+Natasa Sladoje
+4th February 2019
+Some more https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3948928/</rdfs:comment>
         <rdfs:label>Format</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -1455,6 +1479,7 @@ Numbers in a matrix are responses from a sensor measured at a set of sampling po
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
         <oboInOwl:inSubset>formats</oboInOwl:inSubset>
         <rdfs:label>hdf5</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Hierarchical_Data_Format"/>
     </owl:Class>
     
 
@@ -1773,8 +1798,9 @@ Numbers in a matrix are responses from a sensor measured at a set of sampling po
         <hide_in_subset>bioimaging</hide_in_subset>
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
         <oboInOwl:inSubset>operations</oboInOwl:inSubset>
-        <rdfs:comment>ToDo: Clear up relation between Classification, Clustering, and Prediction and recognition (also in main EDAM)</rdfs:comment>
-        <rdfs:label>Prediction and recognition</rdfs:label>
+        <rdfs:comment>Todo: Terms Prediction (https://en.wikipedia.org/wiki/Prediction#Statistics), Forecast, Statistical inference, (Inference|Induction), Inferential statistics, Regression analysis, Hypothesis testing, ... And Regression &amp; Regression analysis versus Training/Parameter optimisation</rdfs:comment>
+        <rdfs:comment>Work comment: Cleared up relation between Classification, Clustering, and Prediction and recognition (also in main EDAM). Now Classification, Clustering, Regression (which needs more terms &amp; related). Recognition only Pattern recognition (maybe even as topic equal to ML).</rdfs:comment>
+        <rdfs:label>Regression</rdfs:label>
     </owl:Class>
     
 
@@ -1837,10 +1863,10 @@ Numbers in a matrix are responses from a sensor measured at a set of sampling po
     <owl:Class rdf:about="http://edamontology.org/operation_3429">
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_0004"/>
         <hide_in_subset>bioimaging</hide_in_subset>
-        <oboInOwl:hasExactSynonym>Synthesis</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Data synthesis</oboInOwl:hasExactSynonym>
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
         <oboInOwl:inSubset>operations</oboInOwl:inSubset>
-        <rdfs:label>Generation</rdfs:label>
+        <rdfs:label>Data generation</rdfs:label>
     </owl:Class>
     
 
@@ -2041,7 +2067,7 @@ Signed distance transform assigns, to each pixel, its distance to the object bou
     <owl:Class rdf:about="http://edamontology.org/operation_Edge_detection">
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Image_enhancement"/>
         <related_term>Matching filter</related_term>
-        <related_term>Steerable fliter</related_term>
+        <related_term>Steerable filter</related_term>
         <oboInOwl:hasNarrowSynonym>Edge enhancement</oboInOwl:hasNarrowSynonym>
         <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
@@ -2075,7 +2101,9 @@ Grey scale erosion computed in an image point is the minimum of the intensities 
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_3443"/>
         <oboInOwl:hasExactSynonym>Feature detection</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Image labeling</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasNarrowSynonym>SIFT</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasNarrowSynonym>SURF</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>scale-invariant feature transform</oboInOwl:hasNarrowSynonym>
         <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
         <oboInOwl:inSubset>operations</oboInOwl:inSubset>
@@ -2230,7 +2258,7 @@ Grey scale erosion computed in an image point is the minimum of the intensities 
     <owl:Class rdf:about="http://edamontology.org/operation_Image_registration">
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_2928"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Image_processing"/>
-        <oboInOwl:hasDefinition>Image registration is the process of aligning, by applying geometric transformation, two or more misaligned images of the same scene, when images are captured under variable conditions that can change the camera perspective or the content of the scene.</oboInOwl:hasDefinition>
+        <oboInOwl:hasDefinition>Image registration is the process of aligning, by applying geometric transformation, two or more misaligned images of the same (or similar) scene, when images are captured under variable conditions that can change the camera perspective or the content of the scene.</oboInOwl:hasDefinition>
         <oboInOwl:hasExactSynonym>Image alignment</oboInOwl:hasExactSynonym>
         <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
@@ -2278,6 +2306,9 @@ Registration can  be based on correspondence established between the landmarks o
 
     <owl:Class rdf:about="http://edamontology.org/operation_Image_stitching">
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Image_reconstruction"/>
+        <related_term>Tile</related_term>
+        <related_term>Tiling</related_term>
+        <oboInOwl:hasRelatedSynonym>Mosaic</oboInOwl:hasRelatedSynonym>
         <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
         <oboInOwl:inSubset>operations</oboInOwl:inSubset>
@@ -2459,7 +2490,7 @@ The basic morphological operators are erosion, dilation, opening and closing.</o
     <!-- http://edamontology.org/operation_Projection -->
 
     <owl:Class rdf:about="http://edamontology.org/operation_Projection">
-        <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Image_reconstruction"/>
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Image_visualisation"/>
         <oboInOwl:hasExactSynonym>Maximum projection</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Minimum projection</oboInOwl:hasExactSynonym>
         <oboInOwl:hasNarrowSynonym>Maximum intensity projection</oboInOwl:hasNarrowSynonym>
@@ -2561,6 +2592,7 @@ The basic morphological operators are erosion, dilation, opening and closing.</o
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
         <oboInOwl:inSubset>operations</oboInOwl:inSubset>
         <rdfs:label>Warping</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://edamontology.org/operation__RCPVGO34XrwrJasQ5yWBg9k"/>
     </owl:Class>
     
 
@@ -2780,8 +2812,10 @@ The basic morphological operators are erosion, dilation, opening and closing.</o
 
     <owl:Class rdf:about="http://edamontology.org/operation__RBUpi1JSczmHQSf8Q8fDzG5">
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Image_tracking"/>
+        <oboInOwl:hasRelatedSynonym>Scratch assay</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym>Scratch assay analysis</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym>Wound healing analysis</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>Wound-healing assay</oboInOwl:hasRelatedSynonym>
         <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
         <oboInOwl:inSubset>operations</oboInOwl:inSubset>
@@ -2838,6 +2872,7 @@ Whereas  the standard Fourier transform is only localized in frequency, wavelets
         <oboInOwl:inSubset>operations</oboInOwl:inSubset>
         <rdfs:label>Deformable registration</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.456.8649&amp;rep=rep1&amp;type=pdf"/>
+        <rdfs:seeAlso rdf:resource="http://edamontology.org/operation_Warping"/>
         <rdfs:seeAlso rdf:resource="http://hal.archives-ouvertes.fr/docs/00/68/47/15/PDF/RR-7919.pdf"/>
     </owl:Class>
     
@@ -2873,11 +2908,14 @@ Whereas  the standard Fourier transform is only localized in frequency, wavelets
     <!-- http://edamontology.org/operation__RDetoixS3xEu0agR2CebaoB -->
 
     <owl:Class rdf:about="http://edamontology.org/operation__RDetoixS3xEu0agR2CebaoB">
-        <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_2423"/>
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_0004"/>
         <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
         <oboInOwl:inSubset>operations</oboInOwl:inSubset>
+        <rdfs:comment>Pattern recognition aims at identifying regularities in data and includes classification, clustering, anomaly detection, density estimation, etc. This can be done in both supervised and unsupervised manner.</rdfs:comment>
+        <rdfs:comment>Todo: Consider Pattern recognition as some form of synonym of topic ML instead(?)</rdfs:comment>
         <rdfs:label>Pattern recognition</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Pattern_recognition"/>
     </owl:Class>
     
 
@@ -2885,7 +2923,7 @@ Whereas  the standard Fourier transform is only localized in frequency, wavelets
     <!-- http://edamontology.org/operation__RDggamr21qZlMqkQmyOdC7l -->
 
     <owl:Class rdf:about="http://edamontology.org/operation__RDggamr21qZlMqkQmyOdC7l">
-        <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_3553"/>
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/operation______Sparse_annotation"/>
         <related_term>Seed point selection</related_term>
         <oboInOwl:hasExactSynonym>Reference point assignment</oboInOwl:hasExactSynonym>
         <oboInOwl:hasNarrowSynonym>Fiducial placement</oboInOwl:hasNarrowSynonym>
@@ -3003,6 +3041,7 @@ https://en.wikipedia.org/wiki/Region_growing</rdfs:seeAlso>
         <oboInOwl:hasDefinition>Clustering (or cluster analysis) is a process of grouping a set of data points (objects) in such a way that objects in the same group (forming a cluster) are, in some sense,  more similar to each other than to those in other groups (clusters).
 
 Clustering is sometimes referred to as unsupervised classification.</oboInOwl:hasDefinition>
+        <oboInOwl:hasExactSynonym>Cluster analysis</oboInOwl:hasExactSynonym>
         <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
         <oboInOwl:inSubset>operations</oboInOwl:inSubset>
@@ -3075,6 +3114,7 @@ Clustering is sometimes referred to as unsupervised classification.</oboInOwl:ha
         <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
         <oboInOwl:inSubset>operations</oboInOwl:inSubset>
+        <rdfs:comment>ToDo: Add wrt ML/statistical (brainstorming Joakim, Martin, Daniel Sage, Estibaliz...): Training/Learning, Model fitting, (Statistical/ML) Model optimisation/fine-tuning, Hyperparameter optimisation/tuning, Transfer learning, Supervised/Reinforcement/Unsupervised/Semi-supervised, (Regression, Regression analysis?), Energy minimisation, Empirical risk minimisation, Likelihood maximisation, Expectation maximisation,</rdfs:comment>
         <rdfs:label>Parameter optimisation</rdfs:label>
     </owl:Class>
     
@@ -3331,6 +3371,123 @@ Whereas  the standard Fourier transform is only localized in frequency, wavelets
     
 
 
+    <!-- http://edamontology.org/operation______Centroid-based_clustering -->
+
+    <owl:Class rdf:about="http://edamontology.org/operation______Centroid-based_clustering">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/operation___Clustering"/>
+        <related_term>Fuzzy c-means clustering</related_term>
+        <related_term>k-means clustering</related_term>
+        <rdfs:label>Centroid-based clustering</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/K-means_clustering"/>
+        <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Cluster_analysis#Centroid-based_clustering"/>
+    </owl:Class>
+    
+
+
+    <!-- http://edamontology.org/operation______Connectivity-based_clustering -->
+
+    <owl:Class rdf:about="http://edamontology.org/operation______Connectivity-based_clustering">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/operation___Clustering"/>
+        <oboInOwl:hasExactSynonym>Connectivity-based clustering</oboInOwl:hasExactSynonym>
+        <rdfs:label>Hierarchical clustering</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Hierarchical_clustering"/>
+        <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Cluster_analysis#Connectivity-based_clustering_(hierarchical_clustering)"/>
+    </owl:Class>
+    
+
+
+    <!-- http://edamontology.org/operation______Data_augmentation -->
+
+    <owl:Class rdf:about="http://edamontology.org/operation______Data_augmentation">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_3429"/>
+        <oboInOwl:hasDefinition>Synthetically increasing the multiplicity and diversity of data available without collecting new data. Data augmentation relies on a priori knowledge (e.g. of system invariants or the noise structure of the data) to generate more data, typically for training learning models. Common data augmentation techniques include corruption by artificial noise, cropping, padding, rotation, and flipping.</oboInOwl:hasDefinition>
+        <rdfs:label>Data augmentation</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Convolutional_neural_network#Artificial_data"/>
+    </owl:Class>
+    
+
+
+    <!-- http://edamontology.org/operation______Dense_annotation -->
+
+    <owl:Class rdf:about="http://edamontology.org/operation______Dense_annotation">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_3553"/>
+        <rdfs:label>Dense image annotation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://edamontology.org/operation______Density-based_clustering -->
+
+    <owl:Class rdf:about="http://edamontology.org/operation______Density-based_clustering">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/operation___Clustering"/>
+        <related_term>DBSCAN</related_term>
+        <rdfs:label>Density-based clustering</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Cluster_analysis#Density-based_clustering"/>
+    </owl:Class>
+    
+
+
+    <!-- http://edamontology.org/operation______Distribution-based_clustering -->
+
+    <owl:Class rdf:about="http://edamontology.org/operation______Distribution-based_clustering">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/operation___Clustering"/>
+        <related_term>Gaussian mixture model (GMM)</related_term>
+        <rdfs:label>Distribution-based clustering</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Cluster_analysis#Distribution-based_clustering"/>
+    </owl:Class>
+    
+
+
+    <!-- http://edamontology.org/operation______Image-to-image_translation -->
+
+    <owl:Class rdf:about="http://edamontology.org/operation______Image-to-image_translation">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Image_processing"/>
+        <oboInOwl:hasDefinition>Image-to-image translation is a class of image processing techniques where the goal is to learn the mapping between an input image and an output image. It can be applied to a wide range of applications, such as collection style transfer, imaging modality transfer, object transfiguration, season transfer and photo enhancement.</oboInOwl:hasDefinition>
+        <oboInOwl:hasNarrowSynonym>Neural style transfer</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>Style transfer</oboInOwl:hasNarrowSynonym>
+        <rdfs:label>Image-to-image translation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://edamontology.org/operation______Machine_learning-based_data_generation -->
+
+    <owl:Class rdf:about="http://edamontology.org/operation______Machine_learning-based_data_generation">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_3429"/>
+        <related_term>Generative adversarial network (GAN)</related_term>
+        <rdfs:label>Machine learning-based data generation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://edamontology.org/operation______Manual_segmentation -->
+
+    <owl:Class rdf:about="http://edamontology.org/operation______Manual_segmentation">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Image_segmentation"/>
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/operation______Dense_annotation"/>
+        <rdfs:label>Manual segmentation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://edamontology.org/operation______Semi-automatic_segmentation -->
+
+    <owl:Class rdf:about="http://edamontology.org/operation______Semi-automatic_segmentation">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Image_segmentation"/>
+        <rdfs:label>Semi-automatic segmentation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://edamontology.org/operation______Sparse_annotation -->
+
+    <owl:Class rdf:about="http://edamontology.org/operation______Sparse_annotation">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_3553"/>
+        <rdfs:label>Sparse image annotation</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://edamontology.org/topic_0003 -->
 
     <owl:Class rdf:about="http://edamontology.org/topic_0003">
@@ -3354,15 +3511,27 @@ Whereas  the standard Fourier transform is only localized in frequency, wavelets
     
 
 
+    <!-- http://edamontology.org/topic_0218 -->
+
+    <owl:Class rdf:about="http://edamontology.org/topic______Natural_language_processing">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_0218"/>
+        <rdfs:label>Natural language processing</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Natural_language_processing"/>
+    </owl:Class>
+    
+
+
     <!-- http://edamontology.org/topic_0593 -->
 
     <owl:Class rdf:about="http://edamontology.org/topic_0593">
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic__RBfI2XgIsxcfKonPPluKAhK"/>
         <oboInOwl:hasExactSynonym>NMR</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasNarrowSynonym>Magnetic resonance spectroscopy (MRS)</oboInOwl:hasNarrowSynonym>
         <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
         <oboInOwl:inSubset>topics</oboInOwl:inSubset>
         <rdfs:label>Nuclear magnetic resonance spectroscopy</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Nuclear_magnetic_resonance_spectroscopy"/>
     </owl:Class>
     
 
@@ -3407,6 +3576,7 @@ Whereas  the standard Fourier transform is only localized in frequency, wavelets
         <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
         <oboInOwl:inSubset>topics</oboInOwl:inSubset>
+        <rdfs:comment>a list of technique to add is to be found here: https://docs.google.com/document/d/1amTDpRLmoER8pA4IlGMChFfTHzHmMCFcaqUA1xQBd3k/edit</rdfs:comment>
         <rdfs:label>Light microscopy</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C17995"/>
         <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Optical_microscope"/>
@@ -3418,11 +3588,13 @@ Whereas  the standard Fourier transform is only localized in frequency, wavelets
 
     <owl:Class rdf:about="http://edamontology.org/topic_3444">
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_3382"/>
+        <oboInOwl:hasDefinition>Technique using magnetic fields and radio waves to generate images of organs.</oboInOwl:hasDefinition>
         <oboInOwl:hasExactSynonym>MRI</oboInOwl:hasExactSynonym>
         <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
         <oboInOwl:inSubset>topics</oboInOwl:inSubset>
         <rdfs:label>Magnetic resonance imaging</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://bioportal.bioontology.org/ontologies/NCIT/?p=classes&amp;conceptid=http%3A%2F%2Fncicb.nci.nih.gov%2Fxml%2Fowl%2FEVS%2FThesaurus.owl%23C16809&amp;jump_to_nav=true"/>
         <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Magnetic_resonance_imaging"/>
     </owl:Class>
     
@@ -3436,6 +3608,7 @@ Whereas  the standard Fourier transform is only localized in frequency, wavelets
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
         <oboInOwl:inSubset>topics</oboInOwl:inSubset>
         <rdfs:label>Tomography</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Tomography"/>
     </owl:Class>
     
 
@@ -3443,13 +3616,17 @@ Whereas  the standard Fourier transform is only localized in frequency, wavelets
     <!-- http://edamontology.org/topic_3474 -->
 
     <owl:Class rdf:about="http://edamontology.org/topic_3474">
-        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_0003"/>
-        <related_term>Artificial intelligence</related_term>
-        <oboInOwl:hasNarrowSynonym>Deep learning</oboInOwl:hasNarrowSynonym>
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_Statistics"/>
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic______Artificial_intelligence"/>
+        <oboInOwl:hasExactSynonym>ML</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasNarrowSynonym>Statistical learning</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasRelatedSynonym>Data mining</oboInOwl:hasRelatedSynonym>
         <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
         <oboInOwl:inSubset>topics</oboInOwl:inSubset>
+        <rdfs:comment>Statistical learning may either be considered as exact or narrow synonym (or even closely related) synonym of ML. On Wikipedia, https://en.wikipedia.org/wiki/Statistical_learning redirects to ML.</rdfs:comment>
         <rdfs:label>Machine learning</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Data_mining"/>
         <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Machine_learning"/>
     </owl:Class>
     
@@ -3460,6 +3637,8 @@ Whereas  the standard Fourier transform is only localized in frequency, wavelets
     <owl:Class rdf:about="http://edamontology.org/topic_Digital_histology">
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic__RBDp7HwdUBEjpS6PRjYfV2V"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_____Histology"/>
+        <related_term>Digital pathology</related_term>
+        <oboInOwl:hasBroadSynonym>Tissue image informatics</oboInOwl:hasBroadSynonym>
         <oboInOwl:hasExactSynonym>Digital histology</oboInOwl:hasExactSynonym>
         <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <rdfs:label>Tissue image analysis</rdfs:label>
@@ -3485,12 +3664,15 @@ Whereas  the standard Fourier transform is only localized in frequency, wavelets
     <!-- http://edamontology.org/topic_High_content_screening -->
 
     <owl:Class rdf:about="http://edamontology.org/topic_High_content_screening">
-        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_0003"/>
-        <oboInOwl:hasExactSynonym>HCS</oboInOwl:hasExactSynonym>
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_3382"/>
+        <oboInOwl:hasExactSynonym>HCA</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>High-content imaging</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasNarrowSynonym>High-content screening (HCS)</oboInOwl:hasNarrowSynonym>
         <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
         <oboInOwl:inSubset>topics</oboInOwl:inSubset>
-        <rdfs:label>High content screening</rdfs:label>
+        <rdfs:comment>In simple terms, high-content screening (HCS) is the combination of high-throughput screening (HTS) applied to high-content analysis (HCA).</rdfs:comment>
+        <rdfs:label>High-content analysis</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/High-content_screening"/>
     </owl:Class>
     
@@ -3499,32 +3681,39 @@ Whereas  the standard Fourier transform is only localized in frequency, wavelets
     <!-- http://edamontology.org/topic_Light-sheet_microscopy -->
 
     <owl:Class rdf:about="http://edamontology.org/topic_Light-sheet_microscopy">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_Fluorescent_microscopy"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic__R7Vn7GbwtqVvGWNAMGdcNW1"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic__RBsSZve5PnQFO3scMDWo9f0"/>
-        <oboInOwl:hasDefinition>Fluorescence microscopy technique in which the plane of illumination is orthogonal to the axis of observation.</oboInOwl:hasDefinition>
+        <oboInOwl:hasDefinition>Fluorescence microscopy technique where the illumination of the sample is performed along a plane and where the detection arm collects the emitted fluorescence from this plane.</oboInOwl:hasDefinition>
         <oboInOwl:hasNarrowSynonym>DSLM</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasNarrowSynonym>Digitally scanned Laser Light-sheet Microscopy</oboInOwl:hasNarrowSynonym>
-        <oboInOwl:hasNarrowSynonym>LSFM</oboInOwl:hasNarrowSynonym>
-        <oboInOwl:hasNarrowSynonym>Light-sheet fluorescence microscopy</oboInOwl:hasNarrowSynonym>
-        <oboInOwl:hasNarrowSynonym>SPIM</oboInOwl:hasNarrowSynonym>
-        <oboInOwl:hasNarrowSynonym>Selective Plane Illumination Microscopy</oboInOwl:hasNarrowSynonym>
-        <oboInOwl:hasNarrowSynonym>Thin Sheet Laser Imaging Microscopy</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>LLS</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>Light-sheet fluorescence microscopy (LSFM)</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>OCPI</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>Objective-Coupled Planar Illumination Microscopy</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>Oblique Plane Microscopy (OPM)</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>Orthogonal-plane fluorescence optical sectioning (OPFOS)</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>Selective plane illumination microscopy (SPIM)</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>Swept confocally-aligned planar excitation microscopy (SCAPE)</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>Thin Sheet Laser Imaging Microscopy (TSLIM)</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>eSPIM</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>mesoSPIM</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasRelatedSynonym>Bessel Beam Lightsheet Microscopy</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym>COLM</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym>Clarity Optimized Light-sheet Microscopy</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym>Dual-View inverted SPIM</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym>Hardware implementations: multidirectional SPIM</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym>LLSM</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym>Lattice Light-sheet Microscopy</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym>MuViSPIM</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym>Multiview Selective Plane Illumination Microscopy</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>Dual-View inverted SPIM (diSPIM)</oboInOwl:hasRelatedSynonym>
+		<oboInOwl:hasRelatedSynonym>Lattice Light-sheet Microscopy (LLSM)</oboInOwl:hasRelatedSynonym>
+		<oboInOwl:hasRelatedSynonym>Multidirectional SPIM</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>Multiview selective plane illumination microscopy (MuViSPIM)</oboInOwl:hasRelatedSynonym>
+																		 
+        <oboInOwl:hasRelatedSynonym>OPTiSPIM</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym>SPED</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym>Spherical aberrations assisted Extended Depth-of-field Lightsheet Microscopy</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym>diSPIM</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym>iSPIM</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym>inverted SPIM</oboInOwl:hasRelatedSynonym>
+																	   
+																	  
+		<oboInOwl:hasRelatedSynonym>inverted SPIM (iSPIM)</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym>mSPIM</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym>single objective Selective Plane Illumination Microscopy</oboInOwl:hasRelatedSynonym>
+		<oboInOwl:hasRelatedSynonym>single objective Selective Plane Illumination Microscopy</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym>soSPIM</oboInOwl:hasRelatedSynonym>
         <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
@@ -3539,11 +3728,13 @@ Whereas  the standard Fourier transform is only localized in frequency, wavelets
 
     <owl:Class rdf:about="http://edamontology.org/topic_Microscopy">
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_3382"/>
+        <oboInOwl:hasDefinition>The use of microscopes to enlarge objects that are too small to be seen with the naked eye.</oboInOwl:hasDefinition>
         <oboInOwl:hasNarrowSynonym>Slide scanner</oboInOwl:hasNarrowSynonym>
         <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
         <oboInOwl:inSubset>topics</oboInOwl:inSubset>
         <rdfs:label>Microscopy</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://bioportal.bioontology.org/ontologies/NCIT/?p=classes&amp;conceptid=http%3A%2F%2Fncicb.nci.nih.gov%2Fxml%2Fowl%2FEVS%2FThesaurus.owl%23C16853&amp;jump_to_nav=true"/>
         <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Microscopy"/>
     </owl:Class>
     
@@ -3582,6 +3773,7 @@ Whereas  the standard Fourier transform is only localized in frequency, wavelets
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_Fluorescent_microscopy"/>
         <oboInOwl:hasDefinition>Group of microscopy techniques that circumvent the diffration limit and therefore allow for a greater spatial resolution  limit.</oboInOwl:hasDefinition>
         <oboInOwl:hasExactSynonym>SR microscopy</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>SRM</oboInOwl:hasExactSynonym>
         <oboInOwl:hasNarrowSynonym>High resolution microscopy</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasNarrowSynonym>Nanoscopy</oboInOwl:hasNarrowSynonym>
         <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
@@ -3613,11 +3805,12 @@ Whereas  the standard Fourier transform is only localized in frequency, wavelets
     <!-- http://edamontology.org/topic__R77vfEkRqjIenYUqhDPvdkM -->
 
     <owl:Class rdf:about="http://edamontology.org/topic__R77vfEkRqjIenYUqhDPvdkM">
-        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic__ReQzVVVh0IPyN0c1V5wQVO"/>
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic______Sample_fixation"/>
+        <oboInOwl:hasExactSynonym>Cryo-fixation</oboInOwl:hasExactSynonym>
         <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
         <oboInOwl:inSubset>topics</oboInOwl:inSubset>
-        <rdfs:label>Cryo fixation</rdfs:label>
+        <rdfs:label>Cryofixation</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Cryofixation"/>
     </owl:Class>
     
@@ -3647,6 +3840,8 @@ Whereas  the standard Fourier transform is only localized in frequency, wavelets
         <oboInOwl:hasDefinition>Microscopy techniques relying on the point by point imaging of the entire sample. This is typically performed with point illumination of the sample.</oboInOwl:hasDefinition>
         <oboInOwl:hasNarrowSynonym>Laser scanning microscopy</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasNarrowSynonym>Scanning probe microscopy</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasRelatedSynonym>4Pi microscopy</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>Controlled light exposure microscopy (CLEM)</oboInOwl:hasRelatedSynonym>
         <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
         <oboInOwl:inSubset>topics</oboInOwl:inSubset>
@@ -3659,6 +3854,7 @@ Whereas  the standard Fourier transform is only localized in frequency, wavelets
 
     <owl:Class rdf:about="http://edamontology.org/topic__R7WRbf9Y8ySw9QWPwAjzcUa">
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic__RL4rPCXlIu9uzNrGcbcSNp"/>
+        <oboInOwl:hasDefinition>Imaging of tissues fixed or kept in physiological but artificial conditions.</oboInOwl:hasDefinition>
         <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
         <oboInOwl:inSubset>topics</oboInOwl:inSubset>
@@ -3672,6 +3868,7 @@ Whereas  the standard Fourier transform is only localized in frequency, wavelets
 
     <owl:Class rdf:about="http://edamontology.org/topic__R89wYXZ2735GXdn4m4GOT9n">
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic__R9P5gEAm1wic4R2PcZ7ZpPA"/>
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic__RBsSZve5PnQFO3scMDWo9f0"/>
         <oboInOwl:hasDefinition>Contrast enhancing technique that relies on the exclusion from the image of light not diffracted by the sample.</oboInOwl:hasDefinition>
         <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
@@ -3692,7 +3889,7 @@ Whereas  the standard Fourier transform is only localized in frequency, wavelets
         <oboInOwl:hasDefinition>Correlative light and electron microscopy is the combination of light microscopy (typically fluorescence microscopy) and electron microscopy of the same sample.</oboInOwl:hasDefinition>
         <oboInOwl:hasExactSynonym>CLEM</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Correlative light-electron microscopy</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasNarrowSynonym>Integrated light and electron microscopy</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>Integrated light and electron microscopy (ILEM)</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasNarrowSynonym>Integrated light-electron microscopy</oboInOwl:hasNarrowSynonym>
         <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
@@ -3707,6 +3904,7 @@ Whereas  the standard Fourier transform is only localized in frequency, wavelets
 
     <owl:Class rdf:about="http://edamontology.org/topic__R8XUtD89JCyeUaaVebe9Mkw">
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic__RL4rPCXlIu9uzNrGcbcSNp"/>
+        <oboInOwl:hasDefinition>imaging in the living body of a plant or an animal</oboInOwl:hasDefinition>
         <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
         <oboInOwl:inSubset>topics</oboInOwl:inSubset>
@@ -3720,6 +3918,7 @@ Whereas  the standard Fourier transform is only localized in frequency, wavelets
 
     <owl:Class rdf:about="http://edamontology.org/topic__R8nlu8VCuL5nvBFgOaGNHgT">
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic__R9P5gEAm1wic4R2PcZ7ZpPA"/>
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic__RBsSZve5PnQFO3scMDWo9f0"/>
         <oboInOwl:hasDefinition>Microscopy technique taking advantage of the properties of birefringent samples illuminated polarized light and observed through a second polariser perpendicular to the first.</oboInOwl:hasDefinition>
         <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
@@ -3738,18 +3937,18 @@ Whereas  the standard Fourier transform is only localized in frequency, wavelets
         <oboInOwl:hasDefinition>SMLM is based on a temporal separation of the emission of fluorescent molecules, allowing a fitting and precise localisation of these molecules.</oboInOwl:hasDefinition>
         <oboInOwl:hasExactSynonym>SMLM</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Single molecule localization microscopy</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasNarrowSynonym>Direct stochastic optical reconstruction microscopy</oboInOwl:hasNarrowSynonym>
-        <oboInOwl:hasNarrowSynonym>Fluorescence Photoactivation Localisation Microscopy</oboInOwl:hasNarrowSynonym>
-        <oboInOwl:hasNarrowSynonym>Fluorescence Photoactivation Localization Microscopy</oboInOwl:hasNarrowSynonym>
-        <oboInOwl:hasNarrowSynonym>GSDIM</oboInOwl:hasNarrowSynonym>
-        <oboInOwl:hasNarrowSynonym>Ground State Depletion Individual Molecule Return</oboInOwl:hasNarrowSynonym>
-        <oboInOwl:hasNarrowSynonym>PALM</oboInOwl:hasNarrowSynonym>
-        <oboInOwl:hasNarrowSynonym>Photoactivated Localisation Microscopy</oboInOwl:hasNarrowSynonym>
-        <oboInOwl:hasNarrowSynonym>Photoactivated Localization Microscopy</oboInOwl:hasNarrowSynonym>
-        <oboInOwl:hasNarrowSynonym>STORM</oboInOwl:hasNarrowSynonym>
-        <oboInOwl:hasNarrowSynonym>Stochastic optical reconstruction microscopy</oboInOwl:hasNarrowSynonym>
-        <oboInOwl:hasNarrowSynonym>dSTORM</oboInOwl:hasNarrowSynonym>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+        <oboInOwl:hasNarrowSynonym>Direct stochastic optical reconstruction microscopy (dSTORM)</oboInOwl:hasNarrowSynonym>
+		<oboInOwl:hasNarrowSynonym>Fluorescence photoactivation localisation microscopy (fPALM)</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>Ground state depletion individual molecule return (GSDIM)</oboInOwl:hasNarrowSynonym>
+		<oboInOwl:hasNarrowSynonym>Photoactivated localisation microscopy (PALM)</oboInOwl:hasNarrowSynonym>
+																												
+																   
+																									 
+																									 
+																	
+		<oboInOwl:hasNarrowSynonym>Stochastic optical reconstruction microscopy (STORM)</oboInOwl:hasNarrowSynonym>
+		<oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+														 
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
         <oboInOwl:inSubset>topics</oboInOwl:inSubset>
         <rdfs:label>Single molecule localisation microscopy</rdfs:label>
@@ -3776,11 +3975,12 @@ Whereas  the standard Fourier transform is only localized in frequency, wavelets
 
     <owl:Class rdf:about="http://edamontology.org/topic__R9Cmje2ZUXyDW6aQAvFhwSM">
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic__R7Vn7GbwtqVvGWNAMGdcNW1"/>
+        <related_term>Optical sectioning</related_term>
         <oboInOwl:hasDefinition>Microscopy restricted to objects which are in the same focal plane.</oboInOwl:hasDefinition>
-        <oboInOwl:hasExactSynonym>CLSM</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>Confocal laser scanning microscopy</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>LSCM</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>Laser scanning confocal microscopy</oboInOwl:hasExactSynonym>
+																 
+		<oboInOwl:hasExactSynonym>Confocal laser scanning microscopy (CLSM)</oboInOwl:hasExactSynonym>
+																 
+		<oboInOwl:hasExactSynonym>Laser scanning confocal microscopy (LSCM)</oboInOwl:hasExactSynonym>
         <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
         <oboInOwl:inSubset>topics</oboInOwl:inSubset>
@@ -3795,6 +3995,7 @@ Whereas  the standard Fourier transform is only localized in frequency, wavelets
     <owl:Class rdf:about="http://edamontology.org/topic__R9O3HmIAjoN5IqXXXRukzzr">
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic__R7LElbFkBgKS401YKsVtNck"/>
         <oboInOwl:hasDefinition>Process of tilting a sample and collecting images formed at different angles in an electron beam in order to give enhanced 3D information about the sample.</oboInOwl:hasDefinition>
+        <oboInOwl:hasRelatedSynonym>Electron Microscopy Array Tomography</oboInOwl:hasRelatedSynonym>
         <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
         <oboInOwl:inSubset>topics</oboInOwl:inSubset>
@@ -3809,6 +4010,7 @@ Whereas  the standard Fourier transform is only localized in frequency, wavelets
 
     <owl:Class rdf:about="http://edamontology.org/topic__R9P5gEAm1wic4R2PcZ7ZpPA">
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_3385"/>
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic__RBsSZve5PnQFO3scMDWo9f0"/>
         <oboInOwl:hasDefinition>Techniques in microscopy in which the sample is placed between the illumination source and the observer or recording device.</oboInOwl:hasDefinition>
         <oboInOwl:hasNarrowSynonym>Widefield transmission light microscopy</oboInOwl:hasNarrowSynonym>
         <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
@@ -3857,10 +4059,12 @@ Whereas  the standard Fourier transform is only localized in frequency, wavelets
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic__RBZsLMTdyuEDtVe2fge61l0"/>
         <oboInOwl:hasDefinition>Type of scanning electron microscopes performing cycles of ablation of the surface of the sample with an ion beam followed by imaging with an electron beam, therefore allowing the acquisition of 3-dimensional data.</oboInOwl:hasDefinition>
         <oboInOwl:hasExactSynonym>FIB-SEM</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>FIBSEM</oboInOwl:hasExactSynonym>
         <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
         <oboInOwl:inSubset>topics</oboInOwl:inSubset>
         <rdfs:label>Focused ion beam scanning electron microscopy</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://bioportal.bioontology.org/ontologies/NCIT/?p=classes&amp;conceptid=http%3A%2F%2Fncicb.nci.nih.gov%2Fxml%2Fowl%2FEVS%2FThesaurus.owl%23C78815&amp;jump_to_nav=true"/>
         <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Focused_ion_beam"/>
     </owl:Class>
     
@@ -3899,6 +4103,8 @@ Whereas  the standard Fourier transform is only localized in frequency, wavelets
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_3382"/>
         <oboInOwl:hasExactSynonym>Medical ultrasound</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>diagnostic sonography</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasNarrowSynonym>Ultrasound imaging</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>microUS</oboInOwl:hasNarrowSynonym>
         <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
         <oboInOwl:inSubset>topics</oboInOwl:inSubset>
@@ -3913,8 +4119,11 @@ Whereas  the standard Fourier transform is only localized in frequency, wavelets
     <owl:Class rdf:about="http://edamontology.org/topic__RBKlmE9DGTZwEwxw0juThGg">
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic__R7Vn7GbwtqVvGWNAMGdcNW1"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_____Non-linear_microscopy"/>
-        <oboInOwl:hasDefinition>Fluorescence microscopy technnique in which the fluorescent molecule is excited by multiple photons of a wavelength longer than the emission of the fluorescent molecule.</oboInOwl:hasDefinition>
-        <oboInOwl:hasNarrowSynonym>Two-photon excitation Microscopy (TPEM)</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasDefinition>Fluorescence microscopy technique in which the fluorescent molecule is excited by multiple photons of a wavelength longer than the emission of the fluorescent molecule.</oboInOwl:hasDefinition>
+        <oboInOwl:hasNarrowSynonym>2PEM</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>3PEM</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>Three-photon excitation microscopy</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>Two-photon excitation microscopy (TPEM)</oboInOwl:hasNarrowSynonym>
         <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
         <oboInOwl:inSubset>topics</oboInOwl:inSubset>
@@ -3930,12 +4139,17 @@ Whereas  the standard Fourier transform is only localized in frequency, wavelets
 
     <owl:Class rdf:about="http://edamontology.org/topic__RBNfUSYBOKUapWrsyPMMTkw">
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic__RBZsLMTdyuEDtVe2fge61l0"/>
-        <oboInOwl:hasExactSynonym>Cryo SEM</oboInOwl:hasExactSynonym>
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic______Cryo_electron_microscopy"/>
+        <oboInOwl:hasDefinition>Scanning electron microscopy performed on aqueous samples  preserved by freezing in liquid nitrogen.</oboInOwl:hasDefinition>
+        <oboInOwl:hasExactSynonym>Cryo-scanning electron microscopy</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>CryoSEM</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Cryogenic scanning electron microscopy</oboInOwl:hasExactSynonym>
         <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
         <oboInOwl:inSubset>topics</oboInOwl:inSubset>
-        <rdfs:label>Cryo scanning electron microscopy</rdfs:label>
+        <rdfs:label>Scanning electron cryomicroscopy</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Cryogenic_electron_microscopy"/>
+        <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Scanning_electron_cryomicroscopy"/>
     </owl:Class>
     
 
@@ -3944,6 +4158,7 @@ Whereas  the standard Fourier transform is only localized in frequency, wavelets
 
     <owl:Class rdf:about="http://edamontology.org/topic__RBNoPZIOvBhdWGe8mFNpoWQ">
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_3382"/>
+        <oboInOwl:hasDefinition>Imaging of biological tissues preserved by chemicals or temperature.</oboInOwl:hasDefinition>
         <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
         <oboInOwl:inSubset>topics</oboInOwl:inSubset>
@@ -4005,10 +4220,14 @@ Spectrometry deals with the measurement of a specific spectrum; essentially the 
 
     <owl:Class rdf:about="http://edamontology.org/topic__RBsSZve5PnQFO3scMDWo9f0">
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_3385"/>
+        <oboInOwl:hasNarrowSynonym>Area-capturing microscopy</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>Array based detection</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasRelatedSynonym>Camera based microscopy</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>Controlled light exposure microscopy (CLEM)</oboInOwl:hasRelatedSynonym>
         <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
         <oboInOwl:inSubset>topics</oboInOwl:inSubset>
-        <rdfs:label>Area-capturing microscopy</rdfs:label>
+        <rdfs:label>Array-based detection microscopy</rdfs:label>
     </owl:Class>
     
 
@@ -4018,10 +4237,14 @@ Spectrometry deals with the measurement of a specific spectrum; essentially the 
     <owl:Class rdf:about="http://edamontology.org/topic__RByvmgDpAo4FOrMdvTm1gwR">
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic__RBZsLMTdyuEDtVe2fge61l0"/>
         <oboInOwl:hasDefinition>An ultramicrotome present inside the SEM allow for serial sectioning of the sample between acquisitions therefore allowing for the generation of 3-dimensional data.</oboInOwl:hasDefinition>
+        <oboInOwl:hasExactSynonym>SBEM</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>SBF SEM</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>SBFSEM</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasNarrowSynonym>3View®</oboInOwl:hasNarrowSynonym>
         <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
         <oboInOwl:inSubset>topics</oboInOwl:inSubset>
+        <rdfs:comment>[3View®] It is not in scope of EDAM to list and model products and vendors, with exceptions of those that are crucial keywords for end users to search for. Todo: add this into general EDAM guidelines.</rdfs:comment>
         <rdfs:label>Serial block-face scanning electron microscopy</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Serial_block-face_scanning_electron_microscopy"/>
     </owl:Class>
@@ -4035,11 +4258,11 @@ Spectrometry deals with the measurement of a specific spectrum; essentially the 
         <oboInOwl:hasDefinition>A patterned illumination interferes with the sample and creates moire fringes which are further processed by an algorithm to increase spatial resolution.</oboInOwl:hasDefinition>
         <oboInOwl:hasExactSynonym>SIM</oboInOwl:hasExactSynonym>
         <oboInOwl:hasRelatedSynonym>Instant linear structured Illumination Microscopy</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym>MSIM</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym>Multifocal Structured Illumination Microscopy</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym>SSIM</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym>Saturated Structured Illumination</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym>iSIM</oboInOwl:hasRelatedSynonym>
+																	 
+		<oboInOwl:hasRelatedSynonym>Multifocal Structured Illumination Microscopy (MSIM)</oboInOwl:hasRelatedSynonym>
+																	 
+		<oboInOwl:hasRelatedSynonym>Saturated structured illumination microscopy (SSIM)</oboInOwl:hasRelatedSynonym>
+		<oboInOwl:hasRelatedSynonym>iSIM</oboInOwl:hasRelatedSynonym>
         <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
         <oboInOwl:inSubset>topics</oboInOwl:inSubset>
@@ -4054,13 +4277,19 @@ Spectrometry deals with the measurement of a specific spectrum; essentially the 
 
     <owl:Class rdf:about="http://edamontology.org/topic__RDCjx86atJP685sX1zrE2ia">
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic__R9O3HmIAjoN5IqXXXRukzzr"/>
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic______Cryo_electron_microscopy"/>
+        <oboInOwl:hasBroadSynonym>Cryo-transmission electron microscopy</oboInOwl:hasBroadSynonym>
+        <oboInOwl:hasBroadSynonym>CryoTEM</oboInOwl:hasBroadSynonym>
+        <oboInOwl:hasBroadSynonym>Cryogenic transmission electron microscopy</oboInOwl:hasBroadSynonym>
+        <oboInOwl:hasExactSynonym>Cryo-electron tomography</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>CryoET</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>Electron cryotomography</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasNarrowSynonym>CET</oboInOwl:hasNarrowSynonym>
         <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
         <oboInOwl:inSubset>topics</oboInOwl:inSubset>
-        <rdfs:label>Cryo electron tomography</rdfs:label>
+        <rdfs:label>Electron cryotomography</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://bioportal.bioontology.org/ontologies/MESH/?p=classes&amp;conceptid=http%3A%2F%2Fpurl.bioontology.org%2Fontology%2FMESH%2FD020285"/>
+        <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Cryogenic_electron_microscopy"/>
         <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Electron_cryotomography"/>
     </owl:Class>
     
@@ -4070,6 +4299,7 @@ Spectrometry deals with the measurement of a specific spectrum; essentially the 
 
     <owl:Class rdf:about="http://edamontology.org/topic__RDdX0TswBVhmWiS1dI3pghN">
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic__R9P5gEAm1wic4R2PcZ7ZpPA"/>
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic__RBsSZve5PnQFO3scMDWo9f0"/>
         <oboInOwl:hasDefinition>Microscopy technique relying on the direct observation of samples with light transmitted through them.</oboInOwl:hasDefinition>
         <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
@@ -4084,8 +4314,10 @@ Spectrometry deals with the measurement of a specific spectrum; essentially the 
 
     <owl:Class rdf:about="http://edamontology.org/topic__RDos3h5yRfjhLUcOImDOFgB">
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_3452"/>
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic______Medical_imaging"/>
         <related_term>Computerized tomography</related_term>
         <oboInOwl:hasNarrowSynonym>PET</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>microPET</oboInOwl:hasNarrowSynonym>
         <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
         <oboInOwl:inSubset>topics</oboInOwl:inSubset>
@@ -4099,10 +4331,13 @@ Spectrometry deals with the measurement of a specific spectrum; essentially the 
 
     <owl:Class rdf:about="http://edamontology.org/topic__RDvZSyRAcr8fonKvKdVoXw2">
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_3382"/>
+        <oboInOwl:hasDefinition>Recording of native light emission by organism expressing a light emitting molecule.</oboInOwl:hasDefinition>
+        <oboInOwl:hasExactSynonym>BLI</oboInOwl:hasExactSynonym>
         <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
         <oboInOwl:inSubset>topics</oboInOwl:inSubset>
         <rdfs:label>Bioluminescence imaging</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://bioportal.bioontology.org/ontologies/NCIT?p=classes&amp;conceptid=http%3A%2F%2Fncicb.nci.nih.gov%2Fxml%2Fowl%2FEVS%2FThesaurus.owl%23C62655"/>
         <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Bioluminescence_imaging"/>
     </owl:Class>
     
@@ -4112,6 +4347,7 @@ Spectrometry deals with the measurement of a specific spectrum; essentially the 
 
     <owl:Class rdf:about="http://edamontology.org/topic__RL4rPCXlIu9uzNrGcbcSNp">
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_3382"/>
+        <oboInOwl:hasBroadSynonym>Dynamic imaging</oboInOwl:hasBroadSynonym>
         <oboInOwl:hasDefinition>imaging of samples in conditions that keeps them alive, allowing the study of dynamic changes.</oboInOwl:hasDefinition>
         <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
@@ -4130,8 +4366,8 @@ Spectrometry deals with the measurement of a specific spectrum; essentially the 
         <oboInOwl:hasDefinition>An increase in spatial resolution is obtained thanks to stimulated emission properties of fluorophores illuminated simultaneously by two lasers.</oboInOwl:hasDefinition>
         <oboInOwl:hasExactSynonym>STED</oboInOwl:hasExactSynonym>
         <oboInOwl:hasNarrowSynonym>MinFlux</oboInOwl:hasNarrowSynonym>
-        <oboInOwl:hasNarrowSynonym>RESOLFT</oboInOwl:hasNarrowSynonym>
-        <oboInOwl:hasNarrowSynonym>Reversible Saturable Optical Linear Fluorescence Transitions microscopy</oboInOwl:hasNarrowSynonym>
+																	  
+		<oboInOwl:hasNarrowSynonym>Reversible saturable optical linear fluorescence transitions microscopy (RESOLFT)</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasNarrowSynonym>gated-STED</oboInOwl:hasNarrowSynonym>
         <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
@@ -4159,6 +4395,7 @@ Spectrometry deals with the measurement of a specific spectrum; essentially the 
 
     <owl:Class rdf:about="http://edamontology.org/topic__RNFOzq5E0ZVBh5Euhn06rn">
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic__R9P5gEAm1wic4R2PcZ7ZpPA"/>
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic__RBsSZve5PnQFO3scMDWo9f0"/>
         <oboInOwl:hasDefinition>Contrast enhancing microscopy technique based on interferences between rays that travel different distances through a sample.</oboInOwl:hasDefinition>
         <oboInOwl:hasExactSynonym>Differential interference contrast microscopy</oboInOwl:hasExactSynonym>
         <oboInOwl:hasNarrowSynonym>Nomarski interferential contrast (NIC)</oboInOwl:hasNarrowSynonym>
@@ -4176,6 +4413,7 @@ Spectrometry deals with the measurement of a specific spectrum; essentially the 
 
     <owl:Class rdf:about="http://edamontology.org/topic__RXLeVr0cHSXzTSRyO5zwZD">
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic__R7LElbFkBgKS401YKsVtNck"/>
+        <oboInOwl:hasDefinition>Imaging of a thin specimen by a focused electron beam which is scanned over the sample.</oboInOwl:hasDefinition>
         <oboInOwl:hasExactSynonym>STEM</oboInOwl:hasExactSynonym>
         <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
@@ -4198,6 +4436,7 @@ Spectrometry deals with the measurement of a specific spectrum; essentially the 
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
         <oboInOwl:inSubset>topics</oboInOwl:inSubset>
         <rdfs:label>Freeze fracturing</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Electron_microscope#Sample_preparation"/>
     </owl:Class>
     
 
@@ -4233,11 +4472,11 @@ Spectrometry deals with the measurement of a specific spectrum; essentially the 
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_Fluorescent_microscopy"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic__R9Cmje2ZUXyDW6aQAvFhwSM"/>
         <oboInOwl:hasDefinition>In confocal fluorescent microscopy, a pinhole rejects light from out-of-focus planes allowing an increase in contrast and spatial resolution, mostly axially.</oboInOwl:hasDefinition>
-        <oboInOwl:hasNarrowSynonym>LSM</oboInOwl:hasNarrowSynonym>
-        <oboInOwl:hasNarrowSynonym>Laser scanning microscopy</oboInOwl:hasNarrowSynonym>
+																  
+		<oboInOwl:hasNarrowSynonym>Laser scanning microscopy (LSM)</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasNarrowSynonym>Nipkow disk microscopy</oboInOwl:hasNarrowSynonym>
-        <oboInOwl:hasNarrowSynonym>SDCM</oboInOwl:hasNarrowSynonym>
-        <oboInOwl:hasNarrowSynonym>Spinning Disk confocal microscopy</oboInOwl:hasNarrowSynonym>
+																   
+		<oboInOwl:hasNarrowSynonym>Spinning disk confocal microscopy (SDCM)</oboInOwl:hasNarrowSynonym>
         <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
         <oboInOwl:inSubset>topics</oboInOwl:inSubset>
@@ -4253,6 +4492,7 @@ Spectrometry deals with the measurement of a specific spectrum; essentially the 
 
     <owl:Class rdf:about="http://edamontology.org/topic__RtBCcu7zJiS0phrbR2HzAI">
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic__R9P5gEAm1wic4R2PcZ7ZpPA"/>
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic__RBsSZve5PnQFO3scMDWo9f0"/>
         <oboInOwl:hasDefinition>Phase contrast microscopy is based on the conversion of sample-induced phase shift of light into contrast in an image.</oboInOwl:hasDefinition>
         <oboInOwl:hasNarrowSynonym>Phase imaging</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasRelatedSynonym>Quantitative phase-contrast imaging</oboInOwl:hasRelatedSynonym>
@@ -4263,8 +4503,8 @@ Spectrometry deals with the measurement of a specific spectrum; essentially the 
         <rdfs:seeAlso rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C16857"/>
         <rdfs:seeAlso rdf:resource="http://purl.bioontology.org/ontology/MESH/D008858"/>
         <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Phase-contrast_microscopy"/>
-        <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Quantitative_phase-contrast_microscopy"/>
-    </owl:Class>
+	</owl:Class>
+				
     
 
 
@@ -4284,18 +4524,23 @@ Spectrometry deals with the measurement of a specific spectrum; essentially the 
 
     <owl:Class rdf:about="http://edamontology.org/topic__RxfmHE99gOkUOOML5krfsJ">
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_3452"/>
-        <related_term>Positron emission tomography</related_term>
+        <oboInOwl:hasExactSynonym>CAT scan</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>CT</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>Computed tomography</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>Micro computed tomography</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>microCT</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasNarrowSynonym>High resolution x-ray tomography</oboInOwl:hasNarrowSynonym>
-        <oboInOwl:hasNarrowSynonym>X-ray microtomography</oboInOwl:hasNarrowSynonym>
-        <oboInOwl:hasRelatedSynonym>micro CT</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasExactSynonym>CT scan</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Computerised axial tomography</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasNarrowSynonym>HRCT</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>High-resolution CT</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>High-resolution micro-CT</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>X-ray computed tomography</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasRelatedSynonym>High-resolution X-ray tomography</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>X-ray tomography</oboInOwl:hasRelatedSynonym>
         <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
         <oboInOwl:inSubset>topics</oboInOwl:inSubset>
-        <rdfs:label>Computerized tomography</rdfs:label>
+        <rdfs:comment>CT is usually understood as X-ray CT (https://en.wikipedia.org/wiki/X-ray_computed_tomography redirecting to https://en.wikipedia.org/wiki/CT_scan). On the other hand, Optical tomography can also be CT, see concept Optical projection tomography with its synonyms.</rdfs:comment>
+        <rdfs:comment>Work comment: Radical but perhaps a good consideration is to move CT as a narrow synonym of Tomography.</rdfs:comment>
+        <rdfs:label>Computed tomography</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/CT_scan"/>
     </owl:Class>
     
 
@@ -4306,10 +4551,10 @@ Spectrometry deals with the measurement of a specific spectrum; essentially the 
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_Fluorescent_microscopy"/>
         <oboInOwl:hasNarrowSynonym>Photobleaching microscopy with non-linear processing</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasNarrowSynonym>PiMP</oboInOwl:hasNarrowSynonym>
-        <oboInOwl:hasNarrowSynonym>SOFI</oboInOwl:hasNarrowSynonym>
-        <oboInOwl:hasNarrowSynonym>SRRF</oboInOwl:hasNarrowSynonym>
-        <oboInOwl:hasNarrowSynonym>Super resolution optical fluctuation imaging</oboInOwl:hasNarrowSynonym>
-        <oboInOwl:hasNarrowSynonym>Super resolution radial fluctuations</oboInOwl:hasNarrowSynonym>
+																   
+																   
+		<oboInOwl:hasNarrowSynonym>Super resolution optical fluctuation imaging (SOFI)</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>Super resolution radial fluctuations (SRRF)</oboInOwl:hasNarrowSynonym>
         <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
         <oboInOwl:inSubset>topics</oboInOwl:inSubset>
@@ -4325,10 +4570,10 @@ Spectrometry deals with the measurement of a specific spectrum; essentially the 
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic__RBfI2XgIsxcfKonPPluKAhK"/>
         <oboInOwl:hasDefinition>FCS measures fluctuations of fluorescence in a volume, providing after analysis physical parameters of the sample such as diffusion coefficient or concentration.</oboInOwl:hasDefinition>
         <oboInOwl:hasExactSynonym>FCS</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasRelatedSynonym>FCCS</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym>FLCS</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym>Fluorescence Lifetime Correlation Microscopy</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym>Fluorescence cross-correlation spectroscopy</oboInOwl:hasRelatedSynonym>
+																	 
+																	 
+		<oboInOwl:hasRelatedSynonym>Fluorescence Lifetime Correlation Microscopy (FLCS)</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>Fluorescence cross-correlation spectroscopy (FCCS)</oboInOwl:hasRelatedSynonym>
         <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
         <oboInOwl:inSubset>topics</oboInOwl:inSubset>
@@ -4348,6 +4593,7 @@ Spectrometry deals with the measurement of a specific spectrum; essentially the 
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
         <oboInOwl:inSubset>topics</oboInOwl:inSubset>
         <rdfs:label>Fluorescence lifetime imaging microscopy</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://bioportal.bioontology.org/ontologies/NCIT/?p=classes&amp;conceptid=http%3A%2F%2Fncicb.nci.nih.gov%2Fxml%2Fowl%2FEVS%2FThesaurus.owl%23C154786&amp;jump_to_nav=true"/>
         <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Fluorescence-lifetime_imaging_microscopy"/>
     </owl:Class>
     
@@ -4357,16 +4603,18 @@ Spectrometry deals with the measurement of a specific spectrum; essentially the 
 
     <owl:Class rdf:about="http://edamontology.org/topic___Fluorescence_recovery_after_photobleaching">
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_Fluorescent_microscopy"/>
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic__RL4rPCXlIu9uzNrGcbcSNp"/>
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic______Photomanipulation"/>
         <oboInOwl:hasDefinition>Microscopy method for studying kinetics of diffusion of molecules in a sample.</oboInOwl:hasDefinition>
         <oboInOwl:hasExactSynonym>FRAP</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasRelatedSynonym>FLAP</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym>FLIP</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym>Fluorescence Localization after photobleaching</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym>Fluorescence loss in photobleaching</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym>Inverse Fluorescence Recovery after photobleaching</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym>iFRAP</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
-        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+																	 
+																	 
+		<oboInOwl:hasRelatedSynonym>Fluorescence localization after photobleaching (FLAP)</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>Fluorescence loss in photobleaching (FLIP)</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>Inverse fluorescence recovery after photobleaching (iFRAP)</oboInOwl:hasRelatedSynonym>
+																	  
+		<oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+		<oboInOwl:inSubset>edam</oboInOwl:inSubset>
         <oboInOwl:inSubset>topics</oboInOwl:inSubset>
         <rdfs:label>Fluorescence recovery after photobleaching</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Fluorescence_recovery_after_photobleaching"/>
@@ -4374,10 +4622,11 @@ Spectrometry deals with the measurement of a specific spectrum; essentially the 
     
 
 
-    <!-- http://edamontology.org/topic___F%C3%B6rster_resonance_energy_transfer -->
+    <!-- http://edamontology.org/topic___Foerster_resonance_energy_transfer -->
 
-    <owl:Class rdf:about="http://edamontology.org/topic___F%C3%B6rster_resonance_energy_transfer">
+    <owl:Class rdf:about="http://edamontology.org/topic___Foerster_resonance_energy_transfer">
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_Fluorescent_microscopy"/>
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic______Photomanipulation"/>
         <oboInOwl:hasDefinition>FRET allows to study the distance between light sensitive molecules by monitoring the transfer of energy between them.</oboInOwl:hasDefinition>
         <oboInOwl:hasExactSynonym>FRET</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Fluorescence resonance energy transfer</oboInOwl:hasExactSynonym>
@@ -4395,10 +4644,10 @@ Spectrometry deals with the measurement of a specific spectrum; essentially the 
     <owl:Class rdf:about="http://edamontology.org/topic___Image_correlation_spectroscopy">
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_Fluorescent_microscopy"/>
         <oboInOwl:hasExactSynonym>ICS</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasRelatedSynonym>PICS</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym>Particle Image Correlation Spectroscopy</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym>RICS</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym>Raster Image Correlation Spectroscopy</oboInOwl:hasRelatedSynonym>
+																	 
+		<oboInOwl:hasRelatedSynonym>Particle Image Correlation Spectroscopy (PICS)</oboInOwl:hasRelatedSynonym>
+																	 
+		<oboInOwl:hasRelatedSynonym>Raster Image Correlation Spectroscopy (RICS)</oboInOwl:hasRelatedSynonym>
         <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
         <oboInOwl:inSubset>topics</oboInOwl:inSubset>
@@ -4415,6 +4664,7 @@ Spectrometry deals with the measurement of a specific spectrum; essentially the 
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
         <oboInOwl:inSubset>topics</oboInOwl:inSubset>
         <rdfs:label>Reinforcement learning</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Reinforcement_learning"/>
     </owl:Class>
     
 
@@ -4426,7 +4676,18 @@ Spectrometry deals with the measurement of a specific spectrum; essentially the 
         <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
         <oboInOwl:inSubset>topics</oboInOwl:inSubset>
+        <rdfs:comment>Work comments:
+28th August 2018
+
+within supervised learning there could be ‘regression’ and ‘classification’
+joakim.lindblad
+20th March 2019
+
+It&apos;s a good question how deep to go. Currently we&apos;re going less deep within Topics (which are rather broad fluffy) than the operations. Thus I added a seeAlso to the operation</rdfs:comment>
         <rdfs:label>Supervised learning</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://edamontology.org/operation_2423"/>
+        <rdfs:seeAlso rdf:resource="http://edamontology.org/operation_2990"/>
+        <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Supervised_learning"/>
     </owl:Class>
     
 
@@ -4439,6 +4700,8 @@ Spectrometry deals with the measurement of a specific spectrum; essentially the 
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
         <oboInOwl:inSubset>topics</oboInOwl:inSubset>
         <rdfs:label>Unsupervised learning</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://edamontology.org/operation___Clustering"/>
+        <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Unsupervised_learning"/>
     </owl:Class>
     
 
@@ -4462,8 +4725,8 @@ Spectrometry deals with the measurement of a specific spectrum; essentially the 
 
     <owl:Class rdf:about="http://edamontology.org/topic_____Array_tomography">
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_3452"/>
-        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic__R8Ss4wIFt90wZ1yjFLfXyPM"/>
-        <rdfs:comment>volumetric microscopy method based on physical serial sectioning. Can be appyied in LM and EM</rdfs:comment>
+        <oboInOwl:hasDefinition>Can be just EM or anything. But may also combine optical and electron microscopy of ultra thin serial sections.</oboInOwl:hasDefinition>
+        <rdfs:comment>volumetric microscopy method based on physical serial sectioning. Can be appyied in LM and EM. Work comment: should we even remove it from underneath Tomography and instead put it somewhere to Image Prep?</rdfs:comment>
         <rdfs:label>Array tomography</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://doi.org/10.1016/j.neuron.2007.06.014"/>
     </owl:Class>
@@ -4488,6 +4751,7 @@ Spectrometry deals with the measurement of a specific spectrum; essentially the 
 
     <owl:Class rdf:about="http://edamontology.org/topic_____Cell_image_analysis">
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic__RBDp7HwdUBEjpS6PRjYfV2V"/>
+        <oboInOwl:hasBroadSynonym>Cell image informatics</oboInOwl:hasBroadSynonym>
         <oboInOwl:hasExactSynonym>Digital cytology</oboInOwl:hasExactSynonym>
         <rdfs:label>Cell image analysis</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://edamontology.org/topic_2229"/>
@@ -4517,6 +4781,8 @@ Spectrometry deals with the measurement of a specific spectrum; essentially the 
 
     <owl:Class rdf:about="http://edamontology.org/topic_____Expansion_microscopy">
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic__ReQzVVVh0IPyN0c1V5wQVO"/>
+        <oboInOwl:hasDefinition>Expansion microscopy relies on a chemical increase in sample size allowing to obtain a high resolution on traditional microscopes.</oboInOwl:hasDefinition>
+        <oboInOwl:hasExactSynonym>ExM</oboInOwl:hasExactSynonym>
         <rdfs:label>Expansion microscopy</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Expansion_microscopy"/>
     </owl:Class>
@@ -4527,10 +4793,16 @@ Spectrometry deals with the measurement of a specific spectrum; essentially the 
 
     <owl:Class rdf:about="http://edamontology.org/topic_____Fiducial_markers">
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic__ReQzVVVh0IPyN0c1V5wQVO"/>
+        <oboInOwl:hasDefinition>Localisation markers are objects placed in the field of view of an imaging system to serve as a reference.</oboInOwl:hasDefinition>
         <oboInOwl:hasExactSynonym>Landmarking</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Landmarks</oboInOwl:hasExactSynonym>
         <oboInOwl:hasNarrowSynonym>Branding</oboInOwl:hasNarrowSynonym>
-        <rdfs:label>Fiducial markers</rdfs:label>
+        <oboInOwl:hasNarrowSynonym>Fiducial markers</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>Localisation beads</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasRelatedSynonym>Finder grids</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>Gridded coverslips</oboInOwl:hasRelatedSynonym>
+        <rdfs:label>Localisation markers</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Fiducial_marker"/>
     </owl:Class>
     
 
@@ -4548,7 +4820,7 @@ Spectrometry deals with the measurement of a specific spectrum; essentially the 
 
     <owl:Class rdf:about="http://edamontology.org/topic_____Histology">
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_0003"/>
-        <rdfs:comment>Histology uses microscopy, often followed by image analysis.</rdfs:comment>
+        <rdfs:comment>Histology studies the anatomy of tissues via microscopy, often followed by image analysis.</rdfs:comment>
         <rdfs:label>Histology</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Histology"/>
     </owl:Class>
@@ -4570,8 +4842,8 @@ Spectrometry deals with the measurement of a specific spectrum; essentially the 
     <!-- http://edamontology.org/topic_____Intravital_imaging -->
 
     <owl:Class rdf:about="http://edamontology.org/topic_____Intravital_imaging">
-        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic__RL4rPCXlIu9uzNrGcbcSNp"/>
-        <oboInOwl:hasDefinition>Intravital imaging of live processes within living animals, typically by multi photon imaging techniques.</oboInOwl:hasDefinition>
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic__R8XUtD89JCyeUaaVebe9Mkw"/>
+        <oboInOwl:hasDefinition>Imaging of live processes performed within living animals, typically by multi-photon imaging techniques.</oboInOwl:hasDefinition>
         <rdfs:label>Intravital imaging</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://bioportal.bioontology.org/ontologies/MESH/?p=classes&amp;conceptid=http%3A%2F%2Fpurl.bioontology.org%2Fontology%2FMESH%2FD000069416"/>
         <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Intravital_microscopy"/>
@@ -4594,7 +4866,11 @@ Spectrometry deals with the measurement of a specific spectrum; essentially the 
     <owl:Class rdf:about="http://edamontology.org/topic_____Mass_spectrometry_imaging">
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic__RBfI2XgIsxcfKonPPluKAhK"/>
         <oboInOwl:hasExactSynonym>MSI</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasRelatedSynonym>MALDI imaging</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>MALDI imaging mass spectrometry (MALDI-IMS)</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>Matrix-assisted laser desorption ionization imaging</oboInOwl:hasRelatedSynonym>
         <rdfs:label>Mass spectrometry imaging</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/MALDI_imaging"/>
         <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Mass_spectrometry_imaging"/>
     </owl:Class>
     
@@ -4604,6 +4880,8 @@ Spectrometry deals with the measurement of a specific spectrum; essentially the 
 
     <owl:Class rdf:about="http://edamontology.org/topic_____Micro-optical_sectioning_tomography">
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_3452"/>
+        <related_term>Holography</related_term>
+        <related_term>Structured illumination</related_term>
         <oboInOwl:hasNarrowSynonym>2P-MOST</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasNarrowSynonym>MOST</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasNarrowSynonym>Micro-optical sectioning tomography</oboInOwl:hasNarrowSynonym>
@@ -4618,8 +4896,8 @@ Spectrometry deals with the measurement of a specific spectrum; essentially the 
     <owl:Class rdf:about="http://edamontology.org/topic_____Near-field_scanning_optical_microscopy">
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic__R7Vn7GbwtqVvGWNAMGdcNW1"/>
         <oboInOwl:hasExactSynonym>NSOM</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>SNOM</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>Scanning near-field optical microscopy</oboInOwl:hasExactSynonym>
+																 
+		<oboInOwl:hasExactSynonym>Scanning near-field optical microscopy (SNOM)</oboInOwl:hasExactSynonym>
         <oboInOwl:hasNarrowSynonym>Scattering-type scanning near-field optical microscopy</oboInOwl:hasNarrowSynonym>
         <rdfs:label>Near-field scanning optical microscopy</rdfs:label>
     </owl:Class>
@@ -4629,8 +4907,8 @@ Spectrometry deals with the measurement of a specific spectrum; essentially the 
     <!-- http://edamontology.org/topic_____Near-infrared_branding -->
 
     <owl:Class rdf:about="http://edamontology.org/topic_____Near-infrared_branding">
-        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic__R8Ss4wIFt90wZ1yjFLfXyPM"/>
-        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_____Fiducial_markers"/>
+		<rdfs:subClassOf rdf:resource="http://edamontology.org/topic_____Fiducial_markers"/>
+        <oboInOwl:hasDefinition>Creation of localisation markers in 3D in a sample using a near-infrared laser.</oboInOwl:hasDefinition>
         <rdfs:label>Near-infrared branding</rdfs:label>
     </owl:Class>
     
@@ -4672,6 +4950,7 @@ Spectrometry deals with the measurement of a specific spectrum; essentially the 
 
     <owl:Class rdf:about="http://edamontology.org/topic_____Raman_imaging">
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic__RBfI2XgIsxcfKonPPluKAhK"/>
+        <oboInOwl:hasRelatedSynonym>Coherent anti-Stokes Raman scattering microscopy (CARS)</oboInOwl:hasRelatedSynonym>
         <rdfs:label>Raman imaging</rdfs:label>
     </owl:Class>
     
@@ -4681,6 +4960,9 @@ Spectrometry deals with the measurement of a specific spectrum; essentially the 
 
     <owl:Class rdf:about="http://edamontology.org/topic_____Second-harmonic_imaging_microscopy">
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_____Non-linear_microscopy"/>
+        <oboInOwl:hasExactSynonym>SHIM</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Second harmonic generation (SHG)</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasNarrowSynonym>Third harmonic generation (THG)</oboInOwl:hasNarrowSynonym>
         <rdfs:label>Second-harmonic imaging microscopy</rdfs:label>
     </owl:Class>
     
@@ -4690,12 +4972,14 @@ Spectrometry deals with the measurement of a specific spectrum; essentially the 
 
     <owl:Class rdf:about="http://edamontology.org/topic_____Soft_x-ray_tomography">
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_3452"/>
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic______X_ray_imaging"/>
         <oboInOwl:hasExactSynonym>SXT</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasNarrowSynonym>Cryo SXT</oboInOwl:hasNarrowSynonym>
-        <oboInOwl:hasNarrowSynonym>Cryo soft x-ray tomography</oboInOwl:hasNarrowSynonym>
-        <oboInOwl:hasNarrowSynonym>Synchrotron x-ray tomographic microscopy</oboInOwl:hasNarrowSynonym>
-        <oboInOwl:hasNarrowSynonym>Synchrotron x-ray tomography</oboInOwl:hasNarrowSynonym>
-        <rdfs:label>Soft x-ray tomography</rdfs:label>
+        <oboInOwl:hasNarrowSynonym>Cryo-SXT</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>Cryo-soft X-ray tomography</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>Synchrotron X-ray tomographic microscopy</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>Synchrotron X-ray tomography</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>cSXT</oboInOwl:hasNarrowSynonym>
+        <rdfs:label>Soft X-ray tomography</rdfs:label>
     </owl:Class>
     
 
@@ -4708,6 +4992,8 @@ Spectrometry deals with the measurement of a specific spectrum; essentially the 
         <oboInOwl:hasDefinition>Type of microscopy using a high angle of incidence of a laser to produce an evanescent field to selectively excite fluorophores in close proximity to the coverslip.</oboInOwl:hasDefinition>
         <oboInOwl:hasExactSynonym>TIRF</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>TIRFM</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasRelatedSynonym>HiLo microscopy</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>highly inclined and laminated optical sheet (HiLo)</oboInOwl:hasRelatedSynonym>
         <rdfs:label>Total internal reflection fluorescence microscopy</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Total_internal_reflection_fluorescence_microscope"/>
     </owl:Class>
@@ -4728,13 +5014,735 @@ Spectrometry deals with the measurement of a specific spectrum; essentially the 
 
     <owl:Class rdf:about="http://edamontology.org/topic_____X-ray_microscopy">
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_Microscopy"/>
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic______X_ray_imaging"/>
         <related_term>X-ray microscope</related_term>
         <oboInOwl:hasDefinition>An x-ray microscope uses radiation in the soft x-ray band (approximately 0.2-20 nm wavelength) to produce magnified images.</oboInOwl:hasDefinition>
         <rdfs:label>X-ray microscopy</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/X-ray_microscope"/>
     </owl:Class>
+    
+
+
+    <!-- http://edamontology.org/topic______Ablation -->
+
+    <owl:Class rdf:about="http://edamontology.org/topic______Ablation">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic______Sample_thinning"/>
+        <oboInOwl:hasNarrowSynonym>FIB</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>Focused ion beam</oboInOwl:hasNarrowSynonym>
+        <rdfs:label>Ablation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://edamontology.org/topic______Airyscan -->
+
+    <owl:Class rdf:about="http://edamontology.org/topic______Airyscan">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic______Image_Scanning_Microscopy"/>
+        <rdfs:label>Airyscan</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://edamontology.org/topic______Artificial_intelligence -->
+
+    <owl:Class rdf:about="http://edamontology.org/topic______Artificial_intelligence">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_0003"/>
+        <oboInOwl:hasExactSynonym>AI</oboInOwl:hasExactSynonym>
+        <rdfs:label>Artificial intelligence</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://edamontology.org/topic______Autoencoder -->
+
+    <owl:Class rdf:about="http://edamontology.org/topic______Autoencoder">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic______Deep_learning"/>
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic______Artificial_neural_network"/>
+        <oboInOwl:hasExactSynonym>Autoencoder network</oboInOwl:hasExactSynonym>
+        <rdfs:label>Autoencoder</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Autoencoder"/>
+    </owl:Class>
+    
+
+
+    <!-- http://edamontology.org/topic______Bayesian_network -->
+
+    <owl:Class rdf:about="http://edamontology.org/topic______Bayesian_network">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_3474"/>
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic______Bayesian_statistics"/>
+        <rdfs:label>Bayesian network</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Bayesian_network"/>
+    </owl:Class>
+    
+
+
+    <!-- http://edamontology.org/topic______Bayesian_statistics -->
+
+    <owl:Class rdf:about="http://edamontology.org/topic______Bayesian_statistics">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_Statistics"/>
+        <rdfs:label>Bayesian statistics</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Bayesian_statistics"/>
+    </owl:Class>
+    
+
+
+    <!-- http://edamontology.org/topic______Blotting -->
+
+    <owl:Class rdf:about="http://edamontology.org/topic______Blotting">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic______Sample_thinning"/>
+        <rdfs:comment>Work comment: needs to be more specific (here within EM)</rdfs:comment>
+        <rdfs:label>Blotting</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://edamontology.org/topic______Chemical_fixation -->
+
+    <owl:Class rdf:about="http://edamontology.org/topic______Chemical_fixation">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic______Sample_fixation"/>
+        <rdfs:comment>Work comments:
+
+Xavier Heiligenstein
+20th March 2019
+related to : aldehyde fixation, methanol fixation, dehydration
+
+Matúš Kalaš
+20th March 2019
+
+Immunocytochemistry ICC
+Immunohistochemistry IHC
+
+Martin &amp; Laure &amp; Christos Mar 2020: These don&apos;t influence analysis, let&apos;s not care about these in EDAM. Matus: Anything of those useful for searchability by biologists, to put into Related terms? Or in a comment?</rdfs:comment>
+        <rdfs:label>Chemical fixation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://edamontology.org/topic______Computed_microtomography -->
+
+    <owl:Class rdf:about="http://edamontology.org/topic______Computed_microtomography">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic__RxfmHE99gOkUOOML5krfsJ"/>
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_____X-ray_microscopy"/>
+        <oboInOwl:hasExactSynonym>Computed microtomography</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>High-resolution micro-CT</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Micro computed tomography</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Micro-computed tomography</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>micro CT</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>micro-CT</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>µCT</oboInOwl:hasExactSynonym>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>topics</oboInOwl:inSubset>
+        <rdfs:label>X-ray microtomography</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/X-ray_microtomography"/>
+    </owl:Class>
+    
+
+
+    <!-- http://edamontology.org/topic______Computer_vision -->
+
+    <owl:Class rdf:about="http://edamontology.org/topic______Computer_vision">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_0003"/>
+        <rdfs:comment>Work comment: See comment elsewhere</rdfs:comment>
+        <rdfs:label>Computer vision</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Computer_vision"/>
+    </owl:Class>
+    
+
+
+    <!-- http://edamontology.org/topic______Contrasting -->
+
+    <owl:Class rdf:about="http://edamontology.org/topic______Contrasting">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic__ReQzVVVh0IPyN0c1V5wQVO"/>
+        <related_term>Contrasting agent</related_term>
+        <rdfs:comment>Work comment: Re Xavier: it&apos;s added, to some minimal extent. The consideration is how much the contrasting agents etc. influence the choices of analysis. And the relation to annotation/labelling. Done for now, left for further improvements</rdfs:comment>
+        <rdfs:label>Contrasting method</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://edamontology.org/topic______Cryo_electron_microscopy -->
+
+    <owl:Class rdf:about="http://edamontology.org/topic______Cryo_electron_microscopy">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_0611"/>
+        <rdfs:label>Cryo electron microscopy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://edamontology.org/topic______Decision_tree -->
+
+    <owl:Class rdf:about="http://edamontology.org/topic______Decision_tree">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_3474"/>
+        <oboInOwl:hasExactSynonym>Decision tree learning</oboInOwl:hasExactSynonym>
+        <rdfs:label>Decision tree</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Decision_tree_learning"/>
+    </owl:Class>
+    
+
+
+    <!-- http://edamontology.org/topic______Deconvolution_widefield_microscopy -->
+
+    <owl:Class rdf:about="http://edamontology.org/topic______Deconvolution_widefield_microscopy">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_Widefield_microscopy"/>
+        <rdfs:label>Deconvolution widefield microscopy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://edamontology.org/topic______Deep_learning -->
+
+    <owl:Class rdf:about="http://edamontology.org/topic______Deep_learning">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_3474"/>
+        <oboInOwl:hasDefinition>Deep learning is part of a broader family of machine learning methods incorporating feature learning or representation learning (techniques that allow a system to automatically discover the representations needed for feature detection or classification from raw data). Deep learning is typically based on artificial neural networks.</oboInOwl:hasDefinition>
+        <rdfs:label>Deep learning</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Deep_learning"/>
+        <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Feature_learning"/>
+        <rdfs:seeAlso rdf:resource="https://modelzoo.co/"/>
+    </owl:Class>
+    
+
+
+    <!-- http://edamontology.org/topic______Evolutionary_algorithm -->
+
+    <owl:Class rdf:about="http://edamontology.org/topic______Evolutionary_algorithm">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic______Artificial_intelligence"/>
+        <oboInOwl:hasNarrowSynonym>Genetic algorithm</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>Genetic programming</oboInOwl:hasNarrowSynonym>
+        <rdfs:label>Evolutionary algorithm</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Evolutionary_algorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://edamontology.org/topic______Fluorescence -->
+
+    <owl:Class rdf:about="http://edamontology.org/topic______Fluorescence">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_Fluorescent_microscopy"/>
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic______Contrasting"/>
+        <rdfs:label>Fluorescence</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://edamontology.org/topic______Fourier-transform_infrared_spectroscopy -->
+
+    <owl:Class rdf:about="http://edamontology.org/topic______Fourier-transform_infrared_spectroscopy">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic__RBfI2XgIsxcfKonPPluKAhK"/>
+        <oboInOwl:hasExactSynonym>FTIR</oboInOwl:hasExactSynonym>
+        <rdfs:label>Fourier-transform infrared spectroscopy</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Fourier-transform_infrared_spectroscopy"/>
+    </owl:Class>
+    
+
+
+    <!-- http://edamontology.org/topic______High_throughput_screening -->
+
+    <owl:Class rdf:about="http://edamontology.org/topic______High_throughput_screening">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_0003"/>
+        <oboInOwl:hasDefinition>Highly automated microscopy to image and analyse large areas and/or large number of samples. Also outside of imaging (as opposed to HCA/HCS), e.g. proteomics, gene expression/transcriptomics, etc.</oboInOwl:hasDefinition>
+        <oboInOwl:hasExactSynonym>HTS</oboInOwl:hasExactSynonym>
+        <rdfs:comment>In simple terms, high-content screening (HCS) is the combination of high-throughput screening (HTS) applied to high-content analysis (HCA).</rdfs:comment>
+        <rdfs:label>High-throughput screening</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/High-throughput_screening"/>
+    </owl:Class>
+    
+
+
+    <!-- http://edamontology.org/topic______Image_Scanning_Microscopy -->
+
+    <owl:Class rdf:about="http://edamontology.org/topic______Image_Scanning_Microscopy">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_Fluorescent_microscopy"/>
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic__R7Vn7GbwtqVvGWNAMGdcNW1"/>
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic__RBsSZve5PnQFO3scMDWo9f0"/>
+        <oboInOwl:hasExactSynonym>ISM</oboInOwl:hasExactSynonym>
+        <rdfs:label>Image scanning microscopy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://edamontology.org/topic______Imaging_flow_cytometry -->
+
+    <owl:Class rdf:about="http://edamontology.org/topic______Imaging_flow_cytometry">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_3382"/>
+        <oboInOwl:hasExactSynonym>IFC</oboInOwl:hasExactSynonym>
+        <rdfs:label>Imaging flow cytometry</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://edamontology.org/topic______Instrument_maintenance -->
+
+    <owl:Class rdf:about="http://edamontology.org/topic______Instrument_maintenance">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_0003"/>
+        <oboInOwl:hasNarrowSynonym>Instrument calibration</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasRelatedSynonym>Instrument setup</oboInOwl:hasRelatedSynonym>
+        <rdfs:comment>A generic concept related to e.g. calibration of instruments (such as microscopes). Applicable also outside of biology.</rdfs:comment>
+        <rdfs:label>Instrument maintenance</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://edamontology.org/topic______Laser_microdissection -->
+
+    <owl:Class rdf:about="http://edamontology.org/topic______Laser_microdissection">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic______Photomanipulation"/>
+        <oboInOwl:hasNarrowSynonym>Laser capture microdissection (LCM)</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>Laser capture microscopy</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>Laser catapulting</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>Laser dissection microscopy</oboInOwl:hasNarrowSynonym>
+        <rdfs:label>Laser microdissection</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Laser_capture_microdissection"/>
+    </owl:Class>
+    
+
+
+    <!-- http://edamontology.org/topic______Medical_imaging -->
+
+    <owl:Class rdf:about="http://edamontology.org/topic______Medical_imaging">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_3382"/>
+        <rdfs:label>Medical imaging</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://edamontology.org/topic______Microtomy -->
+
+    <owl:Class rdf:about="http://edamontology.org/topic______Microtomy">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic______Sample_thinning"/>
+        <oboInOwl:hasNarrowSynonym>Cryo-microtomy</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>Cryo-ultramicrotomy</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>Oscilating knife</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>Ultra-microtomy</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>Vibrate</oboInOwl:hasNarrowSynonym>
+        <rdfs:label>Microtomy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://edamontology.org/topic______Molecular_Imaging -->
+
+    <owl:Class rdf:about="http://edamontology.org/topic______Molecular_Imaging">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic______Medical_imaging"/>
+        <rdfs:label>Molecular imaging</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://edamontology.org/topic______Optical_Coherence_Tomography -->
+
+    <owl:Class rdf:about="http://edamontology.org/topic______Optical_Coherence_Tomography">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_3452"/>
+        <oboInOwl:hasDefinition>OCT is a label free detection technique, that uses low-coherence light to capture micrometer-resolution, two- and three-dimensional images from within scattering tissues.</oboInOwl:hasDefinition>
+        <oboInOwl:hasExactSynonym>OCT</oboInOwl:hasExactSynonym>
+        <rdfs:label>Optical coherence tomography</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Optical_coherence_tomography"/>
+    </owl:Class>
+    
+
+
+    <!-- http://edamontology.org/topic______Optical_Projection_Tomography -->
+
+    <owl:Class rdf:about="http://edamontology.org/topic______Optical_Projection_Tomography">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_3452"/>
+        <oboInOwl:hasDefinition>OPT is a form of tomography using visible light to generate 3D image volumes based on absorption (label-free) or fluorescence.</oboInOwl:hasDefinition>
+        <oboInOwl:hasExactSynonym>OPT</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Optical tomography</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasNarrowSynonym>Optical computed tomography</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>Optical emission computed tomography</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>Optical tomography</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>optical-CT</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>optical-ECT</oboInOwl:hasNarrowSynonym>
+        <rdfs:label>Optical projection tomography</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Optical_projection_tomography"/>
+        <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Optical_tomography"/>
+    </owl:Class>
+    
+
+
+    <!-- http://edamontology.org/topic______Phase_Contrast_X-Ray_Imaging -->
+
+    <owl:Class rdf:about="http://edamontology.org/topic______Phase_Contrast_X-Ray_Imaging">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic______X_ray_imaging"/>
+        <oboInOwl:hasExactSynonym>PCI</oboInOwl:hasExactSynonym>
+        <rdfs:label>Phase-contrast X-ray imaging</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Phase-contrast_X-ray_imaging"/>
+    </owl:Class>
+    
+
+
+    <!-- http://edamontology.org/topic______Phase_imaging -->
+
+    <owl:Class rdf:about="http://edamontology.org/topic______Phase_imaging">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic__R9P5gEAm1wic4R2PcZ7ZpPA"/>
+        <related_term>Label free</related_term>
+        <oboInOwl:hasNarrowSynonym>Digital Holography</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>Holographic microscopy</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>Holographic tomography</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>Ptychography</oboInOwl:hasNarrowSynonym>
+        <rdfs:label>Phase imaging</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Ptychography"/>
+    </owl:Class>
+    
+
+
+    <!-- http://edamontology.org/topic______Photoablation -->
+
+    <owl:Class rdf:about="http://edamontology.org/topic______Photoablation">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_Fluorescent_microscopy"/>
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic__RL4rPCXlIu9uzNrGcbcSNp"/>
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic______Photomanipulation"/>
+        <oboInOwl:hasDefinition>This technique allows the selective cutting of parts of samples without thermal damage.</oboInOwl:hasDefinition>
+        <oboInOwl:hasNarrowSynonym>Laser ablation</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>Laser microsurgery</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>Laser nanosurgery</oboInOwl:hasNarrowSynonym>
+        <rdfs:label>Photoablation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://edamontology.org/topic______Photoactivation -->
+
+    <owl:Class rdf:about="http://edamontology.org/topic______Photoactivation">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic______Photomanipulation"/>
+        <oboInOwl:hasRelatedSynonym>Optogenetics</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>Photoconversion</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>Photoswitch</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>photobleaching</oboInOwl:hasRelatedSynonym>
+        <rdfs:label>Photoactivation</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Photoactivatable_fluorescent_protein"/>
+    </owl:Class>
+    
+
+
+    <!-- http://edamontology.org/topic______Photomanipulation -->
+
+    <owl:Class rdf:about="http://edamontology.org/topic______Photomanipulation">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_3385"/>
+        <rdfs:label>Photomanipulation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://edamontology.org/topic______Quantitative_phase_imaging -->
+
+    <owl:Class rdf:about="http://edamontology.org/topic______Quantitative_phase_imaging">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic______Phase_imaging"/>
+        <rdfs:label>Quantitative phase imaging</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Quantitative_phase-contrast_microscopy"/>
+    </owl:Class>
+    
+
+
+    <!-- http://edamontology.org/topic______Random_forest -->
+
+    <owl:Class rdf:about="http://edamontology.org/topic______Random_forest">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_3474"/>
+        <oboInOwl:hasExactSynonym>Random decision forest</oboInOwl:hasExactSynonym>
+        <rdfs:label>Random forest</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Random_forest"/>
+    </owl:Class>
+    
+
+
+    <!-- http://edamontology.org/topic______Ratiometric_imaging -->
+
+    <owl:Class rdf:about="http://edamontology.org/topic______Ratiometric_imaging">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_Fluorescent_microscopy"/>
+        <rdfs:label>Ratiometric imaging</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://edamontology.org/topic______Re-scan_confocal_microscopy -->
+
+    <owl:Class rdf:about="http://edamontology.org/topic______Re-scan_confocal_microscopy">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic______Image_Scanning_Microscopy"/>
+        <oboInOwl:hasExactSynonym>RCM</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Rescan</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasRelatedSynonym>Re-Scan</oboInOwl:hasRelatedSynonym>
+        <rdfs:label>Re-scan confocal microscopy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://edamontology.org/topic______Sample_clearing -->
+
+    <owl:Class rdf:about="http://edamontology.org/topic______Sample_clearing">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic__ReQzVVVh0IPyN0c1V5wQVO"/>
+        <oboInOwl:hasDefinition>Sample preparation process that makes sample transparent</oboInOwl:hasDefinition>
+        <oboInOwl:hasNarrowSynonym>cleared tissue</oboInOwl:hasNarrowSynonym>
+        <rdfs:label>Sample clearing</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/CLARITY"/>
+        <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/CUBIC"/>
+        <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/3DISCO"/>
+    </owl:Class>
+    
+
+
+    <!-- http://edamontology.org/topic______Sample_embedding -->
+
+    <owl:Class rdf:about="http://edamontology.org/topic______Sample_embedding">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic__ReQzVVVh0IPyN0c1V5wQVO"/>
+        <rdfs:comment>Work comments:
+Xavier Heiligenstein
+20th March 2019
+
+Subcategories: room temperature embedding, dehydration, progressive lowering temperature (PLT), freeze-substitution
+
+Matúš Kalaš
+20th March 2019
+
+Discussion: Clearing, Thinning, Blotting, Embedding synonyms, related terms Microtomy, etc (see also Matthia&apos;s comment in Sample thinning)
+
+Related term(s) to Volume imaging -- should we add that? In which context(s)?
+
+Further discussion Martin, Laure, Nataša:
+- perhaps concern of another ontology
+- for further consideration what of that matters for analysis choices (e.g. with the volume)
+- Martin: how and when slicing is done in EM will influence analysis</rdfs:comment>
+        <rdfs:label>Sample embedding</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://edamontology.org/topic______Sample_fixation -->
+
+    <owl:Class rdf:about="http://edamontology.org/topic______Sample_fixation">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic__ReQzVVVh0IPyN0c1V5wQVO"/>
+        <oboInOwl:hasExactSynonym>Sample fixation</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Sample stabilisation</oboInOwl:hasExactSynonym>
+        <rdfs:label>Sample immobilisation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://edamontology.org/topic______Sample_thinning -->
+
+    <owl:Class rdf:about="http://edamontology.org/topic______Sample_thinning">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_0611"/>
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic__ReQzVVVh0IPyN0c1V5wQVO"/>
+        <rdfs:comment>Work comments:
+Xavier Heiligenstein
+20th March 2019
+
+This contains the sub categories: microtomy, ultra-microtomy, blotting, vibrating blade sectioning, cryo-microtomy, oscillating, ablation
+
+Matthia.Karreman
+20th March 2019
+
+Examples of sample thinning
+
+    blotting (as in vitrobot)
+    microtomy (ultra-, cryo- (ultra), vibratome, oscilating knife, )
+    ablation (Focus ion beam, laser)
+
+Laure
+16th October 2019
+
+I have created them but as I am no expert, does it work?
+
+Martin: IMHO not a generally used term. See FIB (Ablation), Sectioning
+Christos: Diff between sectining and thinning: sectioning removes. But results otherwise same.
+M &amp; C: Terminology is not (yet) standardised around these
+
+Let&apos;s get back to it with definitions and relations, ...</rdfs:comment>
+        <rdfs:label>Sample thinning</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://edamontology.org/topic______Scientific_visualisation -->
+
+    <owl:Class rdf:about="http://edamontology.org/topic______Scientific_visualisation">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_0003"/>
+        <oboInOwl:hasExactSynonym>Scientific visualization</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasNarrowSynonym>Interactive visual analysis</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>Visual analytics</oboInOwl:hasNarrowSynonym>
+        <rdfs:label>Scientific visualisation</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Scientific_visualization"/>
+    </owl:Class>
+    
+
+
+    <!-- http://edamontology.org/topic______Self-adjusting_microscopy -->
+
+    <owl:Class rdf:about="http://edamontology.org/topic______Self-adjusting_microscopy">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_Microscopy"/>
+        <related_term>Adaptive optics</related_term>
+        <oboInOwl:hasNarrowSynonym>Intelligent microscopy</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>Smart microscopy</oboInOwl:hasNarrowSynonym>
+        <rdfs:comment>Intelligent microscopy uses artificial intelligence; smart microscopy is using a defined algorithm to adapt microscope configuration or imaging parameters. (Robert Haase &amp; consensus)</rdfs:comment>
+        <rdfs:label>Adaptive microscopy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://edamontology.org/topic______Semi-supervised_learning -->
+
+    <owl:Class rdf:about="http://edamontology.org/topic______Semi-supervised_learning">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_3474"/>
+        <rdfs:label>Semi-supervised learning</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Semi-supervised_learning"/>
+    </owl:Class>
+    
+
+
+    <!-- http://edamontology.org/topic______Single_Particle_Cryo-Electron_microscopy -->
+
+    <owl:Class rdf:about="http://edamontology.org/topic______Single_Particle_Cryo-Electron_microscopy">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic__R7LElbFkBgKS401YKsVtNck"/>
+        <oboInOwl:hasNarrowSynonym>SPA</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>Single particle analysis</oboInOwl:hasNarrowSynonym>
+        <rdfs:label>Single particle cryo-electron microscopy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://edamontology.org/topic______Staining -->
+
+    <owl:Class rdf:about="http://edamontology.org/topic______Staining">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_____Histology"/>
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic______Contrasting"/>
+        <oboInOwl:hasDefinition>Enhancement of contrast in biological samples.</oboInOwl:hasDefinition>
+        <rdfs:label>Sample staining</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Staining"/>
+    </owl:Class>
+    
+
+
+    <!-- http://edamontology.org/topic______Stereology -->
+
+    <owl:Class rdf:about="http://edamontology.org/topic______Stereology">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Feature_extraction"/>
+        <rdfs:label>Stereology</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Stereology"/>
+    </owl:Class>
+    
+
+
+    <!-- http://edamontology.org/topic______Stereoscopy -->
+
+    <owl:Class rdf:about="http://edamontology.org/topic______Stereoscopy">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_3385"/>
+        <oboInOwl:hasDefinition>Stereoscopy is a non-digital technique creating the illusion of depth in an image.</oboInOwl:hasDefinition>
+        <oboInOwl:hasNarrowSynonym>Stereo imaging</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>Stereoscopics</oboInOwl:hasNarrowSynonym>
+        <rdfs:label>Stereoscopy</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Stereoscopy"/>
+    </owl:Class>
+    
+
+
+    <!-- http://edamontology.org/topic______Unstained_sample -->
+
+    <owl:Class rdf:about="http://edamontology.org/topic______Unstained_sample">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic______Contrasting"/>
+        <oboInOwl:hasExactSynonym>Label-free sample</oboInOwl:hasExactSynonym>
+        <rdfs:label>Unstained sample</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://edamontology.org/topic______X_ray_imaging -->
+
+    <owl:Class rdf:about="http://edamontology.org/topic______X_ray_imaging">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_3382"/>
+        <rdfs:label>X-ray imaging</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://edamontology.org/topic______Artificial_neural_network -->
+
+    <owl:Class rdf:about="http://edamontology.org/topic______Artificial_neural_network">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_3474"/>
+        <oboInOwl:hasExactSynonym>ANN</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasNarrowSynonym>Dense neural network</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>Feedforward neural network</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>Fully-connected neural network</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>Multi-layer perceptron (MLP)</oboInOwl:hasNarrowSynonym>
+        <rdfs:label>Artificial neural network</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://edamontology.org/topic______Convolutional_neural_network -->
+
+    <owl:Class rdf:about="http://edamontology.org/topic______Convolutional_neural_network">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic______Deep_learning"/>
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic______Artificial_neural_network"/>
+        <related_term>DenseNet</related_term>
+        <related_term>U-Net</related_term>
+        <oboInOwl:hasExactSynonym>CNN</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>ConvNet</oboInOwl:hasExactSynonym>
+        <rdfs:label>Convolutional neural network</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Convolutional_neural_network"/>
+    </owl:Class>
+    
+
+
+    <!-- http://edamontology.org/topic______Radial_basis_function_network -->
+
+    <owl:Class rdf:about="http://edamontology.org/topic______Radial_basis_function_network">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic______Deep_learning"/>
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic______Artificial_neural_network"/>
+        <oboInOwl:hasExactSynonym>RBF network</oboInOwl:hasExactSynonym>
+        <rdfs:label>Radial basis function network</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Radial_basis_function_network"/>
+    </owl:Class>
+    
+
+
+    <!-- http://edamontology.org/topic______Recurrent_neural_network -->
+
+    <owl:Class rdf:about="http://edamontology.org/topic______Recurrent_neural_network">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic______Deep_learning"/>
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic______Artificial_neural_network"/>
+        <oboInOwl:hasExactSynonym>RNN</oboInOwl:hasExactSynonym>
+        <rdfs:label>Recurrent neural network</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Recurrent_neural_network"/>
+        <rdfs:seeAlso>Long short term memory (LSTM)</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://edamontology.org/topic______Region-proposal_network -->
+
+    <owl:Class rdf:about="http://edamontology.org/topic______Region-proposal_network">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic______Deep_learning"/>
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic______Artificial_neural_network"/>
+        <related_term>Fast R-CNN</related_term>
+        <related_term>Faster R-CNN</related_term>
+        <related_term>R-CNN</related_term>
+        <oboInOwl:hasExactSynonym>RBF network</oboInOwl:hasExactSynonym>
+        <rdfs:label>Region-proposal network</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://edamontology.org/topic______Support_vector_machine -->
+
+    <owl:Class rdf:about="http://edamontology.org/topic______Support_vector_machine">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_3474"/>
+        <oboInOwl:hasExactSynonym>SVM</oboInOwl:hasExactSynonym>
+        <rdfs:label>Support vector machine</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Support-vector_machine"/>
+    </owl:Class>
+    
+
+
+    <!-- http://edamontology.org/topic______k-nearest_neighbours -->
+
+    <owl:Class rdf:about="http://edamontology.org/topic______k-nearest_neighbours">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_3474"/>
+        <oboInOwl:hasExactSynonym>k-NN</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>k-nearest neighbor algorithm</oboInOwl:hasExactSynonym>
+        <rdfs:label>k-nearest neighbours</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/K-nearest_neighbors_algorithm"/>
+    </owl:Class>
 </rdf:RDF>
 
 
 
-<!-- Generated by the OWL API (version 4.5.6) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (various versions incl. 4.5.6 and 4.5.13), and subsequently therefore always subjected to major manual clean-up -->
