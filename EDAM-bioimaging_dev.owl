@@ -42,7 +42,7 @@
         <oboInOwl:hasSubset>bioimaging &quot;EDAM-bioimaging&quot;</oboInOwl:hasSubset>
         <oboOther:idspace>EDAM http://edamontology.org/ &quot;EDAM relations and concept properties&quot;</oboOther:idspace>
         <dc:format>application/rdf+xml</dc:format>
-        <oboOther:date>03.03.2020 11:16 UTC</oboOther:date>
+        <oboOther:date>03.03.2020 12:49 UTC</oboOther:date>
         <oboOther:idspace>EDAM_data http://edamontology.org/data_ &quot;EDAM types of data&quot;</oboOther:idspace>
         <oboInOwl:hasSubset>concept_properties &quot;EDAM concept properties&quot;</oboInOwl:hasSubset>
         <dc:creator>Jon Ison</dc:creator>
@@ -93,7 +93,7 @@
         <next_id>!NB.:NO_STABLE_IDS-YET!</next_id>
         <oboInOwl:hasSubset>topics &quot;EDAM topics&quot;</oboInOwl:hasSubset>
         <oboOther:remark>EDAM-bioimaging is an extension to the EDAM ontology (edamontology.org) for bioimage analysis, bioimage informatics, and bioimaging. It is being developed in collaboration between the ELIXIR research infrastructure and the NEUBIAS and COMULIS COST Actions (neubias.org CA15124, comulis.eu CA17121, funded by the Horizon 2020 Framework Programme of the European Union), in close contact with the Euro-BioImaging research infrastructure (PP2) and the Global BioImaging network.</oboOther:remark>
-        <doap:Version>alpha06</doap:Version>
+        <doap:Version>alpha06_dev</doap:Version>
         <rdfs:isDefinedBy rdf:resource="http://edamontology.org/EDAM-bioimaging.owl"/>
         <foaf:page rdf:resource="https://github.com/edamontology/edam-bioimaging"/>
     </owl:Ontology>
@@ -1023,9 +1023,9 @@ Numbers in a matrix are responses from a sensor measured at a set of sampling po
     
 
 
-    <!-- http://edamontology.org/data_roi -->
+    <!-- http://edamontology.org/data_Roi -->
 
-    <owl:Class rdf:about="http://edamontology.org/data_roi">
+    <owl:Class rdf:about="http://edamontology.org/data_Roi">
         <rdfs:subClassOf rdf:resource="http://edamontology.org/data_0006"/>
         <oboInOwl:hasExactSynonym>ROI</oboInOwl:hasExactSynonym>
         <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
@@ -1392,7 +1392,8 @@ Numbers in a matrix are responses from a sensor measured at a set of sampling po
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
         <oboInOwl:inSubset>formats</oboInOwl:inSubset>
         <oboInOwl:inSubset>navigation</oboInOwl:inSubset>
-        <rdfs:comment>Xavier Heiligenstein
+        <rdfs:comment>Work comment:
+Xavier Heiligenstein
 20th March 2019
 I would add: dm3, md4, dv, zvi, mrc, st
 
@@ -3705,12 +3706,9 @@ Whereas  the standard Fourier transform is only localized in frequency, wavelets
 		<oboInOwl:hasRelatedSynonym>Lattice Light-sheet Microscopy (LLSM)</oboInOwl:hasRelatedSynonym>
 		<oboInOwl:hasRelatedSynonym>Multidirectional SPIM</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym>Multiview selective plane illumination microscopy (MuViSPIM)</oboInOwl:hasRelatedSynonym>
-																		 
-        <oboInOwl:hasRelatedSynonym>OPTiSPIM</oboInOwl:hasRelatedSynonym>
+		<oboInOwl:hasRelatedSynonym>OPTiSPIM</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym>SPED</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym>Spherical aberrations assisted Extended Depth-of-field Lightsheet Microscopy</oboInOwl:hasRelatedSynonym>
-																	   
-																	  
 		<oboInOwl:hasRelatedSynonym>inverted SPIM (iSPIM)</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym>mSPIM</oboInOwl:hasRelatedSynonym>
 		<oboInOwl:hasRelatedSynonym>single objective Selective Plane Illumination Microscopy</oboInOwl:hasRelatedSynonym>
@@ -3941,15 +3939,9 @@ Whereas  the standard Fourier transform is only localized in frequency, wavelets
 		<oboInOwl:hasNarrowSynonym>Fluorescence photoactivation localisation microscopy (fPALM)</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasNarrowSynonym>Ground state depletion individual molecule return (GSDIM)</oboInOwl:hasNarrowSynonym>
 		<oboInOwl:hasNarrowSynonym>Photoactivated localisation microscopy (PALM)</oboInOwl:hasNarrowSynonym>
-																												
-																   
-																									 
-																									 
-																	
 		<oboInOwl:hasNarrowSynonym>Stochastic optical reconstruction microscopy (STORM)</oboInOwl:hasNarrowSynonym>
 		<oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
-														 
-        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+		<oboInOwl:inSubset>edam</oboInOwl:inSubset>
         <oboInOwl:inSubset>topics</oboInOwl:inSubset>
         <rdfs:label>Single molecule localisation microscopy</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Super-resolution_microscopy#Localization_microscopy"/>
@@ -3977,9 +3969,7 @@ Whereas  the standard Fourier transform is only localized in frequency, wavelets
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic__R7Vn7GbwtqVvGWNAMGdcNW1"/>
         <related_term>Optical sectioning</related_term>
         <oboInOwl:hasDefinition>Microscopy restricted to objects which are in the same focal plane.</oboInOwl:hasDefinition>
-																 
 		<oboInOwl:hasExactSynonym>Confocal laser scanning microscopy (CLSM)</oboInOwl:hasExactSynonym>
-																 
 		<oboInOwl:hasExactSynonym>Laser scanning confocal microscopy (LSCM)</oboInOwl:hasExactSynonym>
         <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
@@ -4258,9 +4248,7 @@ Spectrometry deals with the measurement of a specific spectrum; essentially the 
         <oboInOwl:hasDefinition>A patterned illumination interferes with the sample and creates moire fringes which are further processed by an algorithm to increase spatial resolution.</oboInOwl:hasDefinition>
         <oboInOwl:hasExactSynonym>SIM</oboInOwl:hasExactSynonym>
         <oboInOwl:hasRelatedSynonym>Instant linear structured Illumination Microscopy</oboInOwl:hasRelatedSynonym>
-																	 
 		<oboInOwl:hasRelatedSynonym>Multifocal Structured Illumination Microscopy (MSIM)</oboInOwl:hasRelatedSynonym>
-																	 
 		<oboInOwl:hasRelatedSynonym>Saturated structured illumination microscopy (SSIM)</oboInOwl:hasRelatedSynonym>
 		<oboInOwl:hasRelatedSynonym>iSIM</oboInOwl:hasRelatedSynonym>
         <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
@@ -4366,7 +4354,6 @@ Spectrometry deals with the measurement of a specific spectrum; essentially the 
         <oboInOwl:hasDefinition>An increase in spatial resolution is obtained thanks to stimulated emission properties of fluorophores illuminated simultaneously by two lasers.</oboInOwl:hasDefinition>
         <oboInOwl:hasExactSynonym>STED</oboInOwl:hasExactSynonym>
         <oboInOwl:hasNarrowSynonym>MinFlux</oboInOwl:hasNarrowSynonym>
-																	  
 		<oboInOwl:hasNarrowSynonym>Reversible saturable optical linear fluorescence transitions microscopy (RESOLFT)</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasNarrowSynonym>gated-STED</oboInOwl:hasNarrowSynonym>
         <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
@@ -4472,10 +4459,8 @@ Spectrometry deals with the measurement of a specific spectrum; essentially the 
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_Fluorescent_microscopy"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic__R9Cmje2ZUXyDW6aQAvFhwSM"/>
         <oboInOwl:hasDefinition>In confocal fluorescent microscopy, a pinhole rejects light from out-of-focus planes allowing an increase in contrast and spatial resolution, mostly axially.</oboInOwl:hasDefinition>
-																  
 		<oboInOwl:hasNarrowSynonym>Laser scanning microscopy (LSM)</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasNarrowSynonym>Nipkow disk microscopy</oboInOwl:hasNarrowSynonym>
-																   
 		<oboInOwl:hasNarrowSynonym>Spinning disk confocal microscopy (SDCM)</oboInOwl:hasNarrowSynonym>
         <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
@@ -4504,7 +4489,6 @@ Spectrometry deals with the measurement of a specific spectrum; essentially the 
         <rdfs:seeAlso rdf:resource="http://purl.bioontology.org/ontology/MESH/D008858"/>
         <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Phase-contrast_microscopy"/>
 	</owl:Class>
-				
     
 
 
@@ -4551,8 +4535,6 @@ Spectrometry deals with the measurement of a specific spectrum; essentially the 
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_Fluorescent_microscopy"/>
         <oboInOwl:hasNarrowSynonym>Photobleaching microscopy with non-linear processing</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasNarrowSynonym>PiMP</oboInOwl:hasNarrowSynonym>
-																   
-																   
 		<oboInOwl:hasNarrowSynonym>Super resolution optical fluctuation imaging (SOFI)</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasNarrowSynonym>Super resolution radial fluctuations (SRRF)</oboInOwl:hasNarrowSynonym>
         <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
@@ -4570,8 +4552,6 @@ Spectrometry deals with the measurement of a specific spectrum; essentially the 
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic__RBfI2XgIsxcfKonPPluKAhK"/>
         <oboInOwl:hasDefinition>FCS measures fluctuations of fluorescence in a volume, providing after analysis physical parameters of the sample such as diffusion coefficient or concentration.</oboInOwl:hasDefinition>
         <oboInOwl:hasExactSynonym>FCS</oboInOwl:hasExactSynonym>
-																	 
-																	 
 		<oboInOwl:hasRelatedSynonym>Fluorescence Lifetime Correlation Microscopy (FLCS)</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym>Fluorescence cross-correlation spectroscopy (FCCS)</oboInOwl:hasRelatedSynonym>
         <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
@@ -4607,12 +4587,9 @@ Spectrometry deals with the measurement of a specific spectrum; essentially the 
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic______Photomanipulation"/>
         <oboInOwl:hasDefinition>Microscopy method for studying kinetics of diffusion of molecules in a sample.</oboInOwl:hasDefinition>
         <oboInOwl:hasExactSynonym>FRAP</oboInOwl:hasExactSynonym>
-																	 
-																	 
 		<oboInOwl:hasRelatedSynonym>Fluorescence localization after photobleaching (FLAP)</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym>Fluorescence loss in photobleaching (FLIP)</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym>Inverse fluorescence recovery after photobleaching (iFRAP)</oboInOwl:hasRelatedSynonym>
-																	  
 		<oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
 		<oboInOwl:inSubset>edam</oboInOwl:inSubset>
         <oboInOwl:inSubset>topics</oboInOwl:inSubset>
@@ -4644,9 +4621,7 @@ Spectrometry deals with the measurement of a specific spectrum; essentially the 
     <owl:Class rdf:about="http://edamontology.org/topic___Image_correlation_spectroscopy">
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_Fluorescent_microscopy"/>
         <oboInOwl:hasExactSynonym>ICS</oboInOwl:hasExactSynonym>
-																	 
 		<oboInOwl:hasRelatedSynonym>Particle Image Correlation Spectroscopy (PICS)</oboInOwl:hasRelatedSynonym>
-																	 
 		<oboInOwl:hasRelatedSynonym>Raster Image Correlation Spectroscopy (RICS)</oboInOwl:hasRelatedSynonym>
         <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
@@ -4896,7 +4871,6 @@ It&apos;s a good question how deep to go. Currently we&apos;re going less deep w
     <owl:Class rdf:about="http://edamontology.org/topic_____Near-field_scanning_optical_microscopy">
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic__R7Vn7GbwtqVvGWNAMGdcNW1"/>
         <oboInOwl:hasExactSynonym>NSOM</oboInOwl:hasExactSynonym>
-																 
 		<oboInOwl:hasExactSynonym>Scanning near-field optical microscopy (SNOM)</oboInOwl:hasExactSynonym>
         <oboInOwl:hasNarrowSynonym>Scattering-type scanning near-field optical microscopy</oboInOwl:hasNarrowSynonym>
         <rdfs:label>Near-field scanning optical microscopy</rdfs:label>
