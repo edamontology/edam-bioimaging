@@ -14,7 +14,7 @@ Twitter: [@edamontology](http://twitter.com/edamontology) ([follow](https://twit
 An ontology of bioimage informatics operations, types of data, data formats, and bioimaging topics
 
 
-EDAM-bioimaging is an extension to the [EDAM ontology](https://github.com/edamontology/edamontology) (http://edamontology.org) for bioimage analysis, bioimage informatics, and bioimaging, developed in collaboration between partners from [NEUBIAS](http://eubias.org/NEUBIAS) Cost Action (Horizon 2020 CA15124) and [ELIXIR](http://www.elixir-europe.org)-EXCELERATE WP1 (Horizon 2020 676559), in contact with partners from [Euro-BioImaging](http://www.eurobioimaging.eu) PP2.
+EDAM-bioimaging is an extension to the [EDAM ontology](https://github.com/edamontology/edamontology) (http://edamontology.org) for bioimage analysis, bioimage informatics, and bioimaging. It is being developed in collaboration between the [ELIXIR](http://www.elixir-europe.org) research infrastructure and the [NEUBIAS](http://eubias.org/NEUBIAS) and [COMULIS](http://www.comulis.eu) COST Actions (CA15124, CA17121, funded by the Horizon 2020 Framework Programme of the European Union), in close contact with the [Euro-BioImaging](http://www.eurobioimaging.eu) research infrastructure (PP2) and the [Global BioImaging](https://globalbioimaging.org/) network.
 
 
 ## Viewing
