@@ -42,7 +42,7 @@
         <oboInOwl:hasSubset>bioimaging &quot;EDAM-bioimaging&quot;</oboInOwl:hasSubset>
         <oboOther:idspace>EDAM http://edamontology.org/ &quot;EDAM relations and concept properties&quot;</oboOther:idspace>
         <dc:format>application/rdf+xml</dc:format>
-        <oboOther:date>03.03.2020 12:47 UTC</oboOther:date>
+        <oboOther:date>03.03.2020 14:24 UTC</oboOther:date>
         <oboOther:idspace>EDAM_data http://edamontology.org/data_ &quot;EDAM types of data&quot;</oboOther:idspace>
         <oboInOwl:hasSubset>concept_properties &quot;EDAM concept properties&quot;</oboInOwl:hasSubset>
         <dc:creator>Jon Ison</dc:creator>
@@ -3496,8 +3496,8 @@ Whereas  the standard Fourier transform is only localized in frequency, wavelets
 
     <!-- http://edamontology.org/topic_0218 -->
 
-    <owl:Class rdf:about="http://edamontology.org/topic______Natural_language_processing">
-        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_0218"/>
+    <owl:Class rdf:about="http://edamontology.org/topic_0218">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_0003"/>
         <rdfs:label>Natural language processing</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Natural_language_processing"/>
     </owl:Class>
