@@ -1,8 +1,8 @@
 DOI representing all stable versions, resolving to the latest: [![10.5281/zenodo.1149730](https://zenodo.org/badge/DOI/10.5281/zenodo.1149730.svg)](https://doi.org/10.5281/zenodo.1149730)
 
-DOI of the latest stable EDAM-bioimaging version _alpha05_: [![10.5281/zenodo.2557012](https://zenodo.org/badge/DOI/10.5281/zenodo.2557012.svg)](https://doi.org/10.5281/zenodo.2557012)
+<!--DOI of the latest stable EDAM-bioimaging version _alpha06_: [![10.5281/zenodo.2557012](https://zenodo.org/badge/DOI/10.5281/zenodo.TODO.svg)](https://doi.org/10.5281/zenodo.TODO)
 
-Poster: [![10.7490/f1000research.f1000research.1116432.1](https://zenodo.org/badge/DOI/10.7490/f1000research.1116432.1.svg)](https://doi.org/10.7490/f1000research.1116432.1)
+Poster: [![10.7490/f1000research.TODO.1](https://zenodo.org/badge/DOI/10.7490/f1000research.TODO.1.svg)](https://doi.org/10.7490/f1000research.TODO.1)-->
 
 Twitter: [@edamontology](http://twitter.com/edamontology) ([follow](https://twitter.com/intent/follow?original_referer=https%3A%2F%2Fgithub.com%2Fedamontology%2Fedam-bioimaging&region=follow_link&screen_name=edamontology&tw_p=followbutton))
 
@@ -19,15 +19,17 @@ EDAM-bioimaging is an extension to the [EDAM ontology](https://github.com/edamon
 
 ## Viewing
 
- * __Last stable version__ (now _alpha05_) at the __[NCBO BioPortal](https://bioportal.bioontology.org/ontologies/EDAM-BIOIMAGING?p=classes)__
+ * __Last stable version__ (now _alpha06_) at the __[NCBO BioPortal](https://bioportal.bioontology.org/ontologies/EDAM-BIOIMAGING?p=classes)__
  
  * __All versions__ at __WebProtégé__. Free registration at WebProtégé is required.
  
-     * __[Live development version](https://webprotege.stanford.edu/#projects/2ce704bf-83ed-4d2e-985f-84c4841fac71/edit/Classes)__ (now *alpha06_dev*)
+     * __[Live development version](https://webprotege.stanford.edu/#projects/2ce704bf-83ed-4d2e-985f-84c4841fac71/edit/Classes)__ (now *alpha07_dev*)
  
-     * __[Last stable version](https://webprotege.stanford.edu/#projects/60fbe82b-bd58-41e2-825d-3801c071ee47/edit/Classes)__ (now _alpha05_)
+     * __[Last stable version](https://webprotege.stanford.edu/#projects/60fbe82b-bd58-41e2-825d-3801c071ee47/edit/Classes)__ (now _alpha06_)
  
-     * __[Frozen version *alpha05*](https://webprotege.stanford.edu/#projects/d9f9a5b2-d746-430a-a2cd-9aa745764079/edit/Classes)__
+     * __[Frozen version *alpha06*](https://webprotege.stanford.edu/#projects/c149e738-4437-456c-843c-eb5861a36854/edit/Classes)__
+ 
+     * [Frozen version *alpha05*](https://webprotege.stanford.edu/#projects/d9f9a5b2-d746-430a-a2cd-9aa745764079/edit/Classes)
  
      * [Frozen version *alpha04*](https://webprotege.stanford.edu/#projects/861eadbe-8e38-46fc-a59e-6d45a1b6f25e/edit/Classes)
  
@@ -52,13 +54,13 @@ __Always the last stable version:__
 * In __CSV__ format from http://edamontology.org/EDAM-bioimaging.csv
 
 
-__Other versions__, _e.g._ the current _alpha05_:
+__Other versions__, _e.g._ the current _alpha06_:
 
-* In __OWL__ format from http://edamontology.org/EDAM-bioimaging_alpha05.owl
+* In __OWL__ format from http://edamontology.org/EDAM-bioimaging_alpha06.owl
 
-* In __TSV__ format from http://edamontology.org/EDAM-bioimaging_alpha05.tsv
+* In __TSV__ format from http://edamontology.org/EDAM-bioimaging_alpha06.tsv
 
-* In __CSV__ format from http://edamontology.org/EDAM-bioimaging_alpha05.csv
+* In __CSV__ format from http://edamontology.org/EDAM-bioimaging_alpha06.csv
 
 
 
@@ -69,10 +71,11 @@ This is an open community project (transparent and participatory), and thus cont
 The most accessible way of contributing is writing comments with suggestions or needs for clarification, and starting discussion threads. Multiple channels are avaialable:
 
 **Preferred:**
-* Add comments to the [live development version of EDAM-bioimaging](https://webprotege.stanford.edu/#projects/2ce704bf-83ed-4d2e-985f-84c4841fac71/edit/Classes) at __WebProtégé__. Free registration at WebProtégé is required. Select a concept and "Start new thread" in the "Comments" widget|window (not "Comments" tab, stay in the "Classes" tab). Contribute to already open threads _ibid_ or in the "Comments" tab.
+* Add __comments__ to the [live development version of EDAM-bioimaging](https://webprotege.stanford.edu/#projects/2ce704bf-83ed-4d2e-985f-84c4841fac71/edit/Classes) at __WebProtégé__. Free registration at WebProtégé is required. Select a concept and "Start new thread" in the "Comments" widget|window (not "Comments" tab, stay in the "Classes" tab). Contribute to already open threads _ibid_ or in the "Comments" tab.
 
 **Other options:**
-* Submit or comment on an [issue](https://github.com/edamontology/edam-bioimaging/issues) at __GitHub__
+* Submit or comment on an [__issue__](https://github.com/edamontology/edam-bioimaging/issues) at __GitHub__
+* Create a __pull request__ to https://github.com/edamontology/edam-bioimaging
 * Add a proposal or comment to EDAM-bioimaging at the __NCBO BioPortal__
     * to a selected concept in the ["Classes" tab](https://bioportal.bioontology.org/ontologies/EDAM-BIOIMAGING/?p=classes) by clicking the small "Notes" tab on the right (still within the big "Classes" tab)
     * on the general level in the ["Notes" tab](https://bioportal.bioontology.org/ontologies/EDAM-BIOIMAGING/?p=notes). You can include new concept proposals here.
