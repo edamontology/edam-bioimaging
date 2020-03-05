@@ -2,7 +2,7 @@ DOI representing all stable versions, resolving to the latest: [![10.5281/zenodo
 
 DOI of the latest stable EDAM-bioimaging version _alpha06_: [![10.5281/zenodo.3695725](https://zenodo.org/badge/DOI/10.5281/zenodo.3695725.svg)](https://doi.org/10.5281/zenodo.3695725)
 
-<!--Poster: [![10.7490/f1000research.TODO.1](https://zenodo.org/badge/DOI/10.7490/f1000research.TODO.1.svg)](https://doi.org/10.7490/f1000research.TODO.1)-->
+Poster: [![10.7490/f1000research.1117826.1](https://zenodo.org/badge/DOI/10.7490/f1000research.1117826.1.svg)](https://doi.org/10.7490/f1000research.1117826.1)
 
 Twitter: [@edamontology](http://twitter.com/edamontology) ([follow](https://twitter.com/intent/follow?original_referer=https%3A%2F%2Fgithub.com%2Fedamontology%2Fedam-bioimaging&region=follow_link&screen_name=edamontology&tw_p=followbutton))
 
@@ -102,7 +102,7 @@ At this momentary early stage of the development, the content of EDAM-bioimaging
 
 Before a full article is published, please cite the following when refering to EDAM-bioimaging in a scholarly publication:
 
- * Matúš Kalaš, Laure Plantard, Nataša Sladoje, Joakim Lindblad, Moritz Alexander Kirschmann, Martin Jones, Anatole Chessel, Leandro Aluisio Scholz, Fabienne Rössler, Alexandre Dufour, John Bogovic, Chong Zhang, Dominic Waithe, Paula Sampaio, Lassi Paavolainen, David Hörl, Sebastian Munck, Ofra Golani, Josh Moore, Alban Gaignard, Florian Levet, participants in the [NEUBIAS Taggathons](http://eubias.org/NEUBIAS/what-is-taggathon/), Perrine Paul-Gilloteaux, Jon Ison, [the EDAM dev team](http://edamontologydocs.readthedocs.io/en/latest/contributors.html#edam-developers), Kota Miura, Julien Colombelli, and [welcoming new contributors](https://github.com/edamontology/edam-bioimaging#contributing) **(2019)**. [EDAM-bioimaging: the ontology of bioimage informatics operations, topics, data, and formats (2019 update) [version 1; not peer reviewed]](https://f1000research.com/posters/8-158). _F1000Research_, **8**(ELIXIR): 158. Poster. [![10.7490/f1000research.1116432.1](https://zenodo.org/badge/DOI/10.7490/f1000research.1116432.1.svg)](https://doi.org/10.7490/f1000research.1116432.1) _Open Access_
+ * Matúš Kalaš, Laure Plantard, Joakim Lindblad, Martin Jones, Nataša Sladoje, Moritz A. Kirschmann, Anatole Chessel, Leandro Scholz, Fabienne Rössler, Laura Nicolás Sáenz, Estibaliz Gómez de Mariscal, John Bogovic, Alexandre Dufour, Xavier Heiligenstein, Dominic Waithe, Marie-Charlotte Domart, Matthia Karreman, Raf Van de Plas, Robert Haase, David Hörl, Lassi Paavolainen, Ivana Vrhovac Madunić, Dean Karaica, Arrate Muñoz-Barrutia, Paula Sampaio, Daniel Sage, Sebastian Munck, Ofra Golani, Josh Moore, Florian Levet, Jon Ison, Alban Gaignard, Hervé Ménager, Chong Zhang, Kota Miura, Julien Colombelli, and Perrine Paul-Gilloteaux. We are [welcoming new contributors!](https://github.com/edamontology/edam-bioimaging#contributing) **(2020)**. [EDAM-bioimaging: the ontology of bioimage informatics operations, topics, data, and formats (update 2020) [version 1; not peer reviewed]](https://f1000research.com/posters/9-162). _F1000Research_, **9**(ELIXIR): 162. Poster. [![10.7490/10.7490/f1000research.1117826.1](https://zenodo.org/badge/DOI/10.7490/f1000research.1117826.1.svg)](https://doi.org/10.7490/f1000research.1117826.1) _Open Access_
 
 The "mainline" EDAM ontology can be cited by:
 
