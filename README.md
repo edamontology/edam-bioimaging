@@ -98,7 +98,7 @@ At this momentary early stage of the development, the content of EDAM-bioimaging
 
 ## Citing
 
-(Download [BibTeX](https://raw.githubusercontent.com/edamontology/edam-bioimaging/master/CITATION.bib))
+(Download [BibTeX](https://raw.githubusercontent.com/edamontology/edam-bioimaging/main/CITATION.bib))
 
 Before a full article is published, please cite the following when refering to EDAM-bioimaging in a scholarly publication:
 
@@ -109,4 +109,4 @@ The "mainline" EDAM ontology can be cited by:
  * Jon Ison, Matúš Kalaš, Inge Jonassen, Dan Bolser, Mahmut Uludag, Hamish McWilliam, James Malone, Rodrigo Lopez, Steve Pettifer, and Peter Rice **(2013)**. [EDAM: an ontology of bioinformatics operations, types of data and identifiers, topics and formats](http://bioinformatics.oxfordjournals.org/content/29/10/1325.full). _Bioinformatics_, **29**(10): 1325-1332.
 [![10.1093/bioinformatics/btt113](https://zenodo.org/badge/DOI/10.1093/bioinformatics/btt113.svg)](https://doi.org/10.1093/bioinformatics/btt113) PMID: [23479348](http://www.ncbi.nlm.nih.gov/pubmed/23479348) _Open Access_
 
-EDAM-bioimaging releases are citable with DOIs too, for cases when that is needed. [![10.5281/zenodo.1149730](https://zenodo.org/badge/DOI/10.5281/zenodo.1149730.svg)](https://doi.org/10.5281/zenodo.1149730) represents all releases and resolves to the DOI of the last stable release. For the DOI of a particular release of EDAM-bioimaging, please see [/releases](https://github.com/edamontology/edam-bioimaging/tree/master/releases).
+EDAM-bioimaging releases are citable with DOIs too, for cases when that is needed. [![10.5281/zenodo.1149730](https://zenodo.org/badge/DOI/10.5281/zenodo.1149730.svg)](https://doi.org/10.5281/zenodo.1149730) represents all releases and resolves to the DOI of the last stable release. For the DOI of a particular release of EDAM-bioimaging, please see [/releases](https://github.com/edamontology/edam-bioimaging/tree/main/releases).
