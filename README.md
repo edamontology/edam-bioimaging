@@ -40,7 +40,7 @@ EDAM-bioimaging is an extension to the [EDAM ontology](https://github.com/edamon
 
 ## Visualization
 
-* In __WebVOWL__: http://visualdataweb.de/webvowl/#iri=http://edamontology.org/EDAM-bioimaging.owl
+* In __WebVOWL__: https://service.tib.eu/webvowl/#iri=https://edamontology.org/EDAM-bioimaging.owl
 
  
 ## Download
