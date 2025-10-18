@@ -13,7 +13,7 @@
      xmlns:dcterms="http://purl.org/dc/terms/"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
      xmlns:oboLegacy="http://purl.obolibrary.org/obo/">
-    <owl:Ontology rdf:about="http://edamontology.org">
+    <owl:Ontology rdf:about="http://edamontology.org/EDAM-bioimaging">
         <next_id>!NB.:NO_STABLE_IDS-YET! Expected end Oct-Nov 2025</next_id>
         <oboLegacy:date>18.10.2025 00:52 UTC</oboLegacy:date>
         <oboLegacy:default-relationship-id-prefix>EDAM</oboLegacy:default-relationship-id-prefix>
@@ -7115,6 +7115,7 @@ Let&apos;s get back to it with definitions and relations, ...</rdfs:comment>
     <!-- http://edamontology.org/topics________009 -->
 
     <owl:Class rdf:about="http://edamontology.org/topics________009">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_0003"/>
         <related_term>Diffraction</related_term>
         <related_term>Diffractometer</related_term>
         <oboInOwl:created_by>Matúš Kalaš</oboInOwl:created_by>
