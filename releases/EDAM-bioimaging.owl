@@ -7,7 +7,6 @@
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:doap="http://usefulinc.com/ns/doap#"
-     xmlns:edam="http://purl.obolibrary.org/obo/edam#"
      xmlns:foaf="http://xmlns.com/foaf/0.1/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
@@ -133,7 +132,6 @@
     <owl:AnnotationProperty rdf:about="http://edamontology.org/abbreviation">
         <rdfs:comment>Especially if the rdfs:label is long, it is recommended for applications to show abbreviation as the primary display label. Example: MALDI-MS.</rdfs:comment>
         <rdfs:label>Abbreviation</rdfs:label>
-        <skos:editorialNote>Make this also a subproperty of http://purl.org/dc/terms/alternative</skos:editorialNote>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
     </owl:AnnotationProperty>
     
@@ -1007,9 +1005,6 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
         <oboInOwl:created_by>Matúš Kalaš</oboInOwl:created_by>
         <oboInOwl:creation_date>20250313-1921</oboInOwl:creation_date>
         <rdfs:label>can use</rdfs:label>
-        <skos:editorialNote>Inverse: usable_in. Domain: Might be too restictive and certainly EDAM-specific. Question: Should replace is_topic_of?? Note: This is about posibility (&quot;can&quot;), and is_topic_of is kind-of about posibility too (as opposed to has_topic!!).</skos:editorialNote>
-        <skos:editorialNote>TODO: Add also &quot;uses&quot;/&quot;used in&quot; (as sub-cases of can/-able(?)) for cases when it must be, e.g. Fluorescence microscopy uses Fluorescence (as a contrasting method)!!</skos:editorialNote>
-        <skos:editorialNote>The bloody WP used a different IRI prefix than defined in settings!! http://webprotege.stanford.edu/can_use (works then just for Classes?? And general various issues with creating properties now://)</skos:editorialNote>
     </owl:ObjectProperty>
     
 
@@ -1023,8 +1018,6 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
         <oboInOwl:creation_date>20250313-1914</oboInOwl:creation_date>
         <rdfs:label>usable for</rdfs:label>
         <oboInOwl:hasExactSynonym>usable in</oboInOwl:hasExactSynonym>
-        <skos:editorialNote>Inverse: can_use. Range: Might be too restictive and certainly EDAM-specific. Question: Should replace has_topic?? Difference: This is about posibility (&quot;can&quot;), whereas has_topic is &quot;always&quot;.</skos:editorialNote>
-        <skos:editorialNote>The bloody WP used a different IRI prefix than defined in settings!! http://webprotege.stanford.edu/usable_in (works then just for Classes?? And general various issues with creating properties now://)</skos:editorialNote>
     </owl:ObjectProperty>
     
 
@@ -1073,7 +1066,6 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
         <rdfs:seeAlso>http://wsio.org/data_002</rdfs:seeAlso>
         <rdfs:seeAlso>http://www.ifomis.org/bfo/1.1/snap#Continuant</rdfs:seeAlso>
         <rdfs:seeAlso>http://www.onto-med.de/ontologies/gfo.owl#Perpetuant</rdfs:seeAlso>
-        <skos:editorialNote>Test of adding IDs: Setting with prefix http://edamontology.org/ &amp; Supplied name; Enter name &quot;format_5005&quot; first; Then rename label to what it should be. Works.</skos:editorialNote>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://edamontology.org/data_0006"/>
@@ -1249,7 +1241,6 @@ Numbers in a matrix are responses from a sensor measured at a set of sampling po
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
         <rdfs:label>Region of interest</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Region_of_interest"/>
-        <skos:editorialNote>Resolving the discussion on &quot;object vs region vs region of interest&quot;, after adding Wiki def. Object is a region, but region can be more than an object.</skos:editorialNote>
     </owl:Class>
     
 
@@ -1537,7 +1528,6 @@ Numbers in a matrix are responses from a sensor measured at a set of sampling po
     <owl:Class rdf:about="http://edamontology.org/data____Image_formation_characteristics">
         <rdfs:subClassOf rdf:resource="http://edamontology.org/data_______Instrument_parameters_and_characteristics"/>
         <rdfs:label>Image formation characteristics</rdfs:label>
-        <skos:editorialNote>This was before in the Image characteristics.</skos:editorialNote>
     </owl:Class>
     
 
@@ -2208,7 +2198,6 @@ imzML metadata file (.imzML, http://edamontology.org/format_3682).</rdfs:comment
         <rdfs:comment>ToDo: Clear up relation between Classification, Clustering, and Prediction and recognition (also in main EDAM)</rdfs:comment>
         <rdfs:label>Classification</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Classification"/>
-        <skos:editorialNote>TODO: a lot of relevant points nicely collated in https://en.wikipedia.org/wiki/Classification</skos:editorialNote>
     </owl:Class>
     
 
@@ -3782,7 +3771,6 @@ Whereas  the standard Fourier transform is only localized in frequency, wavelets
         <rdfs:label>Data augmentation</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Data_augmentation"/>
         <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Convolutional_neural_network#Artificial_data"/>
-        <skos:editorialNote>TODO: See also see also in the see also, i.e. https://en.wikipedia.org/wiki/Data_augmentation#See_also</skos:editorialNote>
     </owl:Class>
     
 
@@ -3837,7 +3825,6 @@ Whereas  the standard Fourier transform is only localized in frequency, wavelets
     <owl:Class rdf:about="http://edamontology.org/operation______Machine_learning-based_data_generation">
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_3429"/>
         <rdfs:label>Machine learning-based data generation</rdfs:label>
-        <skos:editorialNote>delete BUT SAVE COMMENTS FIRST!</skos:editorialNote>
     </owl:Class>
     
 
@@ -3902,7 +3889,6 @@ Whereas  the standard Fourier transform is only localized in frequency, wavelets
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_0003"/>
         <oboInOwl:hasExactSynonym>Single-cell modality</oboInOwl:hasExactSynonym>
         <rdfs:label>Single-cell data acquisition</rdfs:label>
-        <skos:editorialNote>Is this different from Cytometry (http://edamontology.org/topic_3934) ??</skos:editorialNote>
     </owl:Class>
     
 
@@ -4209,7 +4195,6 @@ Whereas  the standard Fourier transform is only localized in frequency, wavelets
         <rdfs:label>Machine learning</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Data_mining"/>
         <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Machine_learning"/>
-        <skos:editorialNote>Statistical learning may either be considered as exact or narrow synonym (or even closely related) synonym of ML. On Wikipedia, https://en.wikipedia.org/wiki/Statistical_learning redirects to ML.</skos:editorialNote>
     </owl:Class>
     
 
@@ -4332,7 +4317,6 @@ Whereas  the standard Fourier transform is only localized in frequency, wavelets
         <oboInOwl:inSubset>topics</oboInOwl:inSubset>
         <rdfs:label>Neuron image analysis</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://edamontology.org/operation__R9Qf06vxvFj2UbAk7pW3IMG"/>
-        <skos:editorialNote>TODO add also under Neuro..(science?)</skos:editorialNote>
     </owl:Class>
     
 
@@ -4344,7 +4328,6 @@ Whereas  the standard Fourier transform is only localized in frequency, wavelets
         <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
         <oboInOwl:inSubset>topics</oboInOwl:inSubset>
-        <skos:editorialNote>Update IRI to http://edamontology.org/topic_2269</skos:editorialNote>
         <rdfs:label>Statistics and probability</rdfs:label>
     </owl:Class>
     
@@ -4366,7 +4349,6 @@ Whereas  the standard Fourier transform is only localized in frequency, wavelets
         <rdfs:comment>There are rare exceptions of super-resolution microscopy, such as scanning near-field optical microscopy (SNOM), that do not necessarily rely on fluorescence.</rdfs:comment>
         <rdfs:label>Super-resolution microscopy</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Super-resolution_microscopy"/>
-        <skos:editorialNote>Enhanced-resolution microscopy is probably included other methods which are not really super-resolution yet. Does that need its concept?</skos:editorialNote>
     </owl:Class>
     
 
@@ -4430,7 +4412,6 @@ Whereas  the standard Fourier transform is only localized in frequency, wavelets
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
         <oboInOwl:inSubset>topics</oboInOwl:inSubset>
         <rdfs:label>Point-scanning microscopy</rdfs:label>
-        <skos:editorialNote>IS IT Point-scanning microscopy OR Point illumination microscopy?</skos:editorialNote>
     </owl:Class>
     
 
@@ -5168,7 +5149,6 @@ Spectrometry deals with the measurement of a specific spectrum; essentially the 
         <rdfs:label>Fluorescence lifetime imaging microscopy</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://bioportal.bioontology.org/ontologies/NCIT/?p=classes&amp;conceptid=http%3A%2F%2Fncicb.nci.nih.gov%2Fxml%2Fowl%2FEVS%2FThesaurus.owl%23C154786&amp;jump_to_nav=true"/>
         <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Fluorescence-lifetime_imaging_microscopy"/>
-        <skos:editorialNote>Can be with array or point detectors.</skos:editorialNote>
     </owl:Class>
     
 
@@ -5190,7 +5170,6 @@ Spectrometry deals with the measurement of a specific spectrum; essentially the 
         <rdfs:comment>Can be widefield or confocal.</rdfs:comment>
         <rdfs:label>Fluorescence recovery after photobleaching</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Fluorescence_recovery_after_photobleaching"/>
-        <skos:editorialNote>Can be with array or point detectors.</skos:editorialNote>
     </owl:Class>
     
 
@@ -5212,7 +5191,6 @@ Spectrometry deals with the measurement of a specific spectrum; essentially the 
         <rdfs:label>Förster resonance energy transfer</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Förster_resonance_energy_transfer"/>
         <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Single-molecule_FRET"/>
-        <skos:editorialNote>Can be with array or point detectors.</skos:editorialNote>
     </owl:Class>
     
 
@@ -5307,7 +5285,6 @@ It&apos;s a good question how deep to go. Currently we&apos;re going less deep w
         <rdfs:comment>volumetric microscopy method based on physical serial sectioning. Can be appyied in LM and EM. Work comment: should we even remove it from underneath Tomography and instead put it somewhere to Image Prep?</rdfs:comment>
         <rdfs:label>Array tomography</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://doi.org/10.1016/j.neuron.2007.06.014"/>
-        <skos:editorialNote>A pity there is no Wikipedia article (yet).</skos:editorialNote>
     </owl:Class>
     
 
@@ -5360,7 +5337,6 @@ It&apos;s a good question how deep to go. Currently we&apos;re going less deep w
         <rdfs:seeAlso rdf:resource="http://edamontology.org/topic_0634"/>
         <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Digital_pathology"/>
         <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Histopathology"/>
-        <skos:editorialNote>Relation to pathology, histology, &amp;/ histopathology?</skos:editorialNote>
     </owl:Class>
     
 
@@ -5529,7 +5505,6 @@ It&apos;s a good question how deep to go. Currently we&apos;re going less deep w
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic__RBDp7HwdUBEjpS6PRjYfV2V"/>
         <oboInOwl:hasBroadSynonym>Plant image informatics</oboInOwl:hasBroadSynonym>
         <rdfs:label>Plant image analysis</rdfs:label>
-        <skos:editorialNote>TODO add also under Botany=Plant science</skos:editorialNote>
     </owl:Class>
     
 
@@ -5635,9 +5610,6 @@ It&apos;s a good question how deep to go. Currently we&apos;re going less deep w
         <related_term>Matrix detector</related_term>
         <related_term>Multi-point detector</related_term>
         <rdfs:label>Multi-point detection microscopy</rdfs:label>
-        <skos:editorialNote>Airyscan is a name from a vendor. Another vendors call it differently, e.g. Matrix detector. The image reconstruction afterwards might be different.</skos:editorialNote>
-        <skos:editorialNote>Airyscan is in any case point-scanning, with a very small array detector (LaureP), and not confocal in the narrow sense (even if it is part of the same machine).</skos:editorialNote>
-        <skos:editorialNote>Enhanced resolution</skos:editorialNote>
     </owl:Class>
     
 
@@ -5677,7 +5649,6 @@ It&apos;s a good question how deep to go. Currently we&apos;re going less deep w
         <oboInOwl:hasExactSynonym>Autoencoder network</oboInOwl:hasExactSynonym>
         <rdfs:label>Autoencoder</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Autoencoder"/>
-        <skos:editorialNote>Should this be explicitly under Unsupervised learning, too? And what about other models?</skos:editorialNote>
     </owl:Class>
     
 
@@ -5690,7 +5661,6 @@ It&apos;s a good question how deep to go. Currently we&apos;re going less deep w
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_______Probabilistic_graphical_model"/>
         <rdfs:label>Bayesian network</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Bayesian_network"/>
-        <skos:editorialNote>Do we need/want synonym Bayesian learning?</skos:editorialNote>
     </owl:Class>
     
 
@@ -5711,7 +5681,6 @@ It&apos;s a good question how deep to go. Currently we&apos;re going less deep w
     <owl:Class rdf:about="http://edamontology.org/topic______Blotting">
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic______Sample_thinning"/>
         <rdfs:label>Blotting</rdfs:label>
-        <skos:editorialNote>Work comment: needs to be more specific (here within EM)</skos:editorialNote>
     </owl:Class>
     
 
@@ -5976,7 +5945,6 @@ Martin &amp; Laure &amp; Christos Mar 2020: These don&apos;t influence analysis,
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic______Medical_imaging"/>
         <rdfs:label>Molecular imaging</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Molecular_imaging"/>
-        <skos:editorialNote>N.B.! In contrast to WikiData, Wikipedia claims that this is a kind of medical imaging in patients!</skos:editorialNote>
         <skos:exactMatch rdf:resource="https://www.wikidata.org/wiki/Q1142297"/>
     </owl:Class>
     
@@ -6128,8 +6096,6 @@ Martin &amp; Laure &amp; Christos Mar 2020: These don&apos;t influence analysis,
         <oboInOwl:hasExactSynonym>Rescan</oboInOwl:hasExactSynonym>
         <oboInOwl:hasRelatedSynonym>Re-Scan</oboInOwl:hasRelatedSynonym>
         <rdfs:label>Re-scan confocal microscopy</rdfs:label>
-        <skos:editorialNote>Enhanced resolution</skos:editorialNote>
-        <skos:editorialNote>This is point-scanning confocal, but with an array detector (camera chip). Super-resolution is reached by ratio between TODO (scanning/projection)</skos:editorialNote>
     </owl:Class>
     
 
@@ -6308,10 +6274,6 @@ Let&apos;s get back to it with definitions and relations, ...</rdfs:comment>
         <oboInOwl:hasNarrowSynonym>Histological staining</oboInOwl:hasNarrowSynonym>
         <rdfs:label>Sample staining</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Staining"/>
-        <skos:editorialNote>A LOT OF TODOs HERE!!!
-1. In Histology, it is Tissue staining. But in Cytology, it&apos;d be Cell staining.
-2. How should this relate to Imaging? (Right under Imaging???)
-3. There are many options for staining, see e.g. wikipedia! Should these all be modelled in EDAM then?!</skos:editorialNote>
     </owl:Class>
     
 
@@ -6369,8 +6331,6 @@ Let&apos;s get back to it with definitions and relations, ...</rdfs:comment>
         <related_term>Röntgenology?</related_term>
         <oboInOwl:hasBroadSynonym>Radiography</oboInOwl:hasBroadSynonym>
         <rdfs:label>X-ray imaging</rdfs:label>
-        <skos:editorialNote>Angelika: What about specifically absorption-based, as opposed to phase-based, and putting the lab-source X-ray imaging there?</skos:editorialNote>
-        <skos:editorialNote>Radiography can also use other rays than X-</skos:editorialNote>
     </owl:Class>
     
 
@@ -6391,7 +6351,6 @@ Let&apos;s get back to it with definitions and relations, ...</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_____Mass_spectrometry_imaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_______Ambient_ionisation_mass_spectrometry"/>
         <rdfs:label>Ambient ionisation mass spectrometry imaging</rdfs:label>
-        <skos:editorialNote>Do we want the &apos;mass spectrometry&apos; in the label?</skos:editorialNote>
     </owl:Class>
     
 
@@ -6415,7 +6374,6 @@ Let&apos;s get back to it with definitions and relations, ...</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic______Artificial_intelligence"/>
         <rdfs:label>Autoregressive model</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Autoregressive_model"/>
-        <skos:editorialNote>Note: Add this kind of models &amp; stuff somehow... Random processes, etc....</skos:editorialNote>
     </owl:Class>
     
 
@@ -6446,12 +6404,6 @@ Let&apos;s get back to it with definitions and relations, ...</rdfs:comment>
         <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Boltzmann_machine"/>
         <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Hopfield_network"/>
         <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Restricted_Boltzmann_machine"/>
-        <skos:editorialNote>Questions to think about:
-- Is this a special case of Hopfield network?
-- Is Hopfield network worth adding too, i.e. is it relevant in science applications these days?
-- Where does this/do these fit within Statistics/Statistical models/Probabilistic models?
-- Is DBM a (Probabilistic) graphical model?
-- AND THE QUESTION OF THE DAY: Are there Generative ML models which are NOT Statistical models??</skos:editorialNote>
     </owl:Class>
     
 
@@ -6462,8 +6414,6 @@ Let&apos;s get back to it with definitions and relations, ...</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topics________008"/>
         <rdfs:label>Chromatography</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Chromatography"/>
-        <skos:editorialNote>In nextgen EDAM, this could be under Analytical chemistry (then mixing technique &amp; application) and Data acquisition, and maybe also some separation/purification</skos:editorialNote>
-        <skos:editorialNote>TODO: Write a nice short def (hasDefinition). Plus add rdfs:comment about further info...</skos:editorialNote>
         <skos:exactMatch rdf:resource="https://www.wikidata.org/wiki/Q170050"/>
     </owl:Class>
     
@@ -6614,8 +6564,6 @@ Let&apos;s get back to it with definitions and relations, ...</rdfs:comment>
         <oboInOwl:hasNarrowSynonym>Multiplexed ion beam imaging (MIBI™ imaging)</oboInOwl:hasNarrowSynonym>
         <rdfs:label>Imaging mass cytometry</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Mass_cytometry#Imaging_Mass_Cytometry_(IMC)"/>
-        <skos:editorialNote>IMC/CyTOF is also Multiplexed immunostaining, however the readout is not (Immuno)fluorescence, but mass spectrometry.</skos:editorialNote>
-        <skos:editorialNote>NOTE: If we model Single-cell data aquisition, we cannot include Imaging mass cytometry (tissue) under Mass cytometry (single cell). But the &quot;pixel&quot; resolution here is subcellular, so we can say it is cytometry and therefore also single-cell analysis.</skos:editorialNote>
     </owl:Class>
     
 
@@ -6646,8 +6594,6 @@ Let&apos;s get back to it with definitions and relations, ...</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic______Staining"/>
         <rdfs:label>Immunostaining</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Immunostaining"/>
-        <skos:editorialNote>TODO: See the various techniques, e.g those mentioned in the wikipedia artcicle.
-NOTE! Immunofluorescence and Immunohistochemistry are Imaging, but others e.g. Western blot or Flow cytometry are not!</skos:editorialNote>
     </owl:Class>
     
 
@@ -6681,7 +6627,6 @@ NOTE! Immunofluorescence and Immunohistochemistry are Imaging, but others e.g. W
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_______Self-supervised_learning"/>
         <abbreviation>LLM</abbreviation>
         <rdfs:label>Large language model</rdfs:label>
-        <skos:editorialNote>TODO: Does it have to be Deep learning = Feature learning of ANN?</skos:editorialNote>
     </owl:Class>
     
 
@@ -6737,8 +6682,6 @@ NOTE! Immunofluorescence and Immunohistochemistry are Imaging, but others e.g. W
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_______Laser_desorption_ionisation_mass_spectrometry"/>
         <oboInOwl:hasExactSynonym>LDI imaging</oboInOwl:hasExactSynonym>
         <rdfs:label>Laser desorption/ionisation mass spectrometry imaging</rdfs:label>
-        <skos:editorialNote>Do we want the &apos;mass spectrometry&apos; in the label?</skos:editorialNote>
-        <skos:editorialNote>Is the abbreviation so well espablished that we should show it instead of the label?  (like MALDI imaging)</skos:editorialNote>
     </owl:Class>
     
 
@@ -6751,7 +6694,6 @@ NOTE! Immunofluorescence and Immunohistochemistry are Imaging, but others e.g. W
         <oboInOwl:hasExactSynonym>L-system</oboInOwl:hasExactSynonym>
         <rdfs:label>Lindenmayer system</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/L-system"/>
-        <skos:editorialNote>This is also a formal grammar, and all grammars are rule-based generative. But not very statistical, I worry.</skos:editorialNote>
     </owl:Class>
     
 
@@ -6788,9 +6730,6 @@ NOTE! Immunofluorescence and Immunohistochemistry are Imaging, but others e.g. W
         <rdfs:label>Mass cytometry</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/CyTOF"/>
         <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Mass_cytometry"/>
-        <skos:editorialNote>Magnus Palmblad
-16th November 2022
-CyTOF can be considered a generic trademark for a mass cytometer with a time-of-flight mass analyser.</skos:editorialNote>
     </owl:Class>
     
 
@@ -6859,7 +6798,6 @@ CyTOF can be considered a generic trademark for a mass cytometer with a time-of-
  and immunohistochemistry (IHC).</rdfs:comment>
         <rdfs:label>Multiplexed immunostaining</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Immunostaining"/>
-        <skos:editorialNote>Other than CyCIF and CODEX, this includes also other machines, such as Vectra, DISCOVERY ULTRA, InSituPlex, DSP, Chipcytometry.</skos:editorialNote>
     </owl:Class>
     
 
@@ -6894,7 +6832,6 @@ CyTOF can be considered a generic trademark for a mass cytometer with a time-of-
     <owl:Class rdf:about="http://edamontology.org/topic_______Prompt_engineering">
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_______Large_language_model"/>
         <rdfs:label>Prompt engineering</rdfs:label>
-        <skos:editorialNote>Rather as operation?</skos:editorialNote>
     </owl:Class>
     
 
@@ -6916,7 +6853,6 @@ CyTOF can be considered a generic trademark for a mass cytometer with a time-of-
         <abbreviation>SIMS</abbreviation>
         <oboInOwl:hasNarrowSynonym>Nanoscale secondary ion mass spectrometry (NanoSIMS)</oboInOwl:hasNarrowSynonym>
         <rdfs:label>Secondary ion mass spectrometry</rdfs:label>
-        <skos:editorialNote>Some folks write SIMS-MS :D</skos:editorialNote>
     </owl:Class>
     
 
@@ -6985,8 +6921,6 @@ CyTOF can be considered a generic trademark for a mass cytometer with a time-of-
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_______Tissue_imaging"/>
         <rdfs:label>Spatial transcriptomics</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Spatial_transcriptomics"/>
-        <skos:editorialNote>TODO at MERGE: Include also under Transcriptomics!
-And something like Spatial omics?? IS NOW IN EDAM MS &amp; Seq WP branch!!</skos:editorialNote>
     </owl:Class>
     
 
@@ -7040,7 +6974,6 @@ And something like Spatial omics?? IS NOW IN EDAM MS &amp; Seq WP branch!!</skos
         <oboInOwl:hasNarrowSynonym>Encoder–decoder model</oboInOwl:hasNarrowSynonym>
         <rdfs:label>Transformer (machine learning)</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Transformer_(machine_learning_model)"/>
-        <skos:editorialNote>Should this be explicitly under Supervised learning, too? And what about other models?</skos:editorialNote>
     </owl:Class>
     
 
@@ -7082,8 +7015,6 @@ And something like Spatial omics?? IS NOW IN EDAM MS &amp; Seq WP branch!!</skos
         <oboInOwl:created_by>MCFoell</oboInOwl:created_by>
         <oboInOwl:creation_date>2025-01-17T09:40:52.400992Z</oboInOwl:creation_date>
         <rdfs:label>Dye-based staining</rdfs:label>
-        <skos:editorialNote>Category for (chemical) dyes used in histology.</skos:editorialNote>
-        <skos:editorialNote>TODO: Fix a slight setup mess-up: ALL &quot;topics________XYZ&quot; IDs by removing the &quot;s&quot; (and somehow decreasing the number/#digits if needed)!!!!</skos:editorialNote>
     </owl:Class>
     
 
@@ -7151,7 +7082,6 @@ And something like Spatial omics?? IS NOW IN EDAM MS &amp; Seq WP branch!!</skos
         <oboInOwl:created_by>Matúš Kalaš</oboInOwl:created_by>
         <oboInOwl:creation_date>2025-02-14T10:50:13.06276Z</oboInOwl:creation_date>
         <rdfs:label>Environmental transmission electron microscopy</rdfs:label>
-        <skos:editorialNote>Is it a very niche thing? Is it within In-situ TEM?</skos:editorialNote>
     </owl:Class>
     
 
@@ -7176,8 +7106,6 @@ And something like Spatial omics?? IS NOW IN EDAM MS &amp; Seq WP branch!!</skos
         <rdfs:label>Sample material separation</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://de.wikipedia.org/wiki/Trennen_(Verfahrenstechnik)"/>
         <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Separation_process"/>
-        <skos:editorialNote>wikidata.org/wiki/Q4751159 is &quot;analytical technique&quot; in EN and defined as separation, but it is confluted with &quot;analytical chemistry&quot; in other languages (which is correctly wikidata.org/wiki/Q2346 &amp; topic_3370).</skos:editorialNote>
-        <skos:editorialNote>wikidata.org/wiki/Q898987 is defined as separation or separation method, so rather exactMatch, but it&apos;s titled separation process in English. Therefore relatedMatch.</skos:editorialNote>
         <skos:relatedMatch rdf:resource="https://www.wikidata.org/wiki/Q4751159"/>
         <skos:relatedMatch rdf:resource="https://www.wikidata.org/wiki/Q898987"/>
     </owl:Class>
@@ -7224,24 +7152,6 @@ And something like Spatial omics?? IS NOW IN EDAM MS &amp; Seq WP branch!!</skos
         <oboInOwl:creation_date>2025-03-11T12:09:28.995236Z</oboInOwl:creation_date>
         <oboInOwl:hasBroadSynonym>Raman imaging</oboInOwl:hasBroadSynonym>
         <rdfs:label>Raman microscopy</rdfs:label>
-        <skos:editorialNote>What&apos;s better R imaging or R microscopy?</skos:editorialNote>
-        <skos:editorialNote>https://assets.thermofisher.com/TFS-Assets/MSD/Reference-Materials/raman-spectroscopy-microscopy-and-imaging-bk56397-en.pdf says:
-What is Raman microscopy?
-In a Raman microscope, a research-grade optical microscope is coupled to
-a laser excitation source and spectrometer, thereby constituting a scientific
-instrument capable of obtaining both traditional optical and spectrochemical
-images with a spatial resolution at the diffraction limit of light (&lt;1 micron). The
-Raman microscope enables the measurement of chemically and spatially
-inhomogeneous samples to reveal their chemical composition, morphology,
-molecular orientation, conformation, polymorphism, crystallinity, material
-deformation, local temperature, etc. A 3D spectrochemical representation of
-the sample can be constructed by acquiring 2D area images at different depths
-in a confocal mode by sequentially shifting the laser focus inside a transparent
-or translucent sample. This method of 3D spectrochemical imaging preserves
-the sample integrity and avoids possible artifacts that may result from physically
-cutting or sectioning the sample. No other microscopic technique offers such a
-combination of spatial resolution and “information-reach” spectral content within
-a workable acquisition time</skos:editorialNote>
     </owl:Class>
     
 
@@ -7272,7 +7182,6 @@ a workable acquisition time</skos:editorialNote>
         <oboInOwl:created_by>Matúš Kalaš</oboInOwl:created_by>
         <oboInOwl:creation_date>2025-03-11T12:31:06.55322Z</oboInOwl:creation_date>
         <rdfs:label>Emission spectroscopy</rdfs:label>
-        <skos:editorialNote>TODO REVIEW ALL THESE! Especially where they should be under! And e.g. how we should capture the relations to SEM! Are all, or only some done together with (the help of) SEM? And is this concept itself sensible in any way??</skos:editorialNote>
     </owl:Class>
     
 
@@ -7328,7 +7237,6 @@ a workable acquisition time</skos:editorialNote>
         <oboInOwl:hasExactSynonym>Electron probe microanalyzer (EPMA)</oboInOwl:hasExactSynonym>
         <rdfs:label>Electron microprobe</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Electron_microprobe"/>
-        <skos:editorialNote>Related to some sort of Scanning probe / Microprobe / Probe microscopy ???</skos:editorialNote>
     </owl:Class>
     
 
@@ -7341,8 +7249,6 @@ a workable acquisition time</skos:editorialNote>
         <oboInOwl:created_by>Matúš Kalaš, Harald Hausen</oboInOwl:created_by>
         <oboInOwl:creation_date>2025-03-11T16:19:33.899595Z</oboInOwl:creation_date>
         <rdfs:label>Cathodoluminescence microscopy</rdfs:label>
-        <skos:editorialNote>CL microscopy is based on irradiation with electrons from SEM (causing cathodoluminescence), combined with light detection.</skos:editorialNote>
-        <skos:editorialNote>Not spectroscopy, is it?</skos:editorialNote>
     </owl:Class>
     
 
@@ -7373,7 +7279,6 @@ a workable acquisition time</skos:editorialNote>
         <oboInOwl:creation_date>2025-03-13T17:17:50.257989Z</oboInOwl:creation_date>
         <rdfs:label>Backscattered electrons imaging</rdfs:label>
         <skos:editorialNote rdf:resource="https://www.thermofisher.com/blog/materials/backscattered-electrons-in-sem-imaging/"/>
-        <skos:editorialNote>Is this just EBSD, or also other methods?</skos:editorialNote>
     </owl:Class>
     
 
@@ -7387,7 +7292,6 @@ a workable acquisition time</skos:editorialNote>
         <oboInOwl:creation_date>2025-03-13T17:21:04.837092Z</oboInOwl:creation_date>
         <rdfs:label>Electron backscatter diffraction</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Electron_backscatter_diffraction"/>
-        <skos:editorialNote>Here the diffraction is detected by a CCD/CMOS camera. Is it so with all difractometry &amp; crystallography??</skos:editorialNote>
         <skos:exactMatch rdf:resource="https://www.wikidata.org/wiki/Q1326017"/>
     </owl:Class>
     
@@ -7456,10 +7360,7 @@ a workable acquisition time</skos:editorialNote>
         <oboInOwl:creation_date>2025-03-13T17:40:53.592595Z</oboInOwl:creation_date>
         <rdfs:label>X-ray diffractometry</rdfs:label>
         <oboInOwl:hasExactSynonym>XRD, DRX</oboInOwl:hasExactSynonym>
-        <skos:editorialNote>X-ray scattering techniques?</skos:editorialNote>
         <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/X-ray_diffraction"/>
-        <skos:editorialNote>Is X-ray diffractometry the same as X-ray crystallography/Radiocrystallography/Röntgencrystallography and as X-ray scattering &quot;techniques&quot;?? (That&apos;s what WikiData claim, and old EDAM too).</skos:editorialNote>
-        <skos:editorialNote>What about other/lower-res(?) methods such as fiber diffraction, powder diffraction and (if the sample is not crystallized) small-angle X-ray scattering (SAXS)??</skos:editorialNote>
         <skos:exactMatch rdf:resource="https://www.wikidata.org/wiki/Q12101244"/>
     </owl:Class>
     
@@ -7475,7 +7376,6 @@ a workable acquisition time</skos:editorialNote>
         <oboInOwl:hasExactSynonym>Elastic neutron scattering</oboInOwl:hasExactSynonym>
         <rdfs:label>Neutron diffraction</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Neutron_diffraction"/>
-        <skos:editorialNote>SEE the wikipedia article, it has a lot! Also on &quot;Science with neutrons&quot; in general (incl. inelastic scattering etc.)!</skos:editorialNote>
         <skos:exactMatch rdf:resource="https://meshb.nlm.nih.gov/record/ui?ui=D033363"/>
         <skos:exactMatch rdf:resource="https://www.wikidata.org/wiki/Q910499"/>
     </owl:Class>
@@ -7507,7 +7407,6 @@ a workable acquisition time</skos:editorialNote>
         <oboInOwl:created_by>Matúš Kalaš</oboInOwl:created_by>
         <oboInOwl:creation_date>2025-08-14T07:35:02.08358Z</oboInOwl:creation_date>
         <rdfs:label>Macromolecular structure capture</rdfs:label>
-        <skos:editorialNote>Under Structural chemistry or so?</skos:editorialNote>
     </owl:Class>
     
 
@@ -7521,7 +7420,6 @@ a workable acquisition time</skos:editorialNote>
         <oboInOwl:hasExactSynonym>Pre-clinical imaging</oboInOwl:hasExactSynonym>
         <rdfs:label>Preclinical imaging</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Preclinical_imaging"/>
-        <skos:editorialNote>Wikidata and wikipedia say that this is &quot;live animal imaging&quot;, what should be improved.</skos:editorialNote>
         <skos:exactMatch rdf:resource="https://www.wikidata.org/wiki/Q7239554"/>
     </owl:Class>
     
@@ -7752,8 +7650,6 @@ a workable acquisition time</skos:editorialNote>
         <oboInOwl:hasNarrowSynonym>DIOS imaging</oboInOwl:hasNarrowSynonym>
         <rdfs:label>Nanostructure imaging mass spectrometry</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Desorption/ionization_on_silicon"/>
-        <skos:editorialNote>Meli says NIMS normally uses DI on other molecules than silicon. But DIOS imaging is the first and special case of NIMS. Wikipedia article agrees.</skos:editorialNote>
-        <skos:editorialNote>RELATED: DIOS-MS is only related, not superconcept. And we should have the Related term &quot;Desorption/ionisation on silicon (DIOS)&quot;, if and only if we don&apos;t have the separate concept of DIOS-MS.</skos:editorialNote>
     </owl:Class>
     
 
@@ -7885,8 +7781,6 @@ a workable acquisition time</skos:editorialNote>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_Microscopy"/>
         <rdfs:label>Scanning probe microscopy</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Scanning_probe_microscopy"/>
-        <skos:editorialNote>Anywhere to include the term &quot;raster scan(ning)&quot;, or is it too ubiquitous and not relevantly specific?</skos:editorialNote>
-        <skos:editorialNote>TODO: At some point do an inventory of what is needed underneath AFM and STM. Some examples are in https://en.wikipedia.org/wiki/Scanning_probe_microscopy</skos:editorialNote>
     </owl:Class>
 </rdf:RDF>
 
