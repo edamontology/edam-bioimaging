@@ -13,9 +13,11 @@
      xmlns:dcterms="http://purl.org/dc/terms/"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
      xmlns:oboLegacy="http://purl.obolibrary.org/obo/">
-    <owl:Ontology rdf:about="http://edamontology.org">
+    <owl:Ontology rdf:about="http://edamontology.org/EDAM-bioimaging">
+        <citation rdf:resource="https://doi.org/10.7490/f1000research.1117826.1"/>
         <next_id>!NB.:NO_STABLE_IDS-YET! Expected end Oct-Nov 2025</next_id>
-        <oboLegacy:date>18.10.2025 00:52 UTC</oboLegacy:date>
+        <repository rdf:resource="https://github.com/edamontology/edam-bioimaging"/>
+        <oboLegacy:date>26.10.2025 01:04 UTC</oboLegacy:date>
         <oboLegacy:default-relationship-id-prefix>EDAM</oboLegacy:default-relationship-id-prefix>
         <oboLegacy:idspace>EDAM http://edamontology.org/ &quot;EDAM relations and concept properties&quot;</oboLegacy:idspace>
         <oboLegacy:idspace>EDAM_data http://edamontology.org/data_ &quot;EDAM types of data&quot;</oboLegacy:idspace>
@@ -71,11 +73,11 @@
         <dc:creator>Moritz Alexander Kirschmann</dc:creator>
         <dc:creator>Moritz Kirschmann</dc:creator>
         <dc:creator>Nataša Sladoje</dc:creator>
+        <dc:description>An ontology of imaging and related techniques and technologies, image processing and analysis, image data and formats, within bio- and other sciences.</dc:description>
         <dc:format>application/rdf+xml</dc:format>
         <dc:title>EDAM (Bio)imaging ontology</dc:title>
-        <dc:description>An ontology of imaging and related techniques and technologies, image processing and analysis, image data and formats, within bio- and other sciences.</dc:description>
-        <doap:Version>1.0alpha_pre-pre-release</doap:Version>
         <dcterms:license rdf:resource="https://creativecommons.org/licenses/by-sa/4.0"/>
+        <doap:Version>1.0alpha</doap:Version>
         <oboInOwl:hasSubset>bioimaging &quot;EDAM-bioimaging&quot;</oboInOwl:hasSubset>
         <oboInOwl:hasSubset>concept_properties &quot;EDAM concept properties&quot;</oboInOwl:hasSubset>
         <oboInOwl:hasSubset>data &quot;EDAM types of data&quot;</oboInOwl:hasSubset>
@@ -86,14 +88,12 @@
         <oboInOwl:hasSubset>relations &quot;EDAM relations&quot;</oboInOwl:hasSubset>
         <oboInOwl:hasSubset>topics &quot;EDAM topics&quot;</oboInOwl:hasSubset>
         <oboInOwl:savedBy>Matúš Kalaš</oboInOwl:savedBy>
-        <owl:priorVersion rdf:resource="http://edamontology.org/EDAM-bioimaging_alpha06.owl"/>
-        <owl:versionIRI rdf:resource="http://edamontology.org/EDAM-bioimaging_1.0alpha_pre-pre-release-20251018T0052Z"/>
-        <owl:versionInfo>1.0alpha_pre-pre-release-20251018T0052Z</owl:versionInfo>
         <rdfs:isDefinedBy rdf:resource="http://edamontology.org/EDAM-bioimaging.owl"/>
-        <foaf:page rdf:resource="https://webprotege.stanford.edu/#projects/2ce704bf-83ed-4d2e-985f-84c4841fac71/edit/Classes"/>
+        <owl:priorVersion rdf:resource="http://edamontology.org/EDAM-bioimaging_alpha06.owl"/>
+        <owl:versionIRI rdf:resource="http://edamontology.org/EDAM-bioimaging_1.0alpha_pre-pre-release-20251026T0104Z"/>
+        <owl:versionInfo>1.0alpha_pre-pre-release-20251026T0104Z</owl:versionInfo>
         <foaf:logo rdf:resource="https://raw.githubusercontent.com/edamontology/edamontology/main/EDAM-logo-square.svg"/>
-        <repository rdf:resource="https://github.com/edamontology/edam-bioimaging"/>
-        <citation rdf:resource="https://doi.org/10.7490/f1000research.1117826.1"/>
+        <foaf:page rdf:resource="https://webprotege.stanford.edu/#projects/2ce704bf-83ed-4d2e-985f-84c4841fac71/edit/Classes"/>
     </owl:Ontology>
     
 
@@ -121,6 +121,7 @@
     <!-- http://edamontology.org/_permanent_id -->
 
     <owl:AnnotationProperty rdf:about="http://edamontology.org/_permanent_id">
+        <rdfs:comment>Unique, permanent, and at most one per concept.</rdfs:comment>
         <rdfs:label>_Permanent ID</rdfs:label>
         <rdfs:subPropertyOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasAlternativeId"/>
     </owl:AnnotationProperty>
@@ -131,7 +132,11 @@
 
     <owl:AnnotationProperty rdf:about="http://edamontology.org/abbreviation">
         <rdfs:comment>Especially if the rdfs:label is long, it is recommended for applications to show abbreviation as the primary display label. Example: MALDI-MS.</rdfs:comment>
+        <rdfs:comment>Just like rdfs:label, edam:abbreviation can be stated at most once per concept and language.</rdfs:comment>
+        <rdfs:comment>To avoid ambiguity, EDAM aims at stating an edam:abbreviation only if: it is unique (or accordingly disambiguated) throughout EDAM; and has at least 4 characters (exceptionally 3 characters), or 2-3 characters plus another word. Other abbreviations in EDAM should be stated only as hasExactSynonym, or as part of other synonyms.</rdfs:comment>
         <rdfs:label>Abbreviation</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/alternative"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
     </owl:AnnotationProperty>
     
@@ -411,6 +416,12 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     
 
 
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
+    
+
+
     <!-- http://purl.org/dc/elements/1.1/format -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/format"/>
@@ -420,6 +431,12 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     <!-- http://purl.org/dc/elements/1.1/title -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
     
 
 
@@ -606,18 +623,13 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     
 
 
-    <!-- http://edamontology.org/has_part -->
+    <!-- http://edamontology.org/can_use -->
 
-    <owl:ObjectProperty rdf:about="http://edamontology.org/has_part">
-        <rdfs:label>has part</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://edamontology.org/part_of -->
-
-    <owl:ObjectProperty rdf:about="http://edamontology.org/part_of">
-        <rdfs:label>part of</rdfs:label>
+    <owl:ObjectProperty rdf:about="http://edamontology.org/can_use">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#related"/>
+        <oboInOwl:created_by>Matúš Kalaš</oboInOwl:created_by>
+        <oboInOwl:creation_date>20250313-1921</oboInOwl:creation_date>
+        <rdfs:label>can use</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -765,6 +777,14 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
         <owl:annotatedTarget>true</owl:annotatedTarget>
         <rdfs:comment>In very unusual cases.</rdfs:comment>
     </owl:Axiom>
+    
+
+
+    <!-- http://edamontology.org/has_part -->
+
+    <owl:ObjectProperty rdf:about="http://edamontology.org/has_part">
+        <rdfs:label>has part</rdfs:label>
+    </owl:ObjectProperty>
     
 
 
@@ -998,13 +1018,10 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     
 
 
-    <!-- http://edamontology.org/can_use -->
+    <!-- http://edamontology.org/part_of -->
 
-    <owl:ObjectProperty rdf:about="http://edamontology.org/can_use">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#related"/>
-        <oboInOwl:created_by>Matúš Kalaš</oboInOwl:created_by>
-        <oboInOwl:creation_date>20250313-1921</oboInOwl:creation_date>
-        <rdfs:label>can use</rdfs:label>
+    <owl:ObjectProperty rdf:about="http://edamontology.org/part_of">
+        <rdfs:label>part of</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1016,8 +1033,8 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
         <rdfs:range rdf:resource="http://edamontology.org/topic_0003"/>
         <oboInOwl:created_by>Matúš Kalaš</oboInOwl:created_by>
         <oboInOwl:creation_date>20250313-1914</oboInOwl:creation_date>
-        <rdfs:label>usable for</rdfs:label>
         <oboInOwl:hasExactSynonym>usable in</oboInOwl:hasExactSynonym>
+        <rdfs:label>usable for</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1088,6 +1105,22 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     
 
 
+    <!-- http://edamontology.org/data_0943 -->
+
+    <owl:Class rdf:about="http://edamontology.org/data_0943">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/data_0006"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://edamontology.org/has_topic"/>
+                <owl:someValuesFrom rdf:resource="http://edamontology.org/topic_0134"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <oboInOwl:hasExactSynonym>Mass spectrum</oboInOwl:hasExactSynonym>
+        <rdfs:label>Mass spectra</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://edamontology.org/data_1D_dataset -->
 
     <owl:Class rdf:about="http://edamontology.org/data_1D_dataset">
@@ -1096,6 +1129,15 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
         <oboInOwl:inSubset>data</oboInOwl:inSubset>
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
         <rdfs:label>1D image</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://edamontology.org/data_2337 -->
+
+    <owl:Class rdf:about="http://edamontology.org/data_2337">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/data_0006"/>
+        <rdfs:label>Metadata</rdfs:label>
     </owl:Class>
     
 
@@ -1619,6 +1661,15 @@ Numbers in a matrix are responses from a sensor measured at a set of sampling po
     
 
 
+    <!-- http://edamontology.org/data_______Instrument_parameters_and_characteristics -->
+
+    <owl:Class rdf:about="http://edamontology.org/data_______Instrument_parameters_and_characteristics">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/data_2337"/>
+        <rdfs:label>Instrument parameters and characteristics</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://edamontology.org/data_______Ion_image -->
 
     <owl:Class rdf:about="http://edamontology.org/data_______Ion_image">
@@ -1626,14 +1677,14 @@ Numbers in a matrix are responses from a sensor measured at a set of sampling po
         <rdfs:subClassOf rdf:resource="http://edamontology.org/data_______Data_cube"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://edamontology.org/part_of"/>
-                <owl:someValuesFrom rdf:resource="http://edamontology.org/data_______Mass_spectroscopy_imaging_data_set"/>
+                <owl:onProperty rdf:resource="http://edamontology.org/has_topic"/>
+                <owl:someValuesFrom rdf:resource="http://edamontology.org/topic_____Mass_spectrometry_imaging"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://edamontology.org/has_topic"/>
-                <owl:someValuesFrom rdf:resource="http://edamontology.org/topic_____Mass_spectrometry_imaging"/>
+                <owl:onProperty rdf:resource="http://edamontology.org/part_of"/>
+                <owl:someValuesFrom rdf:resource="http://edamontology.org/data_______Mass_spectroscopy_imaging_data_set"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <oboInOwl:hasDefinition>Ion image is an array of intensity values (abundance of the given ionised molecule type) for each pixel/voxel in an image.</oboInOwl:hasDefinition>
@@ -1672,22 +1723,6 @@ Numbers in a matrix are responses from a sensor measured at a set of sampling po
     
 
 
-    <!-- http://edamontology.org/data_0943 -->
-
-    <owl:Class rdf:about="http://edamontology.org/data_0943">
-        <rdfs:subClassOf rdf:resource="http://edamontology.org/data_0006"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://edamontology.org/has_topic"/>
-                <owl:someValuesFrom rdf:resource="http://edamontology.org/topic_0134"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <oboInOwl:hasExactSynonym>Mass spectrum</oboInOwl:hasExactSynonym>
-        <rdfs:label>Mass spectra</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://edamontology.org/data_______Mass_spectroscopy_imaging_data_set -->
 
     <owl:Class rdf:about="http://edamontology.org/data_______Mass_spectroscopy_imaging_data_set">
@@ -1695,13 +1730,13 @@ Numbers in a matrix are responses from a sensor measured at a set of sampling po
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://edamontology.org/has_part"/>
-                <owl:someValuesFrom rdf:resource="http://edamontology.org/data_______Ion_image"/>
+                <owl:someValuesFrom rdf:resource="http://edamontology.org/data_0943"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://edamontology.org/has_part"/>
-                <owl:someValuesFrom rdf:resource="http://edamontology.org/data_0943"/>
+                <owl:someValuesFrom rdf:resource="http://edamontology.org/data_______Ion_image"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -2292,6 +2327,16 @@ imzML metadata file (.imzML, http://edamontology.org/format_3682).</rdfs:comment
     
 
 
+    <!-- http://edamontology.org/operation_3695 -->
+
+    <owl:Class rdf:about="http://edamontology.org/operation_3695">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_2409"/>
+        <rdfs:label>Data filtering</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://edamontology.org/operation_3695"/>
+    </owl:Class>
+    
+
+
     <!-- http://edamontology.org/operation_Active_contours -->
 
     <owl:Class rdf:about="http://edamontology.org/operation_Active_contours">
@@ -2716,6 +2761,18 @@ Registration can  be based on correspondence established between the landmarks o
         <oboInOwl:inSubset>operations</oboInOwl:inSubset>
         <rdfs:comment>Visualisation vs Plotting vs Image generation. Should these be merged? Which of these should be the top concept, and which sub-concepts, and which narrow synonyms?</rdfs:comment>
         <rdfs:label>Image visualisation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://edamontology.org/operation_Interactive_segmentation -->
+
+    <owl:Class rdf:about="http://edamontology.org/operation_Interactive_segmentation">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Image_segmentation"/>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>operations</oboInOwl:inSubset>
+        <rdfs:label>Interactive segmentation</rdfs:label>
     </owl:Class>
     
 
@@ -3832,7 +3889,7 @@ Whereas  the standard Fourier transform is only localized in frequency, wavelets
     <!-- http://edamontology.org/operation______Manual_segmentation -->
 
     <owl:Class rdf:about="http://edamontology.org/operation______Manual_segmentation">
-        <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Image_segmentation"/>
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Interactive_segmentation"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation______Dense_annotation"/>
         <rdfs:label>Manual segmentation</rdfs:label>
     </owl:Class>
@@ -3842,7 +3899,7 @@ Whereas  the standard Fourier transform is only localized in frequency, wavelets
     <!-- http://edamontology.org/operation______Semi-automatic_segmentation -->
 
     <owl:Class rdf:about="http://edamontology.org/operation______Semi-automatic_segmentation">
-        <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Image_segmentation"/>
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Interactive_segmentation"/>
         <rdfs:label>Semi-automatic segmentation</rdfs:label>
     </owl:Class>
     
@@ -3853,6 +3910,63 @@ Whereas  the standard Fourier transform is only localized in frequency, wavelets
     <owl:Class rdf:about="http://edamontology.org/operation______Sparse_annotation">
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_3553"/>
         <rdfs:label>Sparse image annotation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://edamontology.org/operation_______Ion_and_optical_other_image_co-registration -->
+
+    <owl:Class rdf:about="http://edamontology.org/operation_______Ion_and_optical_other_image_co-registration">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Image_registration"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://edamontology.org/has_input"/>
+                <owl:someValuesFrom rdf:resource="http://edamontology.org/data_Image"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://edamontology.org/has_input"/>
+                <owl:someValuesFrom rdf:resource="http://edamontology.org/data_______Mass_spectroscopy_imaging_data_set"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://edamontology.org/has_output"/>
+                <owl:someValuesFrom rdf:resource="http://edamontology.org/data_______Data_cube"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>Ion and optical/other image co-registration</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://edamontology.org/operation_______Ion_image_filtering_by_masses -->
+
+    <owl:Class rdf:about="http://edamontology.org/operation_______Ion_image_filtering_by_masses">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_3695"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://edamontology.org/has_input"/>
+                <owl:someValuesFrom rdf:resource="http://edamontology.org/data_______Mass_spectroscopy_imaging_data_set"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>Ion image filtering (by masses)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://edamontology.org/operation_______Ion_image_filtering_by_pixels_voxels_ROI -->
+
+    <owl:Class rdf:about="http://edamontology.org/operation_______Ion_image_filtering_by_pixels_voxels_ROI">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_3695"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://edamontology.org/has_input"/>
+                <owl:someValuesFrom rdf:resource="http://edamontology.org/topic_____Mass_spectrometry_imaging"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>Ion image filtering (by pixels/voxels/ROIs)</rdfs:label>
     </owl:Class>
     
 
@@ -3879,16 +3993,6 @@ Whereas  the standard Fourier transform is only localized in frequency, wavelets
     <owl:Class rdf:about="http://edamontology.org/operation_______Selection">
         <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_2409"/>
         <rdfs:label>Selection</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://edamontology.org/topic_______Single-cell_data_aquisition -->
-
-    <owl:Class rdf:about="http://edamontology.org/topic_______Single-cell_data_aquisition">
-        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_0003"/>
-        <oboInOwl:hasExactSynonym>Single-cell modality</oboInOwl:hasExactSynonym>
-        <rdfs:label>Single-cell data acquisition</rdfs:label>
     </owl:Class>
     
 
@@ -4078,6 +4182,15 @@ Whereas  the standard Fourier transform is only localized in frequency, wavelets
     
 
 
+    <!-- http://edamontology.org/topic_0134 -->
+
+    <owl:Class rdf:about="http://edamontology.org/topic_0134">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_______Spectrometry"/>
+        <rdfs:label>Mass spectrometry</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://edamontology.org/topic_0218 -->
 
     <owl:Class rdf:about="http://edamontology.org/topic_0218">
@@ -4093,6 +4206,13 @@ Whereas  the standard Fourier transform is only localized in frequency, wavelets
     <owl:Class rdf:about="http://edamontology.org/topic_0593">
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic__RBfI2XgIsxcfKonPPluKAhK"/>
         <abbreviation>NMR spectroscopy</abbreviation>
+        <created_in>beta12orEarlier</created_in>
+        <oboInOwl:hasNarrowSynonym>HOESY</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>Heteronuclear Overhauser Effect Spectroscopy</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>NOESY</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>Nuclear Overhauser Effect Spectroscopy</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>ROESY</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>Rotational Frame Nuclear Overhauser Effect Spectroscopy</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasNarrowSynonym>Magnetic resonance spectroscopy (MRS)</oboInOwl:hasNarrowSynonym>
         <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
@@ -4107,6 +4227,7 @@ Whereas  the standard Fourier transform is only localized in frequency, wavelets
 
     <owl:Class rdf:about="http://edamontology.org/topic_0611">
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_Microscopy"/>
+        <created_in>beta12orEarlier</created_in>
         <related_term>Electron microscope</related_term>
         <oboInOwl:hasDefinition>Any form of microscopy that uses a beam of accelerated electrons to image a sample. Electron microscopes can image at higher resolution than light microscopy due to the smaller de Broglie wavelength of the electrons.</oboInOwl:hasDefinition>
         <oboInOwl:hasExactSynonym>EM</oboInOwl:hasExactSynonym>
@@ -4120,10 +4241,35 @@ Whereas  the standard Fourier transform is only localized in frequency, wavelets
     
 
 
+    <!-- http://edamontology.org/topic_2229 -->
+
+    <owl:Class rdf:about="http://edamontology.org/topic_2229">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_0003"/>
+        <oboInOwl:hasExactSynonym>Cell biology</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Cellular biology</oboInOwl:hasExactSynonym>
+        <rdfs:label>Cytology</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://edamontology.org/topic_2828 -->
+
+    <owl:Class rdf:about="http://edamontology.org/topic_2828">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topics________009"/>
+        <created_in>beta12orEarlier</created_in>
+        <oboInOwl:hasExactSynonym>XRD, DRX</oboInOwl:hasExactSynonym>
+        <rdfs:label>X-ray diffractometry</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/X-ray_diffraction"/>
+        <skos:exactMatch rdf:resource="https://www.wikidata.org/wiki/Q12101244"/>
+    </owl:Class>
+    
+
+
     <!-- http://edamontology.org/topic_3382 -->
 
     <owl:Class rdf:about="http://edamontology.org/topic_3382">
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_0003"/>
+        <created_in>1.4</created_in>
         <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
         <oboInOwl:inSubset>topics</oboInOwl:inSubset>
@@ -4133,10 +4279,28 @@ Whereas  the standard Fourier transform is only localized in frequency, wavelets
     
 
 
+    <!-- http://edamontology.org/topic_3383 -->
+
+    <owl:Class rdf:about="http://edamontology.org/topic_3383">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_3382"/>
+        <created_in>1.4</created_in>
+        <oboInOwl:hasDefinition>The use of imaging techniques to understand biology.</oboInOwl:hasDefinition>
+        <oboInOwl:hasExactSynonym>Biological imaging</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Bioscientific imaging</oboInOwl:hasExactSynonym>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>topics</oboInOwl:inSubset>
+        <rdfs:label>Bioimaging</rdfs:label>
+        <skos:exactMatch rdf:resource="https://www.wikidata.org/wiki/Q4914995"/>
+    </owl:Class>
+    
+
+
     <!-- http://edamontology.org/topic_3385 -->
 
     <owl:Class rdf:about="http://edamontology.org/topic_3385">
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_Microscopy"/>
+        <created_in>1.4</created_in>
         <related_term>Light microscope</related_term>
         <related_term>Optical microscope</related_term>
         <oboInOwl:hasDefinition>Light microscopy regroups all techniques in microscopy using light to illuminate and produce an image of a sample.</oboInOwl:hasDefinition>
@@ -4147,6 +4311,7 @@ Whereas  the standard Fourier transform is only localized in frequency, wavelets
         <rdfs:comment>a list of technique to add is to be found here: https://docs.google.com/document/d/1amTDpRLmoER8pA4IlGMChFfTHzHmMCFcaqUA1xQBd3k/edit</rdfs:comment>
         <rdfs:label>Light microscopy</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C17995"/>
+        <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Microscopy#Optical_microscopy"/>
         <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Optical_microscope"/>
     </owl:Class>
     
@@ -4156,6 +4321,7 @@ Whereas  the standard Fourier transform is only localized in frequency, wavelets
 
     <owl:Class rdf:about="http://edamontology.org/topic_3444">
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_3382"/>
+        <created_in>1.7</created_in>
         <oboInOwl:hasDefinition>Technique using magnetic fields and radio waves to generate images of organs.</oboInOwl:hasDefinition>
         <oboInOwl:hasExactSynonym>MRI</oboInOwl:hasExactSynonym>
         <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
@@ -4168,10 +4334,27 @@ Whereas  the standard Fourier transform is only localized in frequency, wavelets
     
 
 
+    <!-- http://edamontology.org/topic_3448 -->
+
+    <owl:Class rdf:about="http://edamontology.org/topic_3448">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_3382"/>
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topics________009"/>
+        <created_in>1.7</created_in>
+        <oboInOwl:hasExactSynonym>Elastic neutron scattering</oboInOwl:hasExactSynonym>
+        <rdfs:label>Neutron diffraction</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Neutron_diffraction"/>
+        <skos:exactMatch rdf:resource="https://meshb.nlm.nih.gov/record/ui?ui=D033363"/>
+        <skos:exactMatch rdf:resource="https://www.wikidata.org/wiki/Q910499"/>
+    </owl:Class>
+    
+
+
     <!-- http://edamontology.org/topic_3452 -->
 
     <owl:Class rdf:about="http://edamontology.org/topic_3452">
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_3382"/>
+        <created_in>1.7</created_in>
+        <oboInOwl:hasDefinition>Imaging in sections (sectioning), through the use of a wave-generating device (tomograph) that generates an image (a tomogram).</oboInOwl:hasDefinition>
         <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
         <oboInOwl:inSubset>topics</oboInOwl:inSubset>
@@ -4199,6 +4382,52 @@ Whereas  the standard Fourier transform is only localized in frequency, wavelets
     
 
 
+    <!-- http://edamontology.org/topic_3934 -->
+
+    <owl:Class rdf:about="http://edamontology.org/topic_3934">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_0003"/>
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_2229"/>
+        <created_in>1.24</created_in>
+        <oboInOwl:hasDefinition>Cytometry is the measurement of the characteristics of cells.</oboInOwl:hasDefinition>
+        <rdfs:label>Cytometry</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Cytometry"/>
+    </owl:Class>
+
+
+
+    <!-- http://edamontology.org/topic_4014 -->
+
+    <owl:Class rdf:about="http://edamontology.org/topic_4014">
+        <created_in>1.26</created_in>
+        <rdfs:label>Electroencephalography</rdfs:label>
+        <oboInOwl:hasExactSynonym>EEG</oboInOwl:hasExactSynonym>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>topics</oboInOwl:inSubset>
+        <oboInOwl:hasDefinition>The monitoring method for measuring electrical activity in the brain.</oboInOwl:hasDefinition>
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_3382"/>
+        <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Electroencephalography"/>
+    </owl:Class>
+
+
+
+    <!-- http://edamontology.org/topic_4016 -->
+
+    <owl:Class rdf:about="http://edamontology.org/topic_4016">
+        <created_in>1.26</created_in>
+        <rdfs:label>Electrocardiography</rdfs:label>
+        <oboInOwl:hasExactSynonym>EKG</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>ECG</oboInOwl:hasExactSynonym>
+        <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>topics</oboInOwl:inSubset>
+        <oboInOwl:hasDefinition>The monitoring method for measuring electrical activity in the heart.</oboInOwl:hasDefinition>
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_3382"/>
+        <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Electrocardiography"/>
+    </owl:Class>
+    
+
+
     <!-- http://edamontology.org/topic_Digital_histology -->
 
     <owl:Class rdf:about="http://edamontology.org/topic_Digital_histology">
@@ -4211,9 +4440,11 @@ Whereas  the standard Fourier transform is only localized in frequency, wavelets
             </owl:Restriction>
         </rdfs:subClassOf>
         <oboInOwl:hasBroadSynonym>Tissue image informatics</oboInOwl:hasBroadSynonym>
-        <oboInOwl:hasExactSynonym>Digital histology</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Tissue image analysis</oboInOwl:hasExactSynonym>
         <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
-        <rdfs:label>Tissue image analysis</rdfs:label>
+        <oboInOwl:inSubset>edam</oboInOwl:inSubset>
+        <oboInOwl:inSubset>topics</oboInOwl:inSubset>
+        <rdfs:label>Digital histology</rdfs:label>
     </owl:Class>
     
 
@@ -4310,13 +4541,19 @@ Whereas  the standard Fourier transform is only localized in frequency, wavelets
 
     <owl:Class rdf:about="http://edamontology.org/topic_Neuron_image_analysis">
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic__RBDp7HwdUBEjpS6PRjYfV2V"/>
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topics________026"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#related"/>
+                <owl:someValuesFrom rdf:resource="http://edamontology.org/operation__R9Qf06vxvFj2UbAk7pW3IMG"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <oboInOwl:hasBroadSynonym>Neuron image informatics</oboInOwl:hasBroadSynonym>
         <oboInOwl:hasNarrowSynonym>Connectomics</oboInOwl:hasNarrowSynonym>
         <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
         <oboInOwl:inSubset>topics</oboInOwl:inSubset>
         <rdfs:label>Neuron image analysis</rdfs:label>
-        <rdfs:seeAlso rdf:resource="http://edamontology.org/operation__R9Qf06vxvFj2UbAk7pW3IMG"/>
     </owl:Class>
     
 
@@ -4338,11 +4575,11 @@ Whereas  the standard Fourier transform is only localized in frequency, wavelets
     <owl:Class rdf:about="http://edamontology.org/topic_Super-resolution_microscopy">
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_Fluorescent_microscopy"/>
         <oboInOwl:hasDefinition>Group of microscopy techniques that circumvent the diffration limit and therefore allow for a greater spatial resolution  limit.</oboInOwl:hasDefinition>
-        <oboInOwl:hasExactSynonym>SR microscopy</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>SRM</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>SR microscopy (SRM)</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Sub-diffraction microscopy</oboInOwl:hasExactSynonym>
         <oboInOwl:hasNarrowSynonym>High-resolution microscopy</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasNarrowSynonym>Optical nanoscopy</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>Super-resolution fluorescence microscopy</oboInOwl:hasNarrowSynonym>
         <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
         <oboInOwl:inSubset>topics</oboInOwl:inSubset>
@@ -4541,7 +4778,7 @@ Whereas  the standard Fourier transform is only localized in frequency, wavelets
     <owl:Class rdf:about="http://edamontology.org/topic__R9Cmje2ZUXyDW6aQAvFhwSM">
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_Fluorescent_microscopy"/>
         <related_term>Optical sectioning</related_term>
-        <oboInOwl:hasDefinition>Confocal microscopy is fluorenscence microscopy in which a pinhole rejects light from out-of-focus planes allowing an increase in contrast and spatial resolution, mostly axially.</oboInOwl:hasDefinition>
+        <oboInOwl:hasDefinition>Confocal microscopy is fluorescence microscopy in which a pinhole rejects light from out-of-focus planes, allowing an increase in contrast and spatial resolution, mostly axially.</oboInOwl:hasDefinition>
         <oboInOwl:hasExactSynonym>Confocal fluorescence microscopy</oboInOwl:hasExactSynonym>
         <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
@@ -4662,7 +4899,7 @@ Whereas  the standard Fourier transform is only localized in frequency, wavelets
     <!-- http://edamontology.org/topic__RBDp7HwdUBEjpS6PRjYfV2V -->
 
     <owl:Class rdf:about="http://edamontology.org/topic__RBDp7HwdUBEjpS6PRjYfV2V">
-        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_0003"/>
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_3383"/>
         <oboInOwl:hasNarrowSynonym>Bioimage analysis</oboInOwl:hasNarrowSynonym>
         <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
@@ -4677,9 +4914,14 @@ Whereas  the standard Fourier transform is only localized in frequency, wavelets
 
     <owl:Class rdf:about="http://edamontology.org/topic__RBHw300pzIYcttGsAmIZvk5">
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_3382"/>
-        <oboInOwl:hasExactSynonym>Medical ultrasound (narrow?)</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>diagnostic sonography (narrow?)</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasNarrowSynonym>Ultrasound imaging (exact?)</oboInOwl:hasNarrowSynonym>
+        <_permanent_id rdf:resource="http://edamontology.org/topic_3954"/>
+        <oboInOwl:hasDefinition>A diagnostic imaging technique based on the application of ultrasound.</oboInOwl:hasDefinition>
+        <oboInOwl:hasExactSynonym>Echography</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Standardized echography</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Ultrasound imaging</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasNarrowSynonym>Diagnostic sonography</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>Medical ultrasound</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>Standard echography</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasNarrowSynonym>microUS</oboInOwl:hasNarrowSynonym>
         <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
@@ -4735,6 +4977,12 @@ Whereas  the standard Fourier transform is only localized in frequency, wavelets
 
     <owl:Class rdf:about="http://edamontology.org/topic__RBNoPZIOvBhdWGe8mFNpoWQ">
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_3382"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://edamontology.org/can_use"/>
+                <owl:someValuesFrom rdf:resource="http://edamontology.org/topic______Sample_fixation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <oboInOwl:hasDefinition>Imaging of biological tissues preserved by chemicals or temperature.</oboInOwl:hasDefinition>
         <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
@@ -4918,6 +5166,7 @@ Spectrometry deals with the measurement of a specific spectrum; essentially the 
         <rdfs:label>Bioluminescence imaging</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://bioportal.bioontology.org/ontologies/NCIT?p=classes&amp;conceptid=http%3A%2F%2Fncicb.nci.nih.gov%2Fxml%2Fowl%2FEVS%2FThesaurus.owl%23C62655"/>
         <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Bioluminescence_imaging"/>
+        <skos:exactMatch rdf:resource="https://www.wikidata.org/wiki/Q4915066"/>
     </owl:Class>
     
 
@@ -5146,9 +5395,11 @@ Spectrometry deals with the measurement of a specific spectrum; essentially the 
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
         <oboInOwl:inSubset>topics</oboInOwl:inSubset>
         <rdfs:comment>Can be done with widefield or confocal.</rdfs:comment>
+        <rdfs:comment>Can be with array or point detectors.</rdfs:comment>
         <rdfs:label>Fluorescence lifetime imaging microscopy</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://bioportal.bioontology.org/ontologies/NCIT/?p=classes&amp;conceptid=http%3A%2F%2Fncicb.nci.nih.gov%2Fxml%2Fowl%2FEVS%2FThesaurus.owl%23C154786&amp;jump_to_nav=true"/>
         <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Fluorescence-lifetime_imaging_microscopy"/>
+        <skos:exactMatch rdf:resource="https://www.wikidata.org/wiki/Q1434196"/>
     </owl:Class>
     
 
@@ -5187,7 +5438,8 @@ Spectrometry deals with the measurement of a specific spectrum; essentially the 
         <oboInOwl:inSubset>bioimaging</oboInOwl:inSubset>
         <oboInOwl:inSubset>edam</oboInOwl:inSubset>
         <oboInOwl:inSubset>topics</oboInOwl:inSubset>
-        <rdfs:comment>Can be widefield or confocal fluorescence microscopy</rdfs:comment>
+        <rdfs:comment>Can be widefield or confocal fluorescence microscopy.</rdfs:comment>
+        <rdfs:comment>Can be with array or point detectors.</rdfs:comment>
         <rdfs:label>Förster resonance energy transfer</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Förster_resonance_energy_transfer"/>
         <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Single-molecule_FRET"/>
@@ -5307,12 +5559,11 @@ It&apos;s a good question how deep to go. Currently we&apos;re going less deep w
     <!-- http://edamontology.org/topic_____Cell_image_analysis -->
 
     <owl:Class rdf:about="http://edamontology.org/topic_____Cell_image_analysis">
-        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic__RBDp7HwdUBEjpS6PRjYfV2V"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_2229"/>
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic__RBDp7HwdUBEjpS6PRjYfV2V"/>
         <oboInOwl:hasBroadSynonym>Cell image informatics</oboInOwl:hasBroadSynonym>
-        <oboInOwl:hasExactSynonym>Digital cytology</oboInOwl:hasExactSynonym>
-        <rdfs:label>Cell image analysis</rdfs:label>
-        <skos:relatedMatch rdf:resource="http://edamontology.org/topic_2229"/>
+        <oboInOwl:hasExactSynonym>Cell image analysis</oboInOwl:hasExactSynonym>
+        <rdfs:label>Digital cytology</rdfs:label>
     </owl:Class>
     
 
@@ -5428,8 +5679,8 @@ It&apos;s a good question how deep to go. Currently we&apos;re going less deep w
     <!-- http://edamontology.org/topic_____Mass_spectrometry_imaging -->
 
     <owl:Class rdf:about="http://edamontology.org/topic_____Mass_spectrometry_imaging">
-        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_3382"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_0134"/>
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_3382"/>
         <oboInOwl:hasExactSynonym>Imaging mass spectrometry (IMS)</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>MSI</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Mass spectrometry-based imaging</oboInOwl:hasExactSynonym>
@@ -5503,6 +5754,7 @@ It&apos;s a good question how deep to go. Currently we&apos;re going less deep w
 
     <owl:Class rdf:about="http://edamontology.org/topic_____Plant_image_analysis">
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic__RBDp7HwdUBEjpS6PRjYfV2V"/>
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topics________032"/>
         <oboInOwl:hasBroadSynonym>Plant image informatics</oboInOwl:hasBroadSynonym>
         <rdfs:label>Plant image analysis</rdfs:label>
     </owl:Class>
@@ -5775,7 +6027,10 @@ Martin &amp; Laure &amp; Christos Mar 2020: These don&apos;t influence analysis,
                 <owl:someValuesFrom rdf:resource="http://edamontology.org/topics________027"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <_permanent_id rdf:resource="http://edamontology.org/topic_4017"/>
         <abbreviation>cryo-EM</abbreviation>
+        <created_in>1.26</created_in>
+        <oboInOwl:hasDefinition>A method for studying biomolecules and other structures at very low (cryogenic) temperature using electron microscopy.</oboInOwl:hasDefinition>
         <oboInOwl:hasExactSynonym>Cryo electron microscopy</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Electron cryomicroscopy</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>cryoEM</oboInOwl:hasExactSynonym>
@@ -5919,8 +6174,18 @@ Martin &amp; Laure &amp; Christos Mar 2020: These don&apos;t influence analysis,
     <!-- http://edamontology.org/topic______Medical_imaging -->
 
     <owl:Class rdf:about="http://edamontology.org/topic______Medical_imaging">
-        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_3382"/>
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_3383"/>
+        <_permanent_id rdf:resource="http://edamontology.org/topic_3384"/>
+        <created_in>1.4</created_in>
+        <oboInOwl:hasDbXref>VT 3.2.13 Medical imaging</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>VT 3.2.14 Nuclear medicine</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>VT 3.2.24 Radiology</oboInOwl:hasDbXref>
+        <oboInOwl:hasDefinition>The use of imaging techniques for clinical purposes for medical research.</oboInOwl:hasDefinition>
+        <oboInOwl:hasNarrowSynonym>Nuclear medicine</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>Radiology</oboInOwl:hasNarrowSynonym>
         <rdfs:label>Medical imaging</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Medical_imaging"/>
+        <skos:exactMatch rdf:resource="https://www.wikidata.org/wiki/Q931309"/>
     </owl:Class>
     
 
@@ -6174,9 +6439,16 @@ Further discussion Martin, Laure, Nataša:
 
     <owl:Class rdf:about="http://edamontology.org/topic______Sample_fixation">
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic__ReQzVVVh0IPyN0c1V5wQVO"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://edamontology.org/usable_for"/>
+                <owl:someValuesFrom rdf:resource="http://edamontology.org/topic__RBNoPZIOvBhdWGe8mFNpoWQ"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <oboInOwl:hasExactSynonym>Sample fixation</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Sample stabilisation</oboInOwl:hasExactSynonym>
         <rdfs:label>Sample immobilisation</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Fixation_(histology)"/>
     </owl:Class>
     
 
@@ -6455,6 +6727,32 @@ Let&apos;s get back to it with definitions and relations, ...</rdfs:comment>
     
 
 
+    <!-- http://edamontology.org/topic_______Desorption_ionisation-on-silicon_mass_spectrometry -->
+
+    <owl:Class rdf:about="http://edamontology.org/topic_______Desorption_ionisation-on-silicon_mass_spectrometry">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_______Surface-assisted_laser_desorption_ionisation_mass_spectrometry"/>
+        <abbreviation>DIOS-MS</abbreviation>
+        <oboInOwl:hasBroadSynonym>Nanostructure-initiator mass spectrometry</oboInOwl:hasBroadSynonym>
+        <rdfs:label>Desorption/ionisation-on-silicon mass spectrometry</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Desorption/ionization_on_silicon"/>
+    </owl:Class>
+    
+
+
+    <!-- http://edamontology.org/topic_______Desorption_ionisation_on_silicon_imaging -->
+
+    <owl:Class rdf:about="http://edamontology.org/topic_______Desorption_ionisation_on_silicon_imaging">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_______Desorption_ionisation-on-silicon_mass_spectrometry"/>
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_______Surface-assisted_laser_desorption_ionisation_imaging"/>
+        <abbreviation>NIMS</abbreviation>
+        <related_term>Desorption/ionisation on silicon (DIOS)</related_term>
+        <oboInOwl:hasNarrowSynonym>DIOS imaging</oboInOwl:hasNarrowSynonym>
+        <rdfs:label>Nanostructure imaging mass spectrometry</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Desorption/ionization_on_silicon"/>
+    </owl:Class>
+    
+
+
     <!-- http://edamontology.org/topic_______Diffusion_model -->
 
     <owl:Class rdf:about="http://edamontology.org/topic_______Diffusion_model">
@@ -6478,8 +6776,8 @@ Let&apos;s get back to it with definitions and relations, ...</rdfs:comment>
     <!-- http://edamontology.org/topic_______Flow_cytometry -->
 
     <owl:Class rdf:about="http://edamontology.org/topic_______Flow_cytometry">
-        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_______Single-cell_data_aquisition"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_3934"/>
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_______Single-cell_data_aquisition"/>
         <rdfs:label>Flow cytometry</rdfs:label>
     </owl:Class>
     
@@ -6622,6 +6920,7 @@ Let&apos;s get back to it with definitions and relations, ...</rdfs:comment>
     <!-- http://edamontology.org/topic_______Large_language_model -->
 
     <owl:Class rdf:about="http://edamontology.org/topic_______Large_language_model">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_0218"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic______Deep_learning"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_______Generative_machine_learning"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_______Self-supervised_learning"/>
@@ -6698,6 +6997,17 @@ Let&apos;s get back to it with definitions and relations, ...</rdfs:comment>
     
 
 
+    <!-- http://edamontology.org/topic_______Liquid_extraction_surface_analysis_imaging -->
+
+    <owl:Class rdf:about="http://edamontology.org/topic_______Liquid_extraction_surface_analysis_imaging">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_______Ambient_ionisation_mass_spectrometry_imaging"/>
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_______Liquid_extraction_surface_analysis_mass_spectrometry"/>
+        <abbreviation>LESA imaging</abbreviation>
+        <rdfs:label>Liquid extraction surface analysis imaging</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://edamontology.org/topic_______Liquid_extraction_surface_analysis_mass_spectrometry -->
 
     <owl:Class rdf:about="http://edamontology.org/topic_______Liquid_extraction_surface_analysis_mass_spectrometry">
@@ -6711,9 +7021,9 @@ Let&apos;s get back to it with definitions and relations, ...</rdfs:comment>
     <!-- http://edamontology.org/topic_______Mass_cytometry -->
 
     <owl:Class rdf:about="http://edamontology.org/topic_______Mass_cytometry">
-        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_______Single-cell_data_aquisition"/>
-        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_3934"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_0134"/>
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_3934"/>
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_______Single-cell_data_aquisition"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#related"/>
@@ -6755,6 +7065,16 @@ Let&apos;s get back to it with definitions and relations, ...</rdfs:comment>
         <abbreviation>MALDESI imaging</abbreviation>
         <rdfs:label>Matrix-assisted laser desorption electrospray ionisation imaging</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Matrix-assisted_laser_desorption_electrospray_ionization"/>
+    </owl:Class>
+    
+
+
+    <!-- http://edamontology.org/topic_______Matrix-assisted_laser_desorption_ionisation_immunohistochemistry -->
+
+    <owl:Class rdf:about="http://edamontology.org/topic_______Matrix-assisted_laser_desorption_ionisation_immunohistochemistry">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_______Matrix-assisted_laser_desorption_ionisation_mass_spectrometry"/>
+        <abbreviation>MALDI-IHC</abbreviation>
+        <rdfs:label>Matrix-assisted laser desorption/ionisation immunohistochemistry</rdfs:label>
     </owl:Class>
     
 
@@ -6830,8 +7150,18 @@ Let&apos;s get back to it with definitions and relations, ...</rdfs:comment>
     <!-- http://edamontology.org/topic_______Prompt_engineering -->
 
     <owl:Class rdf:about="http://edamontology.org/topic_______Prompt_engineering">
-        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_______Large_language_model"/>
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_______Generative_machine_learning"/>
         <rdfs:label>Prompt engineering</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://edamontology.org/topic_______Rule-based_generative_model -->
+
+    <owl:Class rdf:about="http://edamontology.org/topic_______Rule-based_generative_model">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_______Generative_machine_learning"/>
+        <oboInOwl:hasDefinition>A generative statistical model that is based on rules.</oboInOwl:hasDefinition>
+        <rdfs:label>Rule-based generative model</rdfs:label>
     </owl:Class>
     
 
@@ -6881,6 +7211,16 @@ Let&apos;s get back to it with definitions and relations, ...</rdfs:comment>
     <owl:Class rdf:about="http://edamontology.org/topic_______Self-supervised_learning">
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_3474"/>
         <rdfs:label>Self-supervised learning</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://edamontology.org/topic_______Single-cell_data_aquisition -->
+
+    <owl:Class rdf:about="http://edamontology.org/topic_______Single-cell_data_aquisition">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_0003"/>
+        <oboInOwl:hasExactSynonym>Single-cell modality</oboInOwl:hasExactSynonym>
+        <rdfs:label>Single-cell data acquisition</rdfs:label>
     </owl:Class>
     
 
@@ -6943,6 +7283,29 @@ Let&apos;s get back to it with definitions and relations, ...</rdfs:comment>
     
 
 
+    <!-- http://edamontology.org/topic_______Surface-assisted_laser_desorption_ionisation_imaging -->
+
+    <owl:Class rdf:about="http://edamontology.org/topic_______Surface-assisted_laser_desorption_ionisation_imaging">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_______Laser_desorption_ionisation_mass_spectrometry_imaging"/>
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_______Surface-assisted_laser_desorption_ionisation_mass_spectrometry"/>
+        <abbreviation>SALDI imaging</abbreviation>
+        <rdfs:label>Surface-assisted laser desorption/ionisation imaging</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Surface-assisted_laser_desorption/ionization#Imaging_mass_spectrometry"/>
+    </owl:Class>
+    
+
+
+    <!-- http://edamontology.org/topic_______Surface-assisted_laser_desorption_ionisation_mass_spectrometry -->
+
+    <owl:Class rdf:about="http://edamontology.org/topic_______Surface-assisted_laser_desorption_ionisation_mass_spectrometry">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_______Laser_desorption_ionisation_mass_spectrometry"/>
+        <abbreviation>SALDI-MS</abbreviation>
+        <rdfs:label>Surface-assisted laser desorption/ionisation mass spectrometry</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Surface-assisted_laser_desorption/ionization"/>
+    </owl:Class>
+    
+
+
     <!-- http://edamontology.org/topic_______Tissue_cytometry -->
 
     <owl:Class rdf:about="http://edamontology.org/topic_______Tissue_cytometry">
@@ -6986,6 +7349,45 @@ Let&apos;s get back to it with definitions and relations, ...</rdfs:comment>
         <oboInOwl:hasExactSynonym rdf:resource="https://www.wikidata.org/wiki/Q97311562"/>
         <rdfs:label>Variational autoencoder</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Variational_autoencoder"/>
+    </owl:Class>
+    
+
+
+    <!-- http://edamontology.org/topic________EDS -->
+
+    <owl:Class rdf:about="http://edamontology.org/topic________EDS">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_0611"/>
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topics________013"/>
+        <abbreviation>EDS</abbreviation>
+        <oboInOwl:created_by>Cynthia Arend, Matúš Kalaš</oboInOwl:created_by>
+        <oboInOwl:hasExactSynonym>EDX</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>EDXS</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Energy dispersive X-ray analysis (EDXA, EDAX)</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Energy dispersive X-ray microanalysis (EDXMA)</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>XEDS</oboInOwl:hasExactSynonym>
+        <rdfs:label>Energy-dispersive X-ray spectroscopy</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Energy-dispersive_X-ray_spectroscopy"/>
+    </owl:Class>
+    
+
+
+    <!-- http://edamontology.org/topic________EELS -->
+
+    <owl:Class rdf:about="http://edamontology.org/topic________EELS">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_0611"/>
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic__RBfI2XgIsxcfKonPPluKAhK"/>
+        <abbreviation>EELS</abbreviation>
+        <rdfs:label>Electron energy loss spectroscopy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://edamontology.org/topic________Scanning_probe_microscopy -->
+
+    <owl:Class rdf:about="http://edamontology.org/topic________Scanning_probe_microscopy">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_Microscopy"/>
+        <rdfs:label>Scanning probe microscopy</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Scanning_probe_microscopy"/>
     </owl:Class>
     
 
@@ -7115,6 +7517,7 @@ Let&apos;s get back to it with definitions and relations, ...</rdfs:comment>
     <!-- http://edamontology.org/topics________009 -->
 
     <owl:Class rdf:about="http://edamontology.org/topics________009">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_0003"/>
         <related_term>Diffraction</related_term>
         <related_term>Diffractometer</related_term>
         <oboInOwl:created_by>Matúš Kalaš</oboInOwl:created_by>
@@ -7256,9 +7659,9 @@ Let&apos;s get back to it with definitions and relations, ...</rdfs:comment>
     <!-- http://edamontology.org/topics________019 -->
 
     <owl:Class rdf:about="http://edamontology.org/topics________019">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_2828"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic______X_ray_imaging"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topics________013"/>
-        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_2828"/>
         <oboInOwl:created_by>Matúš Kalaš</oboInOwl:created_by>
         <oboInOwl:creation_date>2025-03-13T17:12:59.831249Z</oboInOwl:creation_date>
         <rdfs:label>Backscatter X-ray</rdfs:label>
@@ -7333,8 +7736,8 @@ Let&apos;s get back to it with definitions and relations, ...</rdfs:comment>
     <!-- http://edamontology.org/topics________024 -->
 
     <owl:Class rdf:about="http://edamontology.org/topics________024">
-        <rdfs:subClassOf rdf:resource="http://edamontology.org/topics________023"/>
         <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_2828"/>
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topics________023"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://edamontology.org/usable_for"/>
@@ -7352,32 +7755,15 @@ Let&apos;s get back to it with definitions and relations, ...</rdfs:comment>
     
 
 
-    <!-- http://edamontology.org/topic_2828 -->
+    <!-- http://edamontology.org/topics________026 -->
 
-    <owl:Class rdf:about="http://edamontology.org/topic_2828">
-        <rdfs:subClassOf rdf:resource="http://edamontology.org/topics________009"/>
+    <owl:Class rdf:about="http://edamontology.org/topics________026">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic______Medical_imaging"/>
         <oboInOwl:created_by>Matúš Kalaš</oboInOwl:created_by>
-        <oboInOwl:creation_date>2025-03-13T17:40:53.592595Z</oboInOwl:creation_date>
-        <rdfs:label>X-ray diffractometry</rdfs:label>
-        <oboInOwl:hasExactSynonym>XRD, DRX</oboInOwl:hasExactSynonym>
-        <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/X-ray_diffraction"/>
-        <skos:exactMatch rdf:resource="https://www.wikidata.org/wiki/Q12101244"/>
-    </owl:Class>
-    
-
-
-    <!-- http://edamontology.org/topic_3448 -->
-
-    <owl:Class rdf:about="http://edamontology.org/topic_3448">
-        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_3382"/>
-        <rdfs:subClassOf rdf:resource="http://edamontology.org/topics________009"/>
-        <oboInOwl:created_by>Matúš Kalaš</oboInOwl:created_by>
-        <oboInOwl:creation_date>2025-03-13T17:48:07.280726Z</oboInOwl:creation_date>
-        <oboInOwl:hasExactSynonym>Elastic neutron scattering</oboInOwl:hasExactSynonym>
-        <rdfs:label>Neutron diffraction</rdfs:label>
-        <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Neutron_diffraction"/>
-        <skos:exactMatch rdf:resource="https://meshb.nlm.nih.gov/record/ui?ui=D033363"/>
-        <skos:exactMatch rdf:resource="https://www.wikidata.org/wiki/Q910499"/>
+        <oboInOwl:creation_date>2025-10-25T22:25:20.838673Z</oboInOwl:creation_date>
+        <rdfs:label>Neuroimaging</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Neuroimaging"/>
+        <skos:exactMatch rdf:resource="https://www.wikidata.org/wiki/Q551875"/>
     </owl:Class>
     
 
@@ -7463,6 +7849,18 @@ Let&apos;s get back to it with definitions and relations, ...</rdfs:comment>
     
 
 
+    <!-- http://edamontology.org/topics________032 -->
+
+    <owl:Class rdf:about="http://edamontology.org/topics________032">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_3383"/>
+        <oboInOwl:created_by>Matúš Kalaš</oboInOwl:created_by>
+        <oboInOwl:creation_date>2025-10-25T22:36:12.731422Z</oboInOwl:creation_date>
+        <oboInOwl:hasNarrowSynonym>Plant cell imaging</oboInOwl:hasNarrowSynonym>
+        <rdfs:label>Plant imaging</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://edamontology.org/topics________034 -->
 
     <owl:Class rdf:about="http://edamontology.org/topics________034">
@@ -7540,159 +7938,6 @@ Let&apos;s get back to it with definitions and relations, ...</rdfs:comment>
     
 
 
-    <!-- http://edamontology.org/operation_______Ion_and_optical_other_image_co-registration -->
-
-    <owl:Class rdf:about="http://edamontology.org/operation_______Ion_and_optical_other_image_co-registration">
-        <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_Image_registration"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://edamontology.org/has_input"/>
-                <owl:someValuesFrom rdf:resource="http://edamontology.org/data_Image"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://edamontology.org/has_input"/>
-                <owl:someValuesFrom rdf:resource="http://edamontology.org/data_______Mass_spectroscopy_imaging_data_set"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://edamontology.org/has_output"/>
-                <owl:someValuesFrom rdf:resource="http://edamontology.org/data_______Data_cube"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:label>Ion and optical/other image co-registration</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://edamontology.org/operation_______Ion_image_filtering_by_masses -->
-
-    <owl:Class rdf:about="http://edamontology.org/operation_______Ion_image_filtering_by_masses">
-        <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_3695"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://edamontology.org/has_input"/>
-                <owl:someValuesFrom rdf:resource="http://edamontology.org/data_______Mass_spectroscopy_imaging_data_set"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:label>Ion image filtering (by masses)</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://edamontology.org/operation_______Ion_image_filtering_by_pixels_voxels_ROI -->
-
-    <owl:Class rdf:about="http://edamontology.org/operation_______Ion_image_filtering_by_pixels_voxels_ROI">
-        <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_3695"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://edamontology.org/has_input"/>
-                <owl:someValuesFrom rdf:resource="http://edamontology.org/topic_____Mass_spectrometry_imaging"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:label>Ion image filtering (by pixels/voxels/ROIs)</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://edamontology.org/operation_3695 -->
-
-    <owl:Class rdf:about="http://edamontology.org/operation_3695">
-        <rdfs:subClassOf rdf:resource="http://edamontology.org/operation_2409"/>
-        <rdfs:label>Data filtering</rdfs:label>
-        <rdfs:seeAlso rdf:resource="http://edamontology.org/operation_3695"/>
-    </owl:Class>
-    
-
-
-    <!-- http://edamontology.org/topic_2229 -->
-
-    <owl:Class rdf:about="http://edamontology.org/topic_2229">
-        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_0003"/>
-        <oboInOwl:hasExactSynonym>Cell biology</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>Cellular biology</oboInOwl:hasExactSynonym>
-        <rdfs:label>Cytology</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://edamontology.org/topic_3934 -->
-
-    <owl:Class rdf:about="http://edamontology.org/topic_3934">
-        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_0003"/>
-        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_2229"/>
-        <rdfs:label>Cytometry</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://edamontology.org/topic_______Desorption_ionisation-on-silicon_mass_spectrometry -->
-
-    <owl:Class rdf:about="http://edamontology.org/topic_______Desorption_ionisation-on-silicon_mass_spectrometry">
-        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_______Surface-assisted_laser_desorption_ionisation_mass_spectrometry"/>
-        <abbreviation>DIOS-MS</abbreviation>
-        <oboInOwl:hasBroadSynonym>Nanostructure-initiator mass spectrometry</oboInOwl:hasBroadSynonym>
-        <rdfs:label>Desorption/ionisation-on-silicon mass spectrometry</rdfs:label>
-        <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Desorption/ionization_on_silicon"/>
-    </owl:Class>
-    
-
-
-    <!-- http://edamontology.org/topic_______Desorption_ionisation_on_silicon_imaging -->
-
-    <owl:Class rdf:about="http://edamontology.org/topic_______Desorption_ionisation_on_silicon_imaging">
-        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_______Desorption_ionisation-on-silicon_mass_spectrometry"/>
-        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_______Surface-assisted_laser_desorption_ionisation_imaging"/>
-        <abbreviation>NIMS</abbreviation>
-        <related_term>Desorption/ionisation on silicon (DIOS)</related_term>
-        <oboInOwl:hasNarrowSynonym>DIOS imaging</oboInOwl:hasNarrowSynonym>
-        <rdfs:label>Nanostructure imaging mass spectrometry</rdfs:label>
-        <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Desorption/ionization_on_silicon"/>
-    </owl:Class>
-    
-
-
-    <!-- http://edamontology.org/data_______Instrument_parameters_and_characteristics -->
-
-    <owl:Class rdf:about="http://edamontology.org/data_______Instrument_parameters_and_characteristics">
-        <rdfs:subClassOf rdf:resource="http://edamontology.org/data_2337"/>
-        <rdfs:label>Instrument parameters and characteristics</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://edamontology.org/topic_______Liquid_extraction_surface_analysis_imaging -->
-
-    <owl:Class rdf:about="http://edamontology.org/topic_______Liquid_extraction_surface_analysis_imaging">
-        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_______Ambient_ionisation_mass_spectrometry_imaging"/>
-        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_______Liquid_extraction_surface_analysis_mass_spectrometry"/>
-        <abbreviation>LESA imaging</abbreviation>
-        <rdfs:label>Liquid extraction surface analysis imaging</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://edamontology.org/topic_0134 -->
-
-    <owl:Class rdf:about="http://edamontology.org/topic_0134">
-        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_______Spectrometry"/>
-        <rdfs:label>Mass spectrometry</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://edamontology.org/topic_______Matrix-assisted_laser_desorption_ionisation_immunohistochemistry -->
-
-    <owl:Class rdf:about="http://edamontology.org/topic_______Matrix-assisted_laser_desorption_ionisation_immunohistochemistry">
-        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_______Matrix-assisted_laser_desorption_ionisation_mass_spectrometry"/>
-        <abbreviation>MALDI-IHC</abbreviation>
-        <rdfs:label>Matrix-assisted laser desorption/ionisation immunohistochemistry</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://edamontology.org/topic_______Matrix_enhanced_surface-assisted_laser_desorption%2Fionization -->
 
     <owl:Class rdf:about="http://edamontology.org/topic_______Matrix_enhanced_surface-assisted_laser_desorption%2Fionization">
@@ -7700,87 +7945,6 @@ Let&apos;s get back to it with definitions and relations, ...</rdfs:comment>
         <abbreviation>ME-SALDI imaging</abbreviation>
         <oboInOwl:hasExactSynonym>MESALDI imaging</oboInOwl:hasExactSynonym>
         <rdfs:label>Matrix-enhanced surface-assisted laser desorption/ionisation imaging</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://edamontology.org/data_2337 -->
-
-    <owl:Class rdf:about="http://edamontology.org/data_2337">
-        <rdfs:subClassOf rdf:resource="http://edamontology.org/data_0006"/>
-        <rdfs:label>Metadata</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://edamontology.org/topic_______Rule-based_generative_model -->
-
-    <owl:Class rdf:about="http://edamontology.org/topic_______Rule-based_generative_model">
-        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_______Generative_machine_learning"/>
-        <oboInOwl:hasDefinition>A generative statistical model that is based on rules.</oboInOwl:hasDefinition>
-        <rdfs:label>Rule-based generative model</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://edamontology.org/topic_______Surface-assisted_laser_desorption_ionisation_imaging -->
-
-    <owl:Class rdf:about="http://edamontology.org/topic_______Surface-assisted_laser_desorption_ionisation_imaging">
-        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_______Laser_desorption_ionisation_mass_spectrometry_imaging"/>
-        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_______Surface-assisted_laser_desorption_ionisation_mass_spectrometry"/>
-        <abbreviation>SALDI imaging</abbreviation>
-        <rdfs:label>Surface-assisted laser desorption/ionisation imaging</rdfs:label>
-        <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Surface-assisted_laser_desorption/ionization#Imaging_mass_spectrometry"/>
-    </owl:Class>
-    
-
-
-    <!-- http://edamontology.org/topic_______Surface-assisted_laser_desorption_ionisation_mass_spectrometry -->
-
-    <owl:Class rdf:about="http://edamontology.org/topic_______Surface-assisted_laser_desorption_ionisation_mass_spectrometry">
-        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_______Laser_desorption_ionisation_mass_spectrometry"/>
-        <abbreviation>SALDI-MS</abbreviation>
-        <rdfs:label>Surface-assisted laser desorption/ionisation mass spectrometry</rdfs:label>
-        <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Surface-assisted_laser_desorption/ionization"/>
-    </owl:Class>
-    
-
-
-    <!-- http://edamontology.org/topic________EDS -->
-
-    <owl:Class rdf:about="http://edamontology.org/topic________EDS">
-        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_0611"/>
-        <rdfs:subClassOf rdf:resource="http://edamontology.org/topics________013"/>
-        <abbreviation>EDS</abbreviation>
-        <oboInOwl:created_by>Cynthia Arend, Matúš Kalaš</oboInOwl:created_by>
-        <oboInOwl:hasExactSynonym>EDX</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>EDXS</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>Energy dispersive X-ray analysis (EDXA, EDAX)</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>Energy dispersive X-ray microanalysis (EDXMA)</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>XEDS</oboInOwl:hasExactSynonym>
-        <rdfs:label>Energy-dispersive X-ray spectroscopy</rdfs:label>
-        <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Energy-dispersive_X-ray_spectroscopy"/>
-    </owl:Class>
-    
-
-
-    <!-- http://edamontology.org/topic________EELS -->
-
-    <owl:Class rdf:about="http://edamontology.org/topic________EELS">
-        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_0611"/>
-        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic__RBfI2XgIsxcfKonPPluKAhK"/>
-        <abbreviation>EELS</abbreviation>
-        <rdfs:label>Electron energy loss spectroscopy</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://edamontology.org/topic________Scanning_probe_microscopy -->
-
-    <owl:Class rdf:about="http://edamontology.org/topic________Scanning_probe_microscopy">
-        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_Microscopy"/>
-        <rdfs:label>Scanning probe microscopy</rdfs:label>
-        <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Scanning_probe_microscopy"/>
     </owl:Class>
 </rdf:RDF>
 
