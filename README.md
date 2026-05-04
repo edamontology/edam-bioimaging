@@ -1,10 +1,6 @@
-DOI representing all stable versions, resolving to the latest: [![10.5281/zenodo.1149730](https://zenodo.org/badge/DOI/10.5281/zenodo.1149730.svg)](https://doi.org/10.5281/zenodo.1149730)
-
-DOI of the latest stable EDAM Bioimaging version _alpha06_: [![10.5281/zenodo.3695725](https://zenodo.org/badge/DOI/10.5281/zenodo.3695725.svg)](https://doi.org/10.5281/zenodo.3695725)
+❗ **NOTE: This repository is out of sync, lagging far behind the developement branch in [WebProtégé](https://webprotege.stanford.edu/#projects/2ce704bf-83ed-4d2e-985f-84c4841fac71/edit/classes).** Until the sync between WebProtégé and Git is established, the development and releases will happen there. **See [NCBO BioPortal](https://bioportal.bioontology.org/ontologies/EDAM-BIOIMAGING?p=classes) or https://edamontology.org/EDAM-bioimaging.owl for the latest release.** ❗
 
 Poster: [EDAM Bioimaging 2024](https://edamontology.org/poster-bioimaging.pdf) (older, citable poster is at [![10.7490/f1000research.1117826.1](https://zenodo.org/badge/DOI/10.7490/f1000research.1117826.1.svg)](https://doi.org/10.7490/f1000research.1117826.1))
-
-Twitter: [@edamontology](http://twitter.com/edamontology) ([follow](https://twitter.com/intent/follow?original_referer=https%3A%2F%2Fgithub.com%2Fedamontology%2Fedam-bioimaging&region=follow_link&screen_name=edamontology&tw_p=followbutton); currently not attended)
 
 [![Project Status: WIP – Initial development is in progress, but there has not yet been a stable, full-fledged reliable release.](https://www.repostatus.org/badges/latest/wip.svg)](https://www.repostatus.org/#wip)
 
@@ -19,23 +15,9 @@ EDAM Bioimaging is an extension to the [EDAM ontology](https://github.com/edamon
 
 ## Viewing
 
- * __Last stable version__ (now _alpha06_) at the __[NCBO BioPortal](https://bioportal.bioontology.org/ontologies/EDAM-BIOIMAGING?p=classes)__
+ * __Last released version__ at the __[NCBO BioPortal](https://bioportal.bioontology.org/ontologies/EDAM-BIOIMAGING?p=classes)__
  
- * __All versions__ at __WebProtégé__. Free registration at WebProtégé is required.
- 
-     * __[Live development version](https://webprotege.stanford.edu/#projects/2ce704bf-83ed-4d2e-985f-84c4841fac71/edit/Classes)__ (now *alpha07_dev*)
- 
-     * __[Last stable version](https://webprotege.stanford.edu/#projects/60fbe82b-bd58-41e2-825d-3801c071ee47/edit/Classes)__ (now _alpha06_)
- 
-     * __[Frozen version *alpha06*](https://webprotege.stanford.edu/#projects/c149e738-4437-456c-843c-eb5861a36854/edit/Classes)__
- 
-     * [Frozen version *alpha05*](https://webprotege.stanford.edu/#projects/d9f9a5b2-d746-430a-a2cd-9aa745764079/edit/Classes)
- 
-     * [Frozen version *alpha04*](https://webprotege.stanford.edu/#projects/861eadbe-8e38-46fc-a59e-6d45a1b6f25e/edit/Classes)
- 
-     * [Frozen version *alpha03*](https://webprotege.stanford.edu/#projects/40a89525-b6d6-42f2-a4c1-88e7fb1c1f86/edit/Classes)
- 
-     * [Frozen version *alpha02*](https://webprotege.stanford.edu/#projects/f2cd721e-0f26-4b05-9ce2-ce20d4860442/edit/Classes)
+* __[Live development version](https://webprotege.stanford.edu/#projects/2ce704bf-83ed-4d2e-985f-84c4841fac71/edit/Classes)__
  
 
 ## Visualization
@@ -45,22 +27,9 @@ EDAM Bioimaging is an extension to the [EDAM ontology](https://github.com/edamon
  
 ## Download
 
-__Always the last stable version:__
+__Always the latest version:__
 
 * In __OWL__ format from http://edamontology.org/EDAM-bioimaging.owl
-
-* In __TSV__ format from http://edamontology.org/EDAM-bioimaging.tsv
-
-* In __CSV__ format from http://edamontology.org/EDAM-bioimaging.csv
-
-
-__Other versions__, _e.g._ the current _alpha06_:
-
-* In __OWL__ format from http://edamontology.org/EDAM-bioimaging_alpha06.owl
-
-* In __TSV__ format from http://edamontology.org/EDAM-bioimaging_alpha06.tsv
-
-* In __CSV__ format from http://edamontology.org/EDAM-bioimaging_alpha06.csv
 
 
 
