@@ -1,4 +1,4 @@
-❗ **NOTE: This repository is out of sync, lagging far behind the developement branch in [WebProtégé](https://bioportal.bioontology.org/ontologies/EDAM-BIOIMAGING?p=classes&conceptid=http%3A%2F%2Fedamontology.org%2Ftopic_3382).** Until the sync between WebProtégé and Git is established, the development and releases will happen there. **See [NCBO BioPortal](https://bioportal.bioontology.org/ontologies/EDAM-BIOIMAGING?p=classes) or https://edamontology.org/EDAM-bioimaging.owl for the latest release.** ❗
+❗ **NOTE: This repository is out of sync, lagging far behind the developement branch in [WebProtégé](https://webprotege.stanford.edu/#projects/2ce704bf-83ed-4d2e-985f-84c4841fac71/edit/Classes?selection=Class(%3Chttp://edamontology.org/topic_3382%3E)).** Until the sync between WebProtégé and Git is established, the development and releases will happen there. **See [NCBO BioPortal](https://bioportal.bioontology.org/ontologies/EDAM-BIOIMAGING?p=classes&conceptid=http%3A%2F%2Fedamontology.org%2Ftopic_3382) or https://edamontology.org/EDAM-bioimaging.owl for the latest release.** ❗
 
 Poster: [EDAM Bioimaging 2024](https://edamontology.org/poster-bioimaging.pdf) (older, citable poster is at [![10.7490/f1000research.1117826.1](https://zenodo.org/badge/DOI/10.7490/f1000research.1117826.1.svg)](https://doi.org/10.7490/f1000research.1117826.1))
 
@@ -7,10 +7,12 @@ Poster: [EDAM Bioimaging 2024](https://edamontology.org/poster-bioimaging.pdf) (
 
 # EDAM Bioimaging
 
-An ontology of bioimage informatics operations, types of data, data formats, and bioimaging topics
+**An ontology of imaging and related techniques and technologies, image processing and analysis, image data and formats, within bio- and other sciences.**
+
+EDAM Bioimaging is an extension to the [EDAM ontology](https://github.com/edamontology/edamontology) (http://edamontology.org), dedicated to imaging and (bio)image informatics, AI/ML, mass spectrometry, and cytometry. It has been developed by an open, global community of contributors, including consortia and projects such as NEUBIAS/GloBIAS, COMULIS, ELIXIR, Euro-BioImaging, vEM, QUAREP-LiMi, foundingGIDE, EOSC OSCARS, and more, within bio- and other sciences.
 
 
-EDAM Bioimaging is an extension to the [EDAM ontology](https://github.com/edamontology/edamontology) (http://edamontology.org) for image analysis, bioimaging, AI/ML, bioimage informatics, mass spectrometry, and cytometry. It is being developed in on open between the [ELIXIR](http://www.elixir-europe.org) Research Infrastructure consortium, and the bioimaging community (especially supporting were [NEUBIAS](http://eubias.org/NEUBIAS) and [COMULIS](http://www.comulis.eu) COST Actions CA15124, CA17121, funded by the Horizon 2020 Framework Programme of the European Union), in close contact with the [Euro-BioImaging](http://www.eurobioimaging.eu) Research Infrastructure consortium, the [Global BioImaging](https://globalbioimaging.org/) network, and [QUAREP-LiMi](https://quarep.org), the global grassroots organisation for standardisation in light microscopy.
+<!--It is being developed in on open between the [ELIXIR](http://www.elixir-europe.org) Research Infrastructure consortium, and the bioimaging community (especially supporting were [NEUBIAS](http://eubias.org/NEUBIAS) and [COMULIS](http://www.comulis.eu) COST Actions CA15124, CA17121, funded by the Horizon 2020 Framework Programme of the European Union), in close contact with the [Euro-BioImaging](http://www.eurobioimaging.eu) Research Infrastructure consortium, the [Global BioImaging](https://globalbioimaging.org/) network, and [QUAREP-LiMi](https://quarep.org), the global grassroots organisation for standardisation in light microscopy.-->
 
 
 ## Viewing
@@ -20,7 +22,7 @@ EDAM Bioimaging is an extension to the [EDAM ontology](https://github.com/edamon
 * __[Live development version](https://webprotege.stanford.edu/#projects/2ce704bf-83ed-4d2e-985f-84c4841fac71/edit/Classes)__
  
 
-## Visualization
+## Visualisation
 
 * In __WebVOWL__: https://service.tib.eu/webvowl/#iri=https://edamontology.org/EDAM-bioimaging.owl
 
@@ -44,25 +46,16 @@ The most accessible way of contributing is writing comments with suggestions or 
 
 **Other options:**
 * Submit or comment on an [__issue__](https://github.com/edamontology/edam-bioimaging/issues) at __GitHub__
-* Create a __pull request__ to https://github.com/edamontology/edam-bioimaging
-* Add a proposal or comment to EDAM-bioimaging at the __NCBO BioPortal__
+* Add a proposal or comment to EDAM Bioimaging at the __NCBO BioPortal__
     * to a selected concept in the ["Classes" tab](https://bioportal.bioontology.org/ontologies/EDAM-BIOIMAGING/?p=classes) by clicking the small "Notes" tab on the right (still within the big "Classes" tab)
     * on the general level in the ["Notes" tab](https://bioportal.bioontology.org/ontologies/EDAM-BIOIMAGING/?p=notes). You can include new concept proposals here.
-* Join the discussions at wg4-edam_ontology@irbbarcelona.org.glip.com (if member of, or invited to NeuBIAS on [Glip](https://app.glip.com/)). Mostly organisational stuff.
-* Add comments to the stable versions of EDAM-bioimaging at WebProtégé, such as the [last stable version](https://webprotege.stanford.edu/#projects/60fbe82b-bd58-41e2-825d-3801c071ee47/edit/Classes) and especially the frozen versions ([alpha06](https://webprotege.stanford.edu/#projects/c149e738-4437-456c-843c-eb5861a36854/edit/Classes), [alpha05](https://webprotege.stanford.edu/#projects/d9f9a5b2-d746-430a-a2cd-9aa745764079/edit/Classes), [alpha04](https://webprotege.stanford.edu/#projects/861eadbe-8e38-46fc-a59e-6d45a1b6f25e/edit/Classes), [alpha03](https://webprotege.stanford.edu/#projects/40a89525-b6d6-42f2-a4c1-88e7fb1c1f86/edit/Classes), [alpha02](https://webprotege.stanford.edu/#projects/f2cd721e-0f26-4b05-9ce2-ce20d4860442/edit/Classes)) for more persistent comments. Note that comments to the [live version](https://webprotege.stanford.edu/#projects/2ce704bf-83ed-4d2e-985f-84c4841fac71/edit/Classes) are handled with the highest priority.
 
-If you want to contribute in person, please join or organise a hackathon. Get in touch with wg4-edam_ontology@irbbarcelona.org.glip.com or matus.kalas@uib.no for planning. Usual hackathons for editing EDAM-bioimaging are the [NEUBIAS Taggathons](http://eubias.org/NEUBIAS/what-is-taggathon/).
+If you want to contribute in person, please join or organise a hackathon. Get in touch via WebProtégé, GitHub, or drmatuskalas@duck.com for planning. Sucessful example hackathons for editing EDAM Bioimaging were the [NEUBIAS Taggathons](http://eubias.org/NEUBIAS/what-is-taggathon/).
 
 
 ## Editing
 
-At this momentary early stage of the development, the content of EDAM-bioimaging is developed collaboratively at http://webprotege.stanford.edu/#projects/2ce704bf-83ed-4d2e-985f-84c4841fac71/edit/Classes. After one dev cycle, these developments are commited in a batch to _git_. _Vice versa_, commits from _git_ are merged into WebProtégé.
-
-**_N.B._:** Due to this special setup, edit either:
-* in only _git_ or in only WebProtégé and merge afterwards
-* or if needed in parallel, edit properties and root concepts only in _git_ and other concepts only in WebProtégé. Merge afterwards.
-
-**_N.B._:** Be aware of how IDs of new concepts are assigned, and what it means for both **merging into _git_** and **[Comments](https://webprotege.stanford.edu/#projects/2ce704bf-83ed-4d2e-985f-84c4841fac71/edit/Comments) in WebProtégé**. See https://github.com/edamontology/edam-bioimaging/issues/7.
+The content of EDAM Bioimaging is developed collaboratively at http://webprotege.stanford.edu/#projects/2ce704bf-83ed-4d2e-985f-84c4841fac71/edit/Classes. Everyone can post comments with suggestions, and reply to other comments (see [above](#contributing)). Onboarded editors can edit.
 
 
 ## Citing
@@ -75,7 +68,4 @@ Before a full article is published, please cite the following when refering to E
 
 The "mainline" EDAM ontology can be cited by:
 
- * Jon Ison, Matúš Kalaš, Inge Jonassen, Dan Bolser, Mahmut Uludag, Hamish McWilliam, James Malone, Rodrigo Lopez, Steve Pettifer, and Peter Rice **(2013)**. [EDAM: an ontology of bioinformatics operations, types of data and identifiers, topics and formats](http://bioinformatics.oxfordjournals.org/content/29/10/1325.full). _Bioinformatics_, **29**(10): 1325-1332.
-[![10.1093/bioinformatics/btt113](https://zenodo.org/badge/DOI/10.1093/bioinformatics/btt113.svg)](https://doi.org/10.1093/bioinformatics/btt113) PMID: [23479348](http://www.ncbi.nlm.nih.gov/pubmed/23479348) _Open Access_
-
-EDAM Bioimaging releases are citable with DOIs too, for cases when that is needed. [![10.5281/zenodo.1149730](https://zenodo.org/badge/DOI/10.5281/zenodo.1149730.svg)](https://doi.org/10.5281/zenodo.1149730) represents all releases and resolves to the DOI of the last stable release. For the DOI of a particular release of EDAM Bioimaging, please see [/releases](https://github.com/edamontology/edam-bioimaging/tree/main/releases).
+ * Melissa Black, Lucie Lamothe, Hager Eldakroury, Mads Kierkegaard, Ankita Priya, Anne Machinda, Uttam Singh Khanduja, Drashti Patoliya, Rashika Rathi, Tawah Peggy Che Nico, Gloria Umutesi, Claudia Blankenburg, Anita Op, Precious Chieke, Omodolapo Babatunde, Steve Laurie, Steffen Neumann, Veit Schwämmle, Ivan Kuzmin, Chris Hunter, Jonathan Karr, Jon Ison, Alban Gaignard, Bryan Brancotte, Hervé Ménager, Matúš Kalaš **(2022)**. [EDAM: the bioscientific data analysis ontology](https://doi.org/10.7490/f1000research.1118900.1) (update 2021) [version 1; not peer reviewed]. _F1000Research_, **11**(ISCB Comm J): 1. Poster. [![10.7490/f1000research.1118900.1](https://zenodo.org/badge/DOI/10.7490/f1000research.1118900.1.svg)](https://doi.org/10.7490/f1000research.1118900.1) _Open access_
