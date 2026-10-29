@@ -1,6 +1,6 @@
 ❗ **NOTE: This repository is out of sync, lagging far behind the developement branch in [WebProtégé](https://webprotege.stanford.edu/#projects/2ce704bf-83ed-4d2e-985f-84c4841fac71/edit/Classes?selection=Class(%3Chttp://edamontology.org/topic_3382%3E)).** Until the sync between WebProtégé and Git is established, the development and releases will happen there. **See [NCBO BioPortal](https://bioportal.bioontology.org/ontologies/EDAM-BIOIMAGING?p=classes&conceptid=http%3A%2F%2Fedamontology.org%2Ftopic_3382) or https://edamontology.org/EDAM-bioimaging.owl for the latest release.** ❗
 
-Poster: [EDAM Bioimaging 2024](https://edamontology.org/poster-bioimaging.pdf) (older, citable poster is at [![10.7490/f1000research.1117826.1](https://zenodo.org/badge/DOI/10.7490/f1000research.1117826.1.svg)](https://doi.org/10.7490/f1000research.1117826.1))
+Poster: [EDAM Bioimaging 2026](https://edamontology.org/poster-bioimaging.pdf) (older, citable poster is at [![10.7490/f1000research.1117826.1](https://zenodo.org/badge/DOI/10.7490/f1000research.1117826.1.svg)](https://doi.org/10.7490/f1000research.1117826.1))
 
 [![Project Status: WIP – Initial development is in progress, but there has not yet been a stable, full-fledged reliable release.](https://www.repostatus.org/badges/latest/wip.svg)](https://www.repostatus.org/#wip)
 
@@ -39,7 +39,7 @@ __Always the latest version:__
 
 This is an open community project (transparent and participatory), and thus contributions are very welcome!
 
-The most accessible way of contributing is writing comments with suggestions or needs for clarification, and starting discussion threads. Multiple channels are avaialable:
+The most accessible way of contributing is writing comments with suggestions or needs for clarification, and starting discussion threads. Multiple channels are available:
 
 **Preferred:**
 * Add __comments__ to the [live development version of EDAM-bioimaging](https://webprotege.stanford.edu/#projects/2ce704bf-83ed-4d2e-985f-84c4841fac71/edit/Classes) at __WebProtégé__. Free registration at WebProtégé is required. Select a concept and "Start new thread" in the "Comments" widget|window (not "Comments" tab, stay in the "Classes" tab). Contribute to already open threads _ibid_ or in the "Comments" tab.
@@ -50,7 +50,7 @@ The most accessible way of contributing is writing comments with suggestions or 
     * to a selected concept in the ["Classes" tab](https://bioportal.bioontology.org/ontologies/EDAM-BIOIMAGING/?p=classes) by clicking the small "Notes" tab on the right (still within the big "Classes" tab)
     * on the general level in the ["Notes" tab](https://bioportal.bioontology.org/ontologies/EDAM-BIOIMAGING/?p=notes). You can include new concept proposals here.
 
-If you want to contribute in person, please join or organise a hackathon. Get in touch via WebProtégé, GitHub, or drmatuskalas@duck.com for planning. Sucessful example hackathons for editing EDAM Bioimaging were the [NEUBIAS Taggathons](http://eubias.org/NEUBIAS/what-is-taggathon/).
+If you want to contribute in person, please join or organise a hackathon. Get in touch via WebProtégé, GitHub, or drmatuskalas@duck.com for planning. Successful example hackathons for editing EDAM Bioimaging were the [NEUBIAS Taggathons](http://eubias.org/NEUBIAS/what-is-taggathon/).
 
 
 ## Editing
@@ -62,7 +62,7 @@ The content of EDAM Bioimaging is developed collaboratively at http://webprotege
 
 (Download [BibTeX](https://raw.githubusercontent.com/edamontology/edam-bioimaging/main/CITATION.bib))
 
-Before a full article is published, please cite the following when refering to EDAM Bioimaging in a scholarly publication:
+Before a full article is published, please cite the following when referring to EDAM Bioimaging in a scholarly publication:
 
  * Matúš Kalaš, Laure Plantard, Joakim Lindblad, Martin Jones, Nataša Sladoje, Moritz A. Kirschmann, Anatole Chessel, Leandro Scholz, Fabienne Rössler, Laura Nicolás Sáenz, Estibaliz Gómez de Mariscal, John Bogovic, Alexandre Dufour, Xavier Heiligenstein, Dominic Waithe, Marie-Charlotte Domart, Matthia Karreman, Raf Van de Plas, Robert Haase, David Hörl, Lassi Paavolainen, Ivana Vrhovac Madunić, Dean Karaica, Arrate Muñoz-Barrutia, Paula Sampaio, Daniel Sage, Sebastian Munck, Ofra Golani, Josh Moore, Florian Levet, Jon Ison, Alban Gaignard, Hervé Ménager, Chong Zhang, Kota Miura, Julien Colombelli, and Perrine Paul-Gilloteaux. We are [welcoming new contributors!](https://github.com/edamontology/edam-bioimaging#contributing) **(2020)**. [EDAM-bioimaging: the ontology of bioimage informatics operations, topics, data, and formats (update 2020) [version 1; not peer reviewed]](https://f1000research.com/posters/9-162). _F1000Research_, **9**(ELIXIR): 162. Poster. [![10.7490/10.7490/f1000research.1117826.1](https://zenodo.org/badge/DOI/10.7490/f1000research.1117826.1.svg)](https://doi.org/10.7490/f1000research.1117826.1) _Open Access_
 
