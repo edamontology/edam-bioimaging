@@ -17,7 +17,7 @@
         <citation rdf:resource="https://doi.org/10.7490/f1000research.1117826.1"/>
         <next_id>4201</next_id>
         <repository rdf:resource="https://github.com/edamontology/edam-bioimaging"/>
-        <oboLegacy:date>25.11.2026 22:51 UTC</oboLegacy:date>
+        <oboLegacy:date>25.11.2026 23:11 UTC</oboLegacy:date>
         <oboLegacy:idspace>EDAM http://edamontology.org/ &quot;EDAM relations and concept properties&quot;</oboLegacy:idspace>
         <oboLegacy:idspace>EDAM_data http://edamontology.org/data_ &quot;EDAM types of data&quot;</oboLegacy:idspace>
         <oboLegacy:idspace>EDAM_format http://edamontology.org/format_ &quot;EDAM data formats&quot;</oboLegacy:idspace>
@@ -1703,7 +1703,7 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
 
     <owl:Class rdf:about="http://edamontology.org/data_2D_dataset">
         <rdfs:subClassOf rdf:resource="http://edamontology.org/data_Image"/>
-        <_permanent_id>http://edamontology.org/data_ 4200</_permanent_id>
+        <_permanent_id rdf:resource="http://edamontology.org/data_4200"/>
         <created_in>imaging-alpha01</created_in>
         <related_term>tile</related_term>
         <related_term>tiling</related_term>
