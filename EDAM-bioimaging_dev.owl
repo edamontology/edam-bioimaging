@@ -17,7 +17,7 @@
         <citation rdf:resource="https://doi.org/10.7490/f1000research.1117826.1"/>
         <next_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4201</next_id>
         <repository rdf:resource="https://github.com/edamontology/edam-bioimaging"/>
-        <oboLegacy:date>25.11.2026 17:48 UTC</oboLegacy:date>
+        <oboLegacy:date>25.11.2026 18:25 UTC</oboLegacy:date>
         <oboLegacy:idspace>EDAM http://edamontology.org/ &quot;EDAM relations and concept properties&quot;</oboLegacy:idspace>
         <oboLegacy:idspace>EDAM_data http://edamontology.org/data_ &quot;EDAM types of data&quot;</oboLegacy:idspace>
         <oboLegacy:idspace>EDAM_format http://edamontology.org/format_ &quot;EDAM data formats&quot;</oboLegacy:idspace>
@@ -2854,6 +2854,35 @@ Some more https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3948928/</skos:editorialN
 
     <owl:Class rdf:about="http://edamontology.org/format_3687">
         <rdfs:subClassOf rdf:resource="http://edamontology.org/format_2330"/>
+        <oboInOwl:inSubset rdf:resource="http://edamontology.org/formats"/>
+        <oboInOwl:inSubset rdf:resource="http://edamontology.org/bio"/>
+        <repository rdf:resource="https://github.com/ISA-tools/isa-specs"/>
+        <oboInOwl:savedBy>2026-06-13 Jonathan Hunter, Philippe Rocca-Serra, Helge Hecht, Matúš Kalaš</oboInOwl:savedBy>
+        <rdfs:comment>ISA-Tab extends the MAGE-TAB format (edam:format_3162) and its gene expression-specific focus, but remains compatible with it.</rdfs:comment>
+        <rdfs:seeAlso rdf:resource="https://www.nature.com/documents/scidata-isatab-specification.pdf"/>
+        <rdfs:comment>The ISA model consists of three core entities to capture experimental metadata: Investigation, Study, and Assay. The ISA-Tab is a composite format comprised of one i_Investigation.txt file (edam:format_4066), and one or more Study (s_*.txt; edam:format_4067) and Assay (a_*.txt; edam:format_4068) files.</rdfs:comment>
+        <created_in>1.13</created_in>
+        <skos:editorialNote>TODO when Composite format and its parts (using http://purl.org/dc/terms/isPartOf ?) are ready in EDAM: ISA-Tab with subconcepts, MHD announcement?, ...</skos:editorialNote>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#related"/>
+                <owl:someValuesFrom rdf:resource="http://edamontology.org/format_4069"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <documentation rdf:resource="https://isa-specs.readthedocs.io/en/latest/isamodel.html"/>
+        <rdfs:comment>ISA-Tab format can be converted to ISA-JSON (edam:format_4069; validated against a set of JSON Schemata defined by the ISA model). From ISA-JSON, a serialisation to RDF (JSON-LD) is possible when using a series of JSON context files.</rdfs:comment>
+        <information_standard rdf:resource="https://isa-tools.org/format/specification"/>
+        <documentation rdf:resource="https://isa-specs.readthedocs.io/en/latest/isatab.html"/>
+        <skos:exactMatch rdf:resource="https://doi.org/10.25504/FAIRsharing.53gp75"/>
+        <skos:editorialNote>TODO review the relation to MAGE-TAB</skos:editorialNote>
+        <rdfs:comment>Based on the Investigation / Study / Assay (ISA) Abstract Model, the tab-delimited ISA-Tab format supports the metadata related to multimodality/multi-omics studies which employ a combination of data acquisition techniques.</rdfs:comment>
+        <citation rdf:resource="https://doi.org/10.5281/zenodo.161355"/>
+        <oboInOwl:hasExactSynonym>Investigation Study Assay Tabular</oboInOwl:hasExactSynonym>
+        <rdfs:label>ISA-Tab</rdfs:label>
+        <ontology_used>Ontologies should be used. Any ontology is accepted, as long as it is correctly recorded.</ontology_used>
+        <example rdf:resource="https://github.com/ISA-tools/ISAdatasets/tree/master/tab"/>
+        <oboInOwl:hasDefinition>ISA-Tab stands for Investigation / Study / Assay (ISA) tab-delimited (Tab) format, and it is comprised of metadata describing observational or experimental scientific studies.</oboInOwl:hasDefinition>
+        <example rdf:resource="https://isa-tools.org/format/examples.html"/>
     </owl:Class>
     
 
@@ -3088,6 +3117,32 @@ Some more https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3948928/</skos:editorialN
 
     <owl:Class rdf:about="http://edamontology.org/format_4069">
         <rdfs:subClassOf rdf:resource="http://edamontology.org/format_1915"/>
+        <information_standard rdf:resource="https://isa-tools.org/format/specification"/>
+        <example rdf:resource="https://github.com/ISA-tools/ISAdatasets/tree/master/json"/>
+        <documentation rdf:resource="https://isa-specs.readthedocs.io/en/latest/isajson.html"/>
+        <file_extension>json</file_extension>
+        <rdfs:comment>The ISA model consists of three core entities to capture experimental metadata: Investigation, Study, and Assay. All ISA-JSON content should fall under one Investigation JSON structure in a single JSON file.</rdfs:comment>
+        <citation rdf:resource="https://doi.org/10.1038/ng.1054"/>
+        <ontology_used>Ontologies should be used. Any ontology is accepted, as long as it is correctly recorded.</ontology_used>
+        <rdfs:label>ISA-JSON</rdfs:label>
+        <skos:exactMatch rdf:resource="https://doi.org/10.25504/FAIRsharing.yhLgTV"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#related"/>
+                <owl:someValuesFrom rdf:resource="http://edamontology.org/format_3687"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <oboInOwl:hasExactSynonym>Investigation Study Assay JSON</oboInOwl:hasExactSynonym>
+        <repository rdf:resource="https://github.com/ISA-tools/isa-specs"/>
+        <oboInOwl:savedBy>2026-06-15 Jonathan Hunter, Philippe Rocca-Serra, Helge Hecht, Matúš Kalaš</oboInOwl:savedBy>
+        <oboInOwl:inSubset rdf:resource="http://edamontology.org/formats"/>
+        <oboInOwl:creation_date>2026-01-09</oboInOwl:creation_date>
+        <oboInOwl:hasDefinition>ISA-JSON stands for Investigation / Study / Assay (ISA) JavaScript Object Notation (JSON) format, and it is comprised of metadata describing observational or experimental scientific studies.</oboInOwl:hasDefinition>
+        <oboInOwl:created_by>jonathan-hunter</oboInOwl:created_by>
+        <oboInOwl:inSubset rdf:resource="http://edamontology.org/bio"/>
+        <rdfs:comment>ISA-JSON is the JSON serialisation of the Investigation / Study / Assay (ISA) Abstract Model, complementing ISA-Tab (edam:format_3687). It supports the metadata related to multimodality/multi-omics studies which employ a combination of data acquisition techniques. From ISA-JSON, a serialisation to RDF (JSON-LD) is possible when using a series of JSON context files.</rdfs:comment>
+        <created_in>1.26</created_in>
+        <documentation rdf:resource="https://isa-specs.readthedocs.io/en/latest/isamodel.html"/>
     </owl:Class>
     
 
@@ -9859,6 +9914,7 @@ Let&apos;s get back to it with definitions and relations, ...</rdfs:comment>
         <oboInOwl:hasNarrowSynonym>Large generative model</oboInOwl:hasNarrowSynonym>
         <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Generative_artificial_intelligence"/>
         <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Generative_model"/>
+        <rdfs:label>Generative artificial intelligence</rdfs:label>
         <skos:editorialNote>Before was Generative artificial intelligence (Generative AI, GenAI, GAI) as a narrow to Gen.stat.mod.</skos:editorialNote>
         <skos:narrowMatch rdf:resource="https://www.wikidata.org/wiki/Q117246174"/>
     </owl:Class>
@@ -10164,6 +10220,17 @@ CyTOF can be considered a generic trademark for a mass cytometer with a time-of-
         <oboInOwl:hasExactSynonym>MALDI mass spectrometry imaging (MALDI MSI)</oboInOwl:hasExactSynonym>
         <rdfs:label>Matrix-assisted laser desorption/ionisation imaging</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/MALDI_imaging"/>
+    </owl:Class>
+    
+
+
+    <!-- http://edamontology.org/topic_______Matrix_enhanced_surface-assisted_laser_desorption%2Fionization -->
+
+    <owl:Class rdf:about="http://edamontology.org/topic_______Matrix_enhanced_surface-assisted_laser_desorption%2Fionization">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_______Surface-assisted_laser_desorption_ionisation_imaging"/>
+        <abbreviation>ME-SALDI imaging</abbreviation>
+        <oboInOwl:hasExactSynonym>MESALDI imaging</oboInOwl:hasExactSynonym>
+        <rdfs:label>Matrix-enhanced surface-assisted laser desorption/ionisation imaging</rdfs:label>
     </owl:Class>
     
 
@@ -11257,109 +11324,6 @@ a workable acquisition time</skos:editorialNote>
     </owl:Class>
     
 
-
-    <!-- http://edamontology.org/topic_______Matrix_enhanced_surface-assisted_laser_desorption%2Fionization -->
-
-    <owl:Class rdf:about="http://edamontology.org/topic_______Matrix_enhanced_surface-assisted_laser_desorption%2Fionization">
-        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic_______Surface-assisted_laser_desorption_ionisation_imaging"/>
-        <abbreviation>ME-SALDI imaging</abbreviation>
-        <oboInOwl:hasExactSynonym>MESALDI imaging</oboInOwl:hasExactSynonym>
-        <rdfs:label>Matrix-enhanced surface-assisted laser desorption/ionisation imaging</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://www.geneontology.org/formats/oboInOwl#inSubset -->
-
-    <owl:Class rdf:about="http://www.geneontology.org/formats/oboInOwl#inSubset"/>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Individuals
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://edamontology.org/format_3687 -->
-
-    <owl:NamedIndividual rdf:about="http://edamontology.org/format_3687">
-        <skos:related rdf:resource="http://edamontology.org/format_4069"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://edamontology.org/format_4069 -->
-
-    <owl:NamedIndividual rdf:about="http://edamontology.org/format_4069">
-        <skos:related rdf:resource="http://edamontology.org/format_3687"/>
-    </owl:NamedIndividual>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.geneontology.org/formats/oboInOwl#inSubset"/>
-    </rdf:Description>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Annotations
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    <rdf:Description rdf:about="http://edamontology.org/format_3687">
-        <oboInOwl:inSubset rdf:resource="http://edamontology.org/formats"/>
-        <oboInOwl:inSubset rdf:resource="http://edamontology.org/bio"/>
-        <repository rdf:resource="https://github.com/ISA-tools/isa-specs"/>
-        <oboInOwl:savedBy>2026-06-13 Jonathan Hunter, Philippe Rocca-Serra, Helge Hecht, Matúš Kalaš</oboInOwl:savedBy>
-        <rdfs:comment>ISA-Tab extends the MAGE-TAB format (edam:format_3162) and its gene expression-specific focus, but remains compatible with it.</rdfs:comment>
-        <rdfs:seeAlso rdf:resource="https://www.nature.com/documents/scidata-isatab-specification.pdf"/>
-        <rdfs:comment>The ISA model consists of three core entities to capture experimental metadata: Investigation, Study, and Assay. The ISA-Tab is a composite format comprised of one i_Investigation.txt file (edam:format_4066), and one or more Study (s_*.txt; edam:format_4067) and Assay (a_*.txt; edam:format_4068) files.</rdfs:comment>
-        <created_in>1.13</created_in>
-        <skos:editorialNote>TODO when Composite format and its parts (using http://purl.org/dc/terms/isPartOf ?) are ready in EDAM: ISA-Tab with subconcepts, MHD announcement?, ...</skos:editorialNote>
-        <documentation rdf:resource="https://isa-specs.readthedocs.io/en/latest/isamodel.html"/>
-        <rdfs:comment>ISA-Tab format can be converted to ISA-JSON (edam:format_4069; validated against a set of JSON Schemata defined by the ISA model). From ISA-JSON, a serialisation to RDF (JSON-LD) is possible when using a series of JSON context files.</rdfs:comment>
-        <information_standard rdf:resource="https://isa-tools.org/format/specification"/>
-        <documentation rdf:resource="https://isa-specs.readthedocs.io/en/latest/isatab.html"/>
-        <skos:exactMatch rdf:resource="https://doi.org/10.25504/FAIRsharing.53gp75"/>
-        <skos:editorialNote>TODO review the relation to MAGE-TAB</skos:editorialNote>
-        <rdfs:comment>Based on the Investigation / Study / Assay (ISA) Abstract Model, the tab-delimited ISA-Tab format supports the metadata related to multimodality/multi-omics studies which employ a combination of data acquisition techniques.</rdfs:comment>
-        <citation rdf:resource="https://doi.org/10.5281/zenodo.161355"/>
-        <oboInOwl:hasExactSynonym>Investigation Study Assay Tabular</oboInOwl:hasExactSynonym>
-        <rdfs:label>ISA-Tab</rdfs:label>
-        <ontology_used>Ontologies should be used. Any ontology is accepted, as long as it is correctly recorded.</ontology_used>
-        <example rdf:resource="https://github.com/ISA-tools/ISAdatasets/tree/master/tab"/>
-        <oboInOwl:hasDefinition>ISA-Tab stands for Investigation / Study / Assay (ISA) tab-delimited (Tab) format, and it is comprised of metadata describing observational or experimental scientific studies.</oboInOwl:hasDefinition>
-        <example rdf:resource="https://isa-tools.org/format/examples.html"/>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://edamontology.org/format_4069">
-        <information_standard rdf:resource="https://isa-tools.org/format/specification"/>
-        <example rdf:resource="https://github.com/ISA-tools/ISAdatasets/tree/master/json"/>
-        <documentation rdf:resource="https://isa-specs.readthedocs.io/en/latest/isajson.html"/>
-        <file_extension>json</file_extension>
-        <rdfs:comment>The ISA model consists of three core entities to capture experimental metadata: Investigation, Study, and Assay. All ISA-JSON content should fall under one Investigation JSON structure in a single JSON file.</rdfs:comment>
-        <citation rdf:resource="https://doi.org/10.1038/ng.1054"/>
-        <ontology_used>Ontologies should be used. Any ontology is accepted, as long as it is correctly recorded.</ontology_used>
-        <rdfs:label>ISA-JSON</rdfs:label>
-        <skos:exactMatch rdf:resource="https://doi.org/10.25504/FAIRsharing.yhLgTV"/>
-        <oboInOwl:hasExactSynonym>Investigation Study Assay JSON</oboInOwl:hasExactSynonym>
-        <repository rdf:resource="https://github.com/ISA-tools/isa-specs"/>
-        <oboInOwl:savedBy>2026-06-15 Jonathan Hunter, Philippe Rocca-Serra, Helge Hecht, Matúš Kalaš</oboInOwl:savedBy>
-        <oboInOwl:inSubset rdf:resource="http://edamontology.org/formats"/>
-        <oboInOwl:creation_date>2026-01-09</oboInOwl:creation_date>
-        <oboInOwl:hasDefinition>ISA-JSON stands for Investigation / Study / Assay (ISA) JavaScript Object Notation (JSON) format, and it is comprised of metadata describing observational or experimental scientific studies.</oboInOwl:hasDefinition>
-        <oboInOwl:created_by>jonathan-hunter</oboInOwl:created_by>
-        <oboInOwl:inSubset rdf:resource="http://edamontology.org/bio"/>
-        <rdfs:comment>ISA-JSON is the JSON serialisation of the Investigation / Study / Assay (ISA) Abstract Model, complementing ISA-Tab (edam:format_3687). It supports the metadata related to multimodality/multi-omics studies which employ a combination of data acquisition techniques. From ISA-JSON, a serialisation to RDF (JSON-LD) is possible when using a series of JSON context files.</rdfs:comment>
-        <created_in>1.26</created_in>
-        <documentation rdf:resource="https://isa-specs.readthedocs.io/en/latest/isamodel.html"/>
-    </rdf:Description>
 </rdf:RDF>
 
 
