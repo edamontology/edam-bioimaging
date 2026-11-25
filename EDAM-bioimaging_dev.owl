@@ -17,7 +17,7 @@
         <citation rdf:resource="https://doi.org/10.7490/f1000research.1117826.1"/>
         <next_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4201</next_id>
         <repository rdf:resource="https://github.com/edamontology/edam-bioimaging"/>
-        <oboLegacy:date>25.11.2026 18:25 UTC</oboLegacy:date>
+        <oboLegacy:date>25.11.2026 22:11 UTC</oboLegacy:date>
         <oboLegacy:idspace>EDAM http://edamontology.org/ &quot;EDAM relations and concept properties&quot;</oboLegacy:idspace>
         <oboLegacy:idspace>EDAM_data http://edamontology.org/data_ &quot;EDAM types of data&quot;</oboLegacy:idspace>
         <oboLegacy:idspace>EDAM_format http://edamontology.org/format_ &quot;EDAM data formats&quot;</oboLegacy:idspace>
@@ -1383,17 +1383,6 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
     
 
 
-    <!-- http://edamontology.org/data_1D_dataset -->
-
-    <owl:Class rdf:about="http://edamontology.org/data_1D_dataset">
-        <rdfs:subClassOf rdf:resource="http://edamontology.org/data_Image"/>
-        <oboInOwl:inSubset rdf:resource="http://edamontology.org/bio"/>
-        <oboInOwl:inSubset rdf:resource="http://edamontology.org/data"/>
-        <rdfs:label>1D image?</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://edamontology.org/data_2048 -->
 
     <owl:Class rdf:about="http://edamontology.org/data_2048">
@@ -1461,29 +1450,6 @@ N.B.: In generated subsets, these concepts should be omitted, and their children
         <oboInOwl:inSubset rdf:resource="http://edamontology.org/bio"/>
         <oboInOwl:inSubset rdf:resource="http://edamontology.org/data"/>
         <rdfs:label>Northern blot image</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://edamontology.org/data_2D_dataset -->
-
-    <owl:Class rdf:about="http://edamontology.org/data_2D_dataset">
-        <rdfs:subClassOf rdf:resource="http://edamontology.org/data_Image"/>
-        <_permanent_id>http://edamontology.org/data_ 4200</_permanent_id>
-        <created_in>imaging-alpha01</created_in>
-        <related_term>tile</related_term>
-        <related_term>tiling</related_term>
-        <oboInOwl:hasDefinition>A (2D) image is the optical counterpart of an object produced by an optical or an electronic device.
-
-A (2D) digital image is a representation of a real (2D) image in a form of a 2D array, or matrix, containing numbers that can be stored and handled by a digital computer.</oboInOwl:hasDefinition>
-        <oboInOwl:inSubset rdf:resource="http://edamontology.org/bio"/>
-        <oboInOwl:inSubset rdf:resource="http://edamontology.org/data"/>
-        <oboInOwl:inSubset rdf:resource="http://edamontology.org/imaging"/>
-        <rdfs:comment>For each pixel, the imaging device records a number, or a small set of numbers, that describe some property of this pixel, such as its brightness (the intensity of the light) or its color. 
-Numbers in a matrix are responses from a sensor measured at a set of sampling points, arranged into rows and columns. Digital image is a union of pixels - picture elements - assigned to sampling points. Pixels are typically square regions centered at a sampling point.</rdfs:comment>
-        <rdfs:label>2D image</rdfs:label>
-        <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Digital_image"/>
-        <skos:editorialNote>wikipedia has a poor definition of an image</skos:editorialNote>
     </owl:Class>
     
 
@@ -1696,23 +1662,6 @@ Numbers in a matrix are responses from a sensor measured at a set of sampling po
     
 
 
-    <!-- http://edamontology.org/data_3D_dataset -->
-
-    <owl:Class rdf:about="http://edamontology.org/data_3D_dataset">
-        <rdfs:subClassOf rdf:resource="http://edamontology.org/data_Image"/>
-        <rdfs:subClassOf rdf:resource="http://edamontology.org/data_______Data_cube"/>
-        <related_term>stack</related_term>
-        <oboInOwl:hasBroadSynonym>Volume data</oboInOwl:hasBroadSynonym>
-        <oboInOwl:hasExactSynonym>Volume image</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasRelatedSynonym>Image stack</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym>Tilt stack</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:inSubset rdf:resource="http://edamontology.org/bio"/>
-        <oboInOwl:inSubset rdf:resource="http://edamontology.org/data"/>
-        <rdfs:label>3D image</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://edamontology.org/data_4040 -->
 
     <owl:Class rdf:about="http://edamontology.org/data_4040">
@@ -1735,6 +1684,57 @@ Numbers in a matrix are responses from a sensor measured at a set of sampling po
         <rdfs:label>Data management plan</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Data_management_plan"/>
         <skos:exactMatch rdf:resource="https://www.wikidata.org/wiki/Q17085509"/>
+    </owl:Class>
+    
+
+
+    <!-- http://edamontology.org/data_1D_dataset -->
+
+    <owl:Class rdf:about="http://edamontology.org/data_1D_dataset">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/data_Image"/>
+        <oboInOwl:inSubset rdf:resource="http://edamontology.org/bio"/>
+        <oboInOwl:inSubset rdf:resource="http://edamontology.org/data"/>
+        <rdfs:label>1D image?</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://edamontology.org/data_2D_dataset -->
+
+    <owl:Class rdf:about="http://edamontology.org/data_2D_dataset">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/data_Image"/>
+        <_permanent_id>http://edamontology.org/data_ 4200</_permanent_id>
+        <created_in>imaging-alpha01</created_in>
+        <related_term>tile</related_term>
+        <related_term>tiling</related_term>
+        <oboInOwl:hasDefinition>A (2D) image is the optical counterpart of an object produced by an optical or an electronic device.
+
+A (2D) digital image is a representation of a real (2D) image in a form of a 2D array, or matrix, containing numbers that can be stored and handled by a digital computer.</oboInOwl:hasDefinition>
+        <oboInOwl:inSubset rdf:resource="http://edamontology.org/bio"/>
+        <oboInOwl:inSubset rdf:resource="http://edamontology.org/data"/>
+        <oboInOwl:inSubset rdf:resource="http://edamontology.org/imaging"/>
+        <rdfs:comment>For each pixel, the imaging device records a number, or a small set of numbers, that describe some property of this pixel, such as its brightness (the intensity of the light) or its color. 
+Numbers in a matrix are responses from a sensor measured at a set of sampling points, arranged into rows and columns. Digital image is a union of pixels - picture elements - assigned to sampling points. Pixels are typically square regions centered at a sampling point.</rdfs:comment>
+        <rdfs:label>2D image</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Digital_image"/>
+        <skos:editorialNote>wikipedia has a poor definition of an image</skos:editorialNote>
+    </owl:Class>
+    
+
+
+    <!-- http://edamontology.org/data_3D_dataset -->
+
+    <owl:Class rdf:about="http://edamontology.org/data_3D_dataset">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/data_Image"/>
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/data_______Data_cube"/>
+        <related_term>stack</related_term>
+        <oboInOwl:hasBroadSynonym>Volume data</oboInOwl:hasBroadSynonym>
+        <oboInOwl:hasExactSynonym>Volume image</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasRelatedSynonym>Image stack</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>Tilt stack</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:inSubset rdf:resource="http://edamontology.org/bio"/>
+        <oboInOwl:inSubset rdf:resource="http://edamontology.org/data"/>
+        <rdfs:label>3D image</rdfs:label>
     </owl:Class>
     
 
@@ -3147,24 +3147,6 @@ Some more https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3948928/</skos:editorialN
     
 
 
-    <!-- http://edamontology.org/format________001 -->
-
-    <owl:Class rdf:about="http://edamontology.org/format________001">
-        <rdfs:subClassOf rdf:resource="http://edamontology.org/format_1915"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://edamontology.org/is_format_of"/>
-                <owl:someValuesFrom rdf:resource="http://edamontology.org/data_______Mass_spectroscopy_imaging_data_set"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <oboInOwl:created_by>Matúš Kalaš</oboInOwl:created_by>
-        <oboInOwl:creation_date>2025-08-15T20:55:39.352613Z</oboInOwl:creation_date>
-        <rdfs:comment>imzML is a conglomerate format consisting of 2 files: .idb (http://edamontology.org/format_3839) and imzML metadata file (.imzML, http://edamontology.org/format_3682).</rdfs:comment>
-        <rdfs:label>imzML</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://edamontology.org/format_hdf5 -->
 
     <owl:Class rdf:about="http://edamontology.org/format_hdf5">
@@ -3294,6 +3276,24 @@ Some more https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3948928/</skos:editorialN
         <oboInOwl:inSubset rdf:resource="http://edamontology.org/formats"/>
         <oboInOwl:inSubset rdf:resource="http://edamontology.org/imaging"/>
         <rdfs:label>vsi</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://edamontology.org/format________001 -->
+
+    <owl:Class rdf:about="http://edamontology.org/format________001">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/format_1915"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://edamontology.org/is_format_of"/>
+                <owl:someValuesFrom rdf:resource="http://edamontology.org/data_______Mass_spectroscopy_imaging_data_set"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <oboInOwl:created_by>Matúš Kalaš</oboInOwl:created_by>
+        <oboInOwl:creation_date>2025-08-15T20:55:39.352613Z</oboInOwl:creation_date>
+        <rdfs:comment>imzML is a conglomerate format consisting of 2 files: .idb (http://edamontology.org/format_3839) and imzML metadata file (.imzML, http://edamontology.org/format_3682).</rdfs:comment>
+        <rdfs:label>imzML</rdfs:label>
     </owl:Class>
     
 
@@ -9233,6 +9233,24 @@ Martin &amp; Laure &amp; Christos Mar 2020: These don&apos;t influence analysis,
     
 
 
+    <!-- http://edamontology.org/topic______k-nearest_neighbours -->
+
+    <owl:Class rdf:about="http://edamontology.org/topic______k-nearest_neighbours">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic___Supervised_learning"/>
+        <oboInOwl:hasExactSynonym rdf:resource="https://www.wikidata.org/wiki/Q1071612"/>
+        <oboInOwl:hasExactSynonym>KNN</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>k-NN</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym xml:lang="en-us">k-nearest neighbor algorithm</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym xml:lang="en-us">k-nearest neighbors algorithm</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>k-nearest neighbour algorithm</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>k-nearest neighbours algorithm</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en-us">k-nearest neighbors</rdfs:label>
+        <rdfs:label>k-nearest neighbours</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/K-nearest_neighbors_algorithm"/>
+    </owl:Class>
+    
+
+
     <!-- http://edamontology.org/topic______Laser_microdissection -->
 
     <owl:Class rdf:about="http://edamontology.org/topic______Laser_microdissection">
@@ -10531,24 +10549,6 @@ And something like Spatial omics?? IS NOW IN EDAM MS &amp; Seq WP branch!!</skos
         <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Scanning_probe_microscopy"/>
         <skos:editorialNote>Anywhere to include the term &quot;raster scan(ning)&quot;, or is it too ubiquitous and not relevantly specific?</skos:editorialNote>
         <skos:editorialNote>TODO: At some point do an inventory of what is needed underneath AFM and STM. Some examples are in https://en.wikipedia.org/wiki/Scanning_probe_microscopy</skos:editorialNote>
-    </owl:Class>
-    
-
-
-    <!-- http://edamontology.org/topic______k-nearest_neighbours -->
-
-    <owl:Class rdf:about="http://edamontology.org/topic______k-nearest_neighbours">
-        <rdfs:subClassOf rdf:resource="http://edamontology.org/topic___Supervised_learning"/>
-        <oboInOwl:hasExactSynonym rdf:resource="https://www.wikidata.org/wiki/Q1071612"/>
-        <oboInOwl:hasExactSynonym>KNN</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>k-NN</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym xml:lang="en-us">k-nearest neighbor algorithm</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym xml:lang="en-us">k-nearest neighbors algorithm</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>k-nearest neighbour algorithm</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>k-nearest neighbours algorithm</oboInOwl:hasExactSynonym>
-        <rdfs:label xml:lang="en-us">k-nearest neighbors</rdfs:label>
-        <rdfs:label>k-nearest neighbours</rdfs:label>
-        <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/K-nearest_neighbors_algorithm"/>
     </owl:Class>
     
 
